@@ -1,0 +1,28 @@
+﻿// Config SilverEmu By Ryuuke
+
+	// Ip du serveur de connexion
+Game_ip=127.0.0.1
+
+	// Port du serveur de connexion
+Game_port=5555
+
+	// serveur de la base de donnée
+Game_Database_Host=localhost
+
+	// nom d'utilisateur de la base de donnée
+Game_Database_Username=root
+
+	// mot de passe de la base de donnée
+Game_Database_Password=
+
+	// nom de la base de donnée
+Game_Database_Name=silergame
+
+	// key du game serveur
+Game_key=lolxdmdrlol
+
+	// port de communication avec le Realm
+Realm_ip=127.0.0.1
+
+	// port de communication avec le Realm
+Com_port=448
