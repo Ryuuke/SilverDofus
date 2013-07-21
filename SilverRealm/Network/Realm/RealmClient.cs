@@ -141,20 +141,29 @@ namespace SilverRealm.Network.Realm
 
         private void sendServersList()
         {
+            Dictionary<int, int> ListCharactersByGameServer = Database.Characters.getCharactersByGameServer(account.id);
+
+            string dicToString = string.Empty;
+
+            foreach (var item in ListCharactersByGameServer)
+            {
+                dicToString = string.Concat(dicToString, string.Format("|{0},{1}", item.Key, item.Value));
+            }
+
             if (bool.Parse(Services.Config.get("subscription")) == true)
             {
                 if (account.subscription == null || DateTime.Now >= account.subscription.Value)
                 {
-                    this.sendPackets(string.Format("{0}0|1,1", Services.Packet.SubscriptionPlayerList));
+                    this.sendPackets(string.Format("{0}{1}{2}", Services.Packet.SubscriptionPlayerList, Services.Constant.DiscoveryMode, dicToString));
                 }
                 else
                 {
-                    this.sendPackets(string.Format("{0}{1}|1,1", Services.Packet.SubscriptionPlayerList, (account.subscription.Value - DateTime.Now).TotalMilliseconds.ToString().Split(',')[0]));
+                    this.sendPackets(string.Format("{0}{1}{2}", Services.Packet.SubscriptionPlayerList, (account.subscription.Value - DateTime.Now).TotalMilliseconds.ToString().Split(',')[0], dicToString));
                 }
             }
             else
             {
-                this.sendPackets(string.Format("{0}{1}|1,1", Services.Packet.SubscriptionPlayerList, Services.Constant.OneYear));
+                this.sendPackets(string.Format("{0}{1}{2}", Services.Packet.SubscriptionPlayerList, Services.Constant.OneYear, dicToString));
             }
         }
 

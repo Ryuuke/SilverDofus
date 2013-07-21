@@ -8,7 +8,7 @@ using SilverRealm.Models;
 
 namespace SilverRealm.Database
 {
-    class GameServerRepository
+    static class GameServerRepository
     {
         public static List<GameServer> getAll()
         {
@@ -47,7 +47,6 @@ namespace SilverRealm.Database
                 {
                     Console.WriteLine("Could not find Game Server On database");
                 }
-
             }
 
             return gameServers;
