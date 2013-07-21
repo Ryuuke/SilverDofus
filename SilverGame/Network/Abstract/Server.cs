@@ -1,32 +1,28 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using SilverSock;
 
 namespace SilverGame.Network.Abstract
 {
     abstract class Server
     {
-        protected SilverServer serv;
+        protected SilverServer Serv;
 
-        public Server(string ip, int port)
+        protected Server(string ip, int port)
         {
-            serv = new SilverServer(ip, port);
+            Serv = new SilverServer(ip, port);
             {
-                serv.OnAcceptSocketEvent += new SilverEvents.AcceptSocket(onSocketAccepted);
-                serv.OnListeningEvent += new SilverEvents.Listening(onListening);
-                serv.OnListeningFailedEvent += new SilverEvents.ListeningFailed(onListeningFailed);
-                serv.WaitConnection();
+                Serv.OnAcceptSocketEvent += OnSocketAccepted;
+                Serv.OnListeningEvent += OnListening;
+                Serv.OnListeningFailedEvent += OnListeningFailed;
+                Serv.WaitConnection();
             }
         }
 
         #region abstracts
 
-        public abstract void onSocketAccepted(SilverSocket socket);
-        public abstract void onListening();
-        public abstract void onListeningFailed(Exception e);
+        public abstract void OnSocketAccepted(SilverSocket socket);
+        public abstract void OnListening();
+        public abstract void OnListeningFailed(Exception e);
 
         #endregion
     }

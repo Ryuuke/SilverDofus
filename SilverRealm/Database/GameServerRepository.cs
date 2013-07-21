@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using SilverRealm.Models;
 
@@ -10,17 +8,17 @@ namespace SilverRealm.Database
 {
     static class GameServerRepository
     {
-        public static List<GameServer> getAll()
+        public static List<GameServer> GetAll()
         {
-            List<GameServer> gameServers = new List<GameServer>(); ;
+            var gameServers = new List<GameServer>(); ;
 
-            lock (DbManager._lock)
+            lock (DbManager.Lock)
             {
-                string req = "SELECT * FROM gameservers";
+                const string req = "SELECT * FROM gameservers";
 
-                MySqlCommand command = new MySqlCommand(req, DbManager.connection);
+                var command = new MySqlCommand(req, DbManager.Connection);
 
-                MySqlDataReader reader = command.ExecuteReader();
+                var reader = command.ExecuteReader();
 
                 while (reader.Read())
                 {
@@ -28,11 +26,11 @@ namespace SilverRealm.Database
                     {
                         gameServers.Add(new GameServer()
                         {
-                            id = reader.GetInt16("id"),
-                            ip = reader.GetString("ip"),
-                            port = reader.GetInt32("port"),
-                            key = reader.GetString("key"),
-                            state = reader.GetInt16("state"),
+                            Id = reader.GetInt16("id"),
+                            Ip = reader.GetString("ip"),
+                            Port = reader.GetInt32("port"),
+                            Key = reader.GetString("key"),
+                            State = reader.GetInt16("state"),
                         });
                     }
                     catch (Exception e)

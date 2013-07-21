@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MySql.Data.MySqlClient;
+﻿using MySql.Data.MySqlClient;
 
 namespace SilverGame.Database
 {
@@ -13,11 +8,11 @@ namespace SilverGame.Database
         {
             int numberPlayers = 0;
 
-            lock (DbManager._lock)
+            lock (DbManager.Lock)
             {
-                string req = "SELECT COUNT(*) FROM player";
+                const string req = "SELECT COUNT(*) FROM player";
 
-                MySqlCommand command = new MySqlCommand(req, DbManager.connection);
+                var command = new MySqlCommand(req, DbManager.Connection);
 
                 numberPlayers = (int)command.ExecuteScalar();
             }

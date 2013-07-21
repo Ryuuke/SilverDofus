@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SilverRealm.Services
+﻿namespace SilverRealm.Services
 {
     class Packet
     {
@@ -12,8 +6,8 @@ namespace SilverRealm.Services
                         HelloConnectionServer = "HC",
                         WrongDofusVersion = "AlEv",
                         WrongDofusAccount = "AlEf",
-                        bannedAccount = "AlEb",
-                        bannedTime = "AlEk",
+                        BannedAccount = "AlEb",
+                        BannedTime = "AlEk",
                         AlredyConnected = "AlEa",
                         DofusPseudo = "Ad",
                         Community = "Ac",

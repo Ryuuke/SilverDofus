@@ -9,18 +9,18 @@ namespace SilverGame.Services
 {
     static class Config
     {
-        const string configFile = "GameConfig.txt";
+        const string ConfigFile = "GameConfig.txt";
 
         private static Dictionary<string, string> values;
 
-        public static void loadConfig()
+        public static void LoadConfig()
         {
-            if (!File.Exists(configFile))
-                throw new Exception("unable to find the file : " + configFile);
+            if (!File.Exists(ConfigFile))
+                throw new Exception("unable to find the file : " + ConfigFile);
 
             values = new Dictionary<string, string>();
 
-            StreamReader sr = new StreamReader(configFile, Encoding.Default);
+            var sr = new StreamReader(ConfigFile, Encoding.Default);
 
             try
             {
@@ -37,7 +37,7 @@ namespace SilverGame.Services
             }
             catch (Exception)
             {
-                Console.WriteLine(string.Format("{0} inexistant ou illisible", configFile));
+                Console.WriteLine("{0} inexistant ou illisible", ConfigFile);
             }
 
             sr.Close();

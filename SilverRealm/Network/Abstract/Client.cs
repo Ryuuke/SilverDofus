@@ -1,24 +1,22 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using SilverSock;
 
 namespace SilverRealm.Network.Abstract
 {
     abstract class Client
     {
-        protected SilverSocket socket;
+        protected SilverSocket Socket;
 
-        public Client(SilverSocket socket)
+        protected Client(SilverSocket socket)
         {
-            this.socket = socket;
+            this.Socket = socket;
             {
-                socket.OnConnected += new SilverEvents.Connected(this.OnConnected);
-                socket.OnDataArrivalEvent += new SilverEvents.DataArrival(this.dataArrival);
-                socket.OnFailedToConnect += new SilverEvents.FailedToConnect(this.OnFailedToConnect);
-                socket.OnSocketClosedEvent += new SilverEvents.SocketClosed(this.OnSocketClosed);
+                socket.OnConnected += this.OnConnected;
+                socket.OnDataArrivalEvent += this.DataArrival;
+                socket.OnFailedToConnect += this.OnFailedToConnect;
+                socket.OnSocketClosedEvent += this.OnSocketClosed;
             }
         }
 
@@ -27,22 +25,22 @@ namespace SilverRealm.Network.Abstract
         public abstract void OnConnected();
         public abstract void OnFailedToConnect(Exception e);
         public abstract void OnSocketClosed();
-        public abstract void dataReceived(string packet);
+        public abstract void DataReceived(string packet);
 
         #endregion
 
-        public virtual void sendPackets(string packet)
+        public virtual void SendPackets(string packet)
         {
             Console.WriteLine("send >>" + string.Format("{0}\x00", packet));
-            this.socket.Send(Encoding.UTF8.GetBytes(string.Format("{0}\x00", packet)));
+            this.Socket.Send(Encoding.UTF8.GetBytes(string.Format("{0}\x00", packet)));
         }
 
-        public void dataArrival(byte[] data)
+        public void DataArrival(byte[] data)
         {
             foreach (var packet in Encoding.UTF8.GetString(data).Replace("\x0a", "").Split('\x00').Where(x => x != ""))
             {
                 Console.WriteLine("Recv <<" + packet);
-                dataReceived(packet);
+                DataReceived(packet);
             }
         }
     }

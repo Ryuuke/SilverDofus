@@ -1,18 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SilverRealm.Services
 {
     static class Hash
     {
-        private static Random rand = new Random();
+        private static readonly Random Rand = new Random();
 
         // tableau de caractère pour le hashage du mots de passe
 
-        public static char[] hash = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
+        private static readonly char[] HashTable = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
                 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U',
                 'V', 'W', 'X', 'Y', 'Z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '-', '_'};
 
@@ -24,8 +20,8 @@ namespace SilverRealm.Services
 
             for (var i = 1; i <= lenght; i++)
             {
-                var randomInt = rand.Next(0, hash.Length);
-                str += hash[randomInt];
+                var randomInt = Rand.Next(0, HashTable.Length);
+                str += HashTable[randomInt];
             }
 
             return str;
@@ -33,22 +29,22 @@ namespace SilverRealm.Services
 
         public static string Encrypt(string password, string key)
         {
-            var _Crypted = "1";
+            var crypted = "1";
 
             for (var i = 0; i < password.Length; i++)
             {
-                var PPass = password[i];
-                var PKey = key[i];
-                var APass = (int)PPass / 16;
-                var AKey = (int)PPass % 16;
-                var ANB = (APass + (int)PKey) % hash.Length;
-                var ANB2 = (AKey + (int)PKey) % hash.Length;
+                var pPass = password[i];
+                var pKey = key[i];
+                var aPass = (int)pPass / 16;
+                var aKey = (int)pPass % 16;
+                var anb = (aPass + (int)pKey) % HashTable.Length;
+                var anb2 = (aKey + (int)pKey) % HashTable.Length;
 
-                _Crypted += hash[ANB];
-                _Crypted += hash[ANB2];
+                crypted += HashTable[anb];
+                crypted += HashTable[anb2];
             }
 
-            return _Crypted;
+            return crypted;
         }
     }
 }

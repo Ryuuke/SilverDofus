@@ -1,4 +1,4 @@
-﻿// Config SilverEmu By Ryuuke
+﻿// Config SilverDofus By Ryuuke
 
 	// Ip du serveur de connexion
 Game_ip=127.0.0.1

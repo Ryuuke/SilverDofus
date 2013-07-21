@@ -1,31 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MySql.Data.MySqlClient;
-using SilverRealm.Models;
+﻿using MySql.Data.MySqlClient;
 
 namespace SilverRealm.Database
 {
     static class Characters
     {
-        public static Dictionary<int, int> getCharactersByGameServer(int accountId)
+        public static string GetCharactersByGameServer(int accountId)
         {
-            Dictionary<int, int> charactersByGameServer = new Dictionary<int, int>();
+            var charactersByGameServer = string.Empty;
 
-            lock (DbManager._lock)
+            lock (DbManager.Lock)
             {
-                string req = "Select gameServerId, count(characterId) AS numberCharacters FROM characters WHERE accountId=@accountId GROUP by gameServerId;";
+                const string req = "Select gameServerId, count(characterId) AS numberCharacters FROM characters WHERE accountId=@accountId GROUP by gameServerId;";
 
-                MySqlCommand command = new MySqlCommand(req, DbManager.connection);
+                var command = new MySqlCommand(req, DbManager.Connection);
 
                 command.Parameters.Add(new MySqlParameter("@accountId", accountId));
 
-                MySqlDataReader reader = command.ExecuteReader();
+                var reader = command.ExecuteReader();
 
                 while (reader.Read())
-                    charactersByGameServer.Add(reader.GetInt16("gameServerId"), reader.GetInt16("numberCharacters"));
+                    charactersByGameServer = string.Concat(charactersByGameServer, string.Format("|{0},{1}",reader.GetInt16("gameServerId"), reader.GetInt16("numberCharacters")));
 
                 reader.Close();
             }

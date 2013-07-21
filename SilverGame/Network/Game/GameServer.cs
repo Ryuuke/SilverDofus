@@ -1,33 +1,30 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using SilverSock;
 
 namespace SilverGame.Network.Game
 {
     class GameServer : Abstract.Server
     {
-        List<GameClient> clients;
+        List<GameClient> _clients;
 
         public GameServer()
             : base(Services.Config.get("Game_ip"), Int32.Parse(Services.Config.get("Game_port")))
         {
-            clients = new List<GameClient>();
+            _clients = new List<GameClient>();
         }
 
-        public override void onListening()
+        public override void OnListening()
         {
             throw new NotImplementedException();
         }
 
-        public override void onListeningFailed(Exception e)
+        public override void OnListeningFailed(Exception e)
         {
             throw new NotImplementedException();
         }
 
-        public override void onSocketAccepted(SilverSocket socket)
+        public override void OnSocketAccepted(SilverSocket socket)
         {
             throw new NotImplementedException();
         }

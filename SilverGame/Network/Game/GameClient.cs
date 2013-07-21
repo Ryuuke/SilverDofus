@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using SilverSock;
 
 namespace SilverGame.Network.Game
@@ -30,12 +26,7 @@ namespace SilverGame.Network.Game
             throw new NotImplementedException();
         }
 
-        public override void sendPackets(string packet)
-        {
-            base.sendPackets(packet);
-        }
-
-        public override void dataReceived(string packet)
+        public override void DataReceived(string packet)
         {
             throw new NotImplementedException();
         }

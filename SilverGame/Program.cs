@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SilverGame
 {
@@ -10,11 +6,11 @@ namespace SilverGame
     {
         static void Main(string[] args)
         {
-            Services.Config.loadConfig();
+            Services.Config.LoadConfig();
 
-            Database.DbManager db = new Database.DbManager();
+            var db = new Database.DbManager();
 
-            Network.ToRealm.ToRealmClient com = new Network.ToRealm.ToRealmClient();
+            var com = new Network.ToRealm.ToRealmClient();
 
             Console.ReadLine();
         }

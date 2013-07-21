@@ -1,15 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using SilverRealm.Annotations;
 using SilverSock;
 
 namespace SilverRealm.Network.ToGame
 {
-    class ToGameClient : Abstract.Client
+    sealed class ToGameClient : Abstract.Client
     {
-        private CommunicationState communicationState;
+        [UsedImplicitly] private CommunicationState _communicationState;
 
         public ToGameClient(SilverSocket socket)
             : base(socket)
@@ -29,22 +27,17 @@ namespace SilverRealm.Network.ToGame
 
         public override void OnSocketClosed()
         {
-            lock (ToGameServer._lock)
-                ToGameServer.games.Remove(this);
+            lock (ToGameServer.Lock)
+                ToGameServer.Games.Remove(this);
 
-            Console.WriteLine("Connection closed with Game Server {0}", socket.IP);
+            Console.WriteLine("Connection closed with Game Server {0}", Socket.IP);
         }
 
-        public override void sendPackets(string packet)
+        public override void DataReceived(string packet)
         {
-            base.sendPackets(packet);
-        }
-
-        public override void dataReceived(string packet)
-        {
-            switch (communicationState)
+            switch (_communicationState)
             {
-                case CommunicationState.verifyGame :
+                case CommunicationState.VerifyGame :
                     VerifyGameServer(packet);
                     break;
             }
@@ -52,9 +45,9 @@ namespace SilverRealm.Network.ToGame
 
         private void VerifyGameServer(string packet)
         {
-            string key = packet.Substring(2);
+            var key = packet.Substring(2);
 
-            if (Database.GameServerRepository.getAll().Any((x) => x.key == key))
+            if (Database.GameServerRepository.GetAll().Any((x) => x.Key == key))
             {
                 
             }
@@ -67,7 +60,7 @@ namespace SilverRealm.Network.ToGame
 
         private enum CommunicationState
         {
-            verifyGame,
+            VerifyGame,
         }
     }
 }

@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using SilverSock;
 
 namespace SilverGame.Network.ToRealm
@@ -12,14 +8,14 @@ namespace SilverGame.Network.ToRealm
         public ToRealmClient()
             : base(new SilverSocket())
         {
-            connectToRealm();
+            ConnectToRealm();
 
-            this.sendPackets(string.Format("{0}", Services.Packet.HelloRealm));
+            this.SendPackets(string.Format("{0}", Services.Packet.HelloRealm));
         }
 
-        public void connectToRealm()
+        public void ConnectToRealm()
         {
-            socket.ConnectTo(Services.Config.get("Realm_ip"), Int32.Parse(Services.Config.get("Com_port")));
+            Socket.ConnectTo(Services.Config.get("Realm_ip"), Int32.Parse(Services.Config.get("Com_port")));
         }
 
         public override void OnConnected()
@@ -37,12 +33,12 @@ namespace SilverGame.Network.ToRealm
             Console.WriteLine("Connexion To Realm Server closed");
         }
 
-        public override void sendPackets(string packet)
+        public override sealed void SendPackets(string packet)
         {
-            base.sendPackets(packet);
+            base.SendPackets(packet);
         }
 
-        public override void dataReceived(string packet)
+        public override void DataReceived(string packet)
         {
             throw new NotImplementedException();
         }
