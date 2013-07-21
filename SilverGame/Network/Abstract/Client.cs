@@ -9,14 +9,14 @@ namespace SilverGame.Network.Abstract
     {
         protected SilverSocket Socket;
 
-        public Client(SilverSocket socket)
+        protected Client(SilverSocket socket)
         {
-            this.Socket = socket;
+            Socket = socket;
             {
-                socket.OnConnected += this.OnConnected;
-                socket.OnDataArrivalEvent += this.DataArrival;
-                socket.OnFailedToConnect += this.OnFailedToConnect;
-                socket.OnSocketClosedEvent += this.OnSocketClosed;
+                socket.OnConnected += OnConnected;
+                socket.OnDataArrivalEvent += DataArrival;
+                socket.OnFailedToConnect += OnFailedToConnect;
+                socket.OnSocketClosedEvent += OnSocketClosed;
             }
         }
 
@@ -32,7 +32,7 @@ namespace SilverGame.Network.Abstract
         public virtual void SendPackets(string packet)
         {
             Console.WriteLine("send >>" + string.Format("{0}\x00", packet));
-            this.Socket.Send(Encoding.UTF8.GetBytes(string.Format("{0}\x00", packet)));
+            Socket.Send(Encoding.UTF8.GetBytes(string.Format("{0}\x00", packet)));
         }
 
         public void DataArrival(byte[] data)

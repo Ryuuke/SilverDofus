@@ -4,7 +4,7 @@ namespace SilverRealm
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             Services.Config.LoadConfig();
 

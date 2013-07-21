@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using SilverSock;
 
@@ -63,8 +64,8 @@ namespace SilverRealm.Network.Realm
         public void CheckVersion(string packet)
         {
             if (Services.Constant.Version == packet) return;
-                this.SendPackets(Services.Packet.WrongDofusVersion);
-                this.OnSocketClosed();
+                SendPackets(Services.Packet.WrongDofusVersion);
+                OnSocketClosed();
         }
 
         public void CheckAccount(string packet)
@@ -76,28 +77,28 @@ namespace SilverRealm.Network.Realm
 
             if (_account == null || Services.Hash.Encrypt(_account.Password, _key) != password)
             {
-                this.SendPackets(Services.Packet.WrongDofusAccount);
-                this.OnSocketClosed();
+                SendPackets(Services.Packet.WrongDofusAccount);
+                OnSocketClosed();
             }
             else if (RealmServer.Clients.Count(x => x._account.Username == username) > 1)
             {
-                this.SendPackets(Services.Packet.AlredyConnected);
-                this.OnSocketClosed();
+                SendPackets(Services.Packet.AlredyConnected);
+                OnSocketClosed();
             }
             else if (_account.BannedUntil != null && _account.BannedUntil > DateTime.Now)
             {
-                this.SendPackets(Services.Packet.BannedAccount);
-                this.OnSocketClosed();
+                SendPackets(Services.Packet.BannedAccount);
+                OnSocketClosed();
             }
             else
             {
-                this.SendPackets(string.Format("{0}{1}", Services.Packet.DofusPseudo, _account.Pseudo));
-                this.SendPackets(string.Format("{0}{1}", Services.Packet.Community, 0)); // 0 : communauté fr
+                SendPackets(string.Format("{0}{1}", Services.Packet.DofusPseudo, _account.Pseudo));
+                SendPackets(string.Format("{0}{1}", Services.Packet.Community, 0)); // 0 : communauté fr
 
                 SendServers();
 
-                this.SendPackets(string.Format("{0}{1}", Services.Packet.IsAdmin, _account.GmLevel > 0 ? 1 : 0));
-                this.SendPackets(string.Format("{0}{1}", Services.Packet.SecretQuestion, _account.Question.Replace(" ", "+")));
+                SendPackets(string.Format("{0}{1}", Services.Packet.IsAdmin, _account.GmLevel > 0 ? 1 : 0));
+                SendPackets(string.Format("{0}{1}", Services.Packet.SecretQuestion, _account.Question.Replace(" ", "+")));
             }
         }
 
@@ -105,7 +106,7 @@ namespace SilverRealm.Network.Realm
         {
             _gameServers = Database.GameServerRepository.GetAll();
 
-            this.SendPackets(string.Format("{0}{1}", Services.Packet.Hosts, string.Join("|", _gameServers)));
+            SendPackets(string.Format("{0}{1}", Services.Packet.Hosts, string.Join("|", _gameServers)));
         }
 
         private void CheckQueue(string packet)
@@ -127,27 +128,27 @@ namespace SilverRealm.Network.Realm
 
         private void CheckQueue()
         {
-            this.SendPackets(string.Format("{0}{1}", Services.Packet.NewQueue, "|0|0|1|-1"));
+            SendPackets(string.Format("{0}{1}", Services.Packet.NewQueue, "|0|0|1|-1"));
         }
 
         public void SendServersList()
         {
             var listCharactersByGameServer = Database.Characters.GetCharactersByGameServer(_account.Id);
 
-            if (bool.Parse(Services.Config.Get("subscription")) == true)
+            if (bool.Parse(Services.Config.Get("subscription")))
             {
                 if (_account.Subscription == null || DateTime.Now >= _account.Subscription.Value)
                 {
-                    this.SendPackets(string.Format("{0}{1}{2}", Services.Packet.SubscriptionPlayerList, Services.Constant.DiscoveryMode, listCharactersByGameServer));
+                    SendPackets(string.Format("{0}{1}{2}", Services.Packet.SubscriptionPlayerList, Services.Constant.DiscoveryMode, listCharactersByGameServer));
                 }
                 else
                 {
-                    this.SendPackets(string.Format("{0}{1}{2}", Services.Packet.SubscriptionPlayerList, (_account.Subscription.Value - DateTime.Now).TotalMilliseconds.ToString().Split(',')[0], listCharactersByGameServer));
+                    SendPackets(string.Format("{0}{1}{2}", Services.Packet.SubscriptionPlayerList, (_account.Subscription.Value - DateTime.Now).TotalMilliseconds.ToString(CultureInfo.InvariantCulture).Split(',')[0], listCharactersByGameServer));
                 }
             }
             else
             {
-                this.SendPackets(string.Format("{0}{1}{2}", Services.Packet.SubscriptionPlayerList, Services.Constant.OneYear, listCharactersByGameServer));
+                SendPackets(string.Format("{0}{1}{2}", Services.Packet.SubscriptionPlayerList, Services.Constant.OneYear, listCharactersByGameServer));
             }
         }
 

@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.IO;
 
 namespace SilverGame.Services
@@ -28,7 +26,7 @@ namespace SilverGame.Services
                 {
                     string line = sr.ReadLine();
 
-                    if (line.Trim() != string.Empty && line.Trim().StartsWith("//") == false)
+                    if (line != null && (line.Trim() != string.Empty && line.Trim().StartsWith("//") == false))
                     {
                         var infos = line.Split('=');
                         values.Add(infos[0].Trim(), infos[1].Trim());

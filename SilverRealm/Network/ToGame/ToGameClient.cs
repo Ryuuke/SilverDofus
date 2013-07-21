@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Linq;
-using SilverRealm.Annotations;
+using SilverRealm.Properties;
 using SilverSock;
 
 namespace SilverRealm.Network.ToGame
@@ -47,14 +47,14 @@ namespace SilverRealm.Network.ToGame
         {
             var key = packet.Substring(2);
 
-            if (Database.GameServerRepository.GetAll().Any((x) => x.Key == key))
+            if (Database.GameServerRepository.GetAll().Any(x => x.Key == key))
             {
                 
             }
             else
             {
                 Console.WriteLine("Cloud not find Game Server with key : {0}", key);
-                this.OnSocketClosed();
+                OnSocketClosed();
             }
         }
 

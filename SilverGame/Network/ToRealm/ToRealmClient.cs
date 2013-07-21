@@ -10,7 +10,7 @@ namespace SilverGame.Network.ToRealm
         {
             ConnectToRealm();
 
-            this.SendPackets(string.Format("{0}", Services.Packet.HelloRealm));
+            SendPackets(string.Format("{0}", Services.Packet.HelloRealm));
         }
 
         public void ConnectToRealm()

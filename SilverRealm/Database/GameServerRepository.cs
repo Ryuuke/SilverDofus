@@ -10,7 +10,7 @@ namespace SilverRealm.Database
     {
         public static List<GameServer> GetAll()
         {
-            var gameServers = new List<GameServer>(); ;
+            var gameServers = new List<GameServer>();
 
             lock (DbManager.Lock)
             {
@@ -24,7 +24,7 @@ namespace SilverRealm.Database
                 {
                     try
                     {
-                        gameServers.Add(new GameServer()
+                        gameServers.Add(new GameServer
                         {
                             Id = reader.GetInt16("id"),
                             Ip = reader.GetString("ip"),

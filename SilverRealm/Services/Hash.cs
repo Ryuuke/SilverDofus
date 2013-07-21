@@ -35,10 +35,10 @@ namespace SilverRealm.Services
             {
                 var pPass = password[i];
                 var pKey = key[i];
-                var aPass = (int)pPass / 16;
-                var aKey = (int)pPass % 16;
-                var anb = (aPass + (int)pKey) % HashTable.Length;
-                var anb2 = (aKey + (int)pKey) % HashTable.Length;
+                var aPass = pPass / 16;
+                var aKey = pPass % 16;
+                var anb = (aPass + pKey) % HashTable.Length;
+                var anb2 = (aKey + pKey) % HashTable.Length;
 
                 crypted += HashTable[anb];
                 crypted += HashTable[anb2];

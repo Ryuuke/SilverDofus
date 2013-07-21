@@ -6,7 +6,7 @@ namespace SilverGame.Database
     {
         public int CountPlayers()
         {
-            int numberPlayers = 0;
+            int numberPlayers;
 
             lock (DbManager.Lock)
             {

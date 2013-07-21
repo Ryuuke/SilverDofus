@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using SilverRealm.Models;
 
@@ -28,7 +24,7 @@ namespace SilverRealm.Database
                 {
                     try
                     {
-                        account = new Account()
+                        account = new Account
                         {
                             Id = reader.GetInt32("id"),
                             Username = reader.GetString("username"),
