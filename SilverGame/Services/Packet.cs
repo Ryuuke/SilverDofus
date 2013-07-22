@@ -4,8 +4,10 @@
     {
         // packet for communication Realm << >> Game
         public const string
-                HelloRealm = "HR",
-                NumberOfPlayers = "NoP";
+            HelloRealm = "HR",
+            NumberOfPlayers = "NoP";
 
+        public const string
+            HelloGameServer = "HG";
     }
 }

@@ -22,14 +22,14 @@ namespace SilverGame.Network.Abstract
 
         #region abstracts
 
-        public abstract void OnConnected();
-        public abstract void OnFailedToConnect(Exception e);
-        public abstract void OnSocketClosed();
-        public abstract void DataReceived(string packet);
+        protected abstract void OnConnected();
+        protected abstract void OnFailedToConnect(Exception e);
+        protected abstract void OnSocketClosed();
+        protected abstract void DataReceived(string packet);
 
         #endregion
 
-        public virtual void SendPackets(string packet)
+        public void SendPackets(string packet)
         {
             Console.WriteLine("send >>" + string.Format("{0}\x00", packet));
             Socket.Send(Encoding.UTF8.GetBytes(string.Format("{0}\x00", packet)));

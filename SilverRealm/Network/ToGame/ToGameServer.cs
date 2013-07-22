@@ -4,7 +4,6 @@ using SilverSock;
 
 namespace SilverRealm.Network.ToGame
 {
-
     sealed class ToGameServer : Abstract.Server
     {
         public static List<ToGameClient> Games;
@@ -16,18 +15,20 @@ namespace SilverRealm.Network.ToGame
             Games = new List<ToGameClient>();
         }
 
-        public override void OnListening()
+        protected override void OnListening()
         {
             Console.WriteLine("Waiting for connection to game servers ...");
         }
 
-        public override void OnListeningFailed(Exception e)
+        protected override void OnListeningFailed(Exception e)
         {
             Console.WriteLine("Failed listening server communication verify ip_com or port_com");
         }
 
-        public override void OnSocketAccepted(SilverSocket socket)
+        protected override void OnSocketAccepted(SilverSocket socket)
         {
+            Console.WriteLine("connection with game server " + socket.IP);
+
             lock (Lock)
                 Games.Add(new ToGameClient(socket));
         }

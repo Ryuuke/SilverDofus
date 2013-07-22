@@ -26,3 +26,15 @@ Realm_ip=127.0.0.1
 
 	// port de communication avec le Realm
 Com_port=448
+
+	// serveur de la base de donnée
+Realm_Database_Host=localhost
+
+	// nom d'utilisateur de la base de donnée
+Realm_Database_Username=root
+
+	// mot de passe de la base de donnée
+Realm_Database_Password=
+
+	// nom de la base de donnée
+Realm_Database_Name=SilverEmu

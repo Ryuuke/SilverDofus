@@ -2,5 +2,6 @@
 {
     class Constant
     {
+        public const string ConfigFile = "GameConfig.txt";
     }
 }

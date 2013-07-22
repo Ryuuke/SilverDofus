@@ -1,34 +1,42 @@
 ﻿using System;
 using SilverSock;
+using SilverGame.Services;
 
 namespace SilverGame.Network.Game
 {
-    class GameClient : Abstract.Client
+    sealed class GameClient : Abstract.Client
     {
+        private GameState _gameState;
+
         public GameClient(SilverSocket socket)
             : base(socket)
         {
-
+            SendPackets(Packet.HelloGameServer);
         }
 
-        public override void OnConnected()
+        protected override void OnConnected()
         {
-            throw new NotImplementedException();
+            
         }
 
-        public override void OnFailedToConnect(Exception e)
+        protected override void OnFailedToConnect(Exception e)
         {
-            throw new NotImplementedException();
+            
         }
 
-        public override void OnSocketClosed()
+        protected override void OnSocketClosed()
         {
-            throw new NotImplementedException();
+            
         }
 
-        public override void DataReceived(string packet)
+        protected override void DataReceived(string packet)
         {
-            throw new NotImplementedException();
+            
+        }
+
+        public enum GameState
+        {
+            ReceiveTicket,
         }
     }
 }

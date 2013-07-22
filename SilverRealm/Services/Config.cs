@@ -7,14 +7,14 @@ namespace SilverRealm.Services
 {
     static class Config
     {
-        const string ConfigFile = "RealmConfig.txt";
+        const string ConfigFile = Constant.ConfigFile;
 
         private static Dictionary<string, string> _values;
 
         public static void LoadConfig()
         {
             if(!File.Exists(ConfigFile))
-                throw new Exception("unable to find the file : "+ConfigFile);
+                throw new Exception("Unable to find the file : "+ConfigFile);
 
             _values = new Dictionary<string, string>();
 
@@ -24,7 +24,7 @@ namespace SilverRealm.Services
             {
                 while (!sr.EndOfStream)
                 {
-                    string line = sr.ReadLine();
+                    var line = sr.ReadLine();
 
                     if (line != null && (line.Trim() != string.Empty && line.Trim().StartsWith("//") == false))
                     {
@@ -35,7 +35,7 @@ namespace SilverRealm.Services
             }
             catch (Exception)
             {
-                Console.WriteLine("{0} inexistant ou illisible", ConfigFile);
+                Console.WriteLine("{0} absent or unreadable", ConfigFile);
             }
 
             sr.Close();

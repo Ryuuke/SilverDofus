@@ -48,8 +48,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Database\DbManager.cs" />
-    <Compile Include="Database\Player.cs" />
+    <Compile Include="Database\GameDbManager.cs" />
+    <Compile Include="Database\Characters.cs" />
+    <Compile Include="Database\RealmDbManager.cs" />
     <Compile Include="Network\Abstract\Client.cs" />
     <Compile Include="Network\Abstract\Server.cs" />
     <Compile Include="Network\Game\GameClient.cs" />

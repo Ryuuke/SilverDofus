@@ -1,39 +1,50 @@
 ﻿using System;
 using System.Linq;
-using SilverRealm.Properties;
+using SilverRealm.Network.Realm;
 using SilverSock;
 
 namespace SilverRealm.Network.ToGame
 {
     sealed class ToGameClient : Abstract.Client
     {
-        [UsedImplicitly] private CommunicationState _communicationState;
+        private CommunicationState _communicationState;
+        private string _key;
 
         public ToGameClient(SilverSocket socket)
             : base(socket)
         {
-
+            _communicationState = CommunicationState.VerifyGame;
         }
 
-        public override void OnConnected()
-        {
-            
-        }
-
-        public override void OnFailedToConnect(Exception e)
+        protected override void OnConnected()
         {
            
         }
 
-        public override void OnSocketClosed()
+        protected override void OnFailedToConnect(Exception e)
         {
-            lock (ToGameServer.Lock)
-                ToGameServer.Games.Remove(this);
-
-            Console.WriteLine("Connection closed with Game Server {0}", Socket.IP);
+           
         }
 
-        public override void DataReceived(string packet)
+        protected override void OnSocketClosed()
+        {
+            RealmClient.GameServers.Single(gameServer => gameServer.Key == _key).State = 0;
+
+            lock (RealmServer.Lock)
+            {
+                foreach (var client in RealmServer.Clients)
+                {
+                    client.RefreshServerList();
+                }
+            }
+
+            Console.WriteLine("Connection closed with Game Server {0}", Socket.IP);
+
+            lock (ToGameServer.Lock)
+                ToGameServer.Games.Remove(this);
+        }
+
+        protected override void DataReceived(string packet)
         {
             switch (_communicationState)
             {
@@ -45,16 +56,16 @@ namespace SilverRealm.Network.ToGame
 
         private void VerifyGameServer(string packet)
         {
-            var key = packet.Substring(2);
+            _key = packet.Substring(2);
 
-            if (Database.GameServerRepository.GetAll().Any(x => x.Key == key))
+            RealmClient.GameServers.Single(gameServer => gameServer.Key == _key).State = 1;
+
+            lock (RealmServer.Lock)
             {
-                
-            }
-            else
-            {
-                Console.WriteLine("Cloud not find Game Server with key : {0}", key);
-                OnSocketClosed();
+                foreach (var client in RealmServer.Clients)
+                {
+                    client.RefreshServerList();
+                }
             }
         }
 

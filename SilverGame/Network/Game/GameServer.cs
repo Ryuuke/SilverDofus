@@ -4,29 +4,33 @@ using SilverSock;
 
 namespace SilverGame.Network.Game
 {
-    class GameServer : Abstract.Server
+    sealed class GameServer : Abstract.Server
     {
-        List<GameClient> _clients;
+        public static List<GameClient> Clients;
+        public static Object Lock = new object();
 
         public GameServer()
-            : base(Services.Config.get("Game_ip"), Int32.Parse(Services.Config.get("Game_port")))
+            : base(Services.Config.Get("Game_ip"), Int32.Parse(Services.Config.Get("Game_port")))
         {
-            _clients = new List<GameClient>();
+            Clients = new List<GameClient>();
         }
 
-        public override void OnListening()
+        protected override void OnListening()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Waiting for new connection ...");
         }
 
-        public override void OnListeningFailed(Exception e)
+        protected override void OnListeningFailed(Exception e)
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Listening Failed, check your port or IP address ...");
         }
 
-        public override void OnSocketAccepted(SilverSocket socket)
+        protected override void OnSocketAccepted(SilverSocket socket)
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Connection With host " + socket.IP + " Successfuly");
+
+            lock (Lock)
+                Clients.Add(new GameClient(socket));
         }
     }
 }

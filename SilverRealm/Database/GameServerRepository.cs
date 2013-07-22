@@ -30,7 +30,7 @@ namespace SilverRealm.Database
                             Ip = reader.GetString("ip"),
                             Port = reader.GetInt32("port"),
                             Key = reader.GetString("key"),
-                            State = reader.GetInt16("state"),
+                            State = 0,
                         });
                     }
                     catch (Exception e)

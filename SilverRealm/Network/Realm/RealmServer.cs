@@ -15,7 +15,7 @@ namespace SilverRealm.Network.Realm
             Clients = new List<RealmClient>();
         }
 
-        public override void OnSocketAccepted(SilverSocket socket)
+        protected override void OnSocketAccepted(SilverSocket socket)
         {
             Console.WriteLine("Connection established");
 
@@ -23,12 +23,12 @@ namespace SilverRealm.Network.Realm
                 Clients.Add(new RealmClient(socket));
         }
 
-        public override void OnListening()
+        protected override void OnListening()
         {
             Console.WriteLine("Waiting for new Connexions");
         }
 
-        public override void OnListeningFailed(Exception e)
+        protected override void OnListeningFailed(Exception e)
         {
             Console.WriteLine("Listening Failed : " + e.Message);
         }

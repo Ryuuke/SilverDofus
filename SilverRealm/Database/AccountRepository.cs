@@ -1,22 +1,27 @@
 ﻿using System;
 using MySql.Data.MySqlClient;
 using SilverRealm.Models;
+using Constant = SilverRealm.Services.Constant;
 
 namespace SilverRealm.Database
 {
     static class AccountRepository
     {
-        public static Account GetAccount(string username)
+        public static Account GetAccount<T>(string column, T attribut)
         {
+            if (column != Constant.IdColumnName || column != Constant.PseudoColumnName ||
+                column != Constant.UsernameColumnName)
+                return null;
+
             Account account = null;
 
             lock (DbManager.Lock)
             {
-                const string req = "SELECT * FROM accounts WHERE username=@username";
+                var req = "SELECT * FROM accounts WHERE " + column + "=@attribut";
 
                 var command = new MySqlCommand(req, DbManager.Connection); 
                 
-                command.Parameters.Add(new MySqlParameter("@username", username));
+                command.Parameters.Add(new MySqlParameter("@attribut", attribut));
                     
                 var reader = command.ExecuteReader();
  

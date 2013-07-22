@@ -1,44 +1,53 @@
 ﻿using System;
+using System.Threading;
 using SilverSock;
 
 namespace SilverGame.Network.ToRealm
 {
-    class ToRealmClient : Abstract.Client
+    sealed class ToRealmClient : Abstract.Client
     {
         public ToRealmClient()
             : base(new SilverSocket())
         {
             ConnectToRealm();
-
-            SendPackets(string.Format("{0}", Services.Packet.HelloRealm));
         }
 
         public void ConnectToRealm()
         {
-            Socket.ConnectTo(Services.Config.get("Realm_ip"), Int32.Parse(Services.Config.get("Com_port")));
+            Socket.ConnectTo(Services.Config.Get("Realm_ip"), Int32.Parse(Services.Config.Get("Com_port")));
         }
 
-        public override void OnConnected()
+        protected override void OnConnected()
         {
             Console.WriteLine("Connected to Realm Server Sucessfuly");
+            
+            Thread.Sleep(500);
+
+            SendPackets(string.Format("{0}{1}", Services.Packet.HelloRealm, Services.Config.Get("Game_key")));
         }
 
-        public override void OnFailedToConnect(Exception e)
+        protected override void OnFailedToConnect(Exception e)
         {
             Console.WriteLine("Failed to connect to Realm Server");
+
+            RetryToConnect();
         }
 
-        public override void OnSocketClosed()
+        protected override void OnSocketClosed()
         {
             Console.WriteLine("Connexion To Realm Server closed");
+
+            RetryToConnect();
         }
 
-        public override sealed void SendPackets(string packet)
+        private void RetryToConnect()
         {
-            base.SendPackets(packet);
+            Thread.Sleep(10000);
+
+            ConnectToRealm();
         }
 
-        public override void DataReceived(string packet)
+        protected override void DataReceived(string packet)
         {
             throw new NotImplementedException();
         }

@@ -4,7 +4,7 @@ namespace SilverRealm.Database
 {
     static class Characters
     {
-        public static string GetCharactersByGameServer(int accountId)
+        public static string GetCharactersByGameServer(int accountId, string format)
         {
             var charactersByGameServer = string.Empty;
 
@@ -19,7 +19,7 @@ namespace SilverRealm.Database
                 var reader = command.ExecuteReader();
 
                 while (reader.Read())
-                    charactersByGameServer = string.Concat(charactersByGameServer, string.Format("|{0},{1}",reader.GetInt16("gameServerId"), reader.GetInt16("numberCharacters")));
+                    charactersByGameServer = string.Concat(charactersByGameServer, string.Format(format, reader.GetInt16("gameServerId"), reader.GetInt16("numberCharacters")));
 
                 reader.Close();
             }

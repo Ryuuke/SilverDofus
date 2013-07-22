@@ -20,9 +20,9 @@ namespace SilverRealm.Network.Abstract
 
         #region abstracts
 
-        public abstract void OnSocketAccepted(SilverSocket socket);
-        public abstract void OnListening();
-        public abstract void OnListeningFailed(Exception e);
+        protected abstract void OnSocketAccepted(SilverSocket socket);
+        protected abstract void OnListening();
+        protected abstract void OnListeningFailed(Exception e);
 
         #endregion
     }

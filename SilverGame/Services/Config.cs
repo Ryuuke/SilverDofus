@@ -7,16 +7,16 @@ namespace SilverGame.Services
 {
     static class Config
     {
-        const string ConfigFile = "GameConfig.txt";
+        const string ConfigFile = Constant.ConfigFile;
 
-        private static Dictionary<string, string> values;
+        private static Dictionary<string, string> _values;
 
         public static void LoadConfig()
         {
             if (!File.Exists(ConfigFile))
-                throw new Exception("unable to find the file : " + ConfigFile);
+                throw new Exception("Unable to find the file : " + ConfigFile);
 
-            values = new Dictionary<string, string>();
+            _values = new Dictionary<string, string>();
 
             var sr = new StreamReader(ConfigFile, Encoding.Default);
 
@@ -29,21 +29,21 @@ namespace SilverGame.Services
                     if (line != null && (line.Trim() != string.Empty && line.Trim().StartsWith("//") == false))
                     {
                         var infos = line.Split('=');
-                        values.Add(infos[0].Trim(), infos[1].Trim());
+                        _values.Add(infos[0].Trim(), infos[1].Trim());
                     }
                 }
             }
             catch (Exception)
             {
-                Console.WriteLine("{0} inexistant ou illisible", ConfigFile);
+                Console.WriteLine("{0} absent or unreadable", ConfigFile);
             }
 
             sr.Close();
         }
 
-        public static string get(string info)
+        public static string Get(string info)
         {
-            return values[info];
+            return _values[info];
         }
     }
 }

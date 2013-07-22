@@ -1,4 +1,4 @@
-﻿// Config SilverEmu By Ryuuke
+﻿// Config SilverDofus By Ryuuke
 
 	// Ip du serveur de connexion
 Game_ip=127.0.0.1
@@ -18,7 +18,10 @@ Game_Database_Password=
 	// nom de la base de donnée
 Game_Database_Name=silvergame
 
-	// poript de communication avec le Realm
+	// key du game serveur
+Game_key=lolxdmdrlol
+
+	// port de communication avec le Realm
 Realm_ip=127.0.0.1
 
 	// port de communication avec le Realm
