@@ -66,6 +66,7 @@
     <Compile Include="Services\Config.cs" />
     <Compile Include="Services\Constant.cs" />
     <Compile Include="Services\Hash.cs" />
+    <Compile Include="Services\Logs.cs" />
     <Compile Include="Services\Packet.cs" />
   </ItemGroup>
   <ItemGroup>

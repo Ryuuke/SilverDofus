@@ -10,7 +10,7 @@ namespace SilverRealm.Database
 
             lock (DbManager.Lock)
             {
-                const string req = "Select gameServerId, count(characterId) AS numberCharacters FROM characters WHERE accountId=@accountId GROUP by gameServerId;";
+                const string req = "Select gameServerId, count(characterName) AS numberCharacters FROM characters WHERE accountId=@accountId GROUP by gameServerId;";
 
                 var command = new MySqlCommand(req, DbManager.Connection);
 

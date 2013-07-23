@@ -7,7 +7,7 @@ namespace SilverGame.Network.Abstract
 {
     abstract class Client
     {
-        protected SilverSocket Socket;
+        public SilverSocket Socket;
 
         protected Client(SilverSocket socket)
         {
@@ -24,18 +24,18 @@ namespace SilverGame.Network.Abstract
 
         protected abstract void OnConnected();
         protected abstract void OnFailedToConnect(Exception e);
-        protected abstract void OnSocketClosed();
+        public abstract void OnSocketClosed();
         protected abstract void DataReceived(string packet);
 
         #endregion
 
-        public void SendPackets(string packet)
+        public virtual void SendPackets(string packet)
         {
             Console.WriteLine("send >>" + string.Format("{0}\x00", packet));
             Socket.Send(Encoding.UTF8.GetBytes(string.Format("{0}\x00", packet)));
         }
 
-        public void DataArrival(byte[] data)
+        private void DataArrival(byte[] data)
         {
             foreach (var packet in Encoding.UTF8.GetString(data).Replace("\x0a", "").Split('\x00').Where(x => x != ""))
             {

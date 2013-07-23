@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Globalization;
+using System.Text;
+using SilverRealm.Models;
+using SilverSock;
 
 namespace SilverRealm.Services
 {
@@ -45,6 +49,15 @@ namespace SilverRealm.Services
             }
 
             return crypted;
+        }
+
+        public static string GenerateTicketKey(SilverSocket socket, Account account)
+        {
+            var ticketKey = string.Format("{0}|{1}|{2}", 
+                (DateTime.Now).ToUniversalTime().ToString(CultureInfo.InvariantCulture),
+                    socket.IP, account);
+
+            return ticketKey;
         }
     }
 }

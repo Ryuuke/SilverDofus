@@ -1,5 +1,6 @@
 ﻿using System;
 using MySql.Data.MySqlClient;
+using SilverGame.Services;
 using Config = SilverGame.Services.Config;
 
 namespace SilverGame.Database
@@ -16,7 +17,17 @@ namespace SilverGame.Database
                                         Config.Get("Game_Database_Username"),
                                         Config.Get("Game_Database_Password"),
                                         Config.Get("Game_Database_Name")));
-            Connection.Open();
+            try
+            {
+                Connection.Open();
+
+                Console.WriteLine("Connection to Game database successfully");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("SQL Error : " + e.Message);
+                Logs.LogWritter(Constant.ErrorsFolder, "Game connection database SQL error : " + e.Message);
+            }
         }
     }
 }

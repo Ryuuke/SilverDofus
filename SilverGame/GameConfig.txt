@@ -16,7 +16,7 @@ Game_Database_Username=root
 Game_Database_Password=
 
 	// nom de la base de donnée
-Game_Database_Name=silergame
+Game_Database_Name=silvergame
 
 	// key du game serveur
 Game_key=lolxdmdrlol
@@ -37,4 +37,10 @@ Realm_Database_Username=root
 Realm_Database_Password=
 
 	// nom de la base de donnée
-Realm_Database_Name=SilverEmu
+Realm_Database_Name=SilverEmu*
+
+	// level de départ
+Starting_level=1
+
+	// comunauté 0 : fr
+Community=0

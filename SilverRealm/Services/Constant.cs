@@ -11,5 +11,10 @@
         public const string IdColumnName = "id";
         public const string ServerListFormat = "|{0},{1}";
         public const string FriendsServerListFormat = "{0},{1};";
+
+        public const string
+            ErrorsFolder = "Exceptions_logs",
+            ComFolder = "Com_logs",
+            RealmFolder = "Realm_logs";
     }
 }

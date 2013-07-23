@@ -13,9 +13,9 @@ namespace SilverRealm.Network.Realm
         private readonly string _key;
 
         private StateConnecion _stateConnxion;
-        private Account _account;
+        public Account Account;
 
-        public static List<GameServer> GameServers = Database.GameServerRepository.GetAll();
+        public static List<GameServer> GameServers;
 
         public RealmClient(SilverSocket socket)
             : base(socket)
@@ -27,24 +27,42 @@ namespace SilverRealm.Network.Realm
 
         protected override void OnConnected()
         {
-
+            
         }
 
         protected override void OnFailedToConnect(Exception e)
         {
-            Console.WriteLine("Failed to connect to client");
+            Logs.LogWritter(Constant.ErrorsFolder, _stateConnxion == StateConnecion.CheckingServer
+                 ? string.Format("{0}:ip {1} {2}", Account.Username, Socket.IP, e.Message)
+                 : string.Format("ip {0} {1}", Socket.IP, e.Message));
         }
 
         protected override void OnSocketClosed()
         {
             Console.WriteLine("Connection closed");
+            Logs.LogWritter(Constant.RealmFolder, _stateConnxion == StateConnecion.CheckingServer
+                ? string.Format("{0}:ip {1}  Connection closed", Account.Username, Socket.IP)
+                : string.Format("ip {0} Connection closed", Socket.IP));
 
             lock (RealmServer.Lock)
                 RealmServer.Clients.Remove(this);
         }
 
+        protected override void SendPackets(string packet)
+        {
+            base.SendPackets(packet);
+
+            Logs.LogWritter(Constant.RealmFolder, _stateConnxion == StateConnecion.CheckingServer
+                ? string.Format("{0}:ip {1} Send >> {2}", Account.Username, Socket.IP, packet)
+                : string.Format("ip {0} Send >> {1}", Socket.IP, packet));
+        }
+
         protected override void DataReceived(string packet)
         {
+            Logs.LogWritter(Constant.RealmFolder, _stateConnxion == StateConnecion.CheckingServer 
+                ? string.Format("{0}:ip {1} Recv << {2}", Account.Username, Socket.IP, packet)
+                : string.Format("ip {0} Recv << {1}", Socket.IP, packet));
+
             switch (_stateConnxion)
             {
                 case StateConnecion.CheckingVersion:
@@ -75,32 +93,32 @@ namespace SilverRealm.Network.Realm
             var username = packet.Split('#')[0];
             var password = packet.Split('#')[1];
 
-            _account = Database.AccountRepository.GetAccount(Constant.UsernameColumnName, username);
+            Account = Database.AccountRepository.GetAccount(Constant.UsernameColumnName, username);
 
-            if (_account == null || Hash.Encrypt(_account.Password, _key) != password)
+            if (Account == null || Hash.Encrypt(Account.Password, _key) != password)
             {
                 SendPackets(Packet.WrongDofusAccount);
                 OnSocketClosed();
             }
-            else if (RealmServer.Clients.Count(x => x._account.Username == username) > 1)
+            else if (RealmServer.Clients.Count(x => x.Account.Username == username) > 1)
             {
                 SendPackets(Packet.AlredyConnected);
                 OnSocketClosed();
             }
-            else if (_account.BannedUntil != null && _account.BannedUntil > DateTime.Now)
+            else if (Account.BannedUntil != null && Account.BannedUntil > DateTime.Now)
             {
                 SendPackets(Packet.BannedAccount);
                 OnSocketClosed();
             }
             else
             {
-                SendPackets(string.Format("{0}{1}", Packet.DofusPseudo, _account.Pseudo));
+                SendPackets(string.Format("{0}{1}", Packet.DofusPseudo, Account.Pseudo));
                 SendPackets(string.Format("{0}{1}", Packet.Community, 0)); // 0 : communauté fr
 
                 RefreshServerList();
 
-                SendPackets(string.Format("{0}{1}", Packet.IsAdmin, _account.GmLevel > 0 ? 1 : 0));
-                SendPackets(string.Format("{0}{1}", Packet.SecretQuestion, _account.Question.Replace(" ", "+")));
+                SendPackets(string.Format("{0}{1}", Packet.IsAdmin, Account.GmLevel > 0 ? 1 : 0));
+                SendPackets(string.Format("{0}{1}", Packet.SecretQuestion, Account.Question.Replace(" ", "+")));
             }
         }
 
@@ -141,18 +159,15 @@ namespace SilverRealm.Network.Realm
 
         private void SendServersList()
         {
-            var listCharactersByGameServer = Database.Characters.GetCharactersByGameServer(_account.Id, Constant.ServerListFormat);
+            var listCharactersByGameServer = Database.Characters.GetCharactersByGameServer(Account.Id, Constant.ServerListFormat);
 
             if (bool.Parse(Config.Get("subscription")))
             {
-                if (_account.Subscription == null || DateTime.Now >= _account.Subscription.Value)
-                {
-                    SendPackets(string.Format("{0}{1}{2}", Packet.SubscriptionPlayerList, Constant.DiscoveryMode, listCharactersByGameServer));
-                }
-                else
-                {
-                    SendPackets(string.Format("{0}{1}{2}", Packet.SubscriptionPlayerList, (_account.Subscription.Value - DateTime.Now).TotalMilliseconds.ToString(CultureInfo.InvariantCulture).Split(',')[0], listCharactersByGameServer));
-                }
+                SendPackets(string.Format("{0}{1}{2}", Packet.SubscriptionPlayerList, 
+                        (Account.Subscription == null || DateTime.Now >= Account.Subscription.Value)
+                            ? (object) Constant.DiscoveryMode
+                            : (Account.Subscription.Value - DateTime.Now).TotalMilliseconds.ToString(CultureInfo.InvariantCulture).Split(',')[0], 
+                    listCharactersByGameServer));
             }
             else
             {
@@ -178,7 +193,7 @@ namespace SilverRealm.Network.Realm
         {
             var gameServerId = Int32.Parse(packet.Substring(2));
 
-            var gameServer = GameServers.Single(x => x.Id == gameServerId);
+            var gameServer = GameServers.Single(gS => gS.Id == gameServerId);
 
             if (gameServer == null)
                 return;
@@ -186,7 +201,7 @@ namespace SilverRealm.Network.Realm
             SendPackets(gameServer.State == 0
                 ? Packet.UnavailableServer
                 : string.Format("{0}{1}:{2};{3}", Packet.ConnectToGameServer, gameServer.Ip, gameServer.Port,
-                    Hash.RandomString(20)));
+                    Hash.GenerateTicketKey(Socket, Account)));
         }
 
         public enum StateConnecion

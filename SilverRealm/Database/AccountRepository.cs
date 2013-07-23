@@ -1,6 +1,7 @@
 ﻿using System;
 using MySql.Data.MySqlClient;
 using SilverRealm.Models;
+using SilverRealm.Services;
 using Constant = SilverRealm.Services.Constant;
 
 namespace SilverRealm.Database
@@ -9,10 +10,6 @@ namespace SilverRealm.Database
     {
         public static Account GetAccount<T>(string column, T attribut)
         {
-            if (column != Constant.IdColumnName || column != Constant.PseudoColumnName ||
-                column != Constant.UsernameColumnName)
-                return null;
-
             Account account = null;
 
             lock (DbManager.Lock)
@@ -46,6 +43,7 @@ namespace SilverRealm.Database
                     catch (Exception e)
                     {
                         Console.WriteLine("SQL Error " + e.Message);
+                        Logs.LogWritter(Constant.ErrorsFolder, "SQL Error :" + e.Message);
                     }
                 }
 

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading;
 using SilverSock;
+using Constant = SilverGame.Services.Constant;
 
 namespace SilverGame.Network.ToRealm
 {
@@ -33,7 +34,7 @@ namespace SilverGame.Network.ToRealm
             RetryToConnect();
         }
 
-        protected override void OnSocketClosed()
+        public override void OnSocketClosed()
         {
             Console.WriteLine("Connexion To Realm Server closed");
 
@@ -42,7 +43,7 @@ namespace SilverGame.Network.ToRealm
 
         private void RetryToConnect()
         {
-            Thread.Sleep(10000);
+            Thread.Sleep(Constant.TimeIntervalToReconnectToRealmServer);
 
             ConnectToRealm();
         }

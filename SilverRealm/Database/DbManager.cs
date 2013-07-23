@@ -1,5 +1,6 @@
 ﻿using System;
 using MySql.Data.MySqlClient;
+using SilverRealm.Services;
 using Config = SilverRealm.Services.Config;
 
 namespace SilverRealm.Database
@@ -16,9 +17,17 @@ namespace SilverRealm.Database
                                         Config.Get("Realm_Database_Username"),
                                         Config.Get("Realm_Database_Password"),
                                         Config.Get("Realm_Database_Name")));
-            Connection.Open();
+            try
+            {
+                Connection.Open();
 
-            Console.WriteLine("Connection to database successfully");
+                Console.WriteLine("Connection to database successfully");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("SQL Error : "+ e.Message);
+                Logs.LogWritter(Constant.ErrorsFolder, "SQL error : " + e.Message);
+            }
         }
     }
 }

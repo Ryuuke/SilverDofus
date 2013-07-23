@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Linq;
 using SilverRealm.Network.Realm;
+using SilverRealm.Services;
 using SilverSock;
 
 namespace SilverRealm.Network.ToGame
 {
     sealed class ToGameClient : Abstract.Client
     {
-        private CommunicationState _communicationState;
+        private readonly CommunicationState _communicationState;
         private string _key;
 
         public ToGameClient(SilverSocket socket)
@@ -28,7 +29,15 @@ namespace SilverRealm.Network.ToGame
 
         protected override void OnSocketClosed()
         {
-            RealmClient.GameServers.Single(gameServer => gameServer.Key == _key).State = 0;
+            try
+            {
+                RealmClient.GameServers.Single(gameServer => gameServer.ServerKey == _key).State = 0;
+            }
+            catch (Exception e)
+            { 
+                Console.WriteLine(e.Message);
+            }
+            
 
             lock (RealmServer.Lock)
             {
@@ -39,6 +48,7 @@ namespace SilverRealm.Network.ToGame
             }
 
             Console.WriteLine("Connection closed with Game Server {0}", Socket.IP);
+            Logs.LogWritter(Constant.ComFolder, string.Format("Connection closed with Game Server {0}", Socket.IP));
 
             lock (ToGameServer.Lock)
                 ToGameServer.Games.Remove(this);
@@ -46,6 +56,8 @@ namespace SilverRealm.Network.ToGame
 
         protected override void DataReceived(string packet)
         {
+            Logs.LogWritter(Constant.ComFolder, string.Format("Recv << {0}", packet));
+
             switch (_communicationState)
             {
                 case CommunicationState.VerifyGame :
@@ -58,7 +70,7 @@ namespace SilverRealm.Network.ToGame
         {
             _key = packet.Substring(2);
 
-            RealmClient.GameServers.Single(gameServer => gameServer.Key == _key).State = 1;
+            RealmClient.GameServers.Single(gameServer => gameServer.ServerKey == _key).State = 1;
 
             lock (RealmServer.Lock)
             {

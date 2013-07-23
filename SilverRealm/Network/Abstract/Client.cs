@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Text;
+using SilverRealm.Services;
 using SilverSock;
 
 namespace SilverRealm.Network.Abstract
@@ -29,7 +30,7 @@ namespace SilverRealm.Network.Abstract
 
         #endregion
 
-        protected void SendPackets(string packet)
+        protected virtual void SendPackets(string packet)
         {
             Console.WriteLine("send >>" + string.Format("{0}\x00", packet));
             Socket.Send(Encoding.UTF8.GetBytes(string.Format("{0}\x00", packet)));

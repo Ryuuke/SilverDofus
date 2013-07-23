@@ -1,15 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.IO;
 using System.Linq;
-using System.Reflection;
-using System.Reflection.Emit;
-using System.Runtime.Serialization.Formatters.Binary;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace SilverRealm.Models
+namespace SilverGame.Models
 {
-    [Serializable]
     class Account
     {
         public int Id { get; set; }
@@ -22,11 +18,5 @@ namespace SilverRealm.Models
         public int GmLevel { get; set; }
         public DateTime? BannedUntil { get; set; }
         public DateTime? Subscription { get; set; }
-
-        public override string ToString()
-        {
-            return string.Format("{0},{1},{2},{3},{4},{5},{6},{7},{8},{9}",
-                Id, Username, Password, Pseudo, Question, Reponse, Connected, GmLevel, BannedUntil, Subscription);
-        }
     }
 }

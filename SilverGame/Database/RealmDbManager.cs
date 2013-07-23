@@ -2,7 +2,7 @@
 using MySql.Data.MySqlClient;
 using SilverGame.Services;
 
-namespace SilverRealm.Database
+namespace SilverGame.Database
 {
     class RealmDbManager
     {
@@ -16,9 +16,17 @@ namespace SilverRealm.Database
                                         Config.Get("Realm_Database_Username"),
                                         Config.Get("Realm_Database_Password"),
                                         Config.Get("Realm_Database_Name")));
-            Connection.Open();
+            try
+            {
+                Connection.Open();
 
-            Console.WriteLine("Connection to database successfully");
+                Console.WriteLine("Connection to Realm database successfully");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("SQL Error : " + e.Message);
+                Logs.LogWritter(Constant.ErrorsFolder, "Realm connection database SQL error : " + e.Message);
+            }
         }
     }
 }

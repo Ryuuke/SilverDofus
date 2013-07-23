@@ -5,7 +5,7 @@
         public int Id { get; set; }
         public string Ip { get; set; }
         public int Port { get; set; }
-        public string Key { get; set; }
+        public string ServerKey { get; set; }
         public int State { get; set; }
 
         public override string ToString()
