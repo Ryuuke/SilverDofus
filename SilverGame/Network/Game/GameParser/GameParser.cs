@@ -120,7 +120,6 @@ namespace SilverGame.Network.Game.GameParser
 
         private void GenerateName(string data)
         {
-            Console.WriteLine(_client.Account.Username+ "parser random name ..");
             _client.SendPackets(string.Format("{0}{1}", Packet.CharacterNameGeneratedResponse, Algorithm.GenerateRandomName()));
         }
 
