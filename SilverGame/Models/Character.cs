@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace SilverGame.Models
 {
@@ -17,10 +13,6 @@ namespace SilverGame.Models
         public int Color1 { get; set; }
         public int Color2 { get; set; }
         public int Color3 { get; set; }
-
-        public Character()
-        {
-            Level = int.Parse(Services.Config.Get("Starting_level"));
-        }
+        public List<Item> ItemList { get; set; }
     }
 }

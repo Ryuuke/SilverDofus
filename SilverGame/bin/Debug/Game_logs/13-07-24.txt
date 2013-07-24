@@ -1,0 +1,955 @@
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:31388 Successfuly
+ip 127.0.0.1:31388 Send >> HG
+ip 127.0.0.1:31388 Recv << AT07/24/2013 16:51:05|127.0.0.1:31387|2,Ryuuke,lool,Ryuu,noob ?,OUIIII,False,5,,
+Ryuuke:ip 127.0.0.1:31388 Send >> ATK0
+Ryuuke:ip 127.0.0.1:31388 Recv << Ak0
+Ryuuke:ip 127.0.0.1:31388 Recv << AV
+Ryuuke:ip 127.0.0.1:31388 Send >> AV0
+Ryuuke:ip 127.0.0.1:31388 Recv << Agfr
+Ryuuke:ip 127.0.0.1:31388 Recv << Ai1jlQxn2QQT7Z6412
+Ryuuke:ip 127.0.0.1:31388 Recv << AL
+Ryuuke:ip 127.0.0.1:31388 Recv << Af
+Ryuuke:ip 127.0.0.1:31388 Recv << Af
+Ryuuke:ip 127.0.0.1:31388 Recv << Af
+Ryuuke:ip 127.0.0.1:31388 Recv << Af
+Ryuuke:ip 127.0.0.1:31388 Recv << Af
+Ryuuke:ip 127.0.0.1:31388 Connection Closed
+GameServer Connection With host 127.0.0.1:31397 Successfuly
+ip 127.0.0.1:31397 Send >> HG
+ip 127.0.0.1:31397 Recv << AT07/24/2013 16:52:00|127.0.0.1:31396|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,25/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:31397 Send >> ATK0
+Ryuu:ip 127.0.0.1:31397 Recv << Ak0
+Ryuu:ip 127.0.0.1:31397 Recv << AV
+Ryuu:ip 127.0.0.1:31397 Send >> AV0
+Ryuu:ip 127.0.0.1:31397 Recv << Agfr
+Ryuu:ip 127.0.0.1:31397 Recv << Ai1jlQxn2QQT7Z6412
+Ryuu:ip 127.0.0.1:31397 Recv << AL
+Ryuu:ip 127.0.0.1:31397 Send >> ALK70624012.4632|0
+Ryuu:ip 127.0.0.1:31397 Recv << Af
+Ryuu:ip 127.0.0.1:31397 Recv << AP
+Ryuu:ip 127.0.0.1:31397 Send >> APKkibomame
+Ryuu:ip 127.0.0.1:31397 Recv << AP
+Ryuu:ip 127.0.0.1:31397 Send >> APKdivuxihoq
+Ryuu:ip 127.0.0.1:31397 Recv << AP
+Ryuu:ip 127.0.0.1:31397 Send >> APKsenedoso
+Ryuu:ip 127.0.0.1:31397 Recv << AAsenedoso|2|1|5399723|-1|-1
+Création du personnage senedoso
+Ryuu:ip 127.0.0.1:31397 Send >> AAK
+Ryuu:ip 127.0.0.1:31397 Connection Closed
+GameServer Connection With host 127.0.0.1:31402 Successfuly
+ip 127.0.0.1:31402 Send >> HG
+ip 127.0.0.1:31402 Recv << AT07/24/2013 16:53:25|127.0.0.1:31401|2,Ryuuke,lool,Ryuu,noob ?,OUIIII,False,5,,
+Ryuuke:ip 127.0.0.1:31402 Send >> ATK0
+Ryuuke:ip 127.0.0.1:31402 Recv << Ak0
+Ryuuke:ip 127.0.0.1:31402 Recv << AV
+Ryuuke:ip 127.0.0.1:31402 Send >> AV0
+Ryuuke:ip 127.0.0.1:31402 Recv << Agfr
+Ryuuke:ip 127.0.0.1:31402 Recv << AL
+Ryuuke:ip 127.0.0.1:31402 Recv << Af
+Ryuuke:ip 127.0.0.1:31402 Recv << Af
+Ryuuke:ip 127.0.0.1:31402 Recv << Af
+Ryuuke:ip 127.0.0.1:31402 Recv << Af
+Ryuuke:ip 127.0.0.1:31402 Recv << Af
+Ryuuke:ip 127.0.0.1:31402 Recv << Af
+Ryuuke:ip 127.0.0.1:31402 Recv << Af
+Ryuuke:ip 127.0.0.1:31402 Recv << Af
+Ryuuke:ip 127.0.0.1:31402 Recv << Af
+Ryuuke:ip 127.0.0.1:31402 Recv << Af
+Ryuuke:ip 127.0.0.1:31402 Recv << Af
+Ryuuke:ip 127.0.0.1:31402 Recv << Af
+Ryuuke:ip 127.0.0.1:31402 Recv << Af
+Ryuuke:ip 127.0.0.1:31402 Connection Closed
+GameServer Connection With host 127.0.0.1:31409 Successfuly
+ip 127.0.0.1:31409 Send >> HG
+ip 127.0.0.1:31409 Recv << AT07/24/2013 16:54:40|127.0.0.1:31408|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,25/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:31409 Send >> ATK0
+Ryuu:ip 127.0.0.1:31409 Recv << Ak0
+Ryuu:ip 127.0.0.1:31409 Recv << AV
+Ryuu:ip 127.0.0.1:31409 Send >> AV0
+Ryuu:ip 127.0.0.1:31409 Recv << Agfr
+Ryuu:ip 127.0.0.1:31409 Recv << AL
+Ryuu:ip 127.0.0.1:31409 Send >> ALK70464063.348|0
+Ryuu:ip 127.0.0.1:31409 Recv << Af
+Ryuu:ip 127.0.0.1:31409 Recv << ALf
+Ryuu:ip 127.0.0.1:31409 Send >> ALK70463086.1756|0
+Ryuu:ip 127.0.0.1:31409 Connection Closed
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:31425 Successfuly
+ip 127.0.0.1:31425 Send >> HG
+ip 127.0.0.1:31425 Recv << AT07/24/2013 17:02:01|127.0.0.1:31424|2,Ryuuke,lool,Ryuu,noob ?,OUIIII,False,5,,
+Ryuuke:ip 127.0.0.1:31425 Send >> ATK0
+Ryuuke:ip 127.0.0.1:31425 Recv << Ak0
+Ryuuke:ip 127.0.0.1:31425 Recv << AV
+Ryuuke:ip 127.0.0.1:31425 Send >> AV0
+Ryuuke:ip 127.0.0.1:31425 Recv << Agfr
+Ryuuke:ip 127.0.0.1:31425 Recv << Ai1jlQxn2QQT7Z6412
+Ryuuke:ip 127.0.0.1:31425 Recv << AL
+Ryuuke:ip 127.0.0.1:31425 Connection Closed
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:31445 Successfuly
+ip 127.0.0.1:31445 Send >> HG
+ip 127.0.0.1:31445 Recv << AT07/24/2013 17:05:13|127.0.0.1:31444|2,Ryuuke,lool,Ryuu,noob ?,OUIIII,False,5,,
+Ryuuke:ip 127.0.0.1:31445 Send >> ATK0
+Ryuuke:ip 127.0.0.1:31445 Recv << Ak0
+Ryuuke:ip 127.0.0.1:31445 Recv << AV
+Ryuuke:ip 127.0.0.1:31445 Send >> AV0
+Ryuuke:ip 127.0.0.1:31445 Recv << Agfr
+Ryuuke:ip 127.0.0.1:31445 Recv << Ai1jlQxn2QQT7Z6412
+Ryuuke:ip 127.0.0.1:31445 Recv << AL
+Ryuuke:ip 127.0.0.1:31445 Send >> ALK0|0
+Ryuuke:ip 127.0.0.1:31445 Recv << Af
+Ryuuke:ip 127.0.0.1:31445 Recv << AP
+Ryuuke:ip 127.0.0.1:31445 Send >> APKbata
+Ryuuke:ip 127.0.0.1:31445 Recv << AP
+Ryuuke:ip 127.0.0.1:31445 Send >> APKhovaren
+Ryuuke:ip 127.0.0.1:31445 Recv << AP
+Ryuuke:ip 127.0.0.1:31445 Send >> APKcuf
+Ryuuke:ip 127.0.0.1:31445 Recv << AAcuf|1|1|-1|-1|-1
+Création du personnage cuf
+Ryuuke:ip 127.0.0.1:31445 Send >> AAK
+Ryuuke:ip 127.0.0.1:31445 Recv << ALf
+Ryuuke:ip 127.0.0.1:31445 Send >> ALK0|0
+Ryuuke:ip 127.0.0.1:31445 Connection Closed
+GameServer Connection With host 127.0.0.1:31450 Successfuly
+ip 127.0.0.1:31450 Send >> HG
+ip 127.0.0.1:31450 Recv << AT07/24/2013 17:05:46|127.0.0.1:31449|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,25/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:31450 Send >> ATK0
+Ryuu:ip 127.0.0.1:31450 Recv << Ak0
+Ryuu:ip 127.0.0.1:31450 Recv << AV
+Ryuu:ip 127.0.0.1:31450 Send >> AV0
+Ryuu:ip 127.0.0.1:31450 Recv << Agfr
+Ryuu:ip 127.0.0.1:31450 Recv << AL
+Ryuu:ip 127.0.0.1:31450 Send >> ALK69797826.1271|0
+Ryuu:ip 127.0.0.1:31450 Recv << Af
+Ryuu:ip 127.0.0.1:31450 Recv << AP
+Ryuu:ip 127.0.0.1:31450 Send >> APKcacew
+Ryuu:ip 127.0.0.1:31450 Recv << AAcacew|6|0|2712997|5285161|16711165
+Création du personnage cacew
+Ryuu:ip 127.0.0.1:31450 Send >> AAK
+Ryuu:ip 127.0.0.1:31450 Recv << ALf
+Ryuu:ip 127.0.0.1:31450 Send >> ALK69757266.1144|0
+Ryuu:ip 127.0.0.1:31450 Connection Closed
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:31496 Successfuly
+ip 127.0.0.1:31496 Send >> HG
+ip 127.0.0.1:31496 Recv << AT07/24/2013 17:07:49|127.0.0.1:31495|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,25/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:31496 Send >> ATK0
+Ryuu:ip 127.0.0.1:31496 Recv << Ak0
+Ryuu:ip 127.0.0.1:31496 Recv << AV
+Ryuu:ip 127.0.0.1:31496 Send >> AV0
+Ryuu:ip 127.0.0.1:31496 Recv << Agfr
+Ryuu:ip 127.0.0.1:31496 Recv << AL
+Ryuu:ip 127.0.0.1:31496 Send >> ALK69674500|0
+Ryuu:ip 127.0.0.1:31496 Recv << Af
+Ryuu:ip 127.0.0.1:31496 Recv << AP
+Ryuu:ip 127.0.0.1:31496 Send >> APKfaden
+Ryuu:ip 127.0.0.1:31496 Recv << ALf
+Ryuu:ip 127.0.0.1:31496 Send >> ALK69669107|0
+Ryuu:ip 127.0.0.1:31496 Connection Closed
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:31506 Successfuly
+ip 127.0.0.1:31506 Send >> HG
+ip 127.0.0.1:31506 Recv << AT07/24/2013 17:09:22|127.0.0.1:31505|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,25/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:31506 Send >> ATK0
+Ryuu:ip 127.0.0.1:31506 Recv << Ak0
+Ryuu:ip 127.0.0.1:31506 Recv << AV
+Ryuu:ip 127.0.0.1:31506 Send >> AV0
+Ryuu:ip 127.0.0.1:31506 Recv << Agfr
+Ryuu:ip 127.0.0.1:31506 Recv << AL
+Ryuu:ip 127.0.0.1:31506 Send >> ALK69582035|0
+Ryuu:ip 127.0.0.1:31506 Recv << Af
+Ryuu:ip 127.0.0.1:31506 Recv << AP
+Ryuu:ip 127.0.0.1:31506 Send >> APKcefaroxo
+Ryuu:ip 127.0.0.1:31506 Recv << AAcefaroxo|12|1|-1|-1|-1
+Création du personnage cefaroxo
+Ryuu:ip 127.0.0.1:31506 Send >> AAK
+Ryuu:ip 127.0.0.1:31506 Recv << ALf
+Ryuu:ip 127.0.0.1:31506 Send >> ALK69546042|0
+Ryuu:ip 127.0.0.1:31506 Connection Closed
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:31523 Successfuly
+ip 127.0.0.1:31523 Send >> HG
+ip 127.0.0.1:31523 Recv << AT07/24/2013 17:15:30|127.0.0.1:31522|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,25/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:31523 Send >> ATK0
+Ryuu:ip 127.0.0.1:31523 Recv << Ak0
+Ryuu:ip 127.0.0.1:31523 Recv << AV
+Ryuu:ip 127.0.0.1:31523 Send >> AV0
+Ryuu:ip 127.0.0.1:31523 Recv << Agfr
+Ryuu:ip 127.0.0.1:31523 Recv << AL
+Ryuu:ip 127.0.0.1:31523 Send >> ALK69213968|0
+Ryuu:ip 127.0.0.1:31523 Recv << Af
+Ryuu:ip 127.0.0.1:31523 Recv << ALf
+Ryuu:ip 127.0.0.1:31523 Send >> ALK69205471|0
+Ryuu:ip 127.0.0.1:31523 Connection Closed
+GameServer Connection With host 127.0.0.1:31526 Successfuly
+ip 127.0.0.1:31526 Send >> HG
+ip 127.0.0.1:31526 Recv << AT07/24/2013 17:15:54|127.0.0.1:31524|2,Ryuuke,lool,Ryuu,noob ?,OUIIII,False,5,,
+Ryuuke:ip 127.0.0.1:31526 Send >> ATK0
+Ryuuke:ip 127.0.0.1:31526 Recv << Ak0
+Ryuuke:ip 127.0.0.1:31526 Recv << AV
+Ryuuke:ip 127.0.0.1:31526 Send >> AV0
+Ryuuke:ip 127.0.0.1:31526 Recv << Agfr
+Ryuuke:ip 127.0.0.1:31526 Recv << AL
+Ryuuke:ip 127.0.0.1:31526 Send >> ALK0|0
+Ryuuke:ip 127.0.0.1:31526 Recv << Af
+GameServer Connection With host 127.0.0.1:31527 Successfuly
+ip 127.0.0.1:31527 Send >> HG
+ip 127.0.0.1:31527 Recv << AT07/24/2013 17:15:55|127.0.0.1:31525|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,25/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:31527 Send >> ATK0
+Ryuu:ip 127.0.0.1:31527 Recv << Ak0
+Ryuu:ip 127.0.0.1:31527 Recv << AV
+Ryuu:ip 127.0.0.1:31527 Send >> AV0
+Ryuu:ip 127.0.0.1:31527 Recv << Agfr
+Ryuu:ip 127.0.0.1:31527 Recv << AL
+Ryuu:ip 127.0.0.1:31527 Send >> ALK69188744|0
+Ryuu:ip 127.0.0.1:31527 Recv << Af
+Ryuuke:ip 127.0.0.1:31526 Recv << AP
+Ryuu:ip 127.0.0.1:31527 Send >> APKfox
+Ryuu:ip 127.0.0.1:31527 Recv << AP
+Ryuu:ip 127.0.0.1:31527 Send >> APKsuqorokoq
+Ryuu:ip 127.0.0.1:31527 Recv << ALf
+Ryuu:ip 127.0.0.1:31527 Send >> ALK69167638|0
+Ryuuke:ip 127.0.0.1:31526 Recv << ALf
+Ryuu:ip 127.0.0.1:31527 Send >> ALK69166999|0
+Ryuu:ip 127.0.0.1:31527 Connection Closed
+GameServer Connection With host 127.0.0.1:31529 Successfuly
+ip 127.0.0.1:31529 Send >> HG
+ip 127.0.0.1:31529 Recv << AT07/24/2013 17:16:47|127.0.0.1:31528|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,25/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:31529 Send >> ATK0
+Ryuu:ip 127.0.0.1:31529 Recv << Ak0
+Ryuu:ip 127.0.0.1:31529 Recv << AV
+Ryuu:ip 127.0.0.1:31529 Send >> AV0
+Ryuu:ip 127.0.0.1:31529 Recv << Agfr
+Ryuu:ip 127.0.0.1:31529 Recv << AL
+Ryuu:ip 127.0.0.1:31529 Send >> ALK69137054|0
+Ryuu:ip 127.0.0.1:31529 Recv << Af
+Ryuuke:ip 127.0.0.1:31526 Connection Closed
+GameServer Connection With host 127.0.0.1:31536 Successfuly
+ip 127.0.0.1:31536 Send >> HG
+ip 127.0.0.1:31536 Recv << AT07/24/2013 17:17:02|127.0.0.1:31535|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,25/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:31536 Send >> ATK0
+Ryuu:ip 127.0.0.1:31536 Recv << Ak0
+Ryuu:ip 127.0.0.1:31536 Recv << AV
+Ryuu:ip 127.0.0.1:31536 Send >> AV0
+Ryuu:ip 127.0.0.1:31536 Recv << Agfr
+Ryuu:ip 127.0.0.1:31536 Recv << AL
+Ryuu:ip 127.0.0.1:31536 Send >> ALK69122001|0
+Ryuu:ip 127.0.0.1:31536 Recv << Af
+Ryuu:ip 127.0.0.1:31529 Recv << ALf
+Ryuu:ip 127.0.0.1:31536 Send >> ALK69118383|0
+Ryuu:ip 127.0.0.1:31536 Recv << ALf
+Ryuu:ip 127.0.0.1:31536 Send >> ALK69101791|0
+Ryuu:ip 127.0.0.1:31536 Recv << AP
+Ryuu:ip 127.0.0.1:31536 Send >> APKnes
+Ryuu:ip 127.0.0.1:31536 Recv << ALf
+Ryuu:ip 127.0.0.1:31536 Send >> ALK69093663|0
+Ryuu:ip 127.0.0.1:31529 Connection Closed
+Ryuu:ip 127.0.0.1:31536 Connection Closed
+GameServer Connection With host 127.0.0.1:31538 Successfuly
+ip 127.0.0.1:31538 Send >> HG
+ip 127.0.0.1:31538 Recv << AT07/24/2013 17:17:53|127.0.0.1:31537|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,25/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:31538 Send >> ATK0
+Ryuu:ip 127.0.0.1:31538 Recv << Ak0
+Ryuu:ip 127.0.0.1:31538 Recv << AV
+Ryuu:ip 127.0.0.1:31538 Send >> AV0
+Ryuu:ip 127.0.0.1:31538 Recv << Agfr
+Ryuu:ip 127.0.0.1:31538 Recv << AL
+Ryuu:ip 127.0.0.1:31538 Send >> ALK69070506|0
+Ryuu:ip 127.0.0.1:31538 Recv << Af
+Ryuu:ip 127.0.0.1:31538 Connection Closed
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:31576 Successfuly
+ip 127.0.0.1:31576 Send >> HG
+ip 127.0.0.1:31576 Recv << AT07/24/2013 17:21:38|127.0.0.1:31569|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,25/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:31576 Send >> ATK0
+Ryuu:ip 127.0.0.1:31576 Recv << Ak0
+Ryuu:ip 127.0.0.1:31576 Recv << AV
+Ryuu:ip 127.0.0.1:31576 Send >> AV0
+Ryuu:ip 127.0.0.1:31576 Recv << Agfr
+Ryuu:ip 127.0.0.1:31576 Recv << AL
+Ryuu:ip 127.0.0.1:31576 Send >> ALK68845947|0
+Ryuu:ip 127.0.0.1:31576 Recv << Af
+Ryuu:ip 127.0.0.1:31576 Recv << ALf
+Ryuu:ip 127.0.0.1:31576 Send >> ALK68833873|0
+Ryuu:ip 127.0.0.1:31576 Connection Closed
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:31596 Successfuly
+ip 127.0.0.1:31596 Send >> HG
+ip 127.0.0.1:31596 Recv << AT07/24/2013 17:25:54|127.0.0.1:31595|2,Ryuuke,lool,Ryuu,noob ?,OUIIII,False,5,,
+Ryuuke:ip 127.0.0.1:31596 Send >> ATK0
+Ryuuke:ip 127.0.0.1:31596 Recv << Ak0
+Ryuuke:ip 127.0.0.1:31596 Recv << AV
+Ryuuke:ip 127.0.0.1:31596 Send >> AV0
+Ryuuke:ip 127.0.0.1:31596 Recv << Agfr
+Ryuuke:ip 127.0.0.1:31596 Recv << AL
+Ryuuke:ip 127.0.0.1:31596 Send >> ALK0|0
+Ryuuke:ip 127.0.0.1:31596 Recv << Af
+GameServer Connection With host 127.0.0.1:31597 Successfuly
+ip 127.0.0.1:31597 Send >> HG
+ip 127.0.0.1:31597 Recv << AT07/24/2013 17:25:54|127.0.0.1:31594|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,25/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:31597 Send >> ATK0
+Ryuu:ip 127.0.0.1:31597 Recv << Ak0
+Ryuu:ip 127.0.0.1:31597 Recv << AV
+Ryuu:ip 127.0.0.1:31597 Send >> AV0
+Ryuu:ip 127.0.0.1:31597 Recv << Agfr
+Ryuu:ip 127.0.0.1:31597 Recv << AL
+Ryuu:ip 127.0.0.1:31597 Send >> ALK68589473|0
+Ryuu:ip 127.0.0.1:31597 Recv << Af
+Ryuuke:ip 127.0.0.1:31596 Recv << ALf
+Ryuu:ip 127.0.0.1:31597 Send >> ALK68587546|0
+Ryuu:ip 127.0.0.1:31597 Recv << ALf
+Ryuu:ip 127.0.0.1:31597 Send >> ALK68579523|0
+Ryuuke:ip 127.0.0.1:31596 Connection Closed
+Ryuu:ip 127.0.0.1:31597 Connection Closed
+GameServer Connection With host 127.0.0.1:31605 Successfuly
+ip 127.0.0.1:31605 Send >> HG
+ip 127.0.0.1:31605 Recv << AT07/24/2013 17:27:15|127.0.0.1:31604|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,25/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:31605 Send >> ATK0
+Ryuu:ip 127.0.0.1:31605 Recv << Ak0
+Ryuu:ip 127.0.0.1:31605 Recv << AV
+Ryuu:ip 127.0.0.1:31605 Send >> AV0
+Ryuu:ip 127.0.0.1:31605 Recv << Agfr
+Ryuu:ip 127.0.0.1:31605 Recv << AL
+Ryuu:ip 127.0.0.1:31605 Send >> ALK68508785|0
+Ryuu:ip 127.0.0.1:31605 Recv << Af
+Ryuu:ip 127.0.0.1:31605 Recv << ALf
+Ryuu:ip 127.0.0.1:31605 Send >> ALK68499659|0
+Ryuu:ip 127.0.0.1:31605 Connection Closed
+GameServer Connection With host 127.0.0.1:31607 Successfuly
+ip 127.0.0.1:31607 Send >> HG
+ip 127.0.0.1:31607 Recv << AT07/24/2013 17:27:40|127.0.0.1:31606|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,25/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:31607 Send >> ATK0
+Ryuu:ip 127.0.0.1:31607 Recv << Ak0
+Ryuu:ip 127.0.0.1:31607 Recv << AV
+Ryuu:ip 127.0.0.1:31607 Send >> AV0
+Ryuu:ip 127.0.0.1:31607 Recv << Agfr
+Ryuu:ip 127.0.0.1:31607 Recv << AL
+Ryuu:ip 127.0.0.1:31607 Send >> ALK68484334|0
+Ryuu:ip 127.0.0.1:31607 Recv << Af
+GameServer Connection With host 127.0.0.1:31608 Successfuly
+ip 127.0.0.1:31608 Send >> HG
+ip 127.0.0.1:31608 Recv << AT07/24/2013 17:27:40|127.0.0.1:31603|2,Ryuuke,lool,Ryuu,noob ?,OUIIII,False,5,,
+Ryuuke:ip 127.0.0.1:31608 Send >> ATK0
+Ryuuke:ip 127.0.0.1:31608 Recv << Ak0
+Ryuuke:ip 127.0.0.1:31608 Recv << AV
+Ryuuke:ip 127.0.0.1:31608 Send >> AV0
+Ryuuke:ip 127.0.0.1:31608 Recv << Agfr
+Ryuuke:ip 127.0.0.1:31608 Recv << AL
+Ryuuke:ip 127.0.0.1:31608 Send >> ALK0|0
+Ryuuke:ip 127.0.0.1:31608 Recv << Af
+Ryuu:ip 127.0.0.1:31607 Recv << ALf
+Ryuuke:ip 127.0.0.1:31608 Send >> ALK0|0
+Ryuuke:ip 127.0.0.1:31608 Recv << ALf
+Ryuuke:ip 127.0.0.1:31608 Send >> ALK0|0
+Ryuuke:ip 127.0.0.1:31608 Connection Closed
+GameServer Connection With host 127.0.0.1:31610 Successfuly
+ip 127.0.0.1:31610 Send >> HG
+ip 127.0.0.1:31610 Recv << AT07/24/2013 17:28:11|127.0.0.1:31609|2,Ryuuke,lool,Ryuu,noob ?,OUIIII,False,5,,
+Ryuuke:ip 127.0.0.1:31610 Send >> ATK0
+Ryuuke:ip 127.0.0.1:31610 Recv << Ak0
+Ryuuke:ip 127.0.0.1:31610 Recv << AV
+Ryuuke:ip 127.0.0.1:31610 Send >> AV0
+Ryuuke:ip 127.0.0.1:31610 Recv << Agfr
+Ryuuke:ip 127.0.0.1:31610 Recv << AL
+Ryuuke:ip 127.0.0.1:31610 Send >> ALK0|0
+Ryuuke:ip 127.0.0.1:31610 Recv << Af
+Ryuuke:ip 127.0.0.1:31610 Recv << AP
+Ryuuke:ip 127.0.0.1:31610 Send >> APKlonumule
+Ryuuke:ip 127.0.0.1:31610 Connection Closed
+Ryuu:ip 127.0.0.1:31607 Connection Closed
+GameServer Connection With host 127.0.0.1:31625 Successfuly
+ip 127.0.0.1:31625 Send >> HG
+ip 127.0.0.1:31625 Recv << AT07/24/2013 17:30:14|127.0.0.1:31624|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,25/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:31625 Send >> ATK0
+Ryuu:ip 127.0.0.1:31625 Recv << Ak0
+Ryuu:ip 127.0.0.1:31625 Recv << AV
+Ryuu:ip 127.0.0.1:31625 Send >> AV0
+Ryuu:ip 127.0.0.1:31625 Recv << Agfr
+Ryuu:ip 127.0.0.1:31625 Recv << AL
+Ryuu:ip 127.0.0.1:31625 Send >> ALK68329752|0
+Ryuu:ip 127.0.0.1:31625 Recv << Af
+GameServer Connection With host 127.0.0.1:31626 Successfuly
+ip 127.0.0.1:31626 Send >> HG
+ip 127.0.0.1:31626 Recv << AT07/24/2013 17:30:15|127.0.0.1:31618|2,Ryuuke,lool,Ryuu,noob ?,OUIIII,False,5,,
+Ryuuke:ip 127.0.0.1:31626 Send >> ATK0
+Ryuuke:ip 127.0.0.1:31626 Recv << Ak0
+Ryuuke:ip 127.0.0.1:31626 Recv << AV
+Ryuuke:ip 127.0.0.1:31626 Send >> AV0
+Ryuuke:ip 127.0.0.1:31626 Recv << Agfr
+Ryuuke:ip 127.0.0.1:31626 Recv << AL
+Ryuuke:ip 127.0.0.1:31626 Send >> ALK0|0
+Ryuuke:ip 127.0.0.1:31626 Recv << Af
+Ryuuke:ip 127.0.0.1:31626 Recv << AP
+Ryuuke:ip 127.0.0.1:31626 Send >> APKmelobupaq
+Ryuu:ip 127.0.0.1:31625 Recv << AP
+Ryuuke:ip 127.0.0.1:31626 Send >> APKhelemer
+Ryuu:ip 127.0.0.1:31625 Recv << AP
+Ryuuke:ip 127.0.0.1:31626 Send >> APKkejunucu
+Ryuu:ip 127.0.0.1:31625 Recv << AP
+Ryuuke:ip 127.0.0.1:31626 Send >> APKpanegequ
+Ryuu:ip 127.0.0.1:31625 Recv << AP
+Ryuuke:ip 127.0.0.1:31626 Send >> APKdehehe
+Ryuu:ip 127.0.0.1:31625 Recv << AP
+Ryuuke:ip 127.0.0.1:31626 Send >> APKhebuse
+Ryuu:ip 127.0.0.1:31625 Recv << AP
+Ryuuke:ip 127.0.0.1:31626 Send >> APKvekuwe
+Ryuu:ip 127.0.0.1:31625 Recv << AP
+Ryuuke:ip 127.0.0.1:31626 Send >> APKpovohif
+Ryuu:ip 127.0.0.1:31625 Recv << AP
+Ryuuke:ip 127.0.0.1:31626 Send >> APKmiporequ
+Ryuu:ip 127.0.0.1:31625 Recv << AP
+Ryuuke:ip 127.0.0.1:31626 Send >> APKnedu
+Ryuu:ip 127.0.0.1:31625 Recv << AP
+Ryuuke:ip 127.0.0.1:31626 Send >> APKtetija
+Ryuu:ip 127.0.0.1:31625 Recv << AP
+Ryuuke:ip 127.0.0.1:31626 Send >> APKqiba
+Ryuu:ip 127.0.0.1:31625 Recv << AP
+Ryuuke:ip 127.0.0.1:31626 Send >> APKxogigib
+Ryuu:ip 127.0.0.1:31625 Connection Closed
+Ryuuke:ip 127.0.0.1:31626 Connection Closed
+GameServer Waiting for new connection
+////
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:31693 Successfuly
+ip 127.0.0.1:31693 Send >> HG
+ip 127.0.0.1:31693 Recv << AT07/24/2013 17:38:13|127.0.0.1:31692|2,Ryuuke,lool,Ryuu,noob ?,OUIIII,False,5,,
+Ryuuke:ip 127.0.0.1:31693 Send >> ATK0
+Ryuuke:ip 127.0.0.1:31693 Recv << Ak0
+Ryuuke:ip 127.0.0.1:31693 Recv << AV
+Ryuuke:ip 127.0.0.1:31693 Send >> AV0
+Ryuuke:ip 127.0.0.1:31693 Recv << Agfr
+Ryuuke:ip 127.0.0.1:31693 Recv << AL
+Ryuuke:ip 127.0.0.1:31693 Send >> ALK0|0
+Ryuuke:ip 127.0.0.1:31693 Recv << Af
+GameServer Connection With host 127.0.0.1:31694 Successfuly
+ip 127.0.0.1:31694 Send >> HG
+ip 127.0.0.1:31694 Recv << AT07/24/2013 17:38:14|127.0.0.1:31691|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,25/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:31694 Send >> ATK0
+Ryuu:ip 127.0.0.1:31694 Recv << Ak0
+Ryuu:ip 127.0.0.1:31694 Recv << AV
+Ryuu:ip 127.0.0.1:31694 Send >> AV0
+Ryuu:ip 127.0.0.1:31694 Recv << Agfr
+Ryuu:ip 127.0.0.1:31694 Recv << AL
+Ryuu:ip 127.0.0.1:31694 Send >> ALK67850176|0
+Ryuu:ip 127.0.0.1:31694 Recv << Af
+Ryuu:ip 127.0.0.1:31694 Recv << AP
+Ryuu:ip 127.0.0.1:31694 Send >> APKjicofidoq
+Ryuuke:ip 127.0.0.1:31693 Recv << AP
+Ryuu:ip 127.0.0.1:31694 Send >> APKsopojifa
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:31707 Successfuly
+ip 127.0.0.1:31707 Send >> HG
+ip 127.0.0.1:31707 Recv << AT07/24/2013 17:42:11|127.0.0.1:31705|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,25/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:31707 Send >> ATK0
+Ryuu:ip 127.0.0.1:31707 Recv << Ak0
+Ryuu:ip 127.0.0.1:31707 Recv << AV
+Ryuu:ip 127.0.0.1:31707 Send >> AV0
+Ryuu:ip 127.0.0.1:31707 Recv << Agfr
+Ryuu:ip 127.0.0.1:31707 Recv << AL
+Ryuu:ip 127.0.0.1:31707 Send >> ALK67613217|0
+Ryuu:ip 127.0.0.1:31707 Recv << Af
+GameServer Connection With host 127.0.0.1:31708 Successfuly
+ip 127.0.0.1:31708 Send >> HG
+ip 127.0.0.1:31708 Recv << AT07/24/2013 17:42:12|127.0.0.1:31706|2,Ryuuke,lool,Ryuu,noob ?,OUIIII,False,5,,
+Ryuuke:ip 127.0.0.1:31708 Send >> ATK0
+Ryuuke:ip 127.0.0.1:31708 Recv << Ak0
+Ryuuke:ip 127.0.0.1:31708 Recv << AV
+Ryuuke:ip 127.0.0.1:31708 Send >> AV0
+Ryuuke:ip 127.0.0.1:31708 Recv << Agfr
+Ryuuke:ip 127.0.0.1:31708 Recv << AL
+Ryuuke:ip 127.0.0.1:31708 Send >> ALK0|0
+Ryuuke:ip 127.0.0.1:31708 Recv << Af
+Ryuuke:ip 127.0.0.1:31708 Recv << AP
+Ryuuke:ip 127.0.0.1:31708 Send >> APKvaw
+Ryuu:ip 127.0.0.1:31707 Recv << AP
+Ryuuke:ip 127.0.0.1:31708 Send >> APKhufokukag
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:31721 Successfuly
+ip 127.0.0.1:31721 Send >> HG
+ip 127.0.0.1:31721 Recv << AT07/24/2013 17:42:42|127.0.0.1:31720|2,Ryuuke,lool,Ryuu,noob ?,OUIIII,False,5,,
+Ryuuke:ip 127.0.0.1:31721 Send >> ATK0
+Ryuuke:ip 127.0.0.1:31721 Recv << Ak0
+Ryuuke:ip 127.0.0.1:31721 Recv << AV
+Ryuuke:ip 127.0.0.1:31721 Send >> AV0
+Ryuuke:ip 127.0.0.1:31721 Recv << Agfr
+Ryuuke:ip 127.0.0.1:31721 Recv << AL
+Ryuuke:ip 127.0.0.1:31721 Send >> ALK0|0
+Ryuuke:ip 127.0.0.1:31721 Recv << Af
+GameServer Connection With host 127.0.0.1:31722 Successfuly
+ip 127.0.0.1:31722 Send >> HG
+ip 127.0.0.1:31722 Recv << AT07/24/2013 17:42:43|127.0.0.1:31719|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,25/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:31722 Send >> ATK0
+Ryuu:ip 127.0.0.1:31722 Recv << Ak0
+Ryuu:ip 127.0.0.1:31722 Recv << AV
+Ryuu:ip 127.0.0.1:31722 Send >> AV0
+Ryuu:ip 127.0.0.1:31722 Recv << Agfr
+Ryuu:ip 127.0.0.1:31722 Recv << AL
+Ryuu:ip 127.0.0.1:31722 Send >> ALK67581233|0
+Ryuu:ip 127.0.0.1:31722 Recv << Af
+Ryuu:ip 127.0.0.1:31722 Recv << AP
+Ryuu:ip 127.0.0.1:31722 Send >> APKluwurigox
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:31738 Successfuly
+ip 127.0.0.1:31738 Send >> HG
+ip 127.0.0.1:31738 Recv << AT07/24/2013 17:45:28|127.0.0.1:31736|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,25/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:31738 Send >> ATK0
+Ryuu:ip 127.0.0.1:31738 Recv << Ak0
+Ryuu:ip 127.0.0.1:31738 Recv << AV
+Ryuu:ip 127.0.0.1:31738 Send >> AV0
+Ryuu:ip 127.0.0.1:31738 Recv << Agfr
+Ryuu:ip 127.0.0.1:31738 Recv << AL
+Ryuu:ip 127.0.0.1:31738 Send >> ALK67415703|0
+Ryuu:ip 127.0.0.1:31738 Recv << Af
+GameServer Connection With host 127.0.0.1:31739 Successfuly
+ip 127.0.0.1:31739 Send >> HG
+ip 127.0.0.1:31739 Recv << AT07/24/2013 17:45:29|127.0.0.1:31737|2,Ryuuke,lool,Ryuu,noob ?,OUIIII,False,5,,
+Ryuuke:ip 127.0.0.1:31739 Send >> ATK0
+Ryuuke:ip 127.0.0.1:31739 Recv << Ak0
+Ryuuke:ip 127.0.0.1:31739 Recv << AV
+Ryuuke:ip 127.0.0.1:31739 Send >> AV0
+Ryuuke:ip 127.0.0.1:31739 Recv << Agfr
+Ryuuke:ip 127.0.0.1:31739 Recv << AL
+Ryuuke:ip 127.0.0.1:31739 Send >> ALK0|0
+Ryuuke:ip 127.0.0.1:31739 Recv << Af
+Ryuu:ip 127.0.0.1:31738 Recv << AP
+Ryuuke:ip 127.0.0.1:31739 Send >> APKrucumupep
+Ryuu:ip 127.0.0.1:31738 Recv << AP
+Ryuuke:ip 127.0.0.1:31739 Send >> APKdolur
+Ryuu:ip 127.0.0.1:31738 Recv << AP
+Ryuuke:ip 127.0.0.1:31739 Send >> APKrotut
+Ryuu:ip 127.0.0.1:31738 Recv << AP
+Ryuuke:ip 127.0.0.1:31739 Send >> APKtoqe
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:31752 Successfuly
+ip 127.0.0.1:31752 Send >> HG
+ip 127.0.0.1:31752 Recv << AT07/24/2013 17:48:35|127.0.0.1:31750|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,25/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:31752 Send >> ATK0
+Ryuu:ip 127.0.0.1:31752 Recv << Ak0
+Ryuu:ip 127.0.0.1:31752 Recv << AV
+Ryuu:ip 127.0.0.1:31752 Send >> AV0
+Ryuu:ip 127.0.0.1:31752 Recv << Agfr
+Ryuu:ip 127.0.0.1:31752 Recv << AL
+Ryuu:ip 127.0.0.1:31752 Send >> ALK67229022|0
+Ryuu:ip 127.0.0.1:31752 Recv << Af
+GameServer Connection With host 127.0.0.1:31756 Successfuly
+ip 127.0.0.1:31756 Send >> HG
+ip 127.0.0.1:31756 Recv << AT07/24/2013 17:49:03|127.0.0.1:31751|2,Ryuuke,lool,Ryuu,noob ?,OUIIII,False,5,,
+Ryuuke:ip 127.0.0.1:31756 Send >> ATK0
+Ryuuke:ip 127.0.0.1:31756 Recv << Ak0
+Ryuuke:ip 127.0.0.1:31756 Recv << AV
+Ryuuke:ip 127.0.0.1:31756 Send >> AV0
+Ryuuke:ip 127.0.0.1:31756 Recv << Agfr
+Ryuuke:ip 127.0.0.1:31756 Recv << AL
+Ryuuke:ip 127.0.0.1:31756 Send >> ALK0|0
+Ryuuke:ip 127.0.0.1:31756 Recv << Af
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:31772 Successfuly
+ip 127.0.0.1:31772 Recv << AT07/24/2013 17:52:35|127.0.0.1:31771|2,Ryuuke,lool,Ryuu,noob ?,OUIIII,False,5,,
+Ryuuke:ip 127.0.0.1:31772 Recv << Ak0
+Ryuuke:ip 127.0.0.1:31772 Recv << AV
+Ryuuke:ip 127.0.0.1:31772 Recv << Agfr
+Ryuuke:ip 127.0.0.1:31772 Recv << AL
+Ryuuke:ip 127.0.0.1:31772 Recv << Af
+GameServer Connection With host 127.0.0.1:31773 Successfuly
+ip 127.0.0.1:31773 Recv << AT07/24/2013 17:52:38|127.0.0.1:31770|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,25/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:31773 Recv << Ak0
+Ryuu:ip 127.0.0.1:31773 Recv << AV
+Ryuu:ip 127.0.0.1:31773 Recv << Agfr
+Ryuu:ip 127.0.0.1:31773 Recv << AL
+Ryuu:ip 127.0.0.1:31773 Recv << Af
+Ryuuke:ip 127.0.0.1:31772 Recv << AP
+Ryuuke:ip 127.0.0.1:31772 Recv << AP
+Ryuuke:ip 127.0.0.1:31772 Recv << AP
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:31786 Successfuly
+ip 127.0.0.1:31786 Send >> HG
+ip 127.0.0.1:31786 Recv << AT07/24/2013 17:53:36|127.0.0.1:31785|2,Ryuuke,lool,Ryuu,noob ?,OUIIII,False,5,,
+Ryuuke:ip 127.0.0.1:31786 Send >> ATK0
+Ryuuke:ip 127.0.0.1:31786 Recv << Ak0
+Ryuuke:ip 127.0.0.1:31786 Recv << AV
+Ryuuke:ip 127.0.0.1:31786 Send >> AV0
+Ryuuke:ip 127.0.0.1:31786 Recv << Agfr
+Ryuuke:ip 127.0.0.1:31786 Recv << AL
+Ryuuke:ip 127.0.0.1:31786 Send >> ALK0|0
+Ryuuke:ip 127.0.0.1:31786 Recv << Af
+GameServer Connection With host 127.0.0.1:31787 Successfuly
+ip 127.0.0.1:31787 Send >> HG
+ip 127.0.0.1:31787 Recv << AT07/24/2013 17:53:37|127.0.0.1:31784|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,25/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:31787 Send >> ATK0
+Ryuu:ip 127.0.0.1:31787 Recv << Ak0
+Ryuu:ip 127.0.0.1:31787 Recv << AV
+Ryuu:ip 127.0.0.1:31787 Send >> AV0
+Ryuu:ip 127.0.0.1:31787 Recv << Agfr
+Ryuu:ip 127.0.0.1:31787 Recv << AL
+Ryuu:ip 127.0.0.1:31787 Send >> ALK66926794|0
+Ryuu:ip 127.0.0.1:31787 Recv << Af
+Ryuuke:ip 127.0.0.1:31786 Recv << AP
+Ryuu:ip 127.0.0.1:31787 Send >> APKjutukirin
+Ryuuke:ip 127.0.0.1:31786 Recv << AAsasasa|5|0|-1|-1|-1
+Création du personnage sasasa dans le compte : 1
+Ryuu:ip 127.0.0.1:31787 Send >> AAK
+Ryuu:ip 127.0.0.1:31787 Recv << ALf
+Ryuu:ip 127.0.0.1:31787 Send >> ALK66869150|0
+Ryuu:ip 127.0.0.1:31787 Connection Closed
+Ryuuke:ip 127.0.0.1:31786 Connection Closed
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:31808 Successfuly
+ip 127.0.0.1:31808 Send >> HG
+ip 127.0.0.1:31808 Recv << AT07/24/2013 17:56:23|127.0.0.1:31803|2,Ryuuke,lool,Ryuu,noob ?,OUIIII,False,5,,
+Ryuuke:ip 127.0.0.1:31808 Send >> ATK0
+Ryuuke:ip 127.0.0.1:31808 Recv << Ak0
+Ryuuke:ip 127.0.0.1:31808 Recv << AV
+Ryuuke:ip 127.0.0.1:31808 Send >> AV0
+Ryuuke:ip 127.0.0.1:31808 Recv << Agfr
+Ryuuke:ip 127.0.0.1:31808 Recv << AL
+Ryuuke:ip 127.0.0.1:31808 Send >> ALK0|0
+Ryuuke:ip 127.0.0.1:31808 Recv << Af
+GameServer Connection With host 127.0.0.1:31809 Successfuly
+ip 127.0.0.1:31809 Send >> HG
+ip 127.0.0.1:31809 Recv << AT07/24/2013 17:56:24|127.0.0.1:31807|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,25/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:31809 Send >> ATK0
+Ryuu:ip 127.0.0.1:31809 Recv << Ak0
+Ryuu:ip 127.0.0.1:31809 Recv << AV
+Ryuu:ip 127.0.0.1:31809 Send >> AV0
+Ryuu:ip 127.0.0.1:31809 Recv << Agfr
+Ryuu:ip 127.0.0.1:31809 Recv << AL
+Ryuu:ip 127.0.0.1:31809 Send >> ALK66759795|0
+Ryuu:ip 127.0.0.1:31809 Recv << Af
+Ryuuke:ip 127.0.0.1:31808 Recv << AP
+Ryuu:ip 127.0.0.1:31809 Send >> APKbotuqul
+Ryuuke:ip 127.0.0.1:31808 Recv << AP
+Ryuu:ip 127.0.0.1:31809 Send >> APKpofusuk
+Ryuuke:ip 127.0.0.1:31808 Recv << AP
+Ryuu:ip 127.0.0.1:31809 Send >> APKkugu
+Ryuuke:ip 127.0.0.1:31808 Recv << AP
+Ryuu:ip 127.0.0.1:31809 Send >> APKvimemalak
+Ryuuke:ip 127.0.0.1:31808 Recv << AP
+Ryuu:ip 127.0.0.1:31809 Send >> APKxohoqebi
+Ryuuke:ip 127.0.0.1:31808 Recv << AP
+Ryuu:ip 127.0.0.1:31809 Send >> APKkose
+Ryuuke:ip 127.0.0.1:31808 Recv << AP
+Ryuu:ip 127.0.0.1:31809 Send >> APKxode
+Ryuuke:ip 127.0.0.1:31808 Connection Closed
+Ryuu:ip 127.0.0.1:31809 Connection Closed
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:31822 Successfuly
+ip 127.0.0.1:31822 Send >> HG
+ip 127.0.0.1:31822 Recv << AT07/24/2013 18:00:07|127.0.0.1:31820|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,25/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:31822 Send >> ATK0
+Ryuu:ip 127.0.0.1:31822 Recv << Ak0
+Ryuu:ip 127.0.0.1:31822 Recv << AV
+Ryuu:ip 127.0.0.1:31822 Send >> AV0
+Ryuu:ip 127.0.0.1:31822 Recv << Agfr
+Ryuu:ip 127.0.0.1:31822 Recv << AL
+Ryuu:ip 127.0.0.1:31822 Send >> ALK66536581|0
+Ryuu:ip 127.0.0.1:31822 Recv << Af
+GameServer Connection With host 127.0.0.1:31823 Successfuly
+ip 127.0.0.1:31823 Send >> HG
+ip 127.0.0.1:31823 Recv << AT07/24/2013 18:00:13|127.0.0.1:31821|2,Ryuuke,lool,Ryuu,noob ?,OUIIII,False,5,,
+Ryuuke:ip 127.0.0.1:31823 Send >> ATK0
+Ryuuke:ip 127.0.0.1:31823 Recv << Ak0
+Ryuuke:ip 127.0.0.1:31823 Recv << AV
+Ryuuke:ip 127.0.0.1:31823 Send >> AV0
+Ryuuke:ip 127.0.0.1:31823 Recv << Agfr
+Ryuuke:ip 127.0.0.1:31823 Recv << AL
+Ryuuke:ip 127.0.0.1:31823 Send >> ALK0|0
+Ryuuke:ip 127.0.0.1:31823 Recv << Af
+Ryuu:ip 127.0.0.1:31822 Recv << AP
+Ryuuke:ip 127.0.0.1:31823 Send >> APKmibuv
+Ryuu:ip 127.0.0.1:31822 Recv << ALf
+Ryuuke:ip 127.0.0.1:31823 Send >> ALK0|0
+Ryuuke:ip 127.0.0.1:31823 Recv << ALf
+Ryuuke:ip 127.0.0.1:31823 Send >> ALK0|0
+Ryuuke:ip 127.0.0.1:31823 Connection Closed
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:31847 Successfuly
+ip 127.0.0.1:31847 Send >> HG
+ip 127.0.0.1:31847 Recv << AT07/24/2013 18:05:01|127.0.0.1:31845|2,Ryuuke,lool,Ryuu,noob ?,OUIIII,False,5,,
+Ryuuke:ip 127.0.0.1:31847 Send >> ATK0
+Ryuuke:ip 127.0.0.1:31847 Recv << Ak0
+Ryuuke:ip 127.0.0.1:31847 Recv << AV
+Ryuuke:ip 127.0.0.1:31847 Send >> AV0
+Ryuuke:ip 127.0.0.1:31847 Recv << Agfr
+Ryuuke:ip 127.0.0.1:31847 Recv << AL
+Ryuuke:ip 127.0.0.1:31847 Send >> ALK0|0
+Ryuuke:ip 127.0.0.1:31847 Recv << Af
+GameServer Connection With host 127.0.0.1:31848 Successfuly
+ip 127.0.0.1:31848 Send >> HG
+ip 127.0.0.1:31848 Recv << AT07/24/2013 18:05:07|127.0.0.1:31846|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,25/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:31848 Send >> ATK0
+Ryuu:ip 127.0.0.1:31848 Recv << Ak0
+Ryuu:ip 127.0.0.1:31848 Recv << AV
+Ryuu:ip 127.0.0.1:31848 Send >> AV0
+Ryuu:ip 127.0.0.1:31848 Recv << Agfr
+Ryuu:ip 127.0.0.1:31848 Recv << AL
+Ryuu:ip 127.0.0.1:31848 Send >> ALK66236574|0
+Ryuu:ip 127.0.0.1:31848 Recv << Af
+Ryuu:ip 127.0.0.1:31848 Recv << AP
+Ryuu:ip 127.0.0.1:31848 Send >> APKmuq
+Ryuuke:ip 127.0.0.1:31847 Recv << AP
+Ryuu:ip 127.0.0.1:31848 Send >> APKlenuto
+Ryuuke:ip 127.0.0.1:31847 Recv << AP
+Ryuu:ip 127.0.0.1:31848 Send >> APKcexap
+Ryuuke:ip 127.0.0.1:31847 Recv << AP
+Ryuu:ip 127.0.0.1:31848 Send >> APKbarufonaw
+Ryuuke:ip 127.0.0.1:31847 Recv << AP
+Ryuu:ip 127.0.0.1:31848 Send >> APKkudak
+Ryuuke:ip 127.0.0.1:31847 Recv << AP
+Ryuu:ip 127.0.0.1:31848 Send >> APKpupoj
+Ryuuke:ip 127.0.0.1:31847 Recv << AP
+Ryuu:ip 127.0.0.1:31848 Send >> APKbubehubo
+Ryuu:ip 127.0.0.1:31848 Recv << AP
+Ryuu:ip 127.0.0.1:31848 Send >> APKcohefes
+Ryuuke:ip 127.0.0.1:31847 Recv << AP
+Ryuu:ip 127.0.0.1:31848 Send >> APKcefuvi
+Ryuuke:ip 127.0.0.1:31847 Recv << AP
+Ryuu:ip 127.0.0.1:31848 Send >> APKsalahem
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:31897 Successfuly
+ip 127.0.0.1:31897 Send >> HG
+ip 127.0.0.1:31897 Recv << AT07/24/2013 18:11:16|127.0.0.1:31895|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,25/07/2013 12:29:05
+ip 127.0.0.1:31897 Connection Closed
+GameServer Connection With host 127.0.0.1:31898 Successfuly
+ip 127.0.0.1:31898 Send >> HG
+ip 127.0.0.1:31898 Recv << AT07/24/2013 18:11:18|127.0.0.1:31896|2,Ryuuke,lool,Ryuu,noob ?,OUIIII,False,5,,
+ip 127.0.0.1:31898 Connection Closed
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:31911 Successfuly
+ip 127.0.0.1:31911 Send >> HG
+ip 127.0.0.1:31911 Recv << AT07/24/2013 18:12:18|127.0.0.1:31910|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,25/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:31911 Send >> ATK0
+Ryuu:ip 127.0.0.1:31911 Recv << Ak0
+Ryuu:ip 127.0.0.1:31911 Recv << AV
+Ryuu:ip 127.0.0.1:31911 Send >> AV0
+Ryuu:ip 127.0.0.1:31911 Recv << Agfr
+Ryuu:ip 127.0.0.1:31911 Recv << AL
+Ryuu:ip 127.0.0.1:31911 Send >> ALK65806314|0
+Ryuu:ip 127.0.0.1:31911 Recv << Af
+GameServer Connection With host 127.0.0.1:31912 Successfuly
+ip 127.0.0.1:31912 Send >> HG
+ip 127.0.0.1:31912 Recv << AT07/24/2013 18:12:24|127.0.0.1:31909|2,Ryuuke,lool,Ryuu,noob ?,OUIIII,False,5,,
+Ryuuke:ip 127.0.0.1:31912 Send >> ATK0
+Ryuuke:ip 127.0.0.1:31912 Recv << Ak0
+Ryuuke:ip 127.0.0.1:31912 Recv << AV
+Ryuuke:ip 127.0.0.1:31912 Send >> AV0
+Ryuuke:ip 127.0.0.1:31912 Recv << Agfr
+Ryuuke:ip 127.0.0.1:31912 Recv << AL
+Ryuuke:ip 127.0.0.1:31912 Send >> ALK0|0
+Ryuuke:ip 127.0.0.1:31912 Recv << Af
+Ryuuke:ip 127.0.0.1:31912 Recv << AP
+Ryuuke:ip 127.0.0.1:31912 Send >> APKbalisoj
+Ryuu:ip 127.0.0.1:31911 Recv << AP
+Ryuuke:ip 127.0.0.1:31912 Send >> APKgenata
+Ryuu:ip 127.0.0.1:31911 Recv << AP
+Ryuuke:ip 127.0.0.1:31912 Send >> APKkoba
+Ryuu:ip 127.0.0.1:31911 Recv << AP
+Ryuuke:ip 127.0.0.1:31912 Send >> APKmoxi
+Ryuu:ip 127.0.0.1:31911 Recv << AP
+Ryuuke:ip 127.0.0.1:31912 Send >> APKredom
+Ryuu:ip 127.0.0.1:31911 Recv << AP
+Ryuuke:ip 127.0.0.1:31912 Send >> APKduwolek
+Ryuu:ip 127.0.0.1:31911 Recv << AP
+Ryuuke:ip 127.0.0.1:31912 Send >> APKmohu
+Ryuuke:ip 127.0.0.1:31912 Recv << AP
+Ryuuke:ip 127.0.0.1:31912 Send >> APKwukidedo
+Ryuu:ip 127.0.0.1:31911 Recv << AAlol|11|0|-1|-1|-1
+Création du personnage lol
+Ryuuke:ip 127.0.0.1:31912 Send >> AAK
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:31927 Successfuly
+ip 127.0.0.1:31927 Send >> HG
+ip 127.0.0.1:31927 Recv << AT07/24/2013 18:15:08|127.0.0.1:31925|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,25/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:31927 Send >> ATK0
+Ryuu:ip 127.0.0.1:31927 Recv << Ak0
+Ryuu:ip 127.0.0.1:31927 Recv << AV
+Ryuu:ip 127.0.0.1:31927 Send >> AV0
+Ryuu:ip 127.0.0.1:31927 Recv << Agfr
+Ryuu:ip 127.0.0.1:31927 Recv << AL
+Ryuu:ip 127.0.0.1:31927 Send >> ALK65635803|0
+Ryuu:ip 127.0.0.1:31927 Recv << Af
+GameServer Connection With host 127.0.0.1:31928 Successfuly
+ip 127.0.0.1:31928 Send >> HG
+ip 127.0.0.1:31928 Recv << AT07/24/2013 18:15:14|127.0.0.1:31926|2,Ryuuke,lool,Ryuu,noob ?,OUIIII,False,5,,
+Ryuuke:ip 127.0.0.1:31928 Send >> ATK0
+Ryuuke:ip 127.0.0.1:31928 Recv << Ak0
+Ryuuke:ip 127.0.0.1:31928 Recv << AV
+Ryuuke:ip 127.0.0.1:31928 Send >> AV0
+Ryuuke:ip 127.0.0.1:31928 Recv << Agfr
+Ryuuke:ip 127.0.0.1:31928 Recv << AL
+Ryuuke:ip 127.0.0.1:31928 Send >> ALK0|0
+Ryuuke:ip 127.0.0.1:31928 Recv << Af
+Ryuu:ip 127.0.0.1:31927 Recv << AP
+Ryuuke:ip 127.0.0.1:31928 Send >> APKxer
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:31941 Successfuly
+ip 127.0.0.1:31941 Send >> HG
+ip 127.0.0.1:31941 Recv << AT07/24/2013 18:17:42|127.0.0.1:31939|2,Ryuuke,lool,Ryuu,noob ?,OUIIII,False,5,,
+Ryuuke:ip 127.0.0.1:31941 Send >> ATK0
+Ryuuke:ip 127.0.0.1:31941 Recv << Ak0
+Ryuuke:ip 127.0.0.1:31941 Recv << AV
+Ryuuke:ip 127.0.0.1:31941 Send >> AV0
+Ryuuke:ip 127.0.0.1:31941 Recv << Agfr
+Ryuuke:ip 127.0.0.1:31941 Recv << AL
+Ryuuke:ip 127.0.0.1:31941 Send >> ALK0|0
+Ryuuke:ip 127.0.0.1:31941 Recv << Af
+GameServer Connection With host 127.0.0.1:31942 Successfuly
+ip 127.0.0.1:31942 Send >> HG
+ip 127.0.0.1:31942 Recv << AT07/24/2013 18:17:43|127.0.0.1:31940|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,25/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:31942 Send >> ATK0
+Ryuu:ip 127.0.0.1:31942 Recv << Ak0
+Ryuu:ip 127.0.0.1:31942 Recv << AV
+Ryuu:ip 127.0.0.1:31942 Send >> AV0
+Ryuu:ip 127.0.0.1:31942 Recv << Agfr
+Ryuu:ip 127.0.0.1:31942 Recv << AL
+Ryuu:ip 127.0.0.1:31942 Send >> ALK65481045|0
+Ryuu:ip 127.0.0.1:31942 Recv << Af
+Ryuu:ip 127.0.0.1:31942 Recv << AP
+Ryuu:ip 127.0.0.1:31942 Send >> APKjowaniriq
+Ryuuke:ip 127.0.0.1:31941 Recv << AP
+Ryuuke:ip 127.0.0.1:31941 Send >> APKmacekog
+Ryuuke:ip 127.0.0.1:31941 Recv << AP
+Ryuuke:ip 127.0.0.1:31941 Send >> APKmoqaq
+Ryuuke:ip 127.0.0.1:31941 Recv << AP
+Ryuuke:ip 127.0.0.1:31941 Send >> APKfakopep
+Ryuu:ip 127.0.0.1:31942 Recv << AP
+Ryuu:ip 127.0.0.1:31942 Send >> APKsehukoh
+Ryuu:ip 127.0.0.1:31942 Recv << ALf
+Ryuu:ip 127.0.0.1:31942 Send >> ALK65457455|0
+Ryuu:ip 127.0.0.1:31942 Connection Closed
+Ryuuke:ip 127.0.0.1:31941 Recv << ALf
+Ryuuke:ip 127.0.0.1:31941 Send >> ALK0|0
+Ryuuke:ip 127.0.0.1:31941 Connection Closed
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection

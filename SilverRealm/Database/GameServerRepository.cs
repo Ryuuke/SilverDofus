@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using MySql.Data.MySqlClient;
-using SilverRealm.Models;
 using SilverRealm.Services;
+using SilverRealm.Models;
 
 namespace SilverRealm.Database
 {
@@ -36,7 +36,7 @@ namespace SilverRealm.Database
                     }
                     catch (Exception e)
                     {
-                        Console.WriteLine("SQL error : " + e.Message);
+                        SilverConsole.WriteLine("SQL error : " + e.Message, ConsoleColor.Red);
                         Logs.LogWritter(Constant.ErrorsFolder, "SQL error : "+ e.Message);
                     }
                 }
@@ -45,7 +45,7 @@ namespace SilverRealm.Database
 
                 if (!gameServers.Any())
                 {
-                    Console.WriteLine("Could not find Game Server On database");
+                    SilverConsole.WriteLine("Warning : Could not find Game Server On database", ConsoleColor.Yellow);
                     Logs.LogWritter(Constant.RealmFolder, "Could not find Game Server On database");
                 }
             }

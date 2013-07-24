@@ -37,10 +37,12 @@ Realm_Database_Username=root
 Realm_Database_Password=
 
 	// nom de la base de donnée
-Realm_Database_Name=SilverEmu*
+Realm_Database_Name=SilverEmu
 
 	// level de départ
 Starting_level=1
 
 	// comunauté 0 : fr
 Community=0
+
+Subscription=true

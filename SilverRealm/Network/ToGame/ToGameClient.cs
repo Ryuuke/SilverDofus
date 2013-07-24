@@ -2,11 +2,12 @@
 using System.Linq;
 using SilverRealm.Network.Realm;
 using SilverRealm.Services;
+using SilverRealm.Network.Abstract;
 using SilverSock;
 
 namespace SilverRealm.Network.ToGame
 {
-    sealed class ToGameClient : Abstract.Client
+    sealed class ToGameClient : Client
     {
         private readonly CommunicationState _communicationState;
         private string _key;
@@ -47,7 +48,7 @@ namespace SilverRealm.Network.ToGame
                 }
             }
 
-            Console.WriteLine("Connection closed with Game Server {0}", Socket.IP);
+            SilverConsole.WriteLine(string.Format("Connection closed with Game Server {0}", Socket.IP), ConsoleColor.Yellow);
             Logs.LogWritter(Constant.ComFolder, string.Format("Connection closed with Game Server {0}", Socket.IP));
 
             lock (ToGameServer.Lock)

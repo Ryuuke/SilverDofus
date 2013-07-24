@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using SilverRealm.Services;
+using SilverRealm.Network.Abstract;
 using SilverSock;
 
 namespace SilverRealm.Network.ToGame
 {
-    sealed class ToGameServer : Abstract.Server
+    sealed class ToGameServer : Server
     {
         public static List<ToGameClient> Games;
         public static Object Lock = new Object();
@@ -24,13 +25,13 @@ namespace SilverRealm.Network.ToGame
 
         protected override void OnListeningFailed(Exception e)
         {
-            Console.WriteLine("Failed listening server communication verify ip_com or port_com");
+            SilverConsole.WriteLine("Com : Failed listening server communication verify ip_com or port_com", ConsoleColor.Red);
             Logs.LogWritter(Constant.ErrorsFolder, string.Format("ComServer {0}", e.Message));
         }
 
         protected override void OnSocketAccepted(SilverSocket socket)
         {
-            Console.WriteLine("Connection successfuly with game server " + socket.IP);
+            SilverConsole.WriteLine("Com : Connection successfuly with game server " + socket.IP, ConsoleColor.Green);
 
             Logs.LogWritter(Constant.ComFolder, string.Format("Connection successfuly with game server {0}", socket.IP));
 

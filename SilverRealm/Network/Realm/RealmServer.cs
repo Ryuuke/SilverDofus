@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using SilverRealm.Services;
+using SilverRealm.Network.Abstract;
 using SilverSock;
 
 namespace SilverRealm.Network.Realm
 {
-    sealed class RealmServer : Abstract.Server
+    sealed class RealmServer : Server
     {
         public static List<RealmClient> Clients;
         public static Object Lock = new Object();
@@ -25,14 +26,14 @@ namespace SilverRealm.Network.Realm
 
         protected override void OnListeningFailed(Exception e)
         {
-            Console.WriteLine("Listening Failed : " + e.Message);
+            SilverConsole.WriteLine("Realm : Listening Failed : " + e.Message, ConsoleColor.Red);
 
             Logs.LogWritter(Constant.RealmFolder, string.Format("RealmServer Listening Failed {0}", e.Message));
         }
 
         protected override void OnSocketAccepted(SilverSocket socket)
         {
-            Console.WriteLine("Connection established");
+            SilverConsole.WriteLine("Realm : New connection established", ConsoleColor.Green);
 
             Logs.LogWritter(Constant.RealmFolder, string.Format("RealmServer Connection successfuly with Realm Client {0}", socket.IP));
 

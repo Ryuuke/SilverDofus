@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using SilverRealm.Models;
+using SilverRealm.Network.Abstract;
 using SilverSock;
 using SilverRealm.Services;
 
 namespace SilverRealm.Network.Realm
 {
-    sealed class RealmClient : Abstract.Client
+    sealed class RealmClient : Client
     {
         private readonly string _key;
 
@@ -39,7 +40,7 @@ namespace SilverRealm.Network.Realm
 
         protected override void OnSocketClosed()
         {
-            Console.WriteLine("Connection closed");
+            SilverConsole.WriteLine("Connection closed", ConsoleColor.Yellow);
             Logs.LogWritter(Constant.RealmFolder, _stateConnxion == StateConnecion.CheckingServer
                 ? string.Format("{0}:ip {1}  Connection closed", Account.Username, Socket.IP)
                 : string.Format("ip {0} Connection closed", Socket.IP));
@@ -100,7 +101,7 @@ namespace SilverRealm.Network.Realm
                 SendPackets(Packet.WrongDofusAccount);
                 OnSocketClosed();
             }
-            else if (RealmServer.Clients.Count(x => x.Account.Username == username) > 1)
+            else if (RealmServer.Clients.Count(x => x.Account.Username == username) > 1 || Account.Connected)
             {
                 SendPackets(Packet.AlredyConnected);
                 OnSocketClosed();
@@ -166,7 +167,7 @@ namespace SilverRealm.Network.Realm
                 SendPackets(string.Format("{0}{1}{2}", Packet.SubscriptionPlayerList, 
                         (Account.Subscription == null || DateTime.Now >= Account.Subscription.Value)
                             ? (object) Constant.DiscoveryMode
-                            : (Account.Subscription.Value - DateTime.Now).TotalMilliseconds.ToString(CultureInfo.InvariantCulture).Split(',')[0], 
+                            : (Account.Subscription.Value - DateTime.Now).TotalMilliseconds.ToString(CultureInfo.InvariantCulture).Split('.')[0], 
                     listCharactersByGameServer));
             }
             else

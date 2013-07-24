@@ -1,24 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text.RegularExpressions;
+using SilverGame.Database;
 using SilverGame.Models;
 using SilverGame.Services;
-using Client = SilverGame.Network.Game.GameClient;
 
 namespace SilverGame.Network.Game.GameParser
 {
     class GameParser
     {
-        private readonly Client _client;
+        private readonly GameClient _client;
 
         private delegate void Response(string data);
 
-        private static Dictionary<string, Response> _packetRegistry; 
+        private readonly Dictionary<string, Response> _packetRegistry; 
 
-        public GameParser(Client client)
+        public GameParser(GameClient client)
         {
             _client = client;
+
+            _client.SendPackets(Packet.HelloGameServer);
 
             _packetRegistry = new Dictionary<string, Response>();
 
@@ -80,8 +83,8 @@ namespace SilverGame.Network.Game.GameParser
                         Reponse = account[5],
                         Connected = bool.Parse(account[6]),
                         GmLevel = int.Parse(account[7]),
-                        BannedUntil = account[8] == "" ? (DateTime?)null : DateTime.Parse(account[8].ToString(System.Globalization.CultureInfo.InvariantCulture)),
-                        Subscription = account[9] == "" ? (DateTime?)null : DateTime.Parse(account[9].ToString(System.Globalization.CultureInfo.InvariantCulture)),
+                        BannedUntil = account[8] == "" ? (DateTime?)null : DateTime.Parse(account[8].ToString(CultureInfo.InvariantCulture)),
+                        Subscription = account[9] == "" ? (DateTime?)null : DateTime.Parse(account[9].ToString(CultureInfo.InvariantCulture)),
                     };
                 }
                 catch (Exception e)
@@ -101,11 +104,23 @@ namespace SilverGame.Network.Game.GameParser
 
         private void SendCharactersList(string data)
         {
-            _client.SendPackets(Packet.CharactersListResponse + "0");
+            if (bool.Parse(Config.Get("Subscription")))
+            {
+                _client.SendPackets(string.Format("{0}{1}|{2}", Packet.CharactersListResponse,
+                    _client.Account.Subscription != null
+                    ? (_client.Account.Subscription.Value - DateTime.Now).TotalMilliseconds.ToString(CultureInfo.InvariantCulture).Split('.')[0]
+                    : Constant.DiscoveryMode.ToString(CultureInfo.InvariantCulture), "0"));
+            }
+            else
+            {
+                _client.SendPackets(string.Format("{0}{1}|{2}", Packet.CharactersListResponse, Constant.OneYear, "0"));
+            }
+                
         }
 
         private void GenerateName(string data)
         {
+            Console.WriteLine(_client.Account.Username+ "parser random name ..");
             _client.SendPackets(string.Format("{0}{1}", Packet.CharacterNameGeneratedResponse, Algorithm.GenerateRandomName()));
         }
 
@@ -125,7 +140,7 @@ namespace SilverGame.Network.Game.GameParser
 
             var color3 = int.Parse(datas[5]);
       
-            if (!Database.Characters.Exist(name) && name.Length >= 3 && name.Length <= 20)
+            if (!Characters.Exist(name) && name.Length >= 3 && name.Length <= 20)
             {
                 var reg = new Regex("^[a-zA-Z-]+$");
 
@@ -133,7 +148,7 @@ namespace SilverGame.Network.Game.GameParser
                 {
                     if (classe >= 1 && classe <= 12 && (sex == 1 || sex == 0))
                     {
-                        Database.Characters.CreateNewCharacter(name, classe, sex, color1, color2, color3, _client.Account.Id);  
+                        Characters.CreateNewCharacter(name, classe, sex, color1, color2, color3, _client.Account.Id);  
                         _client.SendPackets(Packet.CreationSuccess);
                     }
                     else

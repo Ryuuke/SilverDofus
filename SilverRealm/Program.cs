@@ -1,4 +1,5 @@
 ﻿using System;
+using SilverRealm.Services;
 
 namespace SilverRealm
 {
@@ -6,17 +7,20 @@ namespace SilverRealm
     {
         static void Main()
         {
-            Services.Config.LoadConfig();
+            SilverConsole.Welcome();
 
             Services.Logs.LoadLogs();
 
-            var db = new Database.DbManager();
+            if (Services.Config.LoadConfig())
+            {
+                var db = new Database.DbManager();
 
-            Network.Realm.RealmClient.GameServers = Database.GameServerRepository.GetAll();
+                Network.Realm.RealmClient.GameServers = Database.GameServerRepository.GetAll();
 
-            var server = new Network.Realm.RealmServer();
+                var com = new Network.ToGame.ToGameServer();
 
-            var com = new Network.ToGame.ToGameServer();
+                var server = new Network.Realm.RealmServer();
+            }
 
             Console.ReadLine();
         }

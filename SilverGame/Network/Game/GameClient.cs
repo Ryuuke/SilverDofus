@@ -1,11 +1,12 @@
 ﻿using System;
 using SilverGame.Models;
-using SilverSock;
+using SilverGame.Network.Abstract;
 using SilverGame.Services;
+using SilverSock;
 
 namespace SilverGame.Network.Game
 {
-    sealed class GameClient : Abstract.Client
+    sealed class GameClient : Client
     {
         private readonly GameParser.GameParser _parser;
         public Account Account;
@@ -14,7 +15,6 @@ namespace SilverGame.Network.Game
             : base(socket)
         {
             _parser = new GameParser.GameParser(this);
-            SendPackets(Packet.HelloGameServer);
         }
 
         protected override void OnConnected()
@@ -29,7 +29,7 @@ namespace SilverGame.Network.Game
 
         public override void OnSocketClosed()
         {
-            Console.WriteLine("Connection closed");
+            SilverConsole.WriteLine("Connection closed", ConsoleColor.Yellow);
 
             Logs.LogWritter(Constant.GameFolder, Account != null
                 ? string.Format("{0}:ip {1} Connection Closed", Account.Username, Socket.IP)

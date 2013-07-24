@@ -1,7 +1,7 @@
 ﻿using System;
 using MySql.Data.MySqlClient;
-using SilverRealm.Models;
 using SilverRealm.Services;
+using SilverRealm.Models;
 using Constant = SilverRealm.Services.Constant;
 
 namespace SilverRealm.Database
@@ -42,7 +42,7 @@ namespace SilverRealm.Database
                     }
                     catch (Exception e)
                     {
-                        Console.WriteLine("SQL Error " + e.Message);
+                        SilverConsole.WriteLine("SQL Error " + e.Message, ConsoleColor.Red);
                         Logs.LogWritter(Constant.ErrorsFolder, "SQL Error :" + e.Message);
                     }
                 }

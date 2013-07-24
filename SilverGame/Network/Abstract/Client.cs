@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Text;
+using SilverGame.Services;
 using SilverSock;
 
 namespace SilverGame.Network.Abstract
@@ -31,7 +32,7 @@ namespace SilverGame.Network.Abstract
 
         public virtual void SendPackets(string packet)
         {
-            Console.WriteLine("send >>" + string.Format("{0}\x00", packet));
+            SilverConsole.WriteLine(string.Format("send >>" + string.Format("{0}\x00", packet)), ConsoleColor.Cyan);
             Socket.Send(Encoding.UTF8.GetBytes(string.Format("{0}\x00", packet)));
         }
 
@@ -39,7 +40,7 @@ namespace SilverGame.Network.Abstract
         {
             foreach (var packet in Encoding.UTF8.GetString(data).Replace("\x0a", "").Split('\x00').Where(x => x != ""))
             {
-                Console.WriteLine("Recv <<" + packet);
+                SilverConsole.WriteLine(string.Format("Recv <<" + packet), ConsoleColor.Green);
                 DataReceived(packet);
             }
         }

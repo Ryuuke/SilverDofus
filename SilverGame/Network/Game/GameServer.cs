@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using SilverGame.Network.Abstract;
 using SilverGame.Services;
 using SilverSock;
 
 namespace SilverGame.Network.Game
 {
-    sealed class GameServer : Abstract.Server
+    sealed class GameServer : Server
     {
         public static List<GameClient> Clients;
         public static Object Lock = new object();
@@ -25,18 +26,20 @@ namespace SilverGame.Network.Game
 
         protected override void OnListeningFailed(Exception e)
         {
-            Console.WriteLine("Listening Failed, check your port or IP address ...");
+            SilverConsole.WriteLine("Error : Listening Failed, check your port or IP address ...", ConsoleColor.Red);
             Logs.LogWritter(Constant.GameFolder, string.Format("GameServer listening failed {0}", e.Message));
         }
 
         protected override void OnSocketAccepted(SilverSocket socket)
         {
-            Console.WriteLine("Connection With host " + socket.IP + " Successfuly");
+            SilverConsole.WriteLine("Connection With host " + socket.IP + " Successfuly", ConsoleColor.Green);
 
             Logs.LogWritter(Constant.GameFolder, "GameServer Connection With host " + socket.IP + " Successfuly");
 
             lock (Lock)
                 Clients.Add(new GameClient(socket));
+
+            Console.WriteLine(GameServer.Clients.Count);
         }
     }
 }

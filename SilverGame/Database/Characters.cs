@@ -64,7 +64,7 @@ namespace SilverGame.Database
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.Message);
+                SilverConsole.WriteLine(e.Message, ConsoleColor.Red);
                 Logs.LogWritter(Constant.ErrorsFolder, string.Format("Impossible de créer le personnage {0} : {1}", name, e.Message));
             }
 
@@ -85,7 +85,7 @@ namespace SilverGame.Database
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.Message);
+                SilverConsole.WriteLine(e.Message, ConsoleColor.Red);
                 Logs.LogWritter(Constant.ErrorsFolder, string.Format("Impossible d'ajouter les informations sur le personnage {0} a la table gameserver : {1}", name, e.Message));
             }
         }

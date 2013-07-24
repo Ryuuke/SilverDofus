@@ -7,17 +7,20 @@ namespace SilverGame
     {
         static void Main()
         {
-            Services.Config.LoadConfig();
+            SilverConsole.Welcome();
 
-            Logs.LoadLogs();
+            if (Services.Config.LoadConfig())
+            {
+                Logs.LoadLogs();
 
-            var db = new Database.GameDbManager();
+                var db = new Database.GameDbManager();
 
-            var dbRealm = new Database.RealmDbManager();
+                var dbRealm = new Database.RealmDbManager();
 
-            var com = new Network.ToRealm.ToRealmClient();
+                var com = new Network.ToRealm.ToRealmClient();
 
-            var serv = new Network.Game.GameServer();
+                var serv = new Network.Game.GameServer();
+            }
 
             Console.ReadLine();
         }

@@ -17,10 +17,20 @@ namespace SilverGame.Services
 
             for (var i = 0; i < nameLength; i++)
             {
-                name += i%2 == 0 ? consonant[rand.Next(consonant.Length - 1)] : vowel[rand.Next(vowel.Length - 1)];
+                name += i%2 == 0 ? vowel[rand.Next(vowel.Length - 1)] : consonant[rand.Next(consonant.Length - 1)];
             }
 
             return name;
+        }
+
+        public static string DeciToHex(int decimalNumber)
+        {
+            return decimalNumber == -1 ? "-1" : decimalNumber.ToString("x");
+        }
+
+        public static long HexToDeci(string hexaDecimalNumber)
+        {
+            return hexaDecimalNumber == "" || hexaDecimalNumber == "-1" ? -1 : Convert.ToInt64(hexaDecimalNumber, 16);
         }
     }
 }

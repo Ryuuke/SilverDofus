@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Threading;
+using SilverGame.Network.Abstract;
+using SilverGame.Services;
 using SilverSock;
-using Constant = SilverGame.Services.Constant;
 
 namespace SilverGame.Network.ToRealm
 {
-    sealed class ToRealmClient : Abstract.Client
+    sealed class ToRealmClient : Client
     {
         public ToRealmClient()
             : base(new SilverSocket())
@@ -15,28 +16,32 @@ namespace SilverGame.Network.ToRealm
 
         public void ConnectToRealm()
         {
-            Socket.ConnectTo(Services.Config.Get("Realm_ip"), Int32.Parse(Services.Config.Get("Com_port")));
+            SilverConsole.WriteLine("Connection to Realm server...");
+            Logs.LogWritter(Constant.ComFolder, "Connection to Realm server...");
+            Socket.ConnectTo(Config.Get("Realm_ip"), Int32.Parse(Config.Get("Com_port")));
         }
 
         protected override void OnConnected()
         {
-            Console.WriteLine("Connected to Realm Server Sucessfuly");
-            
+            SilverConsole.WriteLine("Com : Connected to Realm Server Successfully", ConsoleColor.Green);
+            Logs.LogWritter(Constant.ComFolder, "Com : Connected to Realm Server Successfully");
+
             Thread.Sleep(500);
 
-            SendPackets(string.Format("{0}{1}", Services.Packet.HelloRealm, Services.Config.Get("Game_key")));
+            SendPackets(string.Format("{0}{1}", Packet.HelloRealm, Config.Get("Game_key")));
         }
 
         protected override void OnFailedToConnect(Exception e)
         {
-            Console.WriteLine("Failed to connect to Realm Server");
-
+            SilverConsole.WriteLine("Com : Failed to connect to Realm Server", ConsoleColor.Red);
+            Logs.LogWritter(Constant.ComFolder, "Com : Failed to connect to Realm Server");
             RetryToConnect();
         }
 
         public override void OnSocketClosed()
         {
-            Console.WriteLine("Connexion To Realm Server closed");
+            SilverConsole.WriteLine("Connection To Realm Server closed", ConsoleColor.Yellow);
+            Logs.LogWritter(Constant.ComFolder, "Com : Connection to Realm Server closed");
 
             RetryToConnect();
         }

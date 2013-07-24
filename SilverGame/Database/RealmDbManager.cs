@@ -18,13 +18,15 @@ namespace SilverGame.Database
                                         Config.Get("Realm_Database_Name")));
             try
             {
+                SilverConsole.WriteLine("Connection to Realm...");
+
                 Connection.Open();
 
-                Console.WriteLine("Connection to Realm database successfully");
+                SilverConsole.WriteLine("SQL : Connection to Realm database successfully", ConsoleColor.Green);
             }
             catch (Exception e)
             {
-                Console.WriteLine("SQL Error : " + e.Message);
+                SilverConsole.WriteLine("SQL Error : " + e.Message, ConsoleColor.Red);
                 Logs.LogWritter(Constant.ErrorsFolder, "Realm connection database SQL error : " + e.Message);
             }
         }

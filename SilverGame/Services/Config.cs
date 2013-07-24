@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using System.IO;
+using System.Text;
 
 namespace SilverGame.Services
 {
@@ -9,17 +9,17 @@ namespace SilverGame.Services
     {
         private static Dictionary<string, string> _values;
 
-        public static void LoadConfig()
+        public static bool LoadConfig()
         {
             if (!File.Exists(Constant.ConfigFile))
-                throw new Exception("Unable to find the file : " + Constant.ConfigFile);
+                SilverConsole.WriteLine("Error : Unable to find the file : " + Constant.ConfigFile, ConsoleColor.Red);
 
             _values = new Dictionary<string, string>();
 
-            var sr = new StreamReader(Constant.ConfigFile, Encoding.Default);
-
             try
             {
+                var sr = new StreamReader(Constant.ConfigFile, Encoding.Default);
+            
                 while (!sr.EndOfStream)
                 {
                     var line = sr.ReadLine();
@@ -30,13 +30,17 @@ namespace SilverGame.Services
                     var infos = line.Split('=');
                     _values.Add(infos[0].Trim(), infos[1].Trim());
                 }
+
+                sr.Close();
+
+                return true;
             }
             catch (Exception)
             {
-                Console.WriteLine("{0} absent or unreadable", Constant.ConfigFile);
-            }
+                SilverConsole.WriteLine(string.Format("Error : {0} unreadable", Constant.ConfigFile), ConsoleColor.Red);
 
-            sr.Close();
+                return false;
+            }
         }
 
         public static string Get(string info)

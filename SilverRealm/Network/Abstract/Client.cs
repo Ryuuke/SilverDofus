@@ -32,7 +32,7 @@ namespace SilverRealm.Network.Abstract
 
         protected virtual void SendPackets(string packet)
         {
-            Console.WriteLine("send >>" + string.Format("{0}\x00", packet));
+            SilverConsole.WriteLine(string.Format("send >>" + string.Format("{0}\x00", packet)), ConsoleColor.Cyan);
             Socket.Send(Encoding.UTF8.GetBytes(string.Format("{0}\x00", packet)));
         }
 
@@ -40,7 +40,7 @@ namespace SilverRealm.Network.Abstract
         {
             foreach (var packet in Encoding.UTF8.GetString(data).Replace("\x0a", "").Split('\x00').Where(x => x != ""))
             {
-                Console.WriteLine("Recv <<" + packet);
+                SilverConsole.WriteLine("Recv <<" + packet, ConsoleColor.Green);
                 DataReceived(packet);
             }
         }
