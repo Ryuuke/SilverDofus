@@ -23,7 +23,7 @@ namespace SilverRealm.Services
             Console.ResetColor();
         }
 
-        public static void WriteLine(string text, ConsoleColor color = ConsoleColor.Gray)
+        public static void WriteLine<T>(T text, ConsoleColor color = ConsoleColor.Gray)
         {
             Console.ForegroundColor = color;
 

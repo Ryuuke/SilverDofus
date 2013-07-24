@@ -953,3 +953,14 @@ Ryuuke:ip 127.0.0.1:31941 Connection Closed
 GameServer Waiting for new connection
 GameServer Waiting for new connection
 GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection

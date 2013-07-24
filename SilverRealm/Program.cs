@@ -11,10 +11,8 @@ namespace SilverRealm
 
             Services.Logs.LoadLogs();
 
-            if (Services.Config.LoadConfig())
+            if (Services.Config.LoadConfig() && Database.DbManager.InitRealmDatabase())
             {
-                var db = new Database.DbManager();
-
                 Network.Realm.RealmClient.GameServers = Database.GameServerRepository.GetAll();
 
                 var com = new Network.ToGame.ToGameServer();

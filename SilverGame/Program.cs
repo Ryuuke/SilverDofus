@@ -9,13 +9,9 @@ namespace SilverGame
         {
             SilverConsole.Welcome();
 
-            if (Services.Config.LoadConfig())
+            if (Services.Config.LoadConfig() && Database.GameDbManager.InitGameDatabse() && Database.RealmDbManager.InitRealmDatabase())
             {
                 Logs.LoadLogs();
-
-                var db = new Database.GameDbManager();
-
-                var dbRealm = new Database.RealmDbManager();
 
                 var com = new Network.ToRealm.ToRealmClient();
 

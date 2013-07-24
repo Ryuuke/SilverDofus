@@ -9,7 +9,7 @@ namespace SilverGame.Database
         public static MySqlConnection Connection;
         public static Object Lock = new Object();
 
-        public GameDbManager()
+        public static bool InitGameDatabse()
         {
             Connection = new MySqlConnection(string.Format("server={0};uid={1};pwd={2};database={3}",
                                         Config.Get("Game_Database_Host"),
@@ -23,11 +23,15 @@ namespace SilverGame.Database
                 Connection.Open();
 
                 SilverConsole.WriteLine("SQL : Connection to Game database successfully", ConsoleColor.Green);
+
+                return true;
             }
             catch (Exception e)
             {
                 SilverConsole.WriteLine("SQL Error : " + e.Message, ConsoleColor.Red);
                 Logs.LogWritter(Constant.ErrorsFolder, "Game connection database SQL error : " + e.Message);
+
+                return false;
             }
         }
     }
