@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50524
 File Encoding         : 65001
 
-Date: 2013-07-23 20:28:31
+Date: 2013-07-26 02:08:32
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -35,7 +35,7 @@ CREATE TABLE `accounts` (
 -- ----------------------------
 -- Records of accounts
 -- ----------------------------
-INSERT INTO `accounts` VALUES ('1', 'Ryuu', 'lol', 'Ryuuke', 'delete?', 'delete', '0', '2013-07-20 09:50:48', '0', '2013-07-25 12:29:05');
+INSERT INTO `accounts` VALUES ('1', 'Ryuu', 'lol', 'Ryuuke', 'delete?', 'delete', '0', '2013-07-20 09:50:48', '0', '2013-07-26 12:29:05');
 INSERT INTO `accounts` VALUES ('2', 'Ryuuke', 'lool', 'Ryuu', 'noob ?', 'OUIIII', '0', null, '5', null);
 
 -- ----------------------------
@@ -52,13 +52,8 @@ CREATE TABLE `characters` (
 -- ----------------------------
 -- Records of characters
 -- ----------------------------
-INSERT INTO `characters` VALUES ('1', '1', '-Ryuuke-');
-INSERT INTO `characters` VALUES ('1', '1', 'afop');
-INSERT INTO `characters` VALUES ('1', '1', 'ejigovi');
-INSERT INTO `characters` VALUES ('1', '1', 'ejor');
-INSERT INTO `characters` VALUES ('1', '1', 'ihedope');
-INSERT INTO `characters` VALUES ('1', '1', 'ocanex');
-INSERT INTO `characters` VALUES ('1', '1', 'oxowigeq');
+INSERT INTO `characters` VALUES ('1', '1', 'xowulofo');
+INSERT INTO `characters` VALUES ('2', '1', 'kukofix');
 
 -- ----------------------------
 -- Table structure for `gameservers`

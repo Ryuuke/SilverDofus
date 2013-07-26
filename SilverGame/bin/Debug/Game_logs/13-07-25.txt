@@ -1,0 +1,144 @@
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:41587 Successfuly
+ip 127.0.0.1:41587 Send >> HG
+ip 127.0.0.1:41587 Recv << AT07/25/2013 13:34:04|127.0.0.1:41586|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,25/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:41587 Send >> ATK0
+Ryuu:ip 127.0.0.1:41587 Recv << Ak0
+Ryuu:ip 127.0.0.1:41587 Recv << AV
+Ryuu:ip 127.0.0.1:41587 Send >> AV0
+Ryuu:ip 127.0.0.1:41587 Recv << Agfr
+Ryuu:ip 127.0.0.1:41587 Recv << AL
+Ryuu:ip 127.0.0.1:41587 Send >> ALK-3899859|0
+Ryuu:ip 127.0.0.1:41587 Recv << Af
+Ryuu:ip 127.0.0.1:41587 Recv << AP
+Ryuu:ip 127.0.0.1:41587 Send >> APKxiw
+Ryuu:ip 127.0.0.1:41587 Recv << AP
+Ryuu:ip 127.0.0.1:41587 Send >> APKgoha
+Ryuu:ip 127.0.0.1:41587 Recv << AAgoha|5|0|-1|-1|-1
+Création du personnage goha
+Ryuu:ip 127.0.0.1:41587 Send >> AAK
+Ryuu:ip 127.0.0.1:41587 Connection Closed
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:44846 Successfuly
+ip 127.0.0.1:44846 Send >> HG
+ip 127.0.0.1:44846 Recv << AT07/25/2013 22:56:52|127.0.0.1:44845|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,25/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:44846 Send >> ATK0
+Ryuu:ip 127.0.0.1:44846 Recv << Ak0
+Ryuu:ip 127.0.0.1:44846 Recv << AV
+Ryuu:ip 127.0.0.1:44846 Send >> AV0
+Ryuu:ip 127.0.0.1:44846 Recv << Agfr
+Ryuu:ip 127.0.0.1:44846 Recv << AL
+Ryuu:ip 127.0.0.1:44846 Send >> ALK-37668396|13System.Collections.Generic.List`1[SilverGame.Models.Accounts.CharactersAccount]
+Ryuu:ip 127.0.0.1:44846 Recv << Af
+Ryuu:ip 127.0.0.1:44846 Recv << ALf
+Ryuu:ip 127.0.0.1:44846 Send >> ALK-37675006|13System.Collections.Generic.List`1[SilverGame.Models.Accounts.CharactersAccount]
+Ryuu:ip 127.0.0.1:44846 Connection Closed
+GameServer Connection With host 127.0.0.1:44848 Successfuly
+ip 127.0.0.1:44848 Send >> HG
+ip 127.0.0.1:44848 Recv << AT07/25/2013 22:57:08|127.0.0.1:44847|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,25/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:44848 Send >> ATK0
+Ryuu:ip 127.0.0.1:44848 Recv << Ak0
+Ryuu:ip 127.0.0.1:44848 Recv << AV
+Ryuu:ip 127.0.0.1:44848 Send >> AV0
+Ryuu:ip 127.0.0.1:44848 Recv << Agfr
+Ryuu:ip 127.0.0.1:44848 Recv << AL
+Ryuu:ip 127.0.0.1:44848 Send >> ALK-37683931|13System.Collections.Generic.List`1[SilverGame.Models.Accounts.CharactersAccount]
+Ryuu:ip 127.0.0.1:44848 Recv << Af
+Ryuu:ip 127.0.0.1:44848 Recv << ALf
+Ryuu:ip 127.0.0.1:44848 Send >> ALK-37685170|13System.Collections.Generic.List`1[SilverGame.Models.Accounts.CharactersAccount]
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:44860 Successfuly
+ip 127.0.0.1:44860 Send >> HG
+ip 127.0.0.1:44860 Recv << AT07/25/2013 22:58:56|127.0.0.1:44859|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,25/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:44860 Send >> ATK0
+Ryuu:ip 127.0.0.1:44860 Recv << Ak0
+Ryuu:ip 127.0.0.1:44860 Recv << AV
+Ryuu:ip 127.0.0.1:44860 Send >> AV0
+Ryuu:ip 127.0.0.1:44860 Recv << Agfr
+Ryuu:ip 127.0.0.1:44860 Recv << AL
+Ryuu:ip 127.0.0.1:44860 Send >> ALK-37791857|13System.Collections.Generic.List`1[SilverGame.Models.Accounts.CharactersAccount]
+Ryuu:ip 127.0.0.1:44860 Recv << Af
+Ryuu:ip 127.0.0.1:44860 Recv << ALf
+Ryuu:ip 127.0.0.1:44860 Send >> ALK-37792721|13System.Collections.Generic.List`1[SilverGame.Models.Accounts.CharactersAccount]
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:44986 Successfuly
+ip 127.0.0.1:44986 Send >> HG
+ip 127.0.0.1:44986 Recv << AT07/25/2013 23:02:59|127.0.0.1:44985|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,25/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:44986 Send >> ATK0
+Ryuu:ip 127.0.0.1:44986 Recv << Ak0
+Ryuu:ip 127.0.0.1:44986 Recv << AV
+Ryuu:ip 127.0.0.1:44986 Send >> AV0
+Ryuu:ip 127.0.0.1:44986 Recv << Agfr
+Ryuu:ip 127.0.0.1:44986 Recv << AL
+Ryuu:ip 127.0.0.1:44986 Send >> ALK0|13System.Collections.Generic.List`1[SilverGame.Models.Accounts.CharactersAccount]
+Ryuu:ip 127.0.0.1:44986 Recv << Af
+Ryuu:ip 127.0.0.1:44986 Recv << ALf
+Ryuu:ip 127.0.0.1:44986 Send >> ALK0|13System.Collections.Generic.List`1[SilverGame.Models.Accounts.CharactersAccount]
+Ryuu:ip 127.0.0.1:44986 Connection Closed
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:45011 Successfuly
+ip 127.0.0.1:45011 Send >> HG
+ip 127.0.0.1:45011 Recv << AT07/25/2013 23:03:46|127.0.0.1:45010|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:45011 Send >> ATK0
+Ryuu:ip 127.0.0.1:45011 Recv << Ak0
+Ryuu:ip 127.0.0.1:45011 Recv << AV
+Ryuu:ip 127.0.0.1:45011 Send >> AV0
+Ryuu:ip 127.0.0.1:45011 Recv << Agfr
+Ryuu:ip 127.0.0.1:45011 Recv << AL
+Ryuu:ip 127.0.0.1:45011 Send >> ALK48318234|13System.Collections.Generic.List`1[SilverGame.Models.Accounts.CharactersAccount]
+Ryuu:ip 127.0.0.1:45011 Recv << Af
+Ryuu:ip 127.0.0.1:45011 Recv << ALf
+Ryuu:ip 127.0.0.1:45011 Send >> ALK48317287|13System.Collections.Generic.List`1[SilverGame.Models.Accounts.CharactersAccount]
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:45023 Successfuly
+ip 127.0.0.1:45023 Send >> HG
+ip 127.0.0.1:45023 Recv << AT07/25/2013 23:06:37|127.0.0.1:45022|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:45023 Send >> ATK0
+Ryuu:ip 127.0.0.1:45023 Recv << Ak0
+Ryuu:ip 127.0.0.1:45023 Recv << AV
+Ryuu:ip 127.0.0.1:45023 Send >> AV0
+Ryuu:ip 127.0.0.1:45023 Recv << Agfr
+Ryuu:ip 127.0.0.1:45023 Recv << AL
+Ryuu:ip 127.0.0.1:45023 Send >> ALK48146876|13SilverGame.Models.Accounts.CharactersAccount|SilverGame.Models.Accounts.CharactersAccount|SilverGame.Models.Accounts.CharactersAccount|SilverGame.Models.Accounts.CharactersAccount|SilverGame.Models.Accounts.CharactersAccount|SilverGame.Models.Accounts.CharactersAccount|SilverGame.Models.Accounts.CharactersAccount|SilverGame.Models.Accounts.CharactersAccount|SilverGame.Models.Accounts.CharactersAccount|SilverGame.Models.Accounts.CharactersAccount|SilverGame.Models.Accounts.CharactersAccount|SilverGame.Models.Accounts.CharactersAccount|SilverGame.Models.Accounts.CharactersAccount
+Ryuu:ip 127.0.0.1:45023 Recv << Af
+GameServer Waiting for new connection

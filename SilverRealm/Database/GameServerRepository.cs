@@ -37,17 +37,16 @@ namespace SilverRealm.Database
                     catch (Exception e)
                     {
                         SilverConsole.WriteLine("SQL error : " + e.Message, ConsoleColor.Red);
-                        Logs.LogWritter(Constant.ErrorsFolder, "SQL error : "+ e.Message);
+                        Logs.LogWritter(Constant.ErrorsFolder, "SQL error : " + e.Message);
                     }
                 }
 
                 reader.Close();
 
-                if (!gameServers.Any())
-                {
-                    SilverConsole.WriteLine("Warning : Could not find Game Server On database", ConsoleColor.Yellow);
-                    Logs.LogWritter(Constant.RealmFolder, "Could not find Game Server On database");
-                }
+                if (gameServers.Any()) return gameServers;
+
+                SilverConsole.WriteLine("Warning : Could not find Game Server On database", ConsoleColor.Yellow);
+                Logs.LogWritter(Constant.RealmFolder, "Could not find Game Server On database");
             }
 
             return gameServers;

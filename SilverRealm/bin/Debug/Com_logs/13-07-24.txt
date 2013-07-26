@@ -570,3 +570,7 @@
 24/07/2013 21:00:13 >> Waiting for connection to game servers ...
 24/07/2013 21:00:14 >> Connection successfuly with game server 127.0.0.1:34604
 24/07/2013 21:00:14 >> Recv << HRlolxdmdrlol
+24/07/2013 22:00:08 >> Waiting for connection to game servers ...
+24/07/2013 22:00:08 >> Connection successfuly with game server 127.0.0.1:36357
+24/07/2013 22:00:08 >> Recv << HRlolxdmdrlol
+24/07/2013 22:07:25 >> Connection closed with Game Server 127.0.0.1:36357

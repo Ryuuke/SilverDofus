@@ -9,9 +9,9 @@ namespace SilverRealm
         {
             SilverConsole.Welcome();
 
-            Services.Logs.LoadLogs();
+            Logs.LoadLogs();
 
-            if (Services.Config.LoadConfig() && Database.DbManager.InitRealmDatabase())
+            if (Config.LoadConfig() && Database.DbManager.InitRealmDatabase())
             {
                 Network.Realm.RealmClient.GameServers = Database.GameServerRepository.GetAll();
 

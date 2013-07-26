@@ -16,7 +16,7 @@ namespace SilverGame.Network.ToRealm
 
         public void ConnectToRealm()
         {
-            SilverConsole.WriteLine("Connection to Realm server...");
+            SilverConsole.WriteLine("Connection to Realm server...", ConsoleColor.DarkGreen);
             Logs.LogWritter(Constant.ComFolder, "Connection to Realm server...");
             Socket.ConnectTo(Config.Get("Realm_ip"), Int32.Parse(Config.Get("Com_port")));
         }

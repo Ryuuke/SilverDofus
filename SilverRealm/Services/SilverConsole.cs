@@ -8,15 +8,15 @@ namespace SilverRealm.Services
         {
             Console.ForegroundColor = ConsoleColor.Cyan;
 
-            Console.WriteLine(" ________     __     __    ___         ___   __________    _________  ");
-            Console.WriteLine("|   _____|   |  |   |  |   \\  \\       /  /  |   _______|  |  |      |");
-            Console.WriteLine("|  |         |  |   |  |    \\  \\     /  /   |  |          |  |      | ");
-            Console.WriteLine("|  |_____    |  |   |  |     \\  \\   /  /    |  |______    |  |______|");
-            Console.WriteLine("|_____   |   |  |   |  |      \\  \\ /  /     |   ______|   |  |______  ");
-            Console.WriteLine("      |  |   |  |   |  |       \\     /      |  |          |  |   |  | Dofus ");
-            Console.WriteLine(" _____|  |   |  |   |  |____    \\   /       |  |_______   |  |   |  | By");
-            Console.WriteLine("|________|   |__|   |________|   \\_/        |__________|  |__|   |__|  Ryuuke");
-            Console.WriteLine("   ________________________________________________________________  ");
+            Console.WriteLine("  ________     __     __    ___         ___   __________    _________  ");
+            Console.WriteLine(" |   _____|   |  |   |  |   \\  \\       /  /  |   _______|  |  |      |");
+            Console.WriteLine(" |  |         |  |   |  |    \\  \\     /  /   |  |          |  |      | ");
+            Console.WriteLine(" |  |_____    |  |   |  |     \\  \\   /  /    |  |______    |  |______|");
+            Console.WriteLine(" |_____   |   |  |   |  |      \\  \\ /  /     |   ______|   |  |______  ");
+            Console.WriteLine("       |  |   |  |   |  |       \\     /      |  |          |  |   |  | Dofus ");
+            Console.WriteLine("  _____|  |   |  |   |  |____    \\   /       |  |_______   |  |   |  | By");
+            Console.WriteLine(" |________|   |__|   |________|   \\_/        |__________|  |__|   |__|  Ryuuke");
+            Console.WriteLine("    ________________________________________________________________  ");
 
             Console.WriteLine(Environment.NewLine);
 

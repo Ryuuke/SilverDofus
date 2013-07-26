@@ -19,7 +19,7 @@ namespace SilverRealm.Database
                                         Config.Get("Realm_Database_Name")));
             try
             {
-                SilverConsole.WriteLine("Connection to Realm...");
+                SilverConsole.WriteLine("Connection to Realm Database...", ConsoleColor.DarkGreen);
 
                 Connection.Open();
 

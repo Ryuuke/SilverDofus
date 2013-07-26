@@ -1,0 +1,592 @@
+26/07/2013 00:24:14 >> RealmServer Waiting for connexion 
+26/07/2013 00:25:44 >> RealmServer Waiting for connexion 
+26/07/2013 00:27:12 >> RealmServer Waiting for connexion 
+26/07/2013 00:30:13 >> RealmServer Waiting for connexion 
+26/07/2013 00:30:33 >> RealmServer Waiting for connexion 
+26/07/2013 00:31:09 >> RealmServer Waiting for connexion 
+26/07/2013 00:32:32 >> RealmServer Waiting for connexion 
+26/07/2013 00:34:46 >> RealmServer Waiting for connexion 
+26/07/2013 00:35:56 >> RealmServer Waiting for connexion 
+26/07/2013 00:36:40 >> RealmServer Waiting for connexion 
+26/07/2013 00:36:59 >> RealmServer Waiting for connexion 
+26/07/2013 00:37:26 >> RealmServer Connection successfuly with Realm Client 127.0.0.1:45364
+26/07/2013 00:37:26 >> ip 127.0.0.1:45364 Send >> HCGiuiq_dHLNi3yRTIL8I9kijvdrsBihR8
+26/07/2013 00:37:26 >> ip 127.0.0.1:45364 Recv << 1.29.1
+26/07/2013 00:37:26 >> ip 127.0.0.1:45364 Recv << ryuu#1ntV47eV1
+26/07/2013 00:37:26 >> Ryuu:ip 127.0.0.1:45364 Send >> AlEf
+26/07/2013 00:37:26 >> Ryuu:ip 127.0.0.1:45364  Connection closed
+26/07/2013 00:37:26 >> Ryuu:ip 127.0.0.1:45364 Recv << Af
+26/07/2013 00:37:26 >> Ryuu:ip 127.0.0.1:45364 Send >> Af|0|0|1|-1
+26/07/2013 00:38:20 >> RealmServer Connection successfuly with Realm Client 127.0.0.1:45374
+26/07/2013 00:38:20 >> ip 127.0.0.1:45374 Send >> HCeVC-G8_qS9nHiVpgP8WQ-4ky-_e_SNyE
+26/07/2013 00:38:20 >> ip 127.0.0.1:45374 Recv << 1.29.1
+26/07/2013 00:38:20 >> ip 127.0.0.1:45374 Recv << Ryuu#1RXCLjp
+26/07/2013 00:38:20 >> Ryuu:ip 127.0.0.1:45374 Send >> AdRyuuke
+26/07/2013 00:38:20 >> Ryuu:ip 127.0.0.1:45374 Send >> Ac0
+26/07/2013 00:38:20 >> Ryuu:ip 127.0.0.1:45374 Send >> AH1;1;0;1|2;0;0;1
+26/07/2013 00:38:20 >> Ryuu:ip 127.0.0.1:45374 Send >> AlK0
+26/07/2013 00:38:20 >> Ryuu:ip 127.0.0.1:45374 Send >> AQdelete?
+26/07/2013 00:38:20 >> Ryuu:ip 127.0.0.1:45374 Recv << Af
+26/07/2013 00:38:20 >> Ryuu:ip 127.0.0.1:45374 Send >> Af|0|0|1|-1
+26/07/2013 00:38:20 >> Ryuu:ip 127.0.0.1:45374 Recv << Ax
+26/07/2013 00:38:20 >> Ryuu:ip 127.0.0.1:45374 Send >> AxK42644066|1,13
+26/07/2013 00:38:22 >> Ryuu:ip 127.0.0.1:45374 Recv << AX1
+26/07/2013 00:38:22 >> Ryuu:ip 127.0.0.1:45374 Send >> AYK127.0.0.1:5555;07/26/2013 00:38:22|127.0.0.1:45374|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+26/07/2013 00:38:22 >> Ryuu:ip 127.0.0.1:45374  Connection closed
+26/07/2013 00:39:16 >> RealmServer Waiting for connexion 
+26/07/2013 00:39:17 >> RealmServer Connection successfuly with Realm Client 127.0.0.1:45386
+26/07/2013 00:39:17 >> ip 127.0.0.1:45386 Send >> HCsaQBjKIw_qyalDXNwYuFwg6_qE1OtM6b
+26/07/2013 00:39:17 >> ip 127.0.0.1:45386 Recv << 1.29.1
+26/07/2013 00:39:17 >> ip 127.0.0.1:45386 Recv << Ryuu#15_NWxD
+26/07/2013 00:39:17 >> Ryuu:ip 127.0.0.1:45386 Send >> AdRyuuke
+26/07/2013 00:39:17 >> Ryuu:ip 127.0.0.1:45386 Send >> Ac0
+26/07/2013 00:39:17 >> Ryuu:ip 127.0.0.1:45386 Send >> AH1;1;0;1|2;0;0;1
+26/07/2013 00:39:17 >> Ryuu:ip 127.0.0.1:45386 Send >> AlK0
+26/07/2013 00:39:17 >> Ryuu:ip 127.0.0.1:45386 Send >> AQdelete?
+26/07/2013 00:39:17 >> Ryuu:ip 127.0.0.1:45386 Recv << Af
+26/07/2013 00:39:17 >> Ryuu:ip 127.0.0.1:45386 Send >> Af|0|0|1|-1
+26/07/2013 00:39:17 >> Ryuu:ip 127.0.0.1:45386 Recv << Ax
+26/07/2013 00:39:18 >> Ryuu:ip 127.0.0.1:45386 Send >> AxK42586998
+26/07/2013 00:39:20 >> Ryuu:ip 127.0.0.1:45386 Recv << AX1
+26/07/2013 00:39:20 >> Ryuu:ip 127.0.0.1:45386 Send >> AYK127.0.0.1:5555;07/26/2013 00:39:20|127.0.0.1:45386|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+26/07/2013 00:39:20 >> Ryuu:ip 127.0.0.1:45386  Connection closed
+26/07/2013 00:40:20 >> RealmServer Waiting for connexion 
+26/07/2013 00:40:21 >> RealmServer Connection successfuly with Realm Client 127.0.0.1:45399
+26/07/2013 00:40:21 >> ip 127.0.0.1:45399 Send >> HCxqhF5voCiW2bssxxOzEn62tnF0RgCiYx
+26/07/2013 00:40:21 >> ip 127.0.0.1:45399 Recv << 1.29.1
+26/07/2013 00:40:21 >> ip 127.0.0.1:45399 Recv << Ryuu#1-e3aU0
+26/07/2013 00:40:21 >> Ryuu:ip 127.0.0.1:45399 Send >> AdRyuuke
+26/07/2013 00:40:21 >> Ryuu:ip 127.0.0.1:45399 Send >> Ac0
+26/07/2013 00:40:21 >> Ryuu:ip 127.0.0.1:45399 Send >> AH1;1;0;1|2;0;0;1
+26/07/2013 00:40:21 >> Ryuu:ip 127.0.0.1:45399 Send >> AlK0
+26/07/2013 00:40:21 >> Ryuu:ip 127.0.0.1:45399 Send >> AQdelete?
+26/07/2013 00:40:21 >> Ryuu:ip 127.0.0.1:45399 Recv << Af
+26/07/2013 00:40:21 >> Ryuu:ip 127.0.0.1:45399 Send >> Af|0|0|1|-1
+26/07/2013 00:40:22 >> Ryuu:ip 127.0.0.1:45399 Recv << Ax
+26/07/2013 00:40:22 >> Ryuu:ip 127.0.0.1:45399 Send >> AxK42522853|1,1
+26/07/2013 00:40:23 >> Ryuu:ip 127.0.0.1:45399 Recv << AX1
+26/07/2013 00:40:23 >> Ryuu:ip 127.0.0.1:45399 Send >> AYK127.0.0.1:5555;07/26/2013 00:40:23|127.0.0.1:45399|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+26/07/2013 00:40:23 >> Ryuu:ip 127.0.0.1:45399  Connection closed
+26/07/2013 00:41:08 >> RealmServer Waiting for connexion 
+26/07/2013 00:41:10 >> RealmServer Connection successfuly with Realm Client 127.0.0.1:45410
+26/07/2013 00:41:10 >> ip 127.0.0.1:45410 Send >> HCtVAkyN_22rxqMSGSM3XcVwljbLVIsVdH
+26/07/2013 00:41:10 >> ip 127.0.0.1:45410 Recv << 1.29.1
+26/07/2013 00:41:10 >> ip 127.0.0.1:45410 Recv << Ryuu#16aCLhn
+26/07/2013 00:41:10 >> Ryuu:ip 127.0.0.1:45410 Send >> AdRyuuke
+26/07/2013 00:41:10 >> Ryuu:ip 127.0.0.1:45410 Send >> Ac0
+26/07/2013 00:41:10 >> Ryuu:ip 127.0.0.1:45410 Send >> AH1;1;0;1|2;0;0;1
+26/07/2013 00:41:10 >> Ryuu:ip 127.0.0.1:45410 Send >> AlK0
+26/07/2013 00:41:10 >> Ryuu:ip 127.0.0.1:45410 Send >> AQdelete?
+26/07/2013 00:41:10 >> Ryuu:ip 127.0.0.1:45410 Recv << Af
+26/07/2013 00:41:10 >> Ryuu:ip 127.0.0.1:45410 Send >> Af|0|0|1|-1
+26/07/2013 00:41:10 >> Ryuu:ip 127.0.0.1:45410 Recv << Ax
+26/07/2013 00:41:10 >> Ryuu:ip 127.0.0.1:45410 Send >> AxK42474108|1,1
+26/07/2013 00:41:11 >> Ryuu:ip 127.0.0.1:45410 Recv << AX1
+26/07/2013 00:41:11 >> Ryuu:ip 127.0.0.1:45410 Send >> AYK127.0.0.1:5555;07/26/2013 00:41:11|127.0.0.1:45410|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+26/07/2013 00:41:11 >> Ryuu:ip 127.0.0.1:45410  Connection closed
+26/07/2013 00:42:23 >> RealmServer Waiting for connexion 
+26/07/2013 00:42:36 >> RealmServer Connection successfuly with Realm Client 127.0.0.1:45423
+26/07/2013 00:42:36 >> ip 127.0.0.1:45423 Send >> HCIh7w0dcC73fYuaXJVoPqw5BkubWmJoyP
+26/07/2013 00:42:36 >> ip 127.0.0.1:45423 Recv << 1.29.1
+26/07/2013 00:42:36 >> ip 127.0.0.1:45423 Recv << Ryuu#1pvU39d
+26/07/2013 00:42:36 >> Ryuu:ip 127.0.0.1:45423 Send >> AdRyuuke
+26/07/2013 00:42:36 >> Ryuu:ip 127.0.0.1:45423 Send >> Ac0
+26/07/2013 00:42:36 >> Ryuu:ip 127.0.0.1:45423 Send >> AH1;1;0;1|2;0;0;1
+26/07/2013 00:42:36 >> Ryuu:ip 127.0.0.1:45423 Send >> AlK0
+26/07/2013 00:42:36 >> Ryuu:ip 127.0.0.1:45423 Send >> AQdelete?
+26/07/2013 00:42:36 >> Ryuu:ip 127.0.0.1:45423 Recv << Af
+26/07/2013 00:42:36 >> Ryuu:ip 127.0.0.1:45423 Send >> Af|0|0|1|-1
+26/07/2013 00:42:36 >> Ryuu:ip 127.0.0.1:45423 Recv << Ax
+26/07/2013 00:42:36 >> Ryuu:ip 127.0.0.1:45423 Send >> AxK42388102|1,1
+26/07/2013 00:42:37 >> Ryuu:ip 127.0.0.1:45423 Recv << AX1
+26/07/2013 00:42:37 >> Ryuu:ip 127.0.0.1:45423 Send >> AYK127.0.0.1:5555;07/26/2013 00:42:37|127.0.0.1:45423|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+26/07/2013 00:42:37 >> Ryuu:ip 127.0.0.1:45423  Connection closed
+26/07/2013 00:43:32 >> RealmServer Waiting for connexion 
+26/07/2013 00:43:34 >> RealmServer Connection successfuly with Realm Client 127.0.0.1:45440
+26/07/2013 00:43:34 >> ip 127.0.0.1:45440 Send >> HC2pjnOZ9PiLHu9ZvN_TVWkcVNQaN3RD-n
+26/07/2013 00:43:34 >> ip 127.0.0.1:45440 Recv << 1.29.1
+26/07/2013 00:43:34 >> ip 127.0.0.1:45440 Recv << Ryuu#14-2_W2
+26/07/2013 00:43:35 >> Ryuu:ip 127.0.0.1:45440 Send >> AdRyuuke
+26/07/2013 00:43:35 >> Ryuu:ip 127.0.0.1:45440 Send >> Ac0
+26/07/2013 00:43:35 >> Ryuu:ip 127.0.0.1:45440 Send >> AH1;1;0;1|2;0;0;1
+26/07/2013 00:43:35 >> Ryuu:ip 127.0.0.1:45440 Send >> AlK0
+26/07/2013 00:43:35 >> Ryuu:ip 127.0.0.1:45440 Send >> AQdelete?
+26/07/2013 00:43:35 >> Ryuu:ip 127.0.0.1:45440 Recv << Af
+26/07/2013 00:43:35 >> Ryuu:ip 127.0.0.1:45440 Send >> Af|0|0|1|-1
+26/07/2013 00:43:35 >> Ryuu:ip 127.0.0.1:45440 Recv << Ax
+26/07/2013 00:43:35 >> Ryuu:ip 127.0.0.1:45440 Send >> AxK42329390
+26/07/2013 00:43:37 >> Ryuu:ip 127.0.0.1:45440 Recv << AX1
+26/07/2013 00:43:37 >> Ryuu:ip 127.0.0.1:45440 Send >> AYK127.0.0.1:5555;07/26/2013 00:43:37|127.0.0.1:45440|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+26/07/2013 00:43:37 >> Ryuu:ip 127.0.0.1:45440  Connection closed
+26/07/2013 00:44:53 >> RealmServer Waiting for connexion 
+26/07/2013 00:45:13 >> RealmServer Waiting for connexion 
+26/07/2013 00:45:14 >> RealmServer Connection successfuly with Realm Client 127.0.0.1:45459
+26/07/2013 00:45:14 >> ip 127.0.0.1:45459 Send >> HCf4Eo5S02UINLP_OZnS9ckFzJApz4rFAY
+26/07/2013 00:45:14 >> ip 127.0.0.1:45459 Recv << 1.29.1
+26/07/2013 00:45:14 >> ip 127.0.0.1:45459 Recv << Ryuu#1SY6dlr
+26/07/2013 00:45:14 >> Ryuu:ip 127.0.0.1:45459 Send >> AdRyuuke
+26/07/2013 00:45:14 >> Ryuu:ip 127.0.0.1:45459 Send >> Ac0
+26/07/2013 00:45:14 >> Ryuu:ip 127.0.0.1:45459 Send >> AH1;1;0;1|2;0;0;1
+26/07/2013 00:45:14 >> Ryuu:ip 127.0.0.1:45459 Send >> AlK0
+26/07/2013 00:45:14 >> Ryuu:ip 127.0.0.1:45459 Send >> AQdelete?
+26/07/2013 00:45:14 >> Ryuu:ip 127.0.0.1:45459 Recv << Af
+26/07/2013 00:45:14 >> Ryuu:ip 127.0.0.1:45459 Send >> Af|0|0|1|-1
+26/07/2013 00:45:14 >> Ryuu:ip 127.0.0.1:45459 Recv << Ax
+26/07/2013 00:45:14 >> Ryuu:ip 127.0.0.1:45459 Send >> AxK42230187
+26/07/2013 00:45:16 >> Ryuu:ip 127.0.0.1:45459 Recv << AX1
+26/07/2013 00:45:16 >> Ryuu:ip 127.0.0.1:45459 Send >> AYK127.0.0.1:5555;07/26/2013 00:45:16|127.0.0.1:45459|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+26/07/2013 00:45:16 >> Ryuu:ip 127.0.0.1:45459  Connection closed
+26/07/2013 00:50:19 >> RealmServer Waiting for connexion 
+26/07/2013 00:50:24 >> RealmServer Connection successfuly with Realm Client 127.0.0.1:45473
+26/07/2013 00:50:24 >> ip 127.0.0.1:45473 Send >> HC0H-4lnFvRR-fy5UU2XYwfrv7z2EYj-O9
+26/07/2013 00:50:24 >> ip 127.0.0.1:45473 Recv << 1.29.1
+26/07/2013 00:50:24 >> ip 127.0.0.1:45473 Recv << Ryuu#128oxZ5
+26/07/2013 00:50:24 >> Ryuu:ip 127.0.0.1:45473 Send >> AdRyuuke
+26/07/2013 00:50:24 >> Ryuu:ip 127.0.0.1:45473 Send >> Ac0
+26/07/2013 00:50:24 >> Ryuu:ip 127.0.0.1:45473 Send >> AH1;1;0;1|2;0;0;1
+26/07/2013 00:50:24 >> Ryuu:ip 127.0.0.1:45473 Send >> AlK0
+26/07/2013 00:50:24 >> Ryuu:ip 127.0.0.1:45473 Send >> AQdelete?
+26/07/2013 00:50:24 >> Ryuu:ip 127.0.0.1:45473 Recv << Af
+26/07/2013 00:50:24 >> Ryuu:ip 127.0.0.1:45473 Send >> Af|0|0|1|-1
+26/07/2013 00:50:24 >> Ryuu:ip 127.0.0.1:45473 Recv << Ax
+26/07/2013 00:50:24 >> Ryuu:ip 127.0.0.1:45473 Send >> AxK41920622|1,1
+26/07/2013 00:50:25 >> Ryuu:ip 127.0.0.1:45473 Recv << AX1
+26/07/2013 00:50:25 >> Ryuu:ip 127.0.0.1:45473 Send >> AYK127.0.0.1:5555;07/26/2013 00:50:25|127.0.0.1:45473|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+26/07/2013 00:50:25 >> Ryuu:ip 127.0.0.1:45473  Connection closed
+26/07/2013 00:52:07 >> RealmServer Waiting for connexion 
+26/07/2013 00:52:09 >> RealmServer Connection successfuly with Realm Client 127.0.0.1:45494
+26/07/2013 00:52:09 >> ip 127.0.0.1:45494 Send >> HC8tRDTqH5jjLK1pk98vMqJjlRwENgfMf1
+26/07/2013 00:52:09 >> ip 127.0.0.1:45494 Recv << 1.29.1
+26/07/2013 00:52:09 >> ip 127.0.0.1:45494 Recv << Ryuu#1-e6dyE
+26/07/2013 00:52:09 >> Ryuu:ip 127.0.0.1:45494 Send >> AdRyuuke
+26/07/2013 00:52:09 >> Ryuu:ip 127.0.0.1:45494 Send >> Ac0
+26/07/2013 00:52:09 >> Ryuu:ip 127.0.0.1:45494 Send >> AH1;1;0;1|2;0;0;1
+26/07/2013 00:52:09 >> Ryuu:ip 127.0.0.1:45494 Send >> AlK0
+26/07/2013 00:52:09 >> Ryuu:ip 127.0.0.1:45494 Send >> AQdelete?
+26/07/2013 00:52:09 >> Ryuu:ip 127.0.0.1:45494 Recv << Af
+26/07/2013 00:52:09 >> Ryuu:ip 127.0.0.1:45494 Send >> Af|0|0|1|-1
+26/07/2013 00:52:09 >> Ryuu:ip 127.0.0.1:45494 Recv << Ax
+26/07/2013 00:52:09 >> Ryuu:ip 127.0.0.1:45494 Send >> AxK41815177
+26/07/2013 00:52:14 >> Ryuu:ip 127.0.0.1:45494 Recv << AX1
+26/07/2013 00:52:14 >> Ryuu:ip 127.0.0.1:45494 Send >> AYK127.0.0.1:5555;07/26/2013 00:52:14|127.0.0.1:45494|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+26/07/2013 00:52:15 >> Ryuu:ip 127.0.0.1:45494  Connection closed
+26/07/2013 00:52:52 >> RealmServer Connection successfuly with Realm Client 127.0.0.1:45503
+26/07/2013 00:52:52 >> ip 127.0.0.1:45503 Send >> HC1wdSENXmY0_J9HNpv-wC_X0YiahoPA0I
+26/07/2013 00:52:52 >> ip 127.0.0.1:45503 Recv << 1.29.1
+26/07/2013 00:52:52 >> ip 127.0.0.1:45503 Recv << Ryuu#1399gQW
+26/07/2013 00:52:52 >> Ryuu:ip 127.0.0.1:45503 Send >> AdRyuuke
+26/07/2013 00:52:52 >> Ryuu:ip 127.0.0.1:45503 Send >> Ac0
+26/07/2013 00:52:52 >> Ryuu:ip 127.0.0.1:45503 Send >> AH1;1;0;1|2;0;0;1
+26/07/2013 00:52:52 >> Ryuu:ip 127.0.0.1:45503 Send >> AlK0
+26/07/2013 00:52:52 >> Ryuu:ip 127.0.0.1:45503 Send >> AQdelete?
+26/07/2013 00:52:52 >> Ryuu:ip 127.0.0.1:45503 Recv << Af
+26/07/2013 00:52:52 >> Ryuu:ip 127.0.0.1:45503 Send >> Af|0|0|1|-1
+26/07/2013 00:52:52 >> Ryuu:ip 127.0.0.1:45503 Recv << Ax
+26/07/2013 00:52:52 >> Ryuu:ip 127.0.0.1:45503 Send >> AxK41772625|1,1
+26/07/2013 00:52:53 >> Ryuu:ip 127.0.0.1:45503 Recv << AX1
+26/07/2013 00:52:53 >> Ryuu:ip 127.0.0.1:45503 Send >> AYK127.0.0.1:5555;07/26/2013 00:52:53|127.0.0.1:45503|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+26/07/2013 00:52:53 >> Ryuu:ip 127.0.0.1:45503  Connection closed
+26/07/2013 00:54:08 >> RealmServer Waiting for connexion 
+26/07/2013 00:54:10 >> RealmServer Connection successfuly with Realm Client 127.0.0.1:45515
+26/07/2013 00:54:10 >> ip 127.0.0.1:45515 Send >> HCvvLn8sfgusW981XkedxPdK8WWfQMAlSo
+26/07/2013 00:54:10 >> ip 127.0.0.1:45515 Recv << 1.29.1
+26/07/2013 00:54:10 >> ip 127.0.0.1:45515 Recv << Ryuu#18c8fsy
+26/07/2013 00:54:10 >> Ryuu:ip 127.0.0.1:45515 Send >> AdRyuuke
+26/07/2013 00:54:10 >> Ryuu:ip 127.0.0.1:45515 Send >> Ac0
+26/07/2013 00:54:10 >> Ryuu:ip 127.0.0.1:45515 Send >> AH1;1;0;1|2;0;0;1
+26/07/2013 00:54:10 >> Ryuu:ip 127.0.0.1:45515 Send >> AlK0
+26/07/2013 00:54:10 >> Ryuu:ip 127.0.0.1:45515 Send >> AQdelete?
+26/07/2013 00:54:10 >> Ryuu:ip 127.0.0.1:45515 Recv << Af
+26/07/2013 00:54:10 >> Ryuu:ip 127.0.0.1:45515 Send >> Af|0|0|1|-1
+26/07/2013 00:54:10 >> Ryuu:ip 127.0.0.1:45515 Recv << Ax
+26/07/2013 00:54:10 >> Ryuu:ip 127.0.0.1:45515 Send >> AxK41694556|1,1
+26/07/2013 00:54:11 >> Ryuu:ip 127.0.0.1:45515 Recv << AX1
+26/07/2013 00:54:11 >> Ryuu:ip 127.0.0.1:45515 Send >> AYK127.0.0.1:5555;07/26/2013 00:54:11|127.0.0.1:45515|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+26/07/2013 00:54:11 >> Ryuu:ip 127.0.0.1:45515  Connection closed
+26/07/2013 00:55:17 >> RealmServer Waiting for connexion 
+26/07/2013 00:55:17 >> RealmServer Connection successfuly with Realm Client 127.0.0.1:45528
+26/07/2013 00:55:17 >> ip 127.0.0.1:45528 Send >> HCsmW9bo9RJoMsqFrNGPGYDQMxFXU0pizP
+26/07/2013 00:55:17 >> ip 127.0.0.1:45528 Send >> AH1;1;0;1|2;0;0;1
+26/07/2013 00:55:17 >> ip 127.0.0.1:45528 Recv << 1.29.1
+26/07/2013 00:55:17 >> ip 127.0.0.1:45528 Recv << Ryuu#15_Z8DJ
+26/07/2013 00:55:17 >> Ryuu:ip 127.0.0.1:45528 Send >> AdRyuuke
+26/07/2013 00:55:17 >> Ryuu:ip 127.0.0.1:45528 Send >> Ac0
+26/07/2013 00:55:17 >> Ryuu:ip 127.0.0.1:45528 Send >> AH1;1;0;1|2;0;0;1
+26/07/2013 00:55:17 >> Ryuu:ip 127.0.0.1:45528 Send >> AlK0
+26/07/2013 00:55:17 >> Ryuu:ip 127.0.0.1:45528 Send >> AQdelete?
+26/07/2013 00:55:17 >> Ryuu:ip 127.0.0.1:45528 Recv << Af
+26/07/2013 00:55:17 >> Ryuu:ip 127.0.0.1:45528 Send >> Af|0|0|1|-1
+26/07/2013 00:55:17 >> Ryuu:ip 127.0.0.1:45528 Recv << Ax
+26/07/2013 00:55:17 >> Ryuu:ip 127.0.0.1:45528 Send >> AxK41627102|1,1
+26/07/2013 00:55:18 >> Ryuu:ip 127.0.0.1:45528 Recv << AX1
+26/07/2013 00:55:18 >> Ryuu:ip 127.0.0.1:45528 Send >> AYK127.0.0.1:5555;07/26/2013 00:55:18|127.0.0.1:45528|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+26/07/2013 00:55:18 >> Ryuu:ip 127.0.0.1:45528  Connection closed
+26/07/2013 00:58:14 >> RealmServer Waiting for connexion 
+26/07/2013 00:58:15 >> RealmServer Connection successfuly with Realm Client 127.0.0.1:45545
+26/07/2013 00:58:15 >> ip 127.0.0.1:45545 Send >> HCScqidZcYQ0I3N5Wr4bP2Z7xqr8BLOE4i
+26/07/2013 00:58:15 >> ip 127.0.0.1:45545 Recv << 1.29.1
+26/07/2013 00:58:15 >> ip 127.0.0.1:45545 Recv << Ryuu#1zFPY39
+26/07/2013 00:58:15 >> Ryuu:ip 127.0.0.1:45545 Send >> AdRyuuke
+26/07/2013 00:58:15 >> Ryuu:ip 127.0.0.1:45545 Send >> Ac0
+26/07/2013 00:58:15 >> Ryuu:ip 127.0.0.1:45545 Send >> AH1;1;0;1|2;0;0;1
+26/07/2013 00:58:15 >> Ryuu:ip 127.0.0.1:45545 Send >> AlK0
+26/07/2013 00:58:15 >> Ryuu:ip 127.0.0.1:45545 Send >> AQdelete?
+26/07/2013 00:58:15 >> Ryuu:ip 127.0.0.1:45545 Recv << Af
+26/07/2013 00:58:15 >> Ryuu:ip 127.0.0.1:45545 Send >> Af|0|0|1|-1
+26/07/2013 00:58:15 >> Ryuu:ip 127.0.0.1:45545 Recv << Ax
+26/07/2013 00:58:15 >> Ryuu:ip 127.0.0.1:45545 Send >> AxK41449250|1,1
+26/07/2013 00:58:16 >> Ryuu:ip 127.0.0.1:45545 Recv << AX1
+26/07/2013 00:58:16 >> Ryuu:ip 127.0.0.1:45545 Send >> AYK127.0.0.1:5555;07/26/2013 00:58:16|127.0.0.1:45545|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+26/07/2013 00:58:16 >> Ryuu:ip 127.0.0.1:45545  Connection closed
+26/07/2013 01:00:52 >> RealmServer Waiting for connexion 
+26/07/2013 01:01:08 >> RealmServer Connection successfuly with Realm Client 127.0.0.1:45563
+26/07/2013 01:01:08 >> ip 127.0.0.1:45563 Send >> HCe6LU8SWkAy821qL3hiBgVhUqYvw3g_xH
+26/07/2013 01:01:08 >> ip 127.0.0.1:45563 Recv << 1.29.1
+26/07/2013 01:01:08 >> ip 127.0.0.1:45563 Recv << Ryuu#1RX8fsy
+26/07/2013 01:01:08 >> Ryuu:ip 127.0.0.1:45563 Send >> AdRyuuke
+26/07/2013 01:01:08 >> Ryuu:ip 127.0.0.1:45563 Send >> Ac0
+26/07/2013 01:01:08 >> Ryuu:ip 127.0.0.1:45563 Send >> AH1;1;0;1|2;0;0;1
+26/07/2013 01:01:08 >> Ryuu:ip 127.0.0.1:45563 Send >> AlK0
+26/07/2013 01:01:08 >> Ryuu:ip 127.0.0.1:45563 Send >> AQdelete?
+26/07/2013 01:01:08 >> Ryuu:ip 127.0.0.1:45563 Recv << Af
+26/07/2013 01:01:08 >> Ryuu:ip 127.0.0.1:45563 Send >> Af|0|0|1|-1
+26/07/2013 01:01:08 >> RealmServer Connection successfuly with Realm Client 127.0.0.1:45564
+26/07/2013 01:01:08 >> ip 127.0.0.1:45564 Send >> HCu4Cvvc41qBYOfBfLIfxpU_q9lu8Mv4eB
+26/07/2013 01:01:08 >> ip 127.0.0.1:45564 Recv << 1.29.1
+26/07/2013 01:01:08 >> ip 127.0.0.1:45564 Recv << Ryuuke#17b6djs8c
+26/07/2013 01:01:08 >> Ryuuke:ip 127.0.0.1:45564 Send >> AdRyuu
+26/07/2013 01:01:08 >> Ryuuke:ip 127.0.0.1:45564 Send >> Ac0
+26/07/2013 01:01:08 >> Ryuuke:ip 127.0.0.1:45564 Send >> AH1;1;0;1|2;0;0;1
+26/07/2013 01:01:08 >> Ryuuke:ip 127.0.0.1:45564 Send >> AlK1
+26/07/2013 01:01:08 >> Ryuuke:ip 127.0.0.1:45564 Send >> AQnoob+?
+26/07/2013 01:01:08 >> Ryuuke:ip 127.0.0.1:45564 Recv << Af
+26/07/2013 01:01:08 >> Ryuuke:ip 127.0.0.1:45564 Send >> Af|0|0|1|-1
+26/07/2013 01:01:09 >> Ryuu:ip 127.0.0.1:45563 Recv << Ax
+26/07/2013 01:01:09 >> Ryuu:ip 127.0.0.1:45563 Send >> AxK41275971|1,1
+26/07/2013 01:01:09 >> Ryuuke:ip 127.0.0.1:45564 Recv << Ax
+26/07/2013 01:01:09 >> Ryuuke:ip 127.0.0.1:45564 Send >> AxK0
+26/07/2013 01:01:12 >> Ryuuke:ip 127.0.0.1:45564 Recv << AX1
+26/07/2013 01:01:12 >> Ryuuke:ip 127.0.0.1:45564 Send >> AYK127.0.0.1:5555;07/26/2013 01:01:12|127.0.0.1:45564|2,Ryuuke,lool,Ryuu,noob ?,OUIIII,False,5,,
+26/07/2013 01:01:12 >> Ryuuke:ip 127.0.0.1:45564  Connection closed
+26/07/2013 01:01:33 >> Ryuu:ip 127.0.0.1:45563 Recv << AX1
+26/07/2013 01:01:33 >> Ryuu:ip 127.0.0.1:45563 Send >> AYK127.0.0.1:5555;07/26/2013 01:01:33|127.0.0.1:45563|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+26/07/2013 01:01:33 >> Ryuu:ip 127.0.0.1:45563  Connection closed
+26/07/2013 01:01:45 >> RealmServer Connection successfuly with Realm Client 127.0.0.1:45570
+26/07/2013 01:01:45 >> ip 127.0.0.1:45570 Send >> HCaAI8ZqIeqM1uvflxqXuaOiZvNFjagrGx
+26/07/2013 01:01:45 >> ip 127.0.0.1:45570 Recv << 1.29.1
+26/07/2013 01:01:45 >> ip 127.0.0.1:45570 Recv << Ryuuke#1NThqpy-e
+26/07/2013 01:01:45 >> Ryuuke:ip 127.0.0.1:45570 Send >> AdRyuu
+26/07/2013 01:01:45 >> Ryuuke:ip 127.0.0.1:45570 Send >> Ac0
+26/07/2013 01:01:45 >> Ryuuke:ip 127.0.0.1:45570 Send >> AH1;1;0;1|2;0;0;1
+26/07/2013 01:01:45 >> Ryuuke:ip 127.0.0.1:45570 Send >> AlK1
+26/07/2013 01:01:45 >> Ryuuke:ip 127.0.0.1:45570 Send >> AQnoob+?
+26/07/2013 01:01:45 >> Ryuuke:ip 127.0.0.1:45570 Recv << Af
+26/07/2013 01:01:45 >> Ryuuke:ip 127.0.0.1:45570 Send >> Af|0|0|1|-1
+26/07/2013 01:01:45 >> Ryuuke:ip 127.0.0.1:45570 Recv << Ax
+26/07/2013 01:01:45 >> Ryuuke:ip 127.0.0.1:45570 Send >> AxK0|1,1
+26/07/2013 01:01:46 >> Ryuuke:ip 127.0.0.1:45570 Recv << AX1
+26/07/2013 01:01:46 >> Ryuuke:ip 127.0.0.1:45570 Send >> AYK127.0.0.1:5555;07/26/2013 01:01:46|127.0.0.1:45570|2,Ryuuke,lool,Ryuu,noob ?,OUIIII,False,5,,
+26/07/2013 01:01:46 >> Ryuuke:ip 127.0.0.1:45570  Connection closed
+26/07/2013 01:04:26 >> RealmServer Waiting for connexion 
+26/07/2013 01:04:27 >> RealmServer Connection successfuly with Realm Client 127.0.0.1:45595
+26/07/2013 01:04:27 >> ip 127.0.0.1:45595 Send >> HCDgUH0G_FRNY7nOLpxxJewq5vK7PlbxIc
+26/07/2013 01:04:27 >> ip 127.0.0.1:45595 Recv << 1.29.1
+26/07/2013 01:04:27 >> ip 127.0.0.1:45595 Recv << Ryuuke#1kqT2BKou
+26/07/2013 01:04:27 >> Ryuuke:ip 127.0.0.1:45595 Send >> AdRyuu
+26/07/2013 01:04:27 >> Ryuuke:ip 127.0.0.1:45595 Send >> Ac0
+26/07/2013 01:04:27 >> Ryuuke:ip 127.0.0.1:45595 Send >> AH1;0;0;1|2;0;0;1
+26/07/2013 01:04:27 >> Ryuuke:ip 127.0.0.1:45595 Send >> AlK1
+26/07/2013 01:04:27 >> Ryuuke:ip 127.0.0.1:45595 Send >> AQnoob+?
+26/07/2013 01:04:27 >> Ryuuke:ip 127.0.0.1:45595 Recv << Af
+26/07/2013 01:04:27 >> Ryuuke:ip 127.0.0.1:45595 Send >> Af|0|0|1|-1
+26/07/2013 01:04:27 >> Ryuuke:ip 127.0.0.1:45595 Send >> AH1;1;0;1|2;0;0;1
+26/07/2013 01:04:28 >> Ryuuke:ip 127.0.0.1:45595 Recv << Ax
+26/07/2013 01:04:28 >> Ryuuke:ip 127.0.0.1:45595 Send >> AxK0|1,1
+26/07/2013 01:04:31 >> Ryuuke:ip 127.0.0.1:45595 Recv << AX1
+26/07/2013 01:04:31 >> Ryuuke:ip 127.0.0.1:45595 Send >> AYK127.0.0.1:5555;07/26/2013 01:04:31|127.0.0.1:45595|2,Ryuuke,lool,Ryuu,noob ?,OUIIII,False,5,,
+26/07/2013 01:04:31 >> Ryuuke:ip 127.0.0.1:45595  Connection closed
+26/07/2013 01:05:11 >> RealmServer Waiting for connexion 
+26/07/2013 01:05:12 >> RealmServer Connection successfuly with Realm Client 127.0.0.1:45606
+26/07/2013 01:05:12 >> ip 127.0.0.1:45606 Send >> HCbPlMSP3OBhiDKVoMBQnskLAATwh67Pm1
+26/07/2013 01:05:12 >> ip 127.0.0.1:45606 Recv << 1.29.1
+26/07/2013 01:05:12 >> ip 127.0.0.1:45606 Recv << Ryuuke#1OUwFY7tz
+26/07/2013 01:05:12 >> Ryuuke:ip 127.0.0.1:45606 Send >> AdRyuu
+26/07/2013 01:05:12 >> Ryuuke:ip 127.0.0.1:45606 Send >> Ac0
+26/07/2013 01:05:12 >> Ryuuke:ip 127.0.0.1:45606 Send >> AH1;1;0;1|2;0;0;1
+26/07/2013 01:05:12 >> Ryuuke:ip 127.0.0.1:45606 Send >> AlK1
+26/07/2013 01:05:12 >> Ryuuke:ip 127.0.0.1:45606 Send >> AQnoob+?
+26/07/2013 01:05:12 >> Ryuuke:ip 127.0.0.1:45606 Recv << Af
+26/07/2013 01:05:12 >> Ryuuke:ip 127.0.0.1:45606 Send >> Af|0|0|1|-1
+26/07/2013 01:05:13 >> Ryuuke:ip 127.0.0.1:45606 Recv << Ax
+26/07/2013 01:05:13 >> Ryuuke:ip 127.0.0.1:45606 Send >> AxK0|1,1
+26/07/2013 01:05:15 >> RealmServer Connection successfuly with Realm Client 127.0.0.1:45607
+26/07/2013 01:05:15 >> ip 127.0.0.1:45607 Send >> HCIUZkiIXqJr_8Wx_0vByyQttBpW4wH9TY
+26/07/2013 01:05:15 >> ip 127.0.0.1:45607 Recv << 1.29.1
+26/07/2013 01:05:15 >> ip 127.0.0.1:45607 Recv << Ryuu#1pvBKGM
+26/07/2013 01:05:15 >> Ryuu:ip 127.0.0.1:45607 Send >> AdRyuuke
+26/07/2013 01:05:15 >> Ryuu:ip 127.0.0.1:45607 Send >> Ac0
+26/07/2013 01:05:15 >> Ryuu:ip 127.0.0.1:45607 Send >> AH1;1;0;1|2;0;0;1
+26/07/2013 01:05:15 >> Ryuu:ip 127.0.0.1:45607 Send >> AlK0
+26/07/2013 01:05:15 >> Ryuu:ip 127.0.0.1:45607 Send >> AQdelete?
+26/07/2013 01:05:15 >> Ryuu:ip 127.0.0.1:45607 Recv << Af
+26/07/2013 01:05:15 >> Ryuu:ip 127.0.0.1:45607 Send >> Af|0|0|1|-1
+26/07/2013 01:05:15 >> Ryuu:ip 127.0.0.1:45607 Recv << Ax
+26/07/2013 01:05:15 >> Ryuu:ip 127.0.0.1:45607 Send >> AxK41029299|1,1
+26/07/2013 01:05:16 >> Ryuu:ip 127.0.0.1:45607 Recv << AX1
+26/07/2013 01:05:16 >> Ryuu:ip 127.0.0.1:45607 Send >> AYK127.0.0.1:5555;07/26/2013 01:05:16|127.0.0.1:45607|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+26/07/2013 01:05:16 >> Ryuu:ip 127.0.0.1:45607  Connection closed
+26/07/2013 01:05:18 >> Ryuuke:ip 127.0.0.1:45606 Recv << AX1
+26/07/2013 01:05:18 >> Ryuuke:ip 127.0.0.1:45606 Send >> AYK127.0.0.1:5555;07/26/2013 01:05:18|127.0.0.1:45606|2,Ryuuke,lool,Ryuu,noob ?,OUIIII,False,5,,
+26/07/2013 01:05:18 >> Ryuuke:ip 127.0.0.1:45606  Connection closed
+26/07/2013 01:13:07 >> RealmServer Waiting for connexion 
+26/07/2013 01:13:19 >> RealmServer Connection successfuly with Realm Client 127.0.0.1:45653
+26/07/2013 01:13:19 >> ip 127.0.0.1:45653 Send >> HC0oiHeXv7-3sQ5bVuMezdm1DwsB88LyEG
+26/07/2013 01:13:19 >> ip 127.0.0.1:45653 Recv << 1.29.1
+26/07/2013 01:13:19 >> ip 127.0.0.1:45653 Recv << Ryuuke#1281-V4ou
+26/07/2013 01:13:19 >> Ryuuke:ip 127.0.0.1:45653 Send >> AdRyuu
+26/07/2013 01:13:19 >> Ryuuke:ip 127.0.0.1:45653 Send >> Ac0
+26/07/2013 01:13:19 >> Ryuuke:ip 127.0.0.1:45653 Send >> AH1;1;0;1|2;0;0;1
+26/07/2013 01:13:19 >> Ryuuke:ip 127.0.0.1:45653 Send >> AlK1
+26/07/2013 01:13:19 >> Ryuuke:ip 127.0.0.1:45653 Send >> AQnoob+?
+26/07/2013 01:13:19 >> Ryuuke:ip 127.0.0.1:45653 Recv << Af
+26/07/2013 01:13:19 >> Ryuuke:ip 127.0.0.1:45653 Send >> Af|0|0|1|-1
+26/07/2013 01:13:19 >> Ryuuke:ip 127.0.0.1:45653 Recv << Ax
+26/07/2013 01:13:19 >> Ryuuke:ip 127.0.0.1:45653 Send >> AxK0|1,1
+26/07/2013 01:13:21 >> Ryuuke:ip 127.0.0.1:45653 Recv << AX1
+26/07/2013 01:13:21 >> Ryuuke:ip 127.0.0.1:45653 Send >> AYK127.0.0.1:5555;07/26/2013 01:13:21|127.0.0.1:45653|2,Ryuuke,lool,Ryuu,noob ?,OUIIII,False,5,,
+26/07/2013 01:13:21 >> Ryuuke:ip 127.0.0.1:45653  Connection closed
+26/07/2013 01:13:36 >> RealmServer Connection successfuly with Realm Client 127.0.0.1:45660
+26/07/2013 01:13:36 >> ip 127.0.0.1:45660 Send >> HCcpxcnPUfEDLMF6RZjzUY4sn_WXpP1zwL
+26/07/2013 01:13:36 >> ip 127.0.0.1:45660 Recv << 1.29.1
+26/07/2013 01:13:36 >> ip 127.0.0.1:45660 Recv << Ryuu#1PV2_-e
+26/07/2013 01:13:36 >> Ryuu:ip 127.0.0.1:45660 Send >> AdRyuuke
+26/07/2013 01:13:36 >> Ryuu:ip 127.0.0.1:45660 Send >> Ac0
+26/07/2013 01:13:36 >> Ryuu:ip 127.0.0.1:45660 Send >> AH1;1;0;1|2;0;0;1
+26/07/2013 01:13:36 >> Ryuu:ip 127.0.0.1:45660 Send >> AlK0
+26/07/2013 01:13:36 >> Ryuu:ip 127.0.0.1:45660 Send >> AQdelete?
+26/07/2013 01:13:36 >> Ryuu:ip 127.0.0.1:45660 Recv << Af
+26/07/2013 01:13:36 >> Ryuu:ip 127.0.0.1:45660 Send >> Af|0|0|1|-1
+26/07/2013 01:13:36 >> Ryuu:ip 127.0.0.1:45660 Recv << Ax
+26/07/2013 01:13:36 >> Ryuu:ip 127.0.0.1:45660 Send >> AxK40528394|1,1
+26/07/2013 01:13:37 >> Ryuu:ip 127.0.0.1:45660 Recv << AX1
+26/07/2013 01:13:37 >> Ryuu:ip 127.0.0.1:45660 Send >> AYK127.0.0.1:5555;07/26/2013 01:13:37|127.0.0.1:45660|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+26/07/2013 01:13:37 >> Ryuu:ip 127.0.0.1:45660  Connection closed
+26/07/2013 01:15:26 >> RealmServer Waiting for connexion 
+26/07/2013 01:16:06 >> RealmServer Waiting for connexion 
+26/07/2013 01:16:17 >> RealmServer Connection successfuly with Realm Client 127.0.0.1:45681
+26/07/2013 01:16:17 >> ip 127.0.0.1:45681 Send >> HCz0cl7WOv27Kr18Aw-xsUubR2hrovJOWW
+26/07/2013 01:16:17 >> ip 127.0.0.1:45681 Recv << 1.29.1
+26/07/2013 01:16:17 >> ip 127.0.0.1:45681 Recv << Ryuu#1ag2_PV
+26/07/2013 01:16:17 >> Ryuu:ip 127.0.0.1:45681 Send >> AdRyuuke
+26/07/2013 01:16:17 >> Ryuu:ip 127.0.0.1:45681 Send >> Ac0
+26/07/2013 01:16:17 >> Ryuu:ip 127.0.0.1:45681 Send >> AH1;1;0;1|2;0;0;1
+26/07/2013 01:16:17 >> Ryuu:ip 127.0.0.1:45681 Send >> AlK0
+26/07/2013 01:16:17 >> Ryuu:ip 127.0.0.1:45681 Send >> AQdelete?
+26/07/2013 01:16:17 >> Ryuu:ip 127.0.0.1:45681 Recv << Af
+26/07/2013 01:16:17 >> Ryuu:ip 127.0.0.1:45681 Send >> Af|0|0|1|-1
+26/07/2013 01:16:18 >> Ryuu:ip 127.0.0.1:45681 Recv << Ax
+26/07/2013 01:16:18 >> Ryuu:ip 127.0.0.1:45681 Send >> AxK40366900|1,1
+26/07/2013 01:16:18 >> Ryuu:ip 127.0.0.1:45681 Recv << AX1
+26/07/2013 01:16:18 >> Ryuu:ip 127.0.0.1:45681 Send >> AYK127.0.0.1:5555;07/26/2013 01:16:18|127.0.0.1:45681|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+26/07/2013 01:16:18 >> Ryuu:ip 127.0.0.1:45681  Connection closed
+26/07/2013 01:16:31 >> RealmServer Connection successfuly with Realm Client 127.0.0.1:45683
+26/07/2013 01:16:31 >> ip 127.0.0.1:45683 Send >> HC34_-wrv_CmCuDukyqrixKrByimePItYo
+26/07/2013 01:16:31 >> ip 127.0.0.1:45683 Recv << 1.29.1
+26/07/2013 01:16:31 >> ip 127.0.0.1:45683 Recv << ryuu#15_6dLR
+26/07/2013 01:16:31 >> Ryuu:ip 127.0.0.1:45683 Send >> AdRyuuke
+26/07/2013 01:16:31 >> Ryuu:ip 127.0.0.1:45683 Send >> Ac0
+26/07/2013 01:16:31 >> Ryuu:ip 127.0.0.1:45683 Send >> AH1;1;0;1|2;0;0;1
+26/07/2013 01:16:31 >> Ryuu:ip 127.0.0.1:45683 Send >> AlK0
+26/07/2013 01:16:31 >> Ryuu:ip 127.0.0.1:45683 Send >> AQdelete?
+26/07/2013 01:16:31 >> Ryuu:ip 127.0.0.1:45683 Recv << Af
+26/07/2013 01:16:31 >> Ryuu:ip 127.0.0.1:45683 Send >> Af|0|0|1|-1
+26/07/2013 01:16:31 >> Ryuu:ip 127.0.0.1:45683 Recv << Ax
+26/07/2013 01:16:31 >> Ryuu:ip 127.0.0.1:45683 Send >> AxK40353722|1,1
+26/07/2013 01:16:37 >> Ryuu:ip 127.0.0.1:45683 Recv << AX1
+26/07/2013 01:16:37 >> Ryuu:ip 127.0.0.1:45683 Send >> AYK127.0.0.1:5555;07/26/2013 01:16:37|127.0.0.1:45683|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+26/07/2013 01:16:38 >> Ryuu:ip 127.0.0.1:45683  Connection closed
+26/07/2013 01:20:52 >> RealmServer Waiting for connexion 
+26/07/2013 01:20:56 >> RealmServer Connection successfuly with Realm Client 127.0.0.1:45721
+26/07/2013 01:20:56 >> ip 127.0.0.1:45721 Send >> HCApiQYbrJxFGHWZ3N4WgsDxqf5PALczsh
+26/07/2013 01:20:56 >> ip 127.0.0.1:45721 Recv << 1.29.1
+26/07/2013 01:20:56 >> ip 127.0.0.1:45721 Recv << ryuu#1hn2_V1
+26/07/2013 01:20:56 >> Ryuu:ip 127.0.0.1:45721 Send >> AdRyuuke
+26/07/2013 01:20:56 >> Ryuu:ip 127.0.0.1:45721 Send >> Ac0
+26/07/2013 01:20:56 >> Ryuu:ip 127.0.0.1:45721 Send >> AH1;1;0;1|2;0;0;1
+26/07/2013 01:20:56 >> Ryuu:ip 127.0.0.1:45721 Send >> AlK0
+26/07/2013 01:20:56 >> Ryuu:ip 127.0.0.1:45721 Send >> AQdelete?
+26/07/2013 01:20:56 >> Ryuu:ip 127.0.0.1:45721 Recv << Af
+26/07/2013 01:20:56 >> Ryuu:ip 127.0.0.1:45721 Send >> Af|0|0|1|-1
+26/07/2013 01:20:56 >> Ryuu:ip 127.0.0.1:45721 Recv << Ax
+26/07/2013 01:20:56 >> Ryuu:ip 127.0.0.1:45721 Send >> AxK40088116|1,1
+26/07/2013 01:20:57 >> Ryuu:ip 127.0.0.1:45721 Recv << AX1
+26/07/2013 01:20:57 >> Ryuu:ip 127.0.0.1:45721 Send >> AYK127.0.0.1:5555;07/26/2013 01:20:57|127.0.0.1:45721|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+26/07/2013 01:20:57 >> Ryuu:ip 127.0.0.1:45721  Connection closed
+26/07/2013 01:21:36 >> RealmServer Waiting for connexion 
+26/07/2013 01:21:37 >> RealmServer Connection successfuly with Realm Client 127.0.0.1:45732
+26/07/2013 01:21:37 >> ip 127.0.0.1:45732 Send >> HCgHhlFRPEgH_6OShr0x4FYcrbF_UlouXq
+26/07/2013 01:21:37 >> ip 127.0.0.1:45732 Send >> AH1;1;0;1|2;0;0;1
+26/07/2013 01:21:37 >> ip 127.0.0.1:45732 Recv << 1.29.1
+26/07/2013 01:21:37 >> ip 127.0.0.1:45732 Recv << ryuu#1TZoxU0
+26/07/2013 01:21:37 >> Ryuu:ip 127.0.0.1:45732 Send >> AdRyuuke
+26/07/2013 01:21:37 >> Ryuu:ip 127.0.0.1:45732 Send >> Ac0
+26/07/2013 01:21:37 >> Ryuu:ip 127.0.0.1:45732 Send >> AH1;1;0;1|2;0;0;1
+26/07/2013 01:21:37 >> Ryuu:ip 127.0.0.1:45732 Send >> AlK0
+26/07/2013 01:21:37 >> Ryuu:ip 127.0.0.1:45732 Send >> AQdelete?
+26/07/2013 01:21:37 >> Ryuu:ip 127.0.0.1:45732 Recv << Af
+26/07/2013 01:21:37 >> Ryuu:ip 127.0.0.1:45732 Send >> Af|0|0|1|-1
+26/07/2013 01:21:37 >> Ryuu:ip 127.0.0.1:45732 Recv << Ax
+26/07/2013 01:21:37 >> Ryuu:ip 127.0.0.1:45732 Send >> AxK40047121|1,1
+26/07/2013 01:21:38 >> Ryuu:ip 127.0.0.1:45732 Recv << AX1
+26/07/2013 01:21:38 >> Ryuu:ip 127.0.0.1:45732 Send >> AYK127.0.0.1:5555;07/26/2013 01:21:38|127.0.0.1:45732|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+26/07/2013 01:21:38 >> Ryuu:ip 127.0.0.1:45732  Connection closed
+26/07/2013 01:21:58 >> RealmServer Waiting for connexion 
+26/07/2013 01:21:58 >> RealmServer Connection successfuly with Realm Client 127.0.0.1:45742
+26/07/2013 01:21:58 >> ip 127.0.0.1:45742 Send >> HCEegcvhLZ8aKZr6bTVPIzshk3LrNj4swM
+26/07/2013 01:21:58 >> ip 127.0.0.1:45742 Recv << 1.29.1
+26/07/2013 01:21:58 >> ip 127.0.0.1:45742 Recv << ryuu#1lrR0TZ
+26/07/2013 01:21:58 >> Ryuu:ip 127.0.0.1:45742 Send >> AdRyuuke
+26/07/2013 01:21:58 >> Ryuu:ip 127.0.0.1:45742 Send >> Ac0
+26/07/2013 01:21:58 >> Ryuu:ip 127.0.0.1:45742 Send >> AH1;0;0;1|2;0;0;1
+26/07/2013 01:21:58 >> Ryuu:ip 127.0.0.1:45742 Send >> AlK0
+26/07/2013 01:21:58 >> Ryuu:ip 127.0.0.1:45742 Send >> AQdelete?
+26/07/2013 01:21:58 >> Ryuu:ip 127.0.0.1:45742 Recv << Af
+26/07/2013 01:21:58 >> Ryuu:ip 127.0.0.1:45742 Send >> Af|0|0|1|-1
+26/07/2013 01:21:59 >> Ryuu:ip 127.0.0.1:45742 Recv << Ax
+26/07/2013 01:21:59 >> Ryuu:ip 127.0.0.1:45742 Send >> AxK40025809|1,1
+26/07/2013 01:21:59 >> Ryuu:ip 127.0.0.1:45742 Send >> AH1;1;0;1|2;0;0;1
+26/07/2013 01:21:59 >> Ryuu:ip 127.0.0.1:45742 Recv << AX1
+26/07/2013 01:21:59 >> Ryuu:ip 127.0.0.1:45742 Send >> AYK127.0.0.1:5555;07/26/2013 01:21:59|127.0.0.1:45742|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+26/07/2013 01:21:59 >> Ryuu:ip 127.0.0.1:45742  Connection closed
+26/07/2013 01:22:17 >> RealmServer Connection successfuly with Realm Client 127.0.0.1:45745
+26/07/2013 01:22:17 >> ip 127.0.0.1:45745 Send >> HCPh9pKUh9e5YDlcskthO9uH9w5pDeFB6P
+26/07/2013 01:22:17 >> ip 127.0.0.1:45745 Recv << 1.29.1
+26/07/2013 01:22:17 >> ip 127.0.0.1:45745 Recv << ryuu#1wCU3_f
+26/07/2013 01:22:17 >> Ryuu:ip 127.0.0.1:45745 Send >> AdRyuuke
+26/07/2013 01:22:17 >> Ryuu:ip 127.0.0.1:45745 Send >> Ac0
+26/07/2013 01:22:17 >> Ryuu:ip 127.0.0.1:45745 Send >> AH1;1;0;1|2;0;0;1
+26/07/2013 01:22:17 >> Ryuu:ip 127.0.0.1:45745 Send >> AlK0
+26/07/2013 01:22:17 >> Ryuu:ip 127.0.0.1:45745 Send >> AQdelete?
+26/07/2013 01:22:17 >> Ryuu:ip 127.0.0.1:45745 Recv << Af
+26/07/2013 01:22:17 >> Ryuu:ip 127.0.0.1:45745 Send >> Af|0|0|1|-1
+26/07/2013 01:22:17 >> Ryuu:ip 127.0.0.1:45745 Recv << Ax
+26/07/2013 01:22:17 >> Ryuu:ip 127.0.0.1:45745 Send >> AxK40007298|1,1
+26/07/2013 01:22:40 >> Ryuu:ip 127.0.0.1:45745 Send >> AH1;0;0;1|2;0;0;1
+26/07/2013 01:26:01 >> RealmServer Waiting for connexion 
+26/07/2013 01:26:15 >> RealmServer Waiting for connexion 
+26/07/2013 01:26:15 >> RealmServer Connection successfuly with Realm Client 127.0.0.1:45761
+26/07/2013 01:26:15 >> ip 127.0.0.1:45761 Send >> HClVl7CTvVMZrQ2izMYcACvXEA-1clzgIh
+26/07/2013 01:26:15 >> ip 127.0.0.1:45761 Recv << 1.29.1
+26/07/2013 01:26:15 >> ip 127.0.0.1:45761 Recv << ryuu#1Y4CLY4
+26/07/2013 01:26:15 >> Ryuu:ip 127.0.0.1:45761 Send >> AdRyuuke
+26/07/2013 01:26:15 >> Ryuu:ip 127.0.0.1:45761 Send >> Ac0
+26/07/2013 01:26:15 >> Ryuu:ip 127.0.0.1:45761 Send >> AH1;0;0;1|2;0;0;1
+26/07/2013 01:26:15 >> Ryuu:ip 127.0.0.1:45761 Send >> AlK0
+26/07/2013 01:26:15 >> Ryuu:ip 127.0.0.1:45761 Send >> AQdelete?
+26/07/2013 01:26:15 >> Ryuu:ip 127.0.0.1:45761 Recv << Af
+26/07/2013 01:26:15 >> Ryuu:ip 127.0.0.1:45761 Send >> Af|0|0|1|-1
+26/07/2013 01:26:15 >> Ryuu:ip 127.0.0.1:45761 Recv << Ax
+26/07/2013 01:26:15 >> Ryuu:ip 127.0.0.1:45761 Send >> AxK39769437|1,1
+26/07/2013 01:26:15 >> Ryuu:ip 127.0.0.1:45761 Send >> AH1;1;0;1|2;0;0;1
+26/07/2013 01:26:19 >> Ryuu:ip 127.0.0.1:45761 Recv << AX1
+26/07/2013 01:26:19 >> Ryuu:ip 127.0.0.1:45761 Send >> AYK127.0.0.1:5555;07/26/2013 01:26:19|127.0.0.1:45761|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+26/07/2013 01:26:19 >> Ryuu:ip 127.0.0.1:45761  Connection closed
+26/07/2013 01:26:22 >> RealmServer Connection successfuly with Realm Client 127.0.0.1:45767
+26/07/2013 01:26:22 >> ip 127.0.0.1:45767 Send >> HCGlOWZ6NqFF8aHL9FRwCRK1DzrW9MRkwG
+26/07/2013 01:26:22 >> ip 127.0.0.1:45767 Recv << 1.29.1
+26/07/2013 01:26:22 >> ip 127.0.0.1:45767 Recv << ryuu#1ntY7vB
+26/07/2013 01:26:22 >> Ryuu:ip 127.0.0.1:45767 Send >> AdRyuuke
+26/07/2013 01:26:22 >> Ryuu:ip 127.0.0.1:45767 Send >> Ac0
+26/07/2013 01:26:22 >> Ryuu:ip 127.0.0.1:45767 Send >> AH1;1;0;1|2;0;0;1
+26/07/2013 01:26:22 >> Ryuu:ip 127.0.0.1:45767 Send >> AlK0
+26/07/2013 01:26:22 >> Ryuu:ip 127.0.0.1:45767 Send >> AQdelete?
+26/07/2013 01:26:22 >> Ryuu:ip 127.0.0.1:45767 Recv << Af
+26/07/2013 01:26:22 >> Ryuu:ip 127.0.0.1:45767 Send >> Af|0|0|1|-1
+26/07/2013 01:26:23 >> Ryuu:ip 127.0.0.1:45767 Recv << Ax
+26/07/2013 01:26:23 >> Ryuu:ip 127.0.0.1:45767 Send >> AxK39761861|1,1
+26/07/2013 01:26:30 >> RealmServer Waiting for connexion 
+26/07/2013 01:26:32 >> RealmServer Connection successfuly with Realm Client 127.0.0.1:45777
+26/07/2013 01:26:32 >> ip 127.0.0.1:45777 Send >> HCDB3Ywyqo5Bpsefboo4gIgt3n9GKsfSGG
+26/07/2013 01:26:32 >> ip 127.0.0.1:45777 Recv << 1.29.1
+26/07/2013 01:26:32 >> ip 127.0.0.1:45777 Recv << ryuu#1kqir5_
+26/07/2013 01:26:32 >> Ryuu:ip 127.0.0.1:45777 Send >> AdRyuuke
+26/07/2013 01:26:32 >> Ryuu:ip 127.0.0.1:45777 Send >> Ac0
+26/07/2013 01:26:32 >> Ryuu:ip 127.0.0.1:45777 Send >> AH1;1;0;1|2;0;0;1
+26/07/2013 01:26:32 >> Ryuu:ip 127.0.0.1:45777 Send >> AlK0
+26/07/2013 01:26:32 >> Ryuu:ip 127.0.0.1:45777 Send >> AQdelete?
+26/07/2013 01:26:32 >> Ryuu:ip 127.0.0.1:45777 Recv << Af
+26/07/2013 01:26:32 >> Ryuu:ip 127.0.0.1:45777 Send >> Af|0|0|1|-1
+26/07/2013 01:26:32 >> Ryuu:ip 127.0.0.1:45777 Recv << Ax
+26/07/2013 01:26:32 >> Ryuu:ip 127.0.0.1:45777 Send >> AxK39752330|1,1
+26/07/2013 01:26:34 >> Ryuu:ip 127.0.0.1:45777 Send >> AH1;0;0;1|2;0;0;1
+26/07/2013 01:26:45 >> RealmServer Waiting for connexion 
+26/07/2013 01:26:46 >> RealmServer Connection successfuly with Realm Client 127.0.0.1:45785
+26/07/2013 01:26:46 >> ip 127.0.0.1:45785 Send >> HCwUZPFJg90f6Z1dIV6bLZunOjjGVbapdU
+26/07/2013 01:26:46 >> ip 127.0.0.1:45785 Recv << 1.29.1
+26/07/2013 01:26:46 >> ip 127.0.0.1:45785 Recv << ryuu#19dBKGM
+26/07/2013 01:26:46 >> Ryuu:ip 127.0.0.1:45785 Send >> AdRyuuke
+26/07/2013 01:26:46 >> Ryuu:ip 127.0.0.1:45785 Send >> Ac0
+26/07/2013 01:26:46 >> Ryuu:ip 127.0.0.1:45785 Send >> AH1;0;0;1|2;0;0;1
+26/07/2013 01:26:46 >> Ryuu:ip 127.0.0.1:45785 Send >> AlK0
+26/07/2013 01:26:46 >> Ryuu:ip 127.0.0.1:45785 Send >> AQdelete?
+26/07/2013 01:26:46 >> Ryuu:ip 127.0.0.1:45785 Recv << Af
+26/07/2013 01:26:46 >> Ryuu:ip 127.0.0.1:45785 Send >> Af|0|0|1|-1
+26/07/2013 01:26:46 >> Ryuu:ip 127.0.0.1:45785 Recv << Ax
+26/07/2013 01:26:46 >> Ryuu:ip 127.0.0.1:45785 Send >> AxK39738459|1,1
+26/07/2013 01:26:46 >> Ryuu:ip 127.0.0.1:45785 Send >> AH1;1;0;1|2;0;0;1
+26/07/2013 02:05:14 >> RealmServer Waiting for connexion 
+26/07/2013 02:05:15 >> RealmServer Listening Failed Une seule utilisation de chaque adresse de socket (protocole/adresse réseau/port) est habituellement autorisée
+26/07/2013 02:05:15 >> RealmServer Listening Failed Une seule utilisation de chaque adresse de socket (protocole/adresse réseau/port) est habituellement autorisée
+26/07/2013 02:05:15 >> RealmServer Listening Failed Une seule utilisation de chaque adresse de socket (protocole/adresse réseau/port) est habituellement autorisée
+26/07/2013 02:05:15 >> RealmServer Listening Failed Une seule utilisation de chaque adresse de socket (protocole/adresse réseau/port) est habituellement autorisée
+26/07/2013 02:05:15 >> RealmServer Listening Failed Une seule utilisation de chaque adresse de socket (protocole/adresse réseau/port) est habituellement autorisée
+26/07/2013 02:05:15 >> RealmServer Listening Failed Une seule utilisation de chaque adresse de socket (protocole/adresse réseau/port) est habituellement autorisée
+26/07/2013 02:05:15 >> RealmServer Listening Failed Une seule utilisation de chaque adresse de socket (protocole/adresse réseau/port) est habituellement autorisée
+26/07/2013 02:05:15 >> RealmServer Listening Failed Une seule utilisation de chaque adresse de socket (protocole/adresse réseau/port) est habituellement autorisée
+26/07/2013 02:05:15 >> RealmServer Listening Failed Une seule utilisation de chaque adresse de socket (protocole/adresse réseau/port) est habituellement autorisée
+26/07/2013 02:05:15 >> RealmServer Listening Failed Une seule utilisation de chaque adresse de socket (protocole/adresse réseau/port) est habituellement autorisée
+26/07/2013 02:05:15 >> RealmServer Listening Failed Une seule utilisation de chaque adresse de socket (protocole/adresse réseau/port) est habituellement autorisée
+26/07/2013 02:05:15 >> RealmServer Listening Failed Une seule utilisation de chaque adresse de socket (protocole/adresse réseau/port) est habituellement autorisée
+26/07/2013 02:05:15 >> RealmServer Listening Failed Une seule utilisation de chaque adresse de socket (protocole/adresse réseau/port) est habituellement autorisée
+26/07/2013 02:05:15 >> RealmServer Listening Failed Une seule utilisation de chaque adresse de socket (protocole/adresse réseau/port) est habituellement autorisée
+26/07/2013 02:05:15 >> RealmServer Listening Failed Une seule utilisation de chaque adresse de socket (protocole/adresse réseau/port) est habituellement autorisée
+26/07/2013 02:05:15 >> RealmServer Listening Failed Une seule utilisation de chaque adresse de socket (protocole/adresse réseau/port) est habituellement autorisée
+26/07/2013 02:05:15 >> RealmServer Listening Failed Une seule utilisation de chaque adresse de socket (protocole/adresse réseau/port) est habituellement autorisée
+26/07/2013 02:05:15 >> RealmServer Listening Failed Une seule utilisation de chaque adresse de socket (protocole/adresse réseau/port) est habituellement autorisée
+26/07/2013 02:05:15 >> RealmServer Listening Failed Une seule utilisation de chaque adresse de socket (protocole/adresse réseau/port) est habituellement autorisée
+26/07/2013 02:05:16 >> RealmServer Listening Failed Une seule utilisation de chaque adresse de socket (protocole/adresse réseau/port) est habituellement autorisée
+26/07/2013 02:05:16 >> RealmServer Listening Failed Une seule utilisation de chaque adresse de socket (protocole/adresse réseau/port) est habituellement autorisée
+26/07/2013 02:05:16 >> RealmServer Listening Failed Une seule utilisation de chaque adresse de socket (protocole/adresse réseau/port) est habituellement autorisée
+26/07/2013 02:05:16 >> RealmServer Listening Failed Une seule utilisation de chaque adresse de socket (protocole/adresse réseau/port) est habituellement autorisée
+26/07/2013 02:05:16 >> RealmServer Listening Failed Une seule utilisation de chaque adresse de socket (protocole/adresse réseau/port) est habituellement autorisée
+26/07/2013 02:05:16 >> RealmServer Listening Failed Une seule utilisation de chaque adresse de socket (protocole/adresse réseau/port) est habituellement autorisée
+26/07/2013 02:05:16 >> RealmServer Listening Failed Une seule utilisation de chaque adresse de socket (protocole/adresse réseau/port) est habituellement autorisée
+26/07/2013 02:05:16 >> RealmServer Listening Failed Une seule utilisation de chaque adresse de socket (protocole/adresse réseau/port) est habituellement autorisée
+26/07/2013 02:05:16 >> RealmServer Listening Failed Une seule utilisation de chaque adresse de socket (protocole/adresse réseau/port) est habituellement autorisée
+26/07/2013 02:05:16 >> RealmServer Listening Failed Une seule utilisation de chaque adresse de socket (protocole/adresse réseau/port) est habituellement autorisée
+26/07/2013 02:05:16 >> RealmServer Listening Failed Une seule utilisation de chaque adresse de socket (protocole/adresse réseau/port) est habituellement autorisée
+26/07/2013 02:05:16 >> RealmServer Listening Failed Une seule utilisation de chaque adresse de socket (protocole/adresse réseau/port) est habituellement autorisée
+26/07/2013 02:05:16 >> RealmServer Listening Failed Une seule utilisation de chaque adresse de socket (protocole/adresse réseau/port) est habituellement autorisée
+26/07/2013 02:05:16 >> RealmServer Listening Failed Une seule utilisation de chaque adresse de socket (protocole/adresse réseau/port) est habituellement autorisée
+26/07/2013 02:05:16 >> RealmServer Listening Failed Une seule utilisation de chaque adresse de socket (protocole/adresse réseau/port) est habituellement autorisée
+26/07/2013 02:05:16 >> RealmServer Listening Failed Une seule utilisation de chaque adresse de socket (protocole/adresse réseau/port) est habituellement autorisée
+26/07/2013 02:05:16 >> RealmServer Listening Failed Une seule utilisation de chaque adresse de socket (protocole/adresse réseau/port) est habituellement autorisée
+26/07/2013 02:05:16 >> RealmServer Listening Failed Une seule utilisation de chaque adresse de socket (protocole/adresse réseau/port) est habituellement autorisée
+26/07/2013 02:05:16 >> RealmServer Listening Failed Une seule utilisation de chaque adresse de socket (protocole/adresse réseau/port) est habituellement autorisée
+26/07/2013 02:05:16 >> RealmServer Listening Failed Une seule utilisation de chaque adresse de socket (protocole/adresse réseau/port) est habituellement autorisée
+26/07/2013 02:05:16 >> RealmServer Listening Failed Une seule utilisation de chaque adresse de socket (protocole/adresse réseau/port) est habituellement autorisée
+26/07/2013 02:05:16 >> RealmServer Listening Failed Une seule utilisation de chaque adresse de socket (protocole/adresse réseau/port) est habituellement autorisée
+26/07/2013 02:05:16 >> RealmServer Listening Failed Une seule utilisation de chaque adresse de socket (protocole/adresse réseau/port) est habituellement autorisée
+26/07/2013 02:05:17 >> RealmServer Listening Failed Une seule utilisation de chaque adresse de socket (protocole/adresse réseau/port) est habituellement autorisée
+26/07/2013 02:05:17 >> RealmServer Listening Failed Une seule utilisation de chaque adresse de socket (protocole/adresse réseau/port) est habituellement autorisée
+26/07/2013 02:05:17 >> RealmServer Listening Failed Une seule utilisation de chaque adresse de socket (protocole/adresse réseau/port) est habituellement autorisée
+26/07/2013 02:05:17 >> RealmServer Listening Failed Une seule utilisation de chaque adresse de socket (protocole/adresse réseau/port) est habituellement autorisée
+26/07/2013 02:05:17 >> RealmServer Listening Failed Une seule utilisation de chaque adresse de socket (protocole/adresse réseau/port) est habituellement autorisée
+26/07/2013 02:05:17 >> RealmServer Listening Failed Une seule utilisation de chaque adresse de socket (protocole/adresse réseau/port) est habituellement autorisée
+26/07/2013 02:05:17 >> RealmServer Listening Failed Une seule utilisation de chaque adresse de socket (protocole/adresse réseau/port) est habituellement autorisée
+26/07/2013 02:05:17 >> RealmServer Listening Failed Une seule utilisation de chaque adresse de socket (protocole/adresse réseau/port) est habituellement autorisée
+26/07/2013 02:05:17 >> RealmServer Listening Failed Une seule utilisation de chaque adresse de socket (protocole/adresse réseau/port) est habituellement autorisée
+26/07/2013 02:05:17 >> RealmServer Listening Failed Une seule utilisation de chaque adresse de socket (protocole/adresse réseau/port) est habituellement autorisée
+26/07/2013 02:05:17 >> RealmServer Listening Failed Une seule utilisation de chaque adresse de socket (protocole/adresse réseau/port) est habituellement autorisée
+26/07/2013 02:05:17 >> RealmServer Listening Failed Une seule utilisation de chaque adresse de socket (protocole/adresse réseau/port) est habituellement autorisée
+26/07/2013 02:07:49 >> RealmServer Waiting for connexion 

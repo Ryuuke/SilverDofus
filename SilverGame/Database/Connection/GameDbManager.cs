@@ -2,7 +2,7 @@
 using MySql.Data.MySqlClient;
 using SilverGame.Services;
 
-namespace SilverGame.Database
+namespace SilverGame.Database.Connection
 {
     class GameDbManager
     {
@@ -18,7 +18,7 @@ namespace SilverGame.Database
                                         Config.Get("Game_Database_Name")));
             try
             {
-                SilverConsole.WriteLine("Connection to Game...");
+                SilverConsole.WriteLine("Connection to Game Database...", ConsoleColor.DarkGreen);
 
                 Connection.Open();
 

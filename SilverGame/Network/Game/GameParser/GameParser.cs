@@ -4,7 +4,8 @@ using System.Globalization;
 using System.Linq;
 using System.Text.RegularExpressions;
 using SilverGame.Database;
-using SilverGame.Models;
+using SilverGame.Database.Repository;
+using SilverGame.Models.Accounts;
 using SilverGame.Services;
 
 namespace SilverGame.Network.Game.GameParser
@@ -104,18 +105,24 @@ namespace SilverGame.Network.Game.GameParser
 
         private void SendCharactersList(string data)
         {
+            var characters = DatabaseProvider.CharactersAccount.Where(x => x.Account.Id == _client.Account.Id).Aggregate(string.Empty, (current, charactersAccount) => current + charactersAccount.Character.InfosWheneChooseCharacter());
+
             if (bool.Parse(Config.Get("Subscription")))
             {
-                _client.SendPackets(string.Format("{0}{1}|{2}", Packet.CharactersListResponse,
-                    _client.Account.Subscription != null
-                    ? (_client.Account.Subscription.Value - DateTime.Now).TotalMilliseconds.ToString(CultureInfo.InvariantCulture).Split('.')[0]
-                    : Constant.DiscoveryMode.ToString(CultureInfo.InvariantCulture), "0"));
+                _client.SendPackets(string.Format("{0}{1}|{2}|{3}", Packet.CharactersListResponse,
+                    _client.Account.Subscription == null || _client.Account.Subscription.Value < DateTime.Now
+                        ? (object) Constant.DiscoveryMode
+                        : (_client.Account.Subscription.Value - DateTime.Now).TotalMilliseconds.ToString(CultureInfo.InvariantCulture).Split('.')[0],
+                        DatabaseProvider.CharactersAccount.Count(x => x.Account.Id == _client.Account.Id),
+                        characters));
             }
             else
             {
-                _client.SendPackets(string.Format("{0}{1}|{2}", Packet.CharactersListResponse, Constant.OneYear, "0"));
+                _client.SendPackets(string.Format("{0}{1}|{2}|{3}", Packet.CharactersListResponse,
+                        Constant.OneYear,
+                        DatabaseProvider.CharactersAccount.Count(x => x.Account.Id == _client.Account.Id),
+                        characters));
             }
-                
         }
 
         private void GenerateName(string data)
@@ -139,7 +146,7 @@ namespace SilverGame.Network.Game.GameParser
 
             var color3 = int.Parse(datas[5]);
       
-            if (!Characters.Exist(name) && name.Length >= 3 && name.Length <= 20)
+            if (!CharacterRepository.Exist(name) && name.Length >= 3 && name.Length <= 20)
             {
                 var reg = new Regex("^[a-zA-Z-]+$");
 
@@ -147,7 +154,7 @@ namespace SilverGame.Network.Game.GameParser
                 {
                     if (classe >= 1 && classe <= 12 && (sex == 1 || sex == 0))
                     {
-                        Characters.CreateNewCharacter(name, classe, sex, color1, color2, color3, _client.Account.Id);  
+                        CharacterRepository.CreateNewCharacter(name, classe, sex, color1, color2, color3, _client.Account.Id);  
                         _client.SendPackets(Packet.CreationSuccess);
                     }
                     else

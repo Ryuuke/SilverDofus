@@ -30,15 +30,8 @@ namespace SilverRealm.Network.ToGame
 
         protected override void OnSocketClosed()
         {
-            try
-            {
-                RealmClient.GameServers.Single(gameServer => gameServer.ServerKey == _key).State = 0;
-            }
-            catch (Exception e)
-            { 
-                Console.WriteLine(e.Message);
-            }
-            
+
+            RealmClient.GameServers.Single(gameServer => gameServer.ServerKey == _key).State = 0;      
 
             lock (RealmServer.Lock)
             {

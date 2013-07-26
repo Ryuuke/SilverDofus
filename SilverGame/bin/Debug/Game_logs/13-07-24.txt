@@ -964,3 +964,27 @@ GameServer Waiting for new connection
 GameServer Waiting for new connection
 GameServer Waiting for new connection
 GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:36366 Successfuly
+ip 127.0.0.1:36366 Send >> HG
+ip 127.0.0.1:36366 Recv << AT07/24/2013 22:00:20|127.0.0.1:36364|2,Ryuuke,lool,Ryuu,noob ?,OUIIII,False,5,,
+Ryuuke:ip 127.0.0.1:36366 Send >> ATK0
+Ryuuke:ip 127.0.0.1:36366 Recv << Ak0
+Ryuuke:ip 127.0.0.1:36366 Recv << AV
+Ryuuke:ip 127.0.0.1:36366 Send >> AV0
+Ryuuke:ip 127.0.0.1:36366 Recv << Agfr
+Ryuuke:ip 127.0.0.1:36366 Recv << AL
+Ryuuke:ip 127.0.0.1:36366 Send >> ALK0|0
+Ryuuke:ip 127.0.0.1:36366 Recv << Af
+Ryuuke:ip 127.0.0.1:36366 Recv << AP
+Ryuuke:ip 127.0.0.1:36366 Send >> APKnuni
+Ryuuke:ip 127.0.0.1:36366 Recv << AP
+Ryuuke:ip 127.0.0.1:36366 Send >> APKqovobef
+Ryuuke:ip 127.0.0.1:36366 Recv << AP
+Ryuuke:ip 127.0.0.1:36366 Send >> APKwuqudefoc
+Ryuuke:ip 127.0.0.1:36366 Recv << AP
+Ryuuke:ip 127.0.0.1:36366 Send >> APKfesobec
+Ryuuke:ip 127.0.0.1:36366 Recv << AAfesobec|10|1|-1|-1|-1
+Création du personnage fesobec
+Ryuuke:ip 127.0.0.1:36366 Send >> AAK
+Ryuuke:ip 127.0.0.1:36366 Connection Closed

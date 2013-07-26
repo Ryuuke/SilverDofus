@@ -12,5 +12,9 @@
             ErrorsFolder = "Exceptions_logs",
             ComFolder = "Com_logs",
             GameFolder = "Game_logs";
+
+        public const string
+            AccountIdColumnName = "id",
+            CharacterNameColumnName = "name";
     }
 }

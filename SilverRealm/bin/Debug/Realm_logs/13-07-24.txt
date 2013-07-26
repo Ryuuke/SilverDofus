@@ -1195,3 +1195,20 @@
 24/07/2013 20:50:35 >> RealmServer Waiting for connexion 
 24/07/2013 20:59:17 >> RealmServer Waiting for connexion 
 24/07/2013 21:00:13 >> RealmServer Waiting for connexion 
+24/07/2013 22:00:08 >> RealmServer Waiting for connexion 
+24/07/2013 22:00:19 >> RealmServer Connection successfuly with Realm Client 127.0.0.1:36364
+24/07/2013 22:00:19 >> ip 127.0.0.1:36364 Send >> HC41U3doT6tbM5Kh-y6NG0nFWHFOvcF6Px
+24/07/2013 22:00:19 >> ip 127.0.0.1:36364 Recv << 1.29.1
+24/07/2013 22:00:19 >> ip 127.0.0.1:36364 Recv << Ryuuke#16a3aBK5_
+24/07/2013 22:00:19 >> Ryuuke:ip 127.0.0.1:36364 Send >> AdRyuu
+24/07/2013 22:00:19 >> Ryuuke:ip 127.0.0.1:36364 Send >> Ac0
+24/07/2013 22:00:19 >> Ryuuke:ip 127.0.0.1:36364 Send >> AH1;1;0;1|2;0;0;1
+24/07/2013 22:00:19 >> Ryuuke:ip 127.0.0.1:36364 Send >> AlK1
+24/07/2013 22:00:19 >> Ryuuke:ip 127.0.0.1:36364 Send >> AQnoob+?
+24/07/2013 22:00:19 >> Ryuuke:ip 127.0.0.1:36364 Recv << Af
+24/07/2013 22:00:19 >> Ryuuke:ip 127.0.0.1:36364 Send >> Af|0|0|1|-1
+24/07/2013 22:00:19 >> Ryuuke:ip 127.0.0.1:36364 Recv << Ax
+24/07/2013 22:00:19 >> Ryuuke:ip 127.0.0.1:36364 Send >> AxK0|1,2
+24/07/2013 22:00:20 >> Ryuuke:ip 127.0.0.1:36364 Recv << AX1
+24/07/2013 22:00:20 >> Ryuuke:ip 127.0.0.1:36364 Send >> AYK127.0.0.1:5555;07/24/2013 22:00:20|127.0.0.1:36364|2,Ryuuke,lool,Ryuu,noob ?,OUIIII,False,5,,
+24/07/2013 22:00:20 >> Ryuuke:ip 127.0.0.1:36364  Connection closed

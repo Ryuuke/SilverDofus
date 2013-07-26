@@ -19,7 +19,7 @@ namespace SilverRealm.Network.ToGame
 
         protected override void OnListening()
         {
-            Console.WriteLine("Waiting for connection to game servers ...");
+            SilverConsole.WriteLine("Waiting for connection to game servers ...", ConsoleColor.DarkGreen);
             Logs.LogWritter(Constant.ComFolder, "Waiting for connection to game servers ...");
         }
 

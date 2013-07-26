@@ -18,22 +18,23 @@ namespace SilverGame.Services
 
             try
             {
-                var sr = new StreamReader(Constant.ConfigFile, Encoding.Default);
-            
-                while (!sr.EndOfStream)
+                using (var sr = new StreamReader(Constant.ConfigFile, Encoding.Default))
                 {
-                    var line = sr.ReadLine();
+                    while (!sr.EndOfStream)
+                    {
+                        var line = sr.ReadLine();
 
-                    if (line == null || (line.Trim() == string.Empty || line.Trim().StartsWith("//")))
-                        continue;
+                        if (line == null || (line.Trim() == string.Empty || line.Trim().StartsWith("//")))
+                            continue;
 
-                    var infos = line.Split('=');
-                    _values.Add(infos[0].Trim(), infos[1].Trim());
+                        var infos = line.Split('=');
+                        _values.Add(infos[0].Trim(), infos[1].Trim());
+                    }
+
+                    sr.Close();
+
+                    return true;
                 }
-
-                sr.Close();
-
-                return true;
             }
             catch (Exception)
             {

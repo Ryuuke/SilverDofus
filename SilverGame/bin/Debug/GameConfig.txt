@@ -45,4 +45,4 @@ Starting_level=1
 	// comunauté 0 : fr
 Community=0
 
-Subscription=true
+Subscription=false

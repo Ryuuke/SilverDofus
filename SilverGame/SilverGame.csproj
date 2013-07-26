@@ -69,13 +69,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Database\GameDbManager.cs" />
-    <Compile Include="Database\Characters.cs" />
-    <Compile Include="Database\RealmDbManager.cs" />
-    <Compile Include="Models\Account.cs" />
-    <Compile Include="Models\Character.cs" />
-    <Compile Include="Models\Item.cs" />
-    <Compile Include="Models\ItemStats.cs" />
+    <Compile Include="Database\Repository\AccountRepository.cs" />
+    <Compile Include="Database\DatabaseProvider.cs" />
+    <Compile Include="Database\Connection\GameDbManager.cs" />
+    <Compile Include="Database\Repository\CharacterRepository.cs" />
+    <Compile Include="Database\Connection\RealmDbManager.cs" />
+    <Compile Include="Models\Accounts\Account.cs" />
+    <Compile Include="Models\Accounts\CharactersAccount.cs" />
+    <Compile Include="Models\Characters\Character.cs" />
+    <Compile Include="Models\Items\InventoryItem.cs" />
+    <Compile Include="Models\Items\ItemInfos.cs" />
+    <Compile Include="Models\Items\ItemStats.cs" />
     <Compile Include="Network\Abstract\Client.cs" />
     <Compile Include="Network\Abstract\Server.cs" />
     <Compile Include="Network\Game\GameClient.cs" />

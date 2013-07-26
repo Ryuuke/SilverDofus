@@ -12,14 +12,14 @@ namespace SilverRealm.Network.Realm
         public static Object Lock = new Object();
 
         public RealmServer()
-            : base(Services.Config.Get("Realm_ip"), Int32.Parse(Services.Config.Get("Realm_port")))
+            : base(Config.Get("Realm_ip"), Int32.Parse(Services.Config.Get("Realm_port")))
         {
             Clients = new List<RealmClient>();
         }
 
         protected override void OnListening()
         {
-            Console.WriteLine("Waiting for new Connexions");
+            SilverConsole.WriteLine("Waiting for new Connexions", ConsoleColor.DarkGreen);
 
             Logs.LogWritter(Constant.RealmFolder, "RealmServer Waiting for connexion ");
         }

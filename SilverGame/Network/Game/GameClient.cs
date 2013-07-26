@@ -1,5 +1,6 @@
 ﻿using System;
 using SilverGame.Models;
+using SilverGame.Models.Accounts;
 using SilverGame.Network.Abstract;
 using SilverGame.Services;
 using SilverSock;
@@ -36,7 +37,7 @@ namespace SilverGame.Network.Game
                 : string.Format("ip {0} Connection Closed", Socket.IP));
 
             lock (GameServer.Lock)
-            GameServer.Clients.Remove(this);
+                GameServer.Clients.Remove(this);
         }
 
         public override void SendPackets(string packet)

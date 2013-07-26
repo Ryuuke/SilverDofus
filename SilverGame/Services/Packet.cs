@@ -21,6 +21,8 @@
             CreateCharacterBadName = "AAEn",
             NameAlredyExists = "AAEa",
             CreateCharacterFullErrors = "AAEF",
-            CreationSuccess = "AAK";
+            CreationSuccess = "AAK",
+            CharacterSelected = "AS",
+            CharacterSelectedResponse = "ASK";
     }
 }

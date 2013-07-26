@@ -21,7 +21,7 @@ namespace SilverRealm.Database
                 command.Parameters.Add(new MySqlParameter("@attribut", attribut));
                     
                 var reader = command.ExecuteReader();
- 
+
                 if (reader.Read())
                 {
                     try
@@ -36,8 +36,14 @@ namespace SilverRealm.Database
                             Reponse = reader.GetString("reponse"),
                             Connected = reader.GetBoolean("connected"),
                             GmLevel = reader.GetInt16("gmLevel"),
-                            BannedUntil = Convert.IsDBNull(reader["bannedUntil"]) ? (DateTime?)null : reader.GetDateTime("bannedUntil"),
-                            Subscription = Convert.IsDBNull(reader["subscription"]) ? (DateTime?)null : reader.GetDateTime("subscription"),
+                            BannedUntil =
+                                Convert.IsDBNull(reader["bannedUntil"])
+                                    ? (DateTime?)null
+                                    : reader.GetDateTime("bannedUntil"),
+                            Subscription =
+                                Convert.IsDBNull(reader["subscription"])
+                                    ? (DateTime?)null
+                                    : reader.GetDateTime("subscription"),
                         };
                     }
                     catch (Exception e)

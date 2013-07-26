@@ -28,9 +28,9 @@ namespace SilverGame.Services
             return decimalNumber == -1 ? "-1" : decimalNumber.ToString("x");
         }
 
-        public static long HexToDeci(string hexaDecimalNumber)
+        public static int HexToDeci(string hexaDecimalNumber)
         {
-            return hexaDecimalNumber == "" || hexaDecimalNumber == "-1" ? -1 : Convert.ToInt64(hexaDecimalNumber, 16);
+            return hexaDecimalNumber == "" || hexaDecimalNumber == "-1" ? -1 : Convert.ToInt32(hexaDecimalNumber, 16);
         }
     }
 }

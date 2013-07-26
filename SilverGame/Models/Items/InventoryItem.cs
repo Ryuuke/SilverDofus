@@ -1,25 +1,25 @@
-﻿using System.Collections.Generic;
+﻿using SilverGame.Models.Characters;
+using SilverGame.Services;
 
-namespace SilverGame.Models
+namespace SilverGame.Models.Items
 {
-    class Item
+    class InventoryItem
     {
-        public  int Id { get; set; }
-        public string Name { get; set; }
-        public int Level { get; set; }
-        public int Weight { get; set; }
-        public List<ItemStats> Stats { get; set; }
-        public string WeaponInfo { get; set; }
-        public int Price { get; set; }
-        public int Type { get; set; }
-        public bool TwoHands { get; set; }
-        public string Conditions { get; set; }
-        public string UseEffects { get; set; }
-        public bool IsEthereal { get; set; }
-        public bool Forgemageable { get; set; }
-        public bool Targetable { get; set; }
-        public bool IsBuff { get; set; }
-        public bool Usable { get; set; }
+        public int Id { get; set; }
+        public Character Character;
+        public int ItemPosition { get; set; }
+        public ItemInfos ItemInfos { get; set; }
+        public int Quantity { get; set; }
+        public string Stats { get; set; }
+
+        public override string ToString()
+        {
+            return string.Format("{0}~{1}~{2}~{3}",
+                Algorithm.DeciToHex(Id),
+                Algorithm.DeciToHex(Quantity),
+                Algorithm.DeciToHex(ItemPosition),
+                Stats);
+        }
 
         public enum Position
         {

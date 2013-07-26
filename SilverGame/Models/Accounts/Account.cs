@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SilverGame.Models
+namespace SilverGame.Models.Accounts
 {
     class Account
     {
