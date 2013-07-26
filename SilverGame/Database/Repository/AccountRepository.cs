@@ -11,7 +11,6 @@ namespace SilverGame.Database.Repository
 {
     static class AccountRepository
     {
-        
         public static Account GetAccount<T>(string column, T value)
         {
             Account account = null;
@@ -64,5 +63,46 @@ namespace SilverGame.Database.Repository
             return account;
         }
 
+        public static void UpdateAccount(bool connected, int id = 0)
+        {
+            lock (RealmDbManager.Lock)
+            {
+                var req = id == 0 ? "UPDATE accounts SET connected = @connected" : "UPDATE accounts SET connected = @connected WHERE id = @id";
+
+                using (var command = new MySqlCommand(req, RealmDbManager.Connection))
+                {
+                    command.Parameters.Add(new MySqlParameter("@id", id));
+                    command.Parameters.Add(new MySqlParameter("@connected", connected));
+
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public static List<Gift> GetGifts(int id)
+        {
+            var gifts = new List<Gift>();
+
+            lock (GameDbManager.Lock)
+            {
+                const string req = "SELECT * FROM account_gifts WHERE accountId=@id";
+
+                using (var command = new MySqlCommand(req, GameDbManager.Connection))
+                {
+                    command.Parameters.Add(new MySqlParameter("@id", id));
+
+                    var reader = command.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+
+                    }
+
+                    reader.Close();
+                }
+            }
+
+            return gifts;
+        }
     }
 }

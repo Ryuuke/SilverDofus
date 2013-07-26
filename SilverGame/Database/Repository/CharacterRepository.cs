@@ -11,38 +11,6 @@ namespace SilverGame.Database.Repository
 {
     static class CharacterRepository
     {
-        
-        public static int CountPlayers()
-        {
-            int numberPlayers;
-
-            lock (GameDbManager.Lock)
-            {
-                const string req = "SELECT COUNT(*) FROM characters";
-
-                using (var command = new MySqlCommand(req, GameDbManager.Connection))
-                {
-                    numberPlayers = (int)command.ExecuteScalar();
-                }
-            }
-
-            return numberPlayers;
-        }
-
-        public static bool Exist(string charName)
-        {
-            lock (GameDbManager.Lock)
-            {
-                const string req = "SELECT COUNT(*) FROM characters WHERE name=@name";
-
-                using (var command = new MySqlCommand(req, GameDbManager.Connection))
-                {
-                    command.Parameters.Add(new MySqlParameter("@name", charName));
-
-                    return command.ExecuteScalar().Equals(1);
-                }
-            }
-        }
 
         public static void CreateNewCharacter(string name, int classe, int sex, int color1, int color2, int color3, int accountId)
         {
@@ -134,7 +102,6 @@ namespace SilverGame.Database.Repository
             }
             catch (Exception e)
             {
-
                 SilverConsole.WriteLine(e.Message, ConsoleColor.Red);
             }
         }

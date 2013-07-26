@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using SilverRealm.Services;
 using SilverRealm.Network.Abstract;
 using SilverSock;
@@ -12,7 +13,7 @@ namespace SilverRealm.Network.Realm
         public static Object Lock = new Object();
 
         public RealmServer()
-            : base(Config.Get("Realm_ip"), Int32.Parse(Services.Config.Get("Realm_port")))
+            : base(Config.Get("Realm_ip"), Int32.Parse(Config.Get("Realm_port")))
         {
             Clients = new List<RealmClient>();
         }
@@ -39,6 +40,13 @@ namespace SilverRealm.Network.Realm
 
             lock (Lock)
                 Clients.Add(new RealmClient(socket));
+        }
+
+        public static void Disconnect(int id)
+        {
+            if (!Clients.Any(x => x.Account != null && x.Account.Id == id)) return;
+
+            Clients.Find(client => client.Account.Id == id).Disconnect();
         }
     }
 }

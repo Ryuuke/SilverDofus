@@ -77,10 +77,10 @@
     <Compile Include="Models\Accounts\Account.cs" />
     <Compile Include="Models\Accounts\CharactersAccount.cs" />
     <Compile Include="Models\Characters\Character.cs" />
+    <Compile Include="Models\Accounts\Gift.cs" />
     <Compile Include="Models\Items\InventoryItem.cs" />
     <Compile Include="Models\Items\ItemInfos.cs" />
     <Compile Include="Models\Items\ItemStats.cs" />
-    <Compile Include="Network\Abstract\Client.cs" />
     <Compile Include="Network\Abstract\Server.cs" />
     <Compile Include="Network\Game\GameClient.cs" />
     <Compile Include="Network\Game\GameParser\GameParser.cs" />

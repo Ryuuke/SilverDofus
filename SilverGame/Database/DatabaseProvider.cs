@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using SilverGame.Database.Connection;
 using SilverGame.Database.Repository;
-using SilverGame.Models;
 using SilverGame.Models.Accounts;
 using MySql.Data.MySqlClient;
 using SilverGame.Models.Characters;
@@ -14,12 +13,13 @@ namespace SilverGame.Database
 {
     class DatabaseProvider
     {
+        public static int ServerId; 
         public static readonly List<Account> Accounts = new List<Account>();
         public static readonly List<CharactersAccount> CharactersAccount = new List<CharactersAccount>();
+        public static readonly List<Gift> Gifts = new List<Gift>(); 
         public static readonly List<Character> Characters = new List<Character>();
         public static readonly List<InventoryItem> InventoryItems = new List<InventoryItem>();
         public static readonly List<ItemInfos> ItemsInfos = new List<ItemInfos>();
-        public static int ServerId; 
 
         public static void LoadDatabase()
         {
@@ -29,6 +29,9 @@ namespace SilverGame.Database
             LoadCharacters();
             LoadItemInfos();
             LoadInventoryItems();
+            LoadGifts();
+
+            AccountRepository.UpdateAccount(false);
         }
 
         private static void LoadServerId()
@@ -97,6 +100,58 @@ namespace SilverGame.Database
             }
 
             SilverConsole.WriteLine(String.Format("loaded {0} accounts successfully", Accounts.Count), ConsoleColor.Green);
+        }
+
+        public static void LoadGifts()
+        {
+            var req = "SELECT * FROM gift_items";
+
+            var listItemGift = new List<KeyValuePair<int, ItemInfos>>();
+
+            using (var command = new MySqlCommand(req, GameDbManager.Connection))
+            {
+                var reader = command.ExecuteReader();
+
+                lock (ItemsInfos)
+                {
+                    while (reader.Read())
+                    {
+                        listItemGift.Add(new KeyValuePair<int, ItemInfos>(
+                            reader.GetInt16("giftId"),
+                            ItemsInfos.Find(x => x.Id == reader.GetInt16("itemId"))
+                            ));
+                    }
+                }
+
+                reader.Close();
+            }
+
+            req = "SELECT * FROM gift";
+
+            using (var command = new MySqlCommand(req, GameDbManager.Connection))
+            {
+                var reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    lock (Gifts)
+                    {
+                        Gifts.Add(new Gift
+                        {
+                            Id = reader.GetInt16("id"),
+                            Title = reader.GetString("title"),
+                            Description = reader.GetString("Description"),
+                            PictureUrl = reader.GetString("pictureUrl"),
+                            Items = listItemGift.FindAll(x => x.Key == reader.GetInt16("id")).Select(x => x.Value)
+
+                        });
+                    }
+                }
+
+                reader.Close();
+            }
+
+            SilverConsole.WriteLine(string.Format("Loaded {0} Gifts Sucessfully", Gifts.Count), ConsoleColor.Green);
         }
 
         public static void LoadCharactersAccount()

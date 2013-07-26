@@ -2,15 +2,19 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using System.Text;
 using SilverRealm.Models;
 using SilverRealm.Network.Abstract;
+using SilverRealm.Network.ToGame;
 using SilverSock;
 using SilverRealm.Services;
 
 namespace SilverRealm.Network.Realm
 {
-    sealed class RealmClient : Client
+    sealed class RealmClient
     {
+        public readonly SilverSocket Socket;
+
         private readonly string _key;
 
         private StateConnecion _stateConnxion;
@@ -19,60 +23,67 @@ namespace SilverRealm.Network.Realm
         public static List<GameServer> GameServers;
 
         public RealmClient(SilverSocket socket)
-            : base(socket)
         {
+            Socket = socket;
+            {
+                socket.OnDataArrivalEvent += DataArrival;
+                socket.OnSocketClosedEvent += OnSocketClosed;
+            }
+
             _key = Hash.RandomString(32);
 
             SendPackets(string.Format("{0}{1}", Packet.HelloConnectionServer, _key));
         }
 
-        protected override void OnConnected()
-        {
-            
-        }
-
-        protected override void OnFailedToConnect(Exception e)
-        {
-            Logs.LogWritter(Constant.ErrorsFolder, _stateConnxion == StateConnecion.CheckingServer
-                 ? string.Format("{0}:ip {1} {2}", Account.Username, Socket.IP, e.Message)
-                 : string.Format("ip {0} {1}", Socket.IP, e.Message));
-        }
-
-        protected override void OnSocketClosed()
+        private void OnSocketClosed()
         {
             SilverConsole.WriteLine("Connection closed", ConsoleColor.Yellow);
             Logs.LogWritter(Constant.RealmFolder, _stateConnxion == StateConnecion.CheckingServer
                 ? string.Format("{0}:ip {1}  Connection closed", Account.Username, Socket.IP)
                 : string.Format("ip {0} Connection closed", Socket.IP));
 
+            RemoveMeOnList();
+        }
+
+        public void RemoveMeOnList()
+        {
             lock (RealmServer.Lock)
                 RealmServer.Clients.Remove(this);
         }
 
-        protected override void SendPackets(string packet)
+        public void SendPackets(string packet)
         {
-            base.SendPackets(packet);
+            SilverConsole.WriteLine(string.Format("send >>" + string.Format("{0}\x00", packet)), ConsoleColor.Cyan);
+            Socket.Send(Encoding.UTF8.GetBytes(string.Format("{0}\x00", packet)));
 
             Logs.LogWritter(Constant.RealmFolder, _stateConnxion == StateConnecion.CheckingServer
                 ? string.Format("{0}:ip {1} Send >> {2}", Account.Username, Socket.IP, packet)
                 : string.Format("ip {0} Send >> {1}", Socket.IP, packet));
         }
 
-        protected override void DataReceived(string packet)
+        public void DataArrival(byte[] data)
         {
-            Logs.LogWritter(Constant.RealmFolder, _stateConnxion == StateConnecion.CheckingServer 
+            foreach (var packet in Encoding.UTF8.GetString(data).Replace("\x0a", "").Split('\x00').Where(x => x != ""))
+            {
+                SilverConsole.WriteLine("Recv <<" + packet, ConsoleColor.Green);
+
+                Logs.LogWritter(Constant.RealmFolder, _stateConnxion == StateConnecion.CheckingServer
                 ? string.Format("{0}:ip {1} Recv << {2}", Account.Username, Socket.IP, packet)
                 : string.Format("ip {0} Recv << {1}", Socket.IP, packet));
 
+                DataReceived(packet);
+            }
+        }
+
+        private void DataReceived(string packet)
+        {
             switch (_stateConnxion)
             {
                 case StateConnecion.CheckingVersion:
-                    _stateConnxion = StateConnecion.CheckingAccount;
                     CheckVersion(packet);
                     break;
 
                 case StateConnecion.CheckingAccount:
-                    _stateConnxion = StateConnecion.CheckingServer;
                     CheckAccount(packet);
                     break;
 
@@ -84,9 +95,13 @@ namespace SilverRealm.Network.Realm
 
         private void CheckVersion(string packet)
         {
-            if (Constant.Version == packet) return;
+            if (Constant.Version != packet)
+            {
                 SendPackets(Packet.WrongDofusVersion);
-                OnSocketClosed();
+                RemoveMeOnList();
+            }
+            else
+                _stateConnxion = StateConnecion.CheckingAccount;
         }
 
         private void CheckAccount(string packet)
@@ -99,20 +114,24 @@ namespace SilverRealm.Network.Realm
             if (Account == null || Hash.Encrypt(Account.Password, _key) != password)
             {
                 SendPackets(Packet.WrongDofusAccount);
-                OnSocketClosed();
+                RemoveMeOnList();
             }
-            else if (RealmServer.Clients.Count(x => x.Account.Username == username) > 1 || Account.Connected)
+            else if (RealmServer.Clients.Count(x => x.Account.Username.Equals(username, StringComparison.OrdinalIgnoreCase)) > 1 || Account.Connected)
             {
                 SendPackets(Packet.AlredyConnected);
-                OnSocketClosed();
+
+                RealmServer.Disconnect(Account.Id);
+                ToGameClient.SendPacket(string.Format("{0}{1}", Packet.DisconnectMe, Account.Id));
+
+                RemoveMeOnList();
             }
             else if (Account.BannedUntil != null && Account.BannedUntil > DateTime.Now)
             {
                 SendPackets(Packet.BannedAccount);
-                OnSocketClosed();
+                RemoveMeOnList();
             }
             else
-            {
+            {     
                 SendPackets(string.Format("{0}{1}", Packet.DofusPseudo, Account.Pseudo));
                 SendPackets(string.Format("{0}{1}", Packet.Community, 0)); // 0 : communauté fr
 
@@ -120,6 +139,8 @@ namespace SilverRealm.Network.Realm
 
                 SendPackets(string.Format("{0}{1}", Packet.IsAdmin, Account.GmLevel > 0 ? 1 : 0));
                 SendPackets(string.Format("{0}{1}", Packet.SecretQuestion, Account.Question.Replace(" ", "+")));
+
+                _stateConnxion = StateConnecion.CheckingServer;
             }
         }
 
@@ -168,12 +189,10 @@ namespace SilverRealm.Network.Realm
                         (Account.Subscription == null || DateTime.Now >= Account.Subscription.Value)
                             ? (object) Constant.DiscoveryMode
                             : (Account.Subscription.Value - DateTime.Now).TotalMilliseconds.ToString(CultureInfo.InvariantCulture).Split('.')[0], 
-                    listCharactersByGameServer));
+                        listCharactersByGameServer));
             }
             else
-            {
                 SendPackets(string.Format("{0}{1}{2}", Packet.SubscriptionPlayerList, Constant.OneYear, listCharactersByGameServer));
-            }
         }
 
         private void SendFriendServerList(string packet)
@@ -199,10 +218,18 @@ namespace SilverRealm.Network.Realm
             if (gameServer == null)
                 return;
 
-            SendPackets(gameServer.State == 0
-                ? Packet.UnavailableServer
-                : string.Format("{0}{1}:{2};{3}", Packet.ConnectToGameServer, gameServer.Ip, gameServer.Port,
-                    Hash.GenerateTicketKey(Socket, Account)));
+            SendPackets(
+                gameServer.State == 0
+                    ? Packet.UnavailableServer
+                    : string.Format("{0}{1}:{2};{3}", Packet.ConnectToGameServer, gameServer.Ip, gameServer.Port,
+                Hash.GenerateTicketKey(Socket, Account)));
+        }
+
+        public void Disconnect()
+        {
+            Socket.CloseSocket();
+
+            RemoveMeOnList();
         }
 
         public enum StateConnecion

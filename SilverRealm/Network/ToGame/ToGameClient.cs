@@ -1,34 +1,31 @@
 ﻿using System;
 using System.Linq;
+using System.Text;
 using SilverRealm.Network.Realm;
 using SilverRealm.Services;
-using SilverRealm.Network.Abstract;
 using SilverSock;
 
 namespace SilverRealm.Network.ToGame
 {
-    sealed class ToGameClient : Client
+    sealed class ToGameClient
     {
+        public static SilverSocket Socket;
+
         private readonly CommunicationState _communicationState;
         private string _key;
 
         public ToGameClient(SilverSocket socket)
-            : base(socket)
         {
+            Socket = socket;
+            {
+                socket.OnDataArrivalEvent += DataArrival;
+                socket.OnSocketClosedEvent += OnSocketClosed;
+            }
+
             _communicationState = CommunicationState.VerifyGame;
         }
 
-        protected override void OnConnected()
-        {
-           
-        }
-
-        protected override void OnFailedToConnect(Exception e)
-        {
-           
-        }
-
-        protected override void OnSocketClosed()
+        public void OnSocketClosed()
         {
 
             RealmClient.GameServers.Single(gameServer => gameServer.ServerKey == _key).State = 0;      
@@ -48,10 +45,24 @@ namespace SilverRealm.Network.ToGame
                 ToGameServer.Games.Remove(this);
         }
 
-        protected override void DataReceived(string packet)
+        public static void SendPacket(string packet)
         {
-            Logs.LogWritter(Constant.ComFolder, string.Format("Recv << {0}", packet));
+            SilverConsole.WriteLine(string.Format("send >>" + string.Format("{0}\x00", packet)), ConsoleColor.Cyan);
+            Socket.Send(Encoding.UTF8.GetBytes(string.Format("{0}\x00", packet)));
+        }
 
+        public void DataArrival(byte[] data)
+        {
+            foreach (var packet in Encoding.UTF8.GetString(data).Replace("\x0a", "").Split('\x00').Where(x => x != ""))
+            {
+                SilverConsole.WriteLine("Recv <<" + packet, ConsoleColor.Green);
+                Logs.LogWritter(Constant.ComFolder, string.Format("Recv << {0}", packet));
+                DataReceived(packet);
+            }
+        }
+
+        public void DataReceived(string packet)
+        {
             switch (_communicationState)
             {
                 case CommunicationState.VerifyGame :

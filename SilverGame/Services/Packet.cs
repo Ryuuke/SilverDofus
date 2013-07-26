@@ -4,7 +4,8 @@
     {
         // packet for communication Realm << >> Game
         public const string
-            HelloRealm = "HR";
+            HelloRealm = "HR",
+            DisconnectMe = "DM";
 
         public const string
             HelloGameServer = "HG",

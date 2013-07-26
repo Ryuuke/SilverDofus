@@ -58,7 +58,7 @@ namespace SilverGame.Network.Game.GameParser
 
             var ip = packet.Split('|')[1];
 
-            if (DateTime.ParseExact(date, "MM/dd/yyyy HH:mm:ss", null).AddSeconds(Constant.TicketTimeExpiredInterval) < DateTime.Now)
+            if (DateTime.ParseExact(date, "MM/dd/yyyy HH:mm:ss", null).AddSeconds(Constant.TicketTimeExpiredInterval) < DateTime.ParseExact(DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss"), "MM/dd/yyyy HH:mm:ss", null))
             {
                 _client.SendPackets(Packet.TicketExpired);
                 _client.OnSocketClosed();
@@ -82,11 +82,13 @@ namespace SilverGame.Network.Game.GameParser
                         Pseudo = account[3],
                         Question = account[4],
                         Reponse = account[5],
-                        Connected = bool.Parse(account[6]),
+                        Connected = true,
                         GmLevel = int.Parse(account[7]),
                         BannedUntil = account[8] == "" ? (DateTime?)null : DateTime.Parse(account[8].ToString(CultureInfo.InvariantCulture)),
                         Subscription = account[9] == "" ? (DateTime?)null : DateTime.Parse(account[9].ToString(CultureInfo.InvariantCulture)),
                     };
+
+                    AccountRepository.UpdateAccount(true, _client.Account.Id);
                 }
                 catch (Exception e)
                 {
@@ -105,11 +107,11 @@ namespace SilverGame.Network.Game.GameParser
 
         private void SendCharactersList(string data)
         {
-            var characters = DatabaseProvider.CharactersAccount.Where(x => x.Account.Id == _client.Account.Id).Aggregate(string.Empty, (current, charactersAccount) => current + charactersAccount.Character.InfosWheneChooseCharacter());
+            var characters = DatabaseProvider.CharactersAccount.Where(accountCharacters => accountCharacters.Account.Id == _client.Account.Id).Aggregate(string.Empty, (current, accountCharacters) => current + accountCharacters.Character.InfosWheneChooseCharacter());
 
             if (bool.Parse(Config.Get("Subscription")))
             {
-                _client.SendPackets(string.Format("{0}{1}|{2}|{3}", Packet.CharactersListResponse,
+                _client.SendPackets(string.Format("{0}{1}|{2}{3}", Packet.CharactersListResponse,
                     _client.Account.Subscription == null || _client.Account.Subscription.Value < DateTime.Now
                         ? (object) Constant.DiscoveryMode
                         : (_client.Account.Subscription.Value - DateTime.Now).TotalMilliseconds.ToString(CultureInfo.InvariantCulture).Split('.')[0],
@@ -118,7 +120,7 @@ namespace SilverGame.Network.Game.GameParser
             }
             else
             {
-                _client.SendPackets(string.Format("{0}{1}|{2}|{3}", Packet.CharactersListResponse,
+                _client.SendPackets(string.Format("{0}{1}|{2}{3}", Packet.CharactersListResponse,
                         Constant.OneYear,
                         DatabaseProvider.CharactersAccount.Count(x => x.Account.Id == _client.Account.Id),
                         characters));
@@ -146,7 +148,7 @@ namespace SilverGame.Network.Game.GameParser
 
             var color3 = int.Parse(datas[5]);
       
-            if (!CharacterRepository.Exist(name) && name.Length >= 3 && name.Length <= 20)
+            if (DatabaseProvider.Characters.All(x => x.Name != name) && name.Length >= 3 && name.Length <= 20)
             {
                 var reg = new Regex("^[a-zA-Z-]+$");
 

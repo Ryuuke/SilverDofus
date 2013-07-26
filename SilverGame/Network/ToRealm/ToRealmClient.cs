@@ -1,16 +1,30 @@
 ﻿using System;
+using System.Linq;
+using System.Net.Sockets;
+using System.Text;
 using System.Threading;
+using SilverGame.Database;
 using SilverGame.Network.Abstract;
+using SilverGame.Network.Game;
 using SilverGame.Services;
 using SilverSock;
 
 namespace SilverGame.Network.ToRealm
 {
-    sealed class ToRealmClient : Client
+    sealed class ToRealmClient
     {
+        public static SilverSocket Socket ;
+
         public ToRealmClient()
-            : base(new SilverSocket())
         {
+            Socket = new SilverSocket();
+            {
+                Socket.OnConnected += OnConnected;
+                Socket.OnDataArrivalEvent += DataArrival;
+                Socket.OnFailedToConnect += OnFailedToConnect;
+                Socket.OnSocketClosedEvent += OnSocketClosed;
+            }
+
             ConnectToRealm();
         }
 
@@ -21,7 +35,7 @@ namespace SilverGame.Network.ToRealm
             Socket.ConnectTo(Config.Get("Realm_ip"), Int32.Parse(Config.Get("Com_port")));
         }
 
-        protected override void OnConnected()
+        public void OnConnected()
         {
             SilverConsole.WriteLine("Com : Connected to Realm Server Successfully", ConsoleColor.Green);
             Logs.LogWritter(Constant.ComFolder, "Com : Connected to Realm Server Successfully");
@@ -31,14 +45,14 @@ namespace SilverGame.Network.ToRealm
             SendPackets(string.Format("{0}{1}", Packet.HelloRealm, Config.Get("Game_key")));
         }
 
-        protected override void OnFailedToConnect(Exception e)
+        public void OnFailedToConnect(Exception e)
         {
             SilverConsole.WriteLine("Com : Failed to connect to Realm Server", ConsoleColor.Red);
             Logs.LogWritter(Constant.ComFolder, "Com : Failed to connect to Realm Server");
             RetryToConnect();
         }
 
-        public override void OnSocketClosed()
+        public void OnSocketClosed()
         {
             SilverConsole.WriteLine("Connection To Realm Server closed", ConsoleColor.Yellow);
             Logs.LogWritter(Constant.ComFolder, "Com : Connection to Realm Server closed");
@@ -53,9 +67,43 @@ namespace SilverGame.Network.ToRealm
             ConnectToRealm();
         }
 
-        protected override void DataReceived(string packet)
+        public static void SendPackets(string packet)
         {
-            throw new NotImplementedException();
+            SilverConsole.WriteLine(string.Format("send >>" + string.Format("{0}\x00", packet)), ConsoleColor.Cyan);
+            Socket.Send(Encoding.UTF8.GetBytes(string.Format("{0}\x00", packet)));
+        }
+
+        private void DataArrival(byte[] data)
+        {
+            foreach (var packet in Encoding.UTF8.GetString(data).Replace("\x0a", "").Split('\x00').Where(x => x != ""))
+            {
+                SilverConsole.WriteLine(string.Format("Recv <<" + packet), ConsoleColor.Green);
+                DataReceived(packet);
+            }
+        }
+
+        public void DataReceived(string packet)
+        {
+            switch (packet.Substring(0,2))
+            {
+                case Packet.DisconnectMe:
+                    DisconectGameClient(packet.Substring(2));
+                    break;
+            }
+                
+        }
+
+        private void DisconectGameClient(string id)
+        {
+            if (GameServer.Clients.All(x => x.Account.Id != int.Parse(id)))
+                return;
+
+            lock (GameServer.Lock)
+            {
+                GameServer.Clients.Find(x => x.Account.Id == int.Parse(id)).Disconnect();
+            }
+
+            Database.Repository.AccountRepository.UpdateAccount(false, int.Parse(id));
         }
     }
 }

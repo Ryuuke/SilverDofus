@@ -18,11 +18,11 @@ namespace SilverGame.Models.Characters
 
         public string InfosWheneChooseCharacter()
         {
-            return string.Format("{0};{1};{2};{3};{4};{5};{6};{7};0;{8};1;1;",
+            return string.Format("|{0};{1};{2};{3};{4};{5};{6};{7};0;{8};;;",
                 Id, Name, Level, Skin, Color1, Color2, Color3,
                 GetItemsWheneChooseCharacter(), DatabaseProvider.ServerId);
         }
-
+            
         private string GetItemsWheneChooseCharacter()
         {
             var items = string.Empty;
