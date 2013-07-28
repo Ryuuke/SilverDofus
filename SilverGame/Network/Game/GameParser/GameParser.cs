@@ -194,8 +194,10 @@ namespace SilverGame.Network.Game.GameParser
 
         private void SendGiftsList(string data)
         {
-
             var gift = DatabaseProvider.AccountGifts.Find(x => x.Key.Id == _client.Account.Id).Value;
+
+            if (gift == null)
+                return;
 
             _client.SendPackets(string.Format("{0}1|{1}", Packet.GiftsList, gift));
         }
