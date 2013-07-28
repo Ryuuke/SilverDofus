@@ -15,9 +15,9 @@ namespace SilverRealm.Database
 
             lock (DbManager.Lock)
             {
-                const string req = "SELECT * FROM gameservers";
+                const string query = "SELECT * FROM gameservers";
 
-                var command = new MySqlCommand(req, DbManager.Connection);
+                var command = new MySqlCommand(query, DbManager.Connection);
 
                 var reader = command.ExecuteReader();
 

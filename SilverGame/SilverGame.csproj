@@ -62,11 +62,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Database\Repository\AccountRepository.cs" />
@@ -74,12 +70,16 @@
     <Compile Include="Database\Connection\GameDbManager.cs" />
     <Compile Include="Database\Repository\CharacterRepository.cs" />
     <Compile Include="Database\Connection\RealmDbManager.cs" />
+    <Compile Include="Database\Repository\GiftRepository.cs" />
+    <Compile Include="Database\Repository\InventoryItemRepository.cs" />
     <Compile Include="Models\Accounts\Account.cs" />
-    <Compile Include="Models\Accounts\CharactersAccount.cs" />
+    <Compile Include="Models\Accounts\AccountCharacters.cs" />
     <Compile Include="Models\Characters\Character.cs" />
-    <Compile Include="Models\Accounts\Gift.cs" />
+    <Compile Include="Models\Gifts\Gift.cs" />
+    <Compile Include="Models\Gifts\GiftItems.cs" />
     <Compile Include="Models\Items\InventoryItem.cs" />
     <Compile Include="Models\Items\ItemInfos.cs" />
+    <Compile Include="Models\Items\ItemManager.cs" />
     <Compile Include="Models\Items\ItemStats.cs" />
     <Compile Include="Network\Abstract\Server.cs" />
     <Compile Include="Network\Game\GameClient.cs" />

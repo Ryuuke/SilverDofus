@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using SilverGame.Database;
+using SilverGame.Models.Items;
 using SilverGame.Services;
 
 namespace SilverGame.Models.Characters
@@ -29,28 +30,28 @@ namespace SilverGame.Models.Characters
 
             var inventoryItems = DatabaseProvider.InventoryItems.FindAll(x => x.Character.Id == Id);
 
-            if (inventoryItems.Any(x => x.ItemPosition == 1))
-                items += Algorithm.DeciToHex(inventoryItems.Find(x => x.ItemPosition == 1).ItemInfos.Id);
+            if (inventoryItems.Any(x => x.ItemPosition == ItemManager.Position.Arme))
+                items += Algorithm.DeciToHex(inventoryItems.Find(x => x.ItemPosition == ItemManager.Position.Arme).ItemInfos.Id);
 
             items += ",";
 
-            if (inventoryItems.Any(x => x.ItemPosition == 6))
-                items += Algorithm.DeciToHex(inventoryItems.Find(x => x.ItemPosition == 6).ItemInfos.Id);
+            if (inventoryItems.Any(x => x.ItemPosition == ItemManager.Position.Coiffe))
+                items += Algorithm.DeciToHex(inventoryItems.Find(x => x.ItemPosition == ItemManager.Position.Coiffe).ItemInfos.Id);
 
             items += ",";
 
-            if (inventoryItems.Any(x => x.ItemPosition == 7))
-                items += Algorithm.DeciToHex(inventoryItems.Find(x => x.ItemPosition == 7).ItemInfos.Id);
+            if (inventoryItems.Any(x => x.ItemPosition == ItemManager.Position.Cape))
+                items += Algorithm.DeciToHex(inventoryItems.Find(x => x.ItemPosition == ItemManager.Position.Cape).ItemInfos.Id);
 
             items += ",";
 
-            if (inventoryItems.Any(x => x.ItemPosition == 8))
-                items += Algorithm.DeciToHex(inventoryItems.Find(x => x.ItemPosition == 8).ItemInfos.Id);
+            if (inventoryItems.Any(x => x.ItemPosition == ItemManager.Position.Familier))
+                items += Algorithm.DeciToHex(inventoryItems.Find(x => x.ItemPosition == ItemManager.Position.Familier).ItemInfos.Id);
 
             items += ",";
 
-            if (inventoryItems.Any(x => x.ItemPosition == 15))
-                items += Algorithm.DeciToHex(inventoryItems.Find(x => x.ItemPosition == 15).ItemInfos.Id);
+            if (inventoryItems.Any(x => x.ItemPosition == ItemManager.Position.Bouclier))
+                items += Algorithm.DeciToHex(inventoryItems.Find(x => x.ItemPosition == ItemManager.Position.Bouclier).ItemInfos.Id);
 
             return items;
         }

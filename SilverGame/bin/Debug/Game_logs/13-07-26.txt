@@ -1130,3 +1130,11 @@ Ryuu:ip 127.0.0.1:54534 Recv << Agfr
 Ryuu:ip 127.0.0.1:54534 Recv << AL
 Ryuu:ip 127.0.0.1:54534 Send >> ALK31536000000|1|1;xowulofo;20;21;-1;-1;-1;,2b8,,,;0;1;;;
 Ryuu:ip 127.0.0.1:54534 Recv << Af
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Waiting for new connection

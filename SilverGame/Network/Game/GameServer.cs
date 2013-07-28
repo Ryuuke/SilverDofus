@@ -38,8 +38,6 @@ namespace SilverGame.Network.Game
 
             lock (Lock)
                 Clients.Add(new GameClient(socket));
-
-            Console.WriteLine(GameServer.Clients.Count);
         }
     }
 }

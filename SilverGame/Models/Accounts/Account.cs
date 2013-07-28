@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace SilverGame.Models.Accounts
 {
@@ -15,6 +14,5 @@ namespace SilverGame.Models.Accounts
         public int GmLevel { get; set; }
         public DateTime? BannedUntil { get; set; }
         public DateTime? Subscription { get; set; }
-        public List<Gift> Gifts { get; set; }
     }
 }

@@ -1,4 +1,7 @@
-﻿using SilverGame.Services;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using SilverGame.Services;
 
 namespace SilverGame.Models.Items
 {
@@ -17,6 +20,35 @@ namespace SilverGame.Models.Items
                 Algorithm.DeciToHex(MaxValue),
                 "0",
                 JetDecimal);
+        }
+
+        public static List<ItemStats> GenerateRandomStats(List<ItemStats> stats)
+        {
+            var rand = new Random();
+
+            var generatedStats = stats.Select(itemStats => new ItemStats
+            {
+                Header = itemStats.Header,
+                MinValue = rand.Next(itemStats.MinValue, itemStats.MaxValue),
+                MaxValue = 0,
+                JetDecimal = itemStats.JetDecimal,
+
+            }).ToList();
+
+
+            return generatedStats;
+        }
+
+        public static List<ItemStats> ToStats(string stats)
+        {
+            var listStats = (from stat in stats.Split(',')
+                where stat.Split('#').Length == 5
+                select new ItemStats
+                {
+                    Header = Algorithm.HexToDeci(stat.Split('#')[0]), MinValue = Algorithm.HexToDeci(stat.Split('#')[1]), MaxValue = Algorithm.HexToDeci(stat.Split('#')[2]), JetDecimal = stat.Split('#')[4]
+                }).ToList();
+
+            return listStats;
         }
     }
 }

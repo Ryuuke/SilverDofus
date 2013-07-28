@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Globalization;
-using System.Text;
 using SilverRealm.Models;
 using SilverSock;
 

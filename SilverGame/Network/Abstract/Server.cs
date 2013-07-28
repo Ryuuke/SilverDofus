@@ -14,8 +14,12 @@ namespace SilverGame.Network.Abstract
                 Serv.OnAcceptSocketEvent += OnSocketAccepted;
                 Serv.OnListeningEvent += OnListening;
                 Serv.OnListeningFailedEvent += OnListeningFailed;
-                Serv.WaitConnection();
             }
+        }
+
+        public void Run()
+        {
+            Serv.WaitConnection();
         }
 
         #region abstracts

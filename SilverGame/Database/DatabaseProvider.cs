@@ -4,6 +4,7 @@ using System.Linq;
 using SilverGame.Database.Connection;
 using SilverGame.Database.Repository;
 using SilverGame.Models.Accounts;
+using SilverGame.Models.Gifts;
 using MySql.Data.MySqlClient;
 using SilverGame.Models.Characters;
 using SilverGame.Models.Items;
@@ -15,21 +16,26 @@ namespace SilverGame.Database
     {
         public static int ServerId; 
         public static readonly List<Account> Accounts = new List<Account>();
-        public static readonly List<CharactersAccount> CharactersAccount = new List<CharactersAccount>();
-        public static readonly List<Gift> Gifts = new List<Gift>(); 
+        public static readonly List<AccountCharacters> AccountCharacters = new List<AccountCharacters>();
         public static readonly List<Character> Characters = new List<Character>();
         public static readonly List<InventoryItem> InventoryItems = new List<InventoryItem>();
         public static readonly List<ItemInfos> ItemsInfos = new List<ItemInfos>();
+        public static readonly List<Gift> Gifts = new List<Gift>(); 
+        public static readonly List<KeyValuePair<Account, Gift>> AccountGifts = new List<KeyValuePair<Account, Gift>>();
+        public static readonly List<GiftItems> ItemGift = new List<GiftItems>();
 
         public static void LoadDatabase()
         {
+            SilverConsole.WriteLine("loading database resources...", ConsoleColor.DarkGreen);
+
             LoadServerId();
             LoadAccounts();
-            LoadCharactersAccount();
             LoadCharacters();
+            LoadCharactersAccount();
             LoadItemInfos();
             LoadInventoryItems();
             LoadGifts();
+            LoadAccountGifts();
 
             AccountRepository.UpdateAccount(false);
         }
@@ -38,9 +44,9 @@ namespace SilverGame.Database
         {
             lock (RealmDbManager.Lock)
             {
-                const string req = "SELECT id FROM gameservers WHERE ServerKey=@key LIMIT 1";
+                const string query = "SELECT id FROM gameservers WHERE ServerKey=@key LIMIT 1";
 
-                using (var command = new MySqlCommand(req, RealmDbManager.Connection))
+                using (var command = new MySqlCommand(query, RealmDbManager.Connection))
                 {
                     command.Parameters.Add(new MySqlParameter("@key", Config.Get("Game_key")));
 
@@ -56,9 +62,9 @@ namespace SilverGame.Database
 
         public static void LoadAccounts()
         {
-            const string req = "SELECT * FROM accounts";
+            const string query = "SELECT * FROM accounts";
 
-            using (var command = new MySqlCommand(req, RealmDbManager.Connection))
+            using (var command = new MySqlCommand(query, RealmDbManager.Connection))
             {
                 var reader = command.ExecuteReader();
 
@@ -102,67 +108,15 @@ namespace SilverGame.Database
             SilverConsole.WriteLine(String.Format("loaded {0} accounts successfully", Accounts.Count), ConsoleColor.Green);
         }
 
-        public static void LoadGifts()
-        {
-            var req = "SELECT * FROM gift_items";
-
-            var listItemGift = new List<KeyValuePair<int, ItemInfos>>();
-
-            using (var command = new MySqlCommand(req, GameDbManager.Connection))
-            {
-                var reader = command.ExecuteReader();
-
-                lock (ItemsInfos)
-                {
-                    while (reader.Read())
-                    {
-                        listItemGift.Add(new KeyValuePair<int, ItemInfos>(
-                            reader.GetInt16("giftId"),
-                            ItemsInfos.Find(x => x.Id == reader.GetInt16("itemId"))
-                            ));
-                    }
-                }
-
-                reader.Close();
-            }
-
-            req = "SELECT * FROM gift";
-
-            using (var command = new MySqlCommand(req, GameDbManager.Connection))
-            {
-                var reader = command.ExecuteReader();
-
-                while (reader.Read())
-                {
-                    lock (Gifts)
-                    {
-                        Gifts.Add(new Gift
-                        {
-                            Id = reader.GetInt16("id"),
-                            Title = reader.GetString("title"),
-                            Description = reader.GetString("Description"),
-                            PictureUrl = reader.GetString("pictureUrl"),
-                            Items = listItemGift.FindAll(x => x.Key == reader.GetInt16("id")).Select(x => x.Value)
-
-                        });
-                    }
-                }
-
-                reader.Close();
-            }
-
-            SilverConsole.WriteLine(string.Format("Loaded {0} Gifts Sucessfully", Gifts.Count), ConsoleColor.Green);
-        }
-
         public static void LoadCharactersAccount()
         {
             lock (RealmDbManager.Lock)
             {
                 var tableResult = new List<KeyValuePair<int, string>>();
 
-                const string req = "SELECT * FROM characters WHERE gameserverId =@ServerId";
+                const string query = "SELECT * FROM characters WHERE gameserverId =@ServerId";
 
-                using (var command = new MySqlCommand(req, RealmDbManager.Connection))
+                using (var command = new MySqlCommand(query, RealmDbManager.Connection))
                 {
                     command.Parameters.Add(new MySqlParameter("@ServerId", ServerId));
 
@@ -171,21 +125,23 @@ namespace SilverGame.Database
                     while (reader.Read())
                     {
                         tableResult.Add(new KeyValuePair<int, string>(
-                                reader.GetInt16("AccountId"),
-                                reader.GetString("characterName")
-                            ));
+                            reader.GetInt16("AccountId"),
+                            reader.GetString("characterName")
+                        ));
                     }
 
                     reader.Close();
+                }
 
-                    foreach (var charactersAccount in tableResult.Select(keyValuePair => new CharactersAccount
+                lock (AccountCharacters)
+                {
+                    foreach (var value in tableResult)
                     {
-                        Account = AccountRepository.GetAccount(Constant.AccountIdColumnName, keyValuePair.Key),
-                        Character = CharacterRepository.GetCharacter(Constant.CharacterNameColumnName, keyValuePair.Value),
-                    }))
-                    {
-                        lock (CharactersAccount)
-                            CharactersAccount.Add(charactersAccount);
+                        AccountCharacters.Add(new AccountCharacters
+                        {
+                            Account = Accounts.Find(x => x.Id == value.Key),
+                            Character = Characters.Find(x => x.Name.Equals(value.Value))
+                        });
                     }
                 }
             }
@@ -193,9 +149,9 @@ namespace SilverGame.Database
 
         public static void LoadCharacters()
         {
-            const string req = "SELECT * FROM Characters";
+            const string query = "SELECT * FROM Characters";
 
-            using (var command = new MySqlCommand(req, GameDbManager.Connection))
+            using (var command = new MySqlCommand(query, GameDbManager.Connection))
             {
                 var reader = command.ExecuteReader();
 
@@ -233,9 +189,9 @@ namespace SilverGame.Database
 
         public static void LoadItemInfos()
         {
-            const string req = "SELECT * FROM items_infos";
+            const string query = "SELECT * FROM items_infos";
 
-            using (var command = new MySqlCommand(req, GameDbManager.Connection))
+            using (var command = new MySqlCommand(query, GameDbManager.Connection))
             {
                 var reader = command.ExecuteReader();
 
@@ -245,7 +201,7 @@ namespace SilverGame.Database
                     {
                         Id = reader.GetInt16("ID"),
                         Name = reader.GetString("Name"),
-                        Type = reader.GetInt16("Type"),
+                        ItemType = (ItemManager.ItemType) reader.GetInt16("Type"),
                         Level = reader.GetInt16("Level"),
                         Weight = reader.GetInt16("Weight"),
                         WeaponInfo = reader.GetString("WeaponInfo"),
@@ -256,7 +212,7 @@ namespace SilverGame.Database
                         Targetable = reader.GetBoolean("Targetable"),
                         Price = reader.GetInt32("Price"),
                         Conditions = reader.GetString("Conditions"),
-                        Stats = reader.GetString("stats"),
+                        Stats = ItemStats.ToStats(reader.GetString("stats")),
                         UseEffects = reader.GetString("UseEffects"),
                     };
 
@@ -272,9 +228,9 @@ namespace SilverGame.Database
 
         public static void LoadInventoryItems()
         {
-            const string req = "SELECT * FROM inventory_items";
+            const string query = "SELECT * FROM inventory_items";
 
-            using (var command = new MySqlCommand(req, GameDbManager.Connection))
+            using (var command = new MySqlCommand(query, GameDbManager.Connection))
             {
                 var reader = command.ExecuteReader();
 
@@ -285,9 +241,9 @@ namespace SilverGame.Database
                         Id = reader.GetInt16("id"),
                         Character = Characters.Find( x => x.Id == reader.GetInt16("characterId")),
                         ItemInfos = ItemsInfos.Find( x => x.Id == reader.GetInt16("ItemId")),
-                        ItemPosition = reader.GetInt16("position"),
+                        ItemPosition = (ItemManager.Position) reader.GetInt16("position"),
                         Quantity = reader.GetInt16("quantity"),
-                        Stats = reader.GetString("stats"),
+                        Stats = ItemStats.ToStats(reader.GetString("stats")),
                     };
 
                     lock (InventoryItems)
@@ -298,6 +254,90 @@ namespace SilverGame.Database
             }
 
             SilverConsole.WriteLine(String.Format("loaded {0} Characters item successfully", InventoryItems.Count), ConsoleColor.Green);
+        }
+
+        public static void LoadGifts()
+        {
+            var query = "SELECT * FROM gift_items";
+
+            using (var command = new MySqlCommand(query, GameDbManager.Connection))
+            {
+                var reader = command.ExecuteReader();
+
+                lock (ItemsInfos)
+                {
+                    while (reader.Read())
+                    {
+                        ItemGift.Add(new GiftItems
+                        {
+                            GiftId = reader.GetInt16("giftId"),
+                            Item = ItemsInfos.Find(x => x.Id == reader.GetInt16("itemId")),
+                            Quantity = reader.GetInt16("quantity")
+                        });
+                    }
+                }
+
+                reader.Close();
+            }
+
+            query = "SELECT * FROM gift";
+
+            using (var command = new MySqlCommand(query, GameDbManager.Connection))
+            {
+                var reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    lock (Gifts)
+                    {
+                        Gifts.Add(new Gift
+                        {
+                            Id = reader.GetInt16("id"),
+                            Title = reader.GetString("title"),
+                            Description = reader.GetString("Description"),
+                            PictureUrl = reader.GetString("pictureUrl"),
+                            Items = ItemGift.FindAll(x => x.GiftId == reader.GetInt16("id")).Select(x => x.Item)
+                        });
+                    }
+                }
+
+                reader.Close();
+            }
+
+            SilverConsole.WriteLine(string.Format("Loaded {0} Gifts Sucessfully", Gifts.Count), ConsoleColor.Green);
+        }
+
+        public static void LoadAccountGifts()
+        {
+            const string query = "SELECT * FROM account_gifts";
+
+            var listResult = new List<KeyValuePair<int, int>>();
+
+            using (var command = new MySqlCommand(query, GameDbManager.Connection))
+            {
+                var reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    listResult.Add(new KeyValuePair<int, int>(
+                        reader.GetInt16("accountId"),
+                        reader.GetInt16("giftId")
+                    ));
+                }
+
+                reader.Close();
+            }
+
+            lock (AccountGifts)
+            {
+                foreach (var keyValuePair in listResult)
+                {
+                    AccountGifts.Add(new KeyValuePair<Account, Gift>(
+                        Accounts.Find(x => x.Id == keyValuePair.Key),
+                        Gifts.Find(x => x.Id == keyValuePair.Value)
+                    ));
+                }
+            }
         }
     }
 }

@@ -2,7 +2,7 @@
 
 namespace SilverGame.Models.Accounts
 {
-    class CharactersAccount
+    class AccountCharacters
     {
         public Account Account { get; set; }
         public Character Character { get; set; }

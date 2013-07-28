@@ -30,12 +30,9 @@ namespace SilverRealm.Network.ToGame
 
             RealmClient.GameServers.Single(gameServer => gameServer.ServerKey == _key).State = 0;      
 
-            lock (RealmServer.Lock)
+            foreach (var client in RealmServer.Clients)
             {
-                foreach (var client in RealmServer.Clients)
-                {
-                    client.RefreshServerList();
-                }
+                client.RefreshServerList();
             }
 
             SilverConsole.WriteLine(string.Format("Connection closed with Game Server {0}", Socket.IP), ConsoleColor.Yellow);

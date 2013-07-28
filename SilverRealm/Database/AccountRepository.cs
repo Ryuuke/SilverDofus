@@ -14,9 +14,9 @@ namespace SilverRealm.Database
 
             lock (DbManager.Lock)
             {
-                var req = "SELECT * FROM accounts WHERE " + column + "=@attribut";
+                var query = "SELECT * FROM accounts WHERE " + column + "=@attribut";
 
-                var command = new MySqlCommand(req, DbManager.Connection); 
+                var command = new MySqlCommand(query, DbManager.Connection); 
                 
                 command.Parameters.Add(new MySqlParameter("@attribut", attribut));
                     

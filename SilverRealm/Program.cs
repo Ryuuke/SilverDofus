@@ -16,8 +16,10 @@ namespace SilverRealm
                 Network.Realm.RealmClient.GameServers = Database.GameServerRepository.GetAll();
 
                 var com = new Network.ToGame.ToGameServer();
+                com.Run();
 
                 var server = new Network.Realm.RealmServer();
+                server.Run();
             }
 
             Console.ReadLine();

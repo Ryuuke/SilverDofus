@@ -2890,3 +2890,13 @@
 26/07/2013 21:49:24 >> Ryuu:ip 127.0.0.1:54528 Recv << AX1
 26/07/2013 21:49:24 >> Ryuu:ip 127.0.0.1:54528 Send >> AYK127.0.0.1:5555;07/26/2013 21:49:24|127.0.0.1:54528|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
 26/07/2013 21:49:24 >> Ryuu:ip 127.0.0.1:54528  Connection closed
+26/07/2013 22:50:08 >> RealmServer Waiting for connexion 
+26/07/2013 22:53:04 >> RealmServer Waiting for connexion 
+26/07/2013 22:57:12 >> RealmServer Waiting for connexion 
+26/07/2013 22:57:35 >> RealmServer Waiting for connexion 
+26/07/2013 22:59:22 >> RealmServer Waiting for connexion 
+26/07/2013 23:01:01 >> RealmServer Waiting for connexion 
+26/07/2013 23:01:22 >> RealmServer Waiting for connexion 
+26/07/2013 23:01:31 >> RealmServer Waiting for connexion 
+26/07/2013 23:01:51 >> RealmServer Waiting for connexion 
+26/07/2013 23:02:57 >> RealmServer Waiting for connexion 

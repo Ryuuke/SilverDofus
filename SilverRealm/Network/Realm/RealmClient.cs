@@ -4,7 +4,6 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using SilverRealm.Models;
-using SilverRealm.Network.Abstract;
 using SilverRealm.Network.ToGame;
 using SilverSock;
 using SilverRealm.Services;

@@ -24,6 +24,10 @@
             CreateCharacterFullErrors = "AAEF",
             CreationSuccess = "AAK",
             CharacterSelected = "AS",
-            CharacterSelectedResponse = "ASK";
+            CharacterSelectedResponse = "ASK",
+            GiftsList = "Ag",
+            GiftStored = "AG",
+            AddGiftItem = "OAKO",
+            GiftStotedSuccess = "AGK";
     }
 }

@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Linq;
-using System.Net.Sockets;
 using System.Text;
 using System.Threading;
-using SilverGame.Database;
-using SilverGame.Network.Abstract;
 using SilverGame.Network.Game;
 using SilverGame.Services;
 using SilverSock;
@@ -24,8 +21,6 @@ namespace SilverGame.Network.ToRealm
                 Socket.OnFailedToConnect += OnFailedToConnect;
                 Socket.OnSocketClosedEvent += OnSocketClosed;
             }
-
-            ConnectToRealm();
         }
 
         public void ConnectToRealm()

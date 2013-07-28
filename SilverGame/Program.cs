@@ -1,7 +1,6 @@
 ﻿using System;
 using SilverGame.Database;
 using SilverGame.Database.Connection;
-using SilverGame.Database.Repository;
 using SilverGame.Services;
 
 namespace SilverGame
@@ -16,12 +15,13 @@ namespace SilverGame
             {
                 Logs.LoadLogs();
 
-                SilverConsole.WriteLine("loading database resources...", ConsoleColor.DarkGreen);
-
                 DatabaseProvider.LoadDatabase();
 
                 var com = new Network.ToRealm.ToRealmClient();
+                com.ConnectToRealm();
+                
                 var serv = new Network.Game.GameServer();
+                serv.Run();
             }
 
             Console.ReadLine();

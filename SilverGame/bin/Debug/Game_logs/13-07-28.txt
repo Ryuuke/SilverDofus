@@ -1,0 +1,1238 @@
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:10383 Successfuly
+ip 127.0.0.1:10383 Send >> HG
+ip 127.0.0.1:10383 Recv << AT07/28/2013 00:01:14|127.0.0.1:10382|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:10383 Send >> ATK0
+Ryuu:ip 127.0.0.1:10383 Recv << Ak0
+Ryuu:ip 127.0.0.1:10383 Recv << AV
+Ryuu:ip 127.0.0.1:10383 Send >> AV0
+Ryuu:ip 127.0.0.1:10383 Recv << Agfr
+Ryuu:ip 127.0.0.1:10383 Send >> Ag1|1|Vous avez un cadeaux :)|Cadeaux de test uniquement|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~914~1~1~System.Collections.Generic.List`1[SilverGame.Models.Items.ItemStats];2~926~1~1~System.Collections.Generic.List`1[SilverGame.Models.Items.ItemStats];3~927~1~1~System.Collections.Generic.List`1[SilverGame.Models.Items.ItemStats];4~96b~2~1~System.Collections.Generic.List`1[SilverGame.Models.Items.ItemStats];5~96e~0~1~System.Collections.Generic.List`1[SilverGame.Models.Items.ItemStats];6~977~1~1~System.Collections.Generic.List`1[SilverGame.Models.Items.ItemStats];2|test|test|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~914~1~1~System.Collections.Generic.List`1[SilverGame.Models.Items.ItemStats];
+Ryuu:ip 127.0.0.1:10383 Recv << AL
+Ryuu:ip 127.0.0.1:10383 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,2b8,,,;0;1;;;
+Ryuu:ip 127.0.0.1:10383 Recv << Af
+Ryuu:ip 127.0.0.1:10383 Recv << AG1|1
+Ryuu:ip 127.0.0.1:10383 Send >> OAKO28~914~0~-1~
+Ryuu:ip 127.0.0.1:10383 Send >> OAKO29~926~0~-1~
+Ryuu:ip 127.0.0.1:10383 Send >> OAKO2a~927~0~-1~
+Ryuu:ip 127.0.0.1:10383 Send >> OAKO2b~96b~0~-1~
+Ryuu:ip 127.0.0.1:10383 Send >> OAKO2c~96e~0~-1~
+Ryuu:ip 127.0.0.1:10383 Send >> OAKO2d~977~0~-1~76#21#0#0#1d50+0
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:10397 Successfuly
+ip 127.0.0.1:10397 Send >> HG
+ip 127.0.0.1:10397 Recv << AT07/28/2013 00:01:57|127.0.0.1:10395|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:10397 Send >> ATK0
+Ryuu:ip 127.0.0.1:10397 Recv << Ak0
+Ryuu:ip 127.0.0.1:10397 Recv << AV
+Ryuu:ip 127.0.0.1:10397 Send >> AV0
+Ryuu:ip 127.0.0.1:10397 Recv << Agfr
+Ryuu:ip 127.0.0.1:10397 Send >> Ag1|1|Vous avez un cadeaux :)|Cadeaux de test uniquement|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~914~1~1~System.Collections.Generic.List`1[SilverGame.Models.Items.ItemStats];2~926~1~1~System.Collections.Generic.List`1[SilverGame.Models.Items.ItemStats];3~927~1~1~System.Collections.Generic.List`1[SilverGame.Models.Items.ItemStats];4~96b~2~1~System.Collections.Generic.List`1[SilverGame.Models.Items.ItemStats];5~96e~0~1~System.Collections.Generic.List`1[SilverGame.Models.Items.ItemStats];6~977~1~1~System.Collections.Generic.List`1[SilverGame.Models.Items.ItemStats];2|test|test|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~914~1~1~System.Collections.Generic.List`1[SilverGame.Models.Items.ItemStats];
+Ryuu:ip 127.0.0.1:10397 Recv << AL
+Ryuu:ip 127.0.0.1:10397 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,2b8,,,;0;1;;;
+Ryuu:ip 127.0.0.1:10397 Recv << Af
+Ryuu:ip 127.0.0.1:10397 Recv << AG1|1
+Ryuu:ip 127.0.0.1:10397 Send >> OAKO2e~914~0~-1~
+Ryuu:ip 127.0.0.1:10397 Send >> OAKO2f~926~0~-1~
+Ryuu:ip 127.0.0.1:10397 Send >> OAKO30~927~0~-1~
+Ryuu:ip 127.0.0.1:10397 Send >> OAKO31~96b~0~-1~
+Ryuu:ip 127.0.0.1:10397 Send >> OAKO32~96e~0~-1~
+Ryuu:ip 127.0.0.1:10397 Send >> OAKO33~977~0~-1~76#21#0#0#1d50+0
+Ryuu:ip 127.0.0.1:10397 Send >> AGK
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:10409 Successfuly
+ip 127.0.0.1:10409 Send >> HG
+ip 127.0.0.1:10409 Recv << AT07/28/2013 00:03:49|127.0.0.1:10407|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:10409 Send >> ATK0
+Ryuu:ip 127.0.0.1:10409 Recv << Ak0
+Ryuu:ip 127.0.0.1:10409 Recv << AV
+Ryuu:ip 127.0.0.1:10409 Send >> AV0
+Ryuu:ip 127.0.0.1:10409 Recv << Agfr
+Ryuu:ip 127.0.0.1:10409 Send >> Ag1|2|test|test|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~914~1~1~System.Collections.Generic.List`1[SilverGame.Models.Items.ItemStats];
+Ryuu:ip 127.0.0.1:10409 Recv << AL
+Ryuu:ip 127.0.0.1:10409 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,2b8,,,;0;1;;;
+Ryuu:ip 127.0.0.1:10409 Recv << Af
+Ryuu:ip 127.0.0.1:10409 Recv << AG2|1
+Ryuu:ip 127.0.0.1:10409 Send >> OAKO34~914~0~-1~
+Ryuu:ip 127.0.0.1:10409 Send >> AGK
+Ryuu:ip 127.0.0.1:10409 Connection Closed
+GameServer Connection With host 127.0.0.1:10411 Successfuly
+ip 127.0.0.1:10411 Send >> HG
+ip 127.0.0.1:10411 Recv << AT07/28/2013 00:04:01|127.0.0.1:10410|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:10411 Send >> ATK0
+Ryuu:ip 127.0.0.1:10411 Recv << Ak0
+Ryuu:ip 127.0.0.1:10411 Recv << AV
+Ryuu:ip 127.0.0.1:10411 Send >> AV0
+Ryuu:ip 127.0.0.1:10411 Recv << Agfr
+Ryuu:ip 127.0.0.1:10411 Send >> Ag1|2|test|test|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~914~1~1~System.Collections.Generic.List`1[SilverGame.Models.Items.ItemStats];
+Ryuu:ip 127.0.0.1:10411 Recv << AL
+Ryuu:ip 127.0.0.1:10411 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,2b8,,,;0;1;;;
+Ryuu:ip 127.0.0.1:10411 Recv << Af
+Ryuu:ip 127.0.0.1:10411 Recv << AG2|1
+Ryuu:ip 127.0.0.1:10411 Send >> OAKO35~914~0~-1~
+Ryuu:ip 127.0.0.1:10411 Send >> AGK
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:10426 Successfuly
+ip 127.0.0.1:10426 Send >> HG
+ip 127.0.0.1:10426 Recv << AT07/28/2013 00:05:04|127.0.0.1:10425|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:10426 Send >> ATK0
+Ryuu:ip 127.0.0.1:10426 Recv << Ak0
+Ryuu:ip 127.0.0.1:10426 Recv << AV
+Ryuu:ip 127.0.0.1:10426 Send >> AV0
+Ryuu:ip 127.0.0.1:10426 Recv << Agfr
+Ryuu:ip 127.0.0.1:10426 Send >> Ag1|1|Vous avez un cadeaux :)|Cadeaux de test uniquement|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~914~1~1~System.Collections.Generic.List`1[SilverGame.Models.Items.ItemStats];2~926~1~1~System.Collections.Generic.List`1[SilverGame.Models.Items.ItemStats];3~927~1~1~System.Collections.Generic.List`1[SilverGame.Models.Items.ItemStats];4~96b~2~1~System.Collections.Generic.List`1[SilverGame.Models.Items.ItemStats];5~96e~0~1~System.Collections.Generic.List`1[SilverGame.Models.Items.ItemStats];
+Ryuu:ip 127.0.0.1:10426 Recv << AL
+Ryuu:ip 127.0.0.1:10426 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:10426 Recv << Af
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:10437 Successfuly
+ip 127.0.0.1:10437 Send >> HG
+ip 127.0.0.1:10437 Recv << AT07/28/2013 00:05:27|127.0.0.1:10436|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:10437 Send >> ATK0
+Ryuu:ip 127.0.0.1:10437 Recv << Ak0
+Ryuu:ip 127.0.0.1:10437 Recv << AV
+Ryuu:ip 127.0.0.1:10437 Send >> AV0
+Ryuu:ip 127.0.0.1:10437 Recv << Agfr
+Ryuu:ip 127.0.0.1:10437 Send >> Ag1|1|Vous avez un cadeaux :)|Cadeaux de test uniquement|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~914~1~1~System.Collections.Generic.List`1[SilverGame.Models.Items.ItemStats];2~926~1~1~System.Collections.Generic.List`1[SilverGame.Models.Items.ItemStats];3~927~1~1~System.Collections.Generic.List`1[SilverGame.Models.Items.ItemStats];4~96b~2~1~System.Collections.Generic.List`1[SilverGame.Models.Items.ItemStats];5~96e~0~1~System.Collections.Generic.List`1[SilverGame.Models.Items.ItemStats];
+Ryuu:ip 127.0.0.1:10437 Recv << AL
+Ryuu:ip 127.0.0.1:10437 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:10437 Recv << Af
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:10448 Successfuly
+ip 127.0.0.1:10448 Send >> HG
+ip 127.0.0.1:10448 Recv << AT07/28/2013 00:06:27|127.0.0.1:10447|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:10448 Send >> ATK0
+Ryuu:ip 127.0.0.1:10448 Recv << Ak0
+Ryuu:ip 127.0.0.1:10448 Recv << AV
+Ryuu:ip 127.0.0.1:10448 Send >> AV0
+Ryuu:ip 127.0.0.1:10448 Recv << Agfr
+Ryuu:ip 127.0.0.1:10448 Send >> Ag1|1|Vous avez un cadeaux :)|Cadeaux de test uniquement|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~914~1~1~;2~926~1~1~;3~927~1~1~;4~96b~2~1~;5~96e~0~1~;
+Ryuu:ip 127.0.0.1:10448 Recv << AL
+Ryuu:ip 127.0.0.1:10448 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:10448 Recv << Af
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:10459 Successfuly
+ip 127.0.0.1:10459 Send >> HG
+ip 127.0.0.1:10459 Recv << AT07/28/2013 00:08:11|127.0.0.1:10458|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:10459 Send >> ATK0
+Ryuu:ip 127.0.0.1:10459 Recv << Ak0
+Ryuu:ip 127.0.0.1:10459 Recv << AV
+Ryuu:ip 127.0.0.1:10459 Send >> AV0
+Ryuu:ip 127.0.0.1:10459 Recv << Agfr
+Ryuu:ip 127.0.0.1:10459 Send >> Ag1|1|Vous avez un cadeaux :)|Cadeaux de test uniquement|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~914~1~1~;2~926~1~1~;3~927~1~1~;4~96b~2~1~;5~96e~0~1~;
+Ryuu:ip 127.0.0.1:10459 Recv << AL
+Ryuu:ip 127.0.0.1:10459 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:10459 Recv << Af
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:10471 Successfuly
+ip 127.0.0.1:10471 Send >> HG
+ip 127.0.0.1:10471 Recv << AT07/28/2013 00:09:58|127.0.0.1:10470|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:10471 Send >> ATK0
+Ryuu:ip 127.0.0.1:10471 Recv << Ak0
+Ryuu:ip 127.0.0.1:10471 Recv << AV
+Ryuu:ip 127.0.0.1:10471 Send >> AV0
+Ryuu:ip 127.0.0.1:10471 Recv << Agfr
+Ryuu:ip 127.0.0.1:10471 Connection Closed
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:10487 Successfuly
+ip 127.0.0.1:10487 Send >> HG
+ip 127.0.0.1:10487 Recv << AT07/28/2013 00:10:15|127.0.0.1:10484|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:10487 Send >> ATK0
+Ryuu:ip 127.0.0.1:10487 Recv << Ak0
+Ryuu:ip 127.0.0.1:10487 Recv << AV
+Ryuu:ip 127.0.0.1:10487 Send >> AV0
+Ryuu:ip 127.0.0.1:10487 Recv << Agfr
+Ryuu:ip 127.0.0.1:10487 Send >> Ag1|1|Vous avez un cadeaux :)|Cadeaux de test uniquement|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~914~1~1~;2~926~1~1~;3~927~1~1~;4~96b~2~1~;5~96e~0~1~;
+Ryuu:ip 127.0.0.1:10487 Recv << AL
+Ryuu:ip 127.0.0.1:10487 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:10487 Recv << Af
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:10498 Successfuly
+ip 127.0.0.1:10498 Send >> HG
+ip 127.0.0.1:10498 Recv << AT07/28/2013 00:10:59|127.0.0.1:10497|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:10498 Send >> ATK0
+Ryuu:ip 127.0.0.1:10498 Recv << Ak0
+Ryuu:ip 127.0.0.1:10498 Recv << AV
+Ryuu:ip 127.0.0.1:10498 Send >> AV0
+Ryuu:ip 127.0.0.1:10498 Recv << Agfr
+Ryuu:ip 127.0.0.1:10498 Send >> Ag1|1|Vous avez un cadeaux :)|Cadeaux de test uniquement|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~914~1~1~;2~926~1~1~;3~927~1~1~;4~96b~2~1~;5~96e~0~1~;
+Ryuu:ip 127.0.0.1:10498 Recv << AL
+Ryuu:ip 127.0.0.1:10498 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:10498 Recv << Af
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:10513 Successfuly
+ip 127.0.0.1:10513 Send >> HG
+ip 127.0.0.1:10513 Recv << AT07/28/2013 00:15:01|127.0.0.1:10512|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:10513 Send >> ATK0
+Ryuu:ip 127.0.0.1:10513 Recv << Ak0
+Ryuu:ip 127.0.0.1:10513 Recv << AV
+Ryuu:ip 127.0.0.1:10513 Send >> AV0
+Ryuu:ip 127.0.0.1:10513 Recv << Agfr
+Ryuu:ip 127.0.0.1:10513 Send >> Ag1|1|Vous avez un cadeaux :)|Cadeaux de test uniquement|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~914~1~1~;2~926~1~1~;3~927~1~1~;4~96b~2~1~;5~96e~0~1~;
+Ryuu:ip 127.0.0.1:10513 Recv << AL
+Ryuu:ip 127.0.0.1:10513 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:10513 Recv << Af
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:10525 Successfuly
+ip 127.0.0.1:10525 Send >> HG
+ip 127.0.0.1:10525 Recv << AT07/28/2013 00:17:02|127.0.0.1:10524|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:10525 Send >> ATK0
+Ryuu:ip 127.0.0.1:10525 Recv << Ak0
+Ryuu:ip 127.0.0.1:10525 Recv << AV
+Ryuu:ip 127.0.0.1:10525 Send >> AV0
+Ryuu:ip 127.0.0.1:10525 Recv << Agfr
+Ryuu:ip 127.0.0.1:10525 Send >> Ag1|1|Vous avez un cadeaux :)|Cadeaux de test uniquement|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~914~1~1~;2~926~1~1~;3~927~1~1~;4~96b~2~1~;5~96e~0~1~;
+Ryuu:ip 127.0.0.1:10525 Recv << AL
+Ryuu:ip 127.0.0.1:10525 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:10525 Recv << Af
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:10536 Successfuly
+ip 127.0.0.1:10536 Send >> HG
+ip 127.0.0.1:10536 Recv << AT07/28/2013 00:17:55|127.0.0.1:10535|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:10536 Send >> ATK0
+Ryuu:ip 127.0.0.1:10536 Recv << Ak0
+Ryuu:ip 127.0.0.1:10536 Recv << AV
+Ryuu:ip 127.0.0.1:10536 Send >> AV0
+Ryuu:ip 127.0.0.1:10536 Recv << Agfr
+Ryuu:ip 127.0.0.1:10536 Send >> Ag1|1|Vous avez un cadeaux :)|Cadeaux de test uniquement|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~914~1~1~;2~926~1~1~;3~927~1~1~;4~96b~2~1~7e#1#28#0#1d40+0,76#1#28#0#1d40+0;5~96e~0~1~ae#1#12c#0#1d300+0,6e#1#32#0#1d50+0;
+Ryuu:ip 127.0.0.1:10536 Recv << AL
+Ryuu:ip 127.0.0.1:10536 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:10536 Recv << Af
+Ryuu:ip 127.0.0.1:10536 Recv << AG1|1
+Ryuu:ip 127.0.0.1:10536 Send >> OAKO1~914~0~-1~
+Ryuu:ip 127.0.0.1:10536 Send >> OAKO2~926~0~-1~
+Ryuu:ip 127.0.0.1:10536 Send >> OAKO3~927~0~-1~
+Ryuu:ip 127.0.0.1:10536 Send >> OAKO4~96b~0~-1~7e#18#0#0#1d40+0,76#b#0#0#1d40+0
+Ryuu:ip 127.0.0.1:10536 Send >> OAKO5~96e~0~-1~ae#68#0#0#1d300+0,6e#8#0#0#1d50+0
+Ryuu:ip 127.0.0.1:10536 Send >> AGK
+Ryuu:ip 127.0.0.1:10536 Connection Closed
+GameServer Connection With host 127.0.0.1:10540 Successfuly
+ip 127.0.0.1:10540 Send >> HG
+ip 127.0.0.1:10540 Recv << AT07/28/2013 00:18:34|127.0.0.1:10539|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:10540 Send >> ATK0
+Ryuu:ip 127.0.0.1:10540 Recv << Ak0
+Ryuu:ip 127.0.0.1:10540 Recv << AV
+Ryuu:ip 127.0.0.1:10540 Send >> AV0
+Ryuu:ip 127.0.0.1:10540 Recv << Agfr
+Ryuu:ip 127.0.0.1:10540 Send >> Ag1|1|Vous avez un cadeaux :)|Cadeaux de test uniquement|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~914~1~1~;2~926~1~1~;3~927~1~1~;4~96b~2~1~7e#1#28#0#1d40+0,76#1#28#0#1d40+0;5~96e~0~1~ae#1#12c#0#1d300+0,6e#1#32#0#1d50+0;
+Ryuu:ip 127.0.0.1:10540 Recv << AL
+Ryuu:ip 127.0.0.1:10540 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:10540 Recv << Af
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:10551 Successfuly
+ip 127.0.0.1:10551 Send >> HG
+ip 127.0.0.1:10551 Recv << AT07/28/2013 00:18:51|127.0.0.1:10550|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:10551 Send >> ATK0
+Ryuu:ip 127.0.0.1:10551 Recv << Ak0
+Ryuu:ip 127.0.0.1:10551 Recv << AV
+Ryuu:ip 127.0.0.1:10551 Send >> AV0
+Ryuu:ip 127.0.0.1:10551 Recv << Agfr
+Ryuu:ip 127.0.0.1:10551 Send >> Ag1|
+Ryuu:ip 127.0.0.1:10551 Recv << AL
+Ryuu:ip 127.0.0.1:10551 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:10551 Recv << Af
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:10565 Successfuly
+ip 127.0.0.1:10565 Send >> HG
+ip 127.0.0.1:10565 Recv << AT07/28/2013 00:20:12|127.0.0.1:10564|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:10565 Send >> ATK0
+Ryuu:ip 127.0.0.1:10565 Recv << Ak0
+Ryuu:ip 127.0.0.1:10565 Recv << AV
+Ryuu:ip 127.0.0.1:10565 Send >> AV0
+Ryuu:ip 127.0.0.1:10565 Recv << Agfr
+Ryuu:ip 127.0.0.1:10565 Send >> Ag1|
+Ryuu:ip 127.0.0.1:10565 Recv << AL
+Ryuu:ip 127.0.0.1:10565 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:10565 Recv << Af
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:10576 Successfuly
+ip 127.0.0.1:10576 Send >> HG
+ip 127.0.0.1:10576 Recv << AT07/28/2013 00:20:28|127.0.0.1:10574|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:10576 Send >> ATK0
+Ryuu:ip 127.0.0.1:10576 Recv << Ak0
+Ryuu:ip 127.0.0.1:10576 Recv << AV
+Ryuu:ip 127.0.0.1:10576 Send >> AV0
+Ryuu:ip 127.0.0.1:10576 Recv << Agfr
+Ryuu:ip 127.0.0.1:10576 Recv << AL
+Ryuu:ip 127.0.0.1:10576 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:10576 Recv << Af
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:10589 Successfuly
+ip 127.0.0.1:10589 Send >> HG
+ip 127.0.0.1:10589 Recv << AT07/28/2013 00:21:01|127.0.0.1:10588|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:10589 Send >> ATK0
+Ryuu:ip 127.0.0.1:10589 Recv << Ak0
+Ryuu:ip 127.0.0.1:10589 Recv << AV
+Ryuu:ip 127.0.0.1:10589 Send >> AV0
+Ryuu:ip 127.0.0.1:10589 Recv << Agfr
+Ryuu:ip 127.0.0.1:10589 Send >> Ag1|1|Vous avez un cadeaux :)|Cadeaux de test uniquement|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~914~1~1~;2~926~1~1~;3~927~1~1~;4~96b~2~1~7e#1#28#0#1d40+0,76#1#28#0#1d40+0;5~96e~0~1~ae#1#12c#0#1d300+0,6e#1#32#0#1d50+0;
+Ryuu:ip 127.0.0.1:10589 Recv << AL
+Ryuu:ip 127.0.0.1:10589 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:10589 Recv << Af
+Ryuu:ip 127.0.0.1:10589 Recv << AG1|1
+Ryuu:ip 127.0.0.1:10589 Send >> OAKO1~914~0~-1~
+Ryuu:ip 127.0.0.1:10589 Send >> OAKO2~926~0~-1~
+Ryuu:ip 127.0.0.1:10589 Send >> OAKO3~927~0~-1~
+Ryuu:ip 127.0.0.1:10589 Send >> OAKO4~96b~0~-1~7e#1d#0#0#1d40+0,76#c#0#0#1d40+0
+Ryuu:ip 127.0.0.1:10589 Send >> OAKO5~96e~0~-1~ae#bd#0#0#1d300+0,6e#26#0#0#1d50+0
+Ryuu:ip 127.0.0.1:10589 Send >> AGK
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:10605 Successfuly
+ip 127.0.0.1:10605 Send >> HG
+ip 127.0.0.1:10605 Recv << AT07/28/2013 00:22:49|127.0.0.1:10604|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:10605 Send >> ATK0
+Ryuu:ip 127.0.0.1:10605 Recv << Ak0
+Ryuu:ip 127.0.0.1:10605 Recv << AV
+Ryuu:ip 127.0.0.1:10605 Send >> AV0
+Ryuu:ip 127.0.0.1:10605 Recv << Agfr
+Ryuu:ip 127.0.0.1:10605 Recv << AL
+Ryuu:ip 127.0.0.1:10605 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:10605 Recv << Af
+Ryuu:ip 127.0.0.1:10605 Connection Closed
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:10620 Successfuly
+ip 127.0.0.1:10620 Send >> HG
+ip 127.0.0.1:10620 Recv << AT07/28/2013 00:23:13|127.0.0.1:10619|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:10620 Send >> ATK0
+Ryuu:ip 127.0.0.1:10620 Recv << Ak0
+Ryuu:ip 127.0.0.1:10620 Recv << AV
+Ryuu:ip 127.0.0.1:10620 Send >> AV0
+Ryuu:ip 127.0.0.1:10620 Recv << Agfr
+Ryuu:ip 127.0.0.1:10620 Send >> Ag1|1|Vous avez un cadeaux :)|Cadeaux de test uniquement|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~914~1~1~;2~926~1~1~;3~927~1~1~;4~96b~2~1~7e#1#28#0#1d40+0,76#1#28#0#1d40+0;5~96e~0~1~ae#1#12c#0#1d300+0,6e#1#32#0#1d50+0;
+Ryuu:ip 127.0.0.1:10620 Recv << AL
+Ryuu:ip 127.0.0.1:10620 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:10620 Recv << Af
+Ryuu:ip 127.0.0.1:10620 Recv << AG1|1
+Ryuu:ip 127.0.0.1:10620 Send >> OAKO1~914~0~-1~
+Ryuu:ip 127.0.0.1:10620 Send >> OAKO2~926~0~-1~
+Ryuu:ip 127.0.0.1:10620 Send >> OAKO3~927~0~-1~
+Ryuu:ip 127.0.0.1:10620 Send >> OAKO4~96b~0~-1~7e#2#0#0#1d40+0,76#17#0#0#1d40+0
+Ryuu:ip 127.0.0.1:10620 Send >> OAKO5~96e~0~-1~ae#81#0#0#1d300+0,6e#26#0#0#1d50+0
+Ryuu:ip 127.0.0.1:10620 Send >> AGK
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:10689 Successfuly
+ip 127.0.0.1:10689 Send >> HG
+ip 127.0.0.1:10689 Recv << AT07/28/2013 00:52:40|127.0.0.1:10688|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:10689 Send >> ATK0
+Ryuu:ip 127.0.0.1:10689 Recv << Ak0
+Ryuu:ip 127.0.0.1:10689 Recv << AV
+Ryuu:ip 127.0.0.1:10689 Send >> AV0
+Ryuu:ip 127.0.0.1:10689 Recv << Agfr
+Ryuu:ip 127.0.0.1:10689 Send >> Ag1|1|Vous avez un cadeaux :)|Cadeaux de test uniquement|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~914~1~1~;2~926~1~1~;3~927~1~1~;4~96b~2~1~7e#1#28#0#1d40+0,76#1#28#0#1d40+0;5~96e~0~1~ae#1#12c#0#1d300+0,6e#1#32#0#1d50+0;
+Ryuu:ip 127.0.0.1:10689 Recv << AL
+Ryuu:ip 127.0.0.1:10689 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:10689 Recv << Af
+Ryuu:ip 127.0.0.1:10689 Recv << AG1|1
+Ryuu:ip 127.0.0.1:10689 Send >> OAKO1~914~1~-1~
+Ryuu:ip 127.0.0.1:10689 Send >> OAKO2~926~1~-1~
+Ryuu:ip 127.0.0.1:10689 Send >> OAKO3~927~1~-1~
+Ryuu:ip 127.0.0.1:10689 Send >> OAKO4~96b~1~-1~7e#11#0#0#1d40+0,76#2#0#0#1d40+0
+Ryuu:ip 127.0.0.1:10689 Send >> OAKO5~96b~1~-1~7e#11#0#0#1d40+0,76#4#0#0#1d40+0
+Ryuu:ip 127.0.0.1:10689 Send >> AGK
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:10735 Successfuly
+ip 127.0.0.1:10735 Send >> HG
+ip 127.0.0.1:10735 Recv << AT07/28/2013 00:54:29|127.0.0.1:10734|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:10735 Send >> ATK0
+Ryuu:ip 127.0.0.1:10735 Recv << Ak0
+Ryuu:ip 127.0.0.1:10735 Recv << AV
+Ryuu:ip 127.0.0.1:10735 Send >> AV0
+Ryuu:ip 127.0.0.1:10735 Recv << Agfr
+Ryuu:ip 127.0.0.1:10735 Send >> Ag1|1|Vous avez un cadeaux :)|Cadeaux de test uniquement|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|
+Ryuu:ip 127.0.0.1:10735 Recv << AL
+Ryuu:ip 127.0.0.1:10735 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:10735 Recv << Af
+Ryuu:ip 127.0.0.1:10735 Connection Closed
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:10750 Successfuly
+ip 127.0.0.1:10750 Send >> HG
+ip 127.0.0.1:10750 Recv << AT07/28/2013 00:56:54|127.0.0.1:10749|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:10750 Send >> ATK0
+Ryuu:ip 127.0.0.1:10750 Recv << Ak0
+Ryuu:ip 127.0.0.1:10750 Recv << AV
+Ryuu:ip 127.0.0.1:10750 Send >> AV0
+Ryuu:ip 127.0.0.1:10750 Recv << Agfr
+Ryuu:ip 127.0.0.1:10750 Connection Closed
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:10761 Successfuly
+ip 127.0.0.1:10761 Send >> HG
+ip 127.0.0.1:10761 Recv << AT07/28/2013 00:57:41|127.0.0.1:10759|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:10761 Send >> ATK0
+Ryuu:ip 127.0.0.1:10761 Recv << Ak0
+Ryuu:ip 127.0.0.1:10761 Recv << AV
+Ryuu:ip 127.0.0.1:10761 Send >> AV0
+Ryuu:ip 127.0.0.1:10761 Recv << Agfr
+Ryuu:ip 127.0.0.1:10761 Connection Closed
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:10772 Successfuly
+ip 127.0.0.1:10772 Send >> HG
+ip 127.0.0.1:10772 Recv << AT07/28/2013 00:58:15|127.0.0.1:10770|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:10772 Send >> ATK0
+Ryuu:ip 127.0.0.1:10772 Recv << Ak0
+Ryuu:ip 127.0.0.1:10772 Recv << AV
+Ryuu:ip 127.0.0.1:10772 Send >> AV0
+Ryuu:ip 127.0.0.1:10772 Recv << Agfr
+Ryuu:ip 127.0.0.1:10772 Connection Closed
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:10783 Successfuly
+ip 127.0.0.1:10783 Send >> HG
+ip 127.0.0.1:10783 Recv << AT07/28/2013 00:59:26|127.0.0.1:10781|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:10783 Send >> ATK0
+Ryuu:ip 127.0.0.1:10783 Recv << Ak0
+Ryuu:ip 127.0.0.1:10783 Recv << AV
+Ryuu:ip 127.0.0.1:10783 Send >> AV0
+Ryuu:ip 127.0.0.1:10783 Recv << Agfr
+Ryuu:ip 127.0.0.1:10783 Recv << AL
+Ryuu:ip 127.0.0.1:10783 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:10783 Recv << Af
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:10798 Successfuly
+ip 127.0.0.1:10798 Send >> HG
+ip 127.0.0.1:10798 Recv << AT07/28/2013 01:00:28|127.0.0.1:10797|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:10798 Send >> ATK0
+Ryuu:ip 127.0.0.1:10798 Recv << Ak0
+Ryuu:ip 127.0.0.1:10798 Recv << AV
+Ryuu:ip 127.0.0.1:10798 Send >> AV0
+Ryuu:ip 127.0.0.1:10798 Recv << Agfr
+Ryuu:ip 127.0.0.1:10798 Send >> Ag1|1|Vous avez un cadeaux :)|Cadeaux de test uniquement|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~914~1~1~;2~926~1~1~;3~96b~2~1~7e#1#28#0#1d40+0,76#1#28#0#1d40+0;4~96e~1~1~ae#1#12c#0#1d300+0,6e#1#32#0#1d50+0;
+Ryuu:ip 127.0.0.1:10798 Recv << AL
+Ryuu:ip 127.0.0.1:10798 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:10798 Recv << Af
+Ryuu:ip 127.0.0.1:10798 Recv << AG1|1
+Ryuu:ip 127.0.0.1:10798 Send >> OAKO1~914~1~-1~
+Ryuu:ip 127.0.0.1:10798 Send >> OAKO2~926~1~-1~
+Ryuu:ip 127.0.0.1:10798 Send >> OAKO3~96b~1~-1~7e#b#0#0#1d40+0,76#13#0#0#1d40+0
+Ryuu:ip 127.0.0.1:10798 Send >> OAKO4~96b~1~-1~7e#1b#0#0#1d40+0,76#1a#0#0#1d40+0
+Ryuu:ip 127.0.0.1:10798 Send >> OAKO5~96e~1~-1~ae#af#0#0#1d300+0,6e#7#0#0#1d50+0
+Ryuu:ip 127.0.0.1:10798 Send >> AGK
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:12656 Successfuly
+ip 127.0.0.1:12656 Send >> HG
+ip 127.0.0.1:12656 Recv << AT07/28/2013 01:15:37|127.0.0.1:12640|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:12656 Send >> ATK0
+Ryuu:ip 127.0.0.1:12656 Recv << Ak0
+Ryuu:ip 127.0.0.1:12656 Recv << AV
+Ryuu:ip 127.0.0.1:12656 Send >> AV0
+Ryuu:ip 127.0.0.1:12656 Recv << Agfr
+Ryuu:ip 127.0.0.1:12656 Send >> Ag1|1|Vous avez un cadeaux :)|Cadeaux de test uniquement|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~914~1~1~;2~926~1~1~;3~96b~2~1~7e#1#28#0#1d40+0,76#1#28#0#1d40+0;4~96e~1~1~ae#1#12c#0#1d300+0,6e#1#32#0#1d50+0;2|test|test|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~96e~1~1~ae#1#12c#0#1d300+0,6e#1#32#0#1d50+0;
+Ryuu:ip 127.0.0.1:12656 Recv << AL
+Ryuu:ip 127.0.0.1:12656 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:12656 Recv << Af
+Ryuu:ip 127.0.0.1:12656 Recv << AG1|1
+Ryuu:ip 127.0.0.1:12656 Send >> OAKO6~914~1~-1~
+Ryuu:ip 127.0.0.1:12656 Send >> OAKO7~926~1~-1~
+Ryuu:ip 127.0.0.1:12656 Send >> OAKO8~96b~1~-1~7e#27#0#0#1d40+0,76#1e#0#0#1d40+0
+Ryuu:ip 127.0.0.1:12656 Send >> OAKO9~96b~1~-1~7e#1d#0#0#1d40+0,76#1a#0#0#1d40+0
+Ryuu:ip 127.0.0.1:12656 Send >> OAKOa~96e~1~-1~ae#c4#0#0#1d300+0,6e#7#0#0#1d50+0
+Ryuu:ip 127.0.0.1:12656 Send >> AGK
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:13744 Successfuly
+ip 127.0.0.1:13744 Send >> HG
+ip 127.0.0.1:13744 Recv << AT07/28/2013 01:18:29|127.0.0.1:13735|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:13744 Send >> ATK0
+Ryuu:ip 127.0.0.1:13744 Recv << Ak0
+Ryuu:ip 127.0.0.1:13744 Recv << AV
+Ryuu:ip 127.0.0.1:13744 Send >> AV0
+Ryuu:ip 127.0.0.1:13744 Recv << Agfr
+Ryuu:ip 127.0.0.1:13744 Send >> Ag1|2|test|test|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~96e~1~1~ae#1#12c#0#1d300+0,6e#1#32#0#1d50+0;
+Ryuu:ip 127.0.0.1:13744 Recv << AL
+Ryuu:ip 127.0.0.1:13744 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:13744 Recv << Af
+Ryuu:ip 127.0.0.1:13744 Connection Closed
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:13901 Successfuly
+ip 127.0.0.1:13901 Send >> HG
+ip 127.0.0.1:13901 Recv << AT07/28/2013 01:18:53|127.0.0.1:13892|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:13901 Send >> ATK0
+Ryuu:ip 127.0.0.1:13901 Recv << Ak0
+Ryuu:ip 127.0.0.1:13901 Recv << AV
+Ryuu:ip 127.0.0.1:13901 Send >> AV0
+Ryuu:ip 127.0.0.1:13901 Recv << Agfr
+Ryuu:ip 127.0.0.1:13901 Send >> Ag1|1|Vous avez un cadeaux :)|Cadeaux de test uniquement|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~914~1~1~;2~926~1~1~;3~96b~2~1~7e#1#28#0#1d40+0,76#1#28#0#1d40+0;4~96e~1~1~ae#1#12c#0#1d300+0,6e#1#32#0#1d50+0;|2|test|test|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~96e~1~1~ae#1#12c#0#1d300+0,6e#1#32#0#1d50+0;
+Ryuu:ip 127.0.0.1:13901 Recv << AL
+Ryuu:ip 127.0.0.1:13901 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:13901 Recv << Af
+Ryuu:ip 127.0.0.1:13901 Recv << AG1|1
+Ryuu:ip 127.0.0.1:13901 Send >> OAKOb~914~1~-1~
+Ryuu:ip 127.0.0.1:13901 Send >> OAKOc~926~1~-1~
+Ryuu:ip 127.0.0.1:13901 Send >> OAKOd~96b~1~-1~7e#1f#0#0#1d40+0,76#1c#0#0#1d40+0
+Ryuu:ip 127.0.0.1:13901 Send >> OAKOe~96b~1~-1~7e#7#0#0#1d40+0,76#23#0#0#1d40+0
+Ryuu:ip 127.0.0.1:13901 Send >> OAKOf~96e~1~-1~ae#17#0#0#1d300+0,6e#13#0#0#1d50+0
+Ryuu:ip 127.0.0.1:13901 Send >> AGK
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:14418 Successfuly
+ip 127.0.0.1:14418 Send >> HG
+ip 127.0.0.1:14418 Recv << AT07/28/2013 01:20:15|127.0.0.1:14403|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:14418 Send >> ATK0
+Ryuu:ip 127.0.0.1:14418 Recv << Ak0
+Ryuu:ip 127.0.0.1:14418 Recv << AV
+Ryuu:ip 127.0.0.1:14418 Send >> AV0
+Ryuu:ip 127.0.0.1:14418 Recv << Agfr
+Ryuu:ip 127.0.0.1:14418 Send >> Ag2|1|Vous avez un cadeaux :)|Cadeaux de test uniquement|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~914~1~1~;2~926~1~1~;3~96b~2~1~7e#1#28#0#1d40+0,76#1#28#0#1d40+0;4~96e~1~1~ae#1#12c#0#1d300+0,6e#1#32#0#1d50+0;|2|test|test|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~96e~1~1~ae#1#12c#0#1d300+0,6e#1#32#0#1d50+0;
+Ryuu:ip 127.0.0.1:14418 Recv << AL
+Ryuu:ip 127.0.0.1:14418 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:14418 Recv << Af
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:14868 Successfuly
+ip 127.0.0.1:14868 Send >> HG
+ip 127.0.0.1:14868 Recv << AT07/28/2013 01:21:28|127.0.0.1:14859|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:14868 Send >> ATK0
+Ryuu:ip 127.0.0.1:14868 Recv << Ak0
+Ryuu:ip 127.0.0.1:14868 Recv << AV
+Ryuu:ip 127.0.0.1:14868 Send >> AV0
+Ryuu:ip 127.0.0.1:14868 Recv << Agfr
+Ryuu:ip 127.0.0.1:14868 Send >> Ag2|1|Vous avez un cadeaux :)|Cadeaux de test uniquement|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~914~1~1~;2~926~1~1~;3~96b~2~1~7e#1#28#0#1d40+0,76#1#28#0#1d40+0;4~96e~1~1~ae#1#12c#0#1d300+0,6e#1#32#0#1d50+0;|2|test|test|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~96e~1~1~ae#1#12c#0#1d300+0,6e#1#32#0#1d50+0;
+Ryuu:ip 127.0.0.1:14868 Recv << AL
+Ryuu:ip 127.0.0.1:14868 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:14868 Recv << Af
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:15625 Successfuly
+ip 127.0.0.1:15625 Send >> HG
+ip 127.0.0.1:15625 Recv << AT07/28/2013 01:23:29|127.0.0.1:15605|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:15625 Send >> ATK0
+Ryuu:ip 127.0.0.1:15625 Recv << Ak0
+Ryuu:ip 127.0.0.1:15625 Recv << AV
+Ryuu:ip 127.0.0.1:15625 Send >> AV0
+Ryuu:ip 127.0.0.1:15625 Recv << Agfr
+Ryuu:ip 127.0.0.1:15625 Send >> Ag2|1|Vous avez un cadeaux :)|Cadeaux de test uniquement|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~914~1~1~;2~926~1~1~;3~96b~2~1~7e#1#28#0#1d40+0,76#1#28#0#1d40+0;4~96e~1~1~ae#1#12c#0#1d300+0,6e#1#32#0#1d50+0;|2|test|test|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~96e~1~1~ae#1#12c#0#1d300+0,6e#1#32#0#1d50+0;
+Ryuu:ip 127.0.0.1:15625 Recv << AL
+Ryuu:ip 127.0.0.1:15625 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:15625 Recv << Af
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:16345 Successfuly
+ip 127.0.0.1:16345 Send >> HG
+ip 127.0.0.1:16345 Recv << AT07/28/2013 01:25:22|127.0.0.1:16326|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:16345 Send >> ATK0
+Ryuu:ip 127.0.0.1:16345 Recv << Ak0
+Ryuu:ip 127.0.0.1:16345 Recv << AV
+Ryuu:ip 127.0.0.1:16345 Send >> AV0
+Ryuu:ip 127.0.0.1:16345 Recv << Agfr
+Ryuu:ip 127.0.0.1:16345 Send >> Ag2|1|Vous avez un cadeaux :)|Cadeaux de test uniquement|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~914~1~1~;2~926~1~1~;3~96b~2~1~7e#1#28#0#1d40+0,76#1#28#0#1d40+0;4~96e~1~1~ae#1#12c#0#1d300+0,6e#1#32#0#1d50+0|2|test|test|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~96e~1~1~ae#1#12c#0#1d300+0,6e#1#32#0#1d50+0
+Ryuu:ip 127.0.0.1:16345 Recv << AL
+Ryuu:ip 127.0.0.1:16345 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:16345 Recv << Af
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:16484 Successfuly
+ip 127.0.0.1:16484 Send >> HG
+ip 127.0.0.1:16484 Recv << AT07/28/2013 01:25:43|127.0.0.1:16472|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:16484 Send >> ATK0
+Ryuu:ip 127.0.0.1:16484 Recv << Ak0
+Ryuu:ip 127.0.0.1:16484 Recv << AV
+Ryuu:ip 127.0.0.1:16484 Send >> AV0
+Ryuu:ip 127.0.0.1:16484 Recv << Agfr
+Ryuu:ip 127.0.0.1:16484 Send >> Ag1|1|Vous avez un cadeaux :)|Cadeaux de test uniquement|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~914~1~1~;2~926~1~1~;3~96b~2~1~7e#1#28#0#1d40+0,76#1#28#0#1d40+0;4~96e~1~1~ae#1#12c#0#1d300+0,6e#1#32#0#1d50+0|2|test|test|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~96e~1~1~ae#1#12c#0#1d300+0,6e#1#32#0#1d50+0
+Ryuu:ip 127.0.0.1:16484 Recv << AL
+Ryuu:ip 127.0.0.1:16484 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:16484 Recv << Af
+Ryuu:ip 127.0.0.1:16484 Recv << AG1|1
+Ryuu:ip 127.0.0.1:16484 Send >> OAKO10~914~1~-1~
+Ryuu:ip 127.0.0.1:16484 Send >> OAKO11~926~1~-1~
+Ryuu:ip 127.0.0.1:16484 Send >> OAKO12~96b~1~-1~7e#13#0#0#1d40+0,76#1f#0#0#1d40+0
+Ryuu:ip 127.0.0.1:16484 Send >> OAKO13~96b~1~-1~7e#3#0#0#1d40+0,76#3#0#0#1d40+0
+Ryuu:ip 127.0.0.1:16484 Send >> OAKO14~96e~1~-1~ae#126#0#0#1d300+0,6e#1c#0#0#1d50+0
+Ryuu:ip 127.0.0.1:16484 Send >> AGK
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:16624 Successfuly
+ip 127.0.0.1:16624 Send >> HG
+ip 127.0.0.1:16624 Recv << AT07/28/2013 01:26:05|127.0.0.1:16603|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:16624 Send >> ATK0
+Ryuu:ip 127.0.0.1:16624 Recv << Ak0
+Ryuu:ip 127.0.0.1:16624 Recv << AV
+Ryuu:ip 127.0.0.1:16624 Send >> AV0
+Ryuu:ip 127.0.0.1:16624 Recv << Agfr
+Ryuu:ip 127.0.0.1:16624 Send >> Ag|2|test|test|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~96e~1~1~ae#1#12c#0#1d300+0,6e#1#32#0#1d50+0
+Ryuu:ip 127.0.0.1:16624 Recv << AL
+Ryuu:ip 127.0.0.1:16624 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:16624 Recv << Af
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:16867 Successfuly
+ip 127.0.0.1:16867 Send >> HG
+ip 127.0.0.1:16867 Recv << AT07/28/2013 01:27:29|127.0.0.1:16866|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:16867 Send >> ATK0
+Ryuu:ip 127.0.0.1:16867 Recv << Ak0
+Ryuu:ip 127.0.0.1:16867 Recv << AV
+Ryuu:ip 127.0.0.1:16867 Send >> AV0
+Ryuu:ip 127.0.0.1:16867 Recv << Agfr
+Ryuu:ip 127.0.0.1:16867 Send >> Ag1|2|test|test|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~96e~1~1~ae#1#12c#0#1d300+0,6e#1#32#0#1d50+0;
+Ryuu:ip 127.0.0.1:16867 Recv << AL
+Ryuu:ip 127.0.0.1:16867 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:16867 Recv << Af
+Ryuu:ip 127.0.0.1:16867 Connection Closed
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:16880 Successfuly
+ip 127.0.0.1:16880 Send >> HG
+ip 127.0.0.1:16880 Recv << AT07/28/2013 01:27:56|127.0.0.1:16879|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:16880 Send >> ATK0
+Ryuu:ip 127.0.0.1:16880 Recv << Ak0
+Ryuu:ip 127.0.0.1:16880 Recv << AV
+Ryuu:ip 127.0.0.1:16880 Send >> AV0
+Ryuu:ip 127.0.0.1:16880 Recv << Agfr
+Ryuu:ip 127.0.0.1:16880 Send >> Ag1|1|Vous avez un cadeaux :)|Cadeaux de test uniquement|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~914~1~1~;2~926~1~1~;3~96b~2~1~7e#1#28#0#1d40+0,76#1#28#0#1d40+0;4~96e~1~1~ae#1#12c#0#1d300+0,6e#1#32#0#1d50+0;|2|test|test|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~96e~1~1~ae#1#12c#0#1d300+0,6e#1#32#0#1d50+0;
+Ryuu:ip 127.0.0.1:16880 Recv << AL
+Ryuu:ip 127.0.0.1:16880 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:16880 Recv << Af
+Ryuu:ip 127.0.0.1:16880 Recv << AG1|1
+Ryuu:ip 127.0.0.1:16880 Send >> OAKO15~914~1~-1~
+Ryuu:ip 127.0.0.1:16880 Send >> OAKO16~926~1~-1~
+Ryuu:ip 127.0.0.1:16880 Send >> OAKO17~96b~1~-1~7e#21#0#0#1d40+0,76#25#0#0#1d40+0
+Ryuu:ip 127.0.0.1:16880 Send >> OAKO18~96b~1~-1~7e#18#0#0#1d40+0,76#20#0#0#1d40+0
+Ryuu:ip 127.0.0.1:16880 Send >> OAKO19~96e~1~-1~ae#97#0#0#1d300+0,6e#f#0#0#1d50+0
+Ryuu:ip 127.0.0.1:16880 Send >> AGK
+Ryuu:ip 127.0.0.1:16880 Connection Closed
+GameServer Connection With host 127.0.0.1:16882 Successfuly
+ip 127.0.0.1:16882 Send >> HG
+ip 127.0.0.1:16882 Recv << AT07/28/2013 01:28:03|127.0.0.1:16881|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:16882 Send >> ATK0
+Ryuu:ip 127.0.0.1:16882 Recv << Ak0
+Ryuu:ip 127.0.0.1:16882 Recv << AV
+Ryuu:ip 127.0.0.1:16882 Send >> AV0
+Ryuu:ip 127.0.0.1:16882 Recv << Agfr
+Ryuu:ip 127.0.0.1:16882 Send >> Ag1|1|Vous avez un cadeaux :)|Cadeaux de test uniquement|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~914~1~1~;2~926~1~1~;3~96b~2~1~7e#1#28#0#1d40+0,76#1#28#0#1d40+0;4~96e~1~1~ae#1#12c#0#1d300+0,6e#1#32#0#1d50+0;|2|test|test|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~96e~1~1~ae#1#12c#0#1d300+0,6e#1#32#0#1d50+0;
+Ryuu:ip 127.0.0.1:16882 Recv << AL
+Ryuu:ip 127.0.0.1:16882 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:16882 Recv << Af
+Ryuu:ip 127.0.0.1:16882 Connection Closed
+GameServer Connection With host 127.0.0.1:16884 Successfuly
+ip 127.0.0.1:16884 Send >> HG
+ip 127.0.0.1:16884 Recv << AT07/28/2013 01:28:24|127.0.0.1:16883|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:16884 Send >> ATK0
+Ryuu:ip 127.0.0.1:16884 Recv << Ak0
+Ryuu:ip 127.0.0.1:16884 Recv << AV
+Ryuu:ip 127.0.0.1:16884 Send >> AV0
+Ryuu:ip 127.0.0.1:16884 Recv << Agfr
+Ryuu:ip 127.0.0.1:16884 Send >> Ag1|1|Vous avez un cadeaux :)|Cadeaux de test uniquement|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~914~1~1~;2~926~1~1~;3~96b~2~1~7e#1#28#0#1d40+0,76#1#28#0#1d40+0;4~96e~1~1~ae#1#12c#0#1d300+0,6e#1#32#0#1d50+0;|2|test|test|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~96e~1~1~ae#1#12c#0#1d300+0,6e#1#32#0#1d50+0;
+Ryuu:ip 127.0.0.1:16884 Recv << AL
+Ryuu:ip 127.0.0.1:16884 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:16884 Recv << Af
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:16896 Successfuly
+ip 127.0.0.1:16896 Send >> HG
+ip 127.0.0.1:16896 Recv << AT07/28/2013 01:30:31|127.0.0.1:16895|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:16896 Send >> ATK0
+Ryuu:ip 127.0.0.1:16896 Recv << Ak0
+Ryuu:ip 127.0.0.1:16896 Recv << AV
+Ryuu:ip 127.0.0.1:16896 Send >> AV0
+Ryuu:ip 127.0.0.1:16896 Recv << Agfr
+Ryuu:ip 127.0.0.1:16896 Send >> Ag1|1|Vous avez un cadeaux :)|Cadeaux de test uniquement|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~914~1~1~;2~926~1~1~;3~96b~2~1~7e#1#28#0#1d40+0,76#1#28#0#1d40+0;4~96e~1~1~ae#1#12c#0#1d300+0,6e#1#32#0#1d50+0;|2|test|test|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~96e~1~1~ae#1#12c#0#1d300+0,6e#1#32#0#1d50+0;
+Ryuu:ip 127.0.0.1:16896 Recv << AL
+Ryuu:ip 127.0.0.1:16896 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:16896 Recv << Af
+Ryuu:ip 127.0.0.1:16896 Recv << AG1|1
+Ryuu:ip 127.0.0.1:16896 Send >> OAKO1a~914~1~-1~
+Ryuu:ip 127.0.0.1:16896 Send >> OAKO1b~926~1~-1~
+Ryuu:ip 127.0.0.1:16896 Send >> OAKO1c~96b~1~-1~7e#5#0#0#1d40+0,76#14#0#0#1d40+0
+Ryuu:ip 127.0.0.1:16896 Send >> OAKO1d~96b~1~-1~7e#3#0#0#1d40+0,76#14#0#0#1d40+0
+Ryuu:ip 127.0.0.1:16896 Send >> OAKO1e~96e~1~-1~ae#126#0#0#1d300+0,6e#30#0#0#1d50+0
+Ryuu:ip 127.0.0.1:16896 Send >> AGK
+Ryuu:ip 127.0.0.1:16896 Connection Closed
+GameServer Connection With host 127.0.0.1:16898 Successfuly
+ip 127.0.0.1:16898 Send >> HG
+ip 127.0.0.1:16898 Recv << AT07/28/2013 01:30:39|127.0.0.1:16897|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:16898 Send >> ATK0
+Ryuu:ip 127.0.0.1:16898 Recv << Ak0
+Ryuu:ip 127.0.0.1:16898 Recv << AV
+Ryuu:ip 127.0.0.1:16898 Send >> AV0
+Ryuu:ip 127.0.0.1:16898 Recv << Agfr
+Ryuu:ip 127.0.0.1:16898 Send >> Ag1|1|Vous avez un cadeaux :)|Cadeaux de test uniquement|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~914~1~1~;2~926~1~1~;3~96b~2~1~7e#1#28#0#1d40+0,76#1#28#0#1d40+0;4~96e~1~1~ae#1#12c#0#1d300+0,6e#1#32#0#1d50+0;|2|test|test|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~96e~1~1~ae#1#12c#0#1d300+0,6e#1#32#0#1d50+0;
+Ryuu:ip 127.0.0.1:16898 Recv << AL
+Ryuu:ip 127.0.0.1:16898 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:16898 Recv << Af
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:16909 Successfuly
+ip 127.0.0.1:16909 Send >> HG
+ip 127.0.0.1:16909 Recv << AT07/28/2013 01:30:55|127.0.0.1:16908|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:16909 Send >> ATK0
+Ryuu:ip 127.0.0.1:16909 Recv << Ak0
+Ryuu:ip 127.0.0.1:16909 Recv << AV
+Ryuu:ip 127.0.0.1:16909 Send >> AV0
+Ryuu:ip 127.0.0.1:16909 Recv << Agfr
+Ryuu:ip 127.0.0.1:16909 Send >> Ag1|2|test|test|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~96e~1~1~ae#1#12c#0#1d300+0,6e#1#32#0#1d50+0;
+Ryuu:ip 127.0.0.1:16909 Recv << AL
+Ryuu:ip 127.0.0.1:16909 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:16909 Recv << Af
+Ryuu:ip 127.0.0.1:16909 Recv << AG2|1
+Ryuu:ip 127.0.0.1:16909 Send >> OAKO1f~914~1~-1~
+Ryuu:ip 127.0.0.1:16909 Send >> OAKO20~926~1~-1~
+Ryuu:ip 127.0.0.1:16909 Send >> OAKO21~96b~1~-1~7e#12#0#0#1d40+0,76#25#0#0#1d40+0
+Ryuu:ip 127.0.0.1:16909 Send >> OAKO22~96b~1~-1~7e#22#0#0#1d40+0,76#5#0#0#1d40+0
+Ryuu:ip 127.0.0.1:16909 Send >> OAKO23~96e~1~-1~ae#b4#0#0#1d300+0,6e#1#0#0#1d50+0
+Ryuu:ip 127.0.0.1:16909 Send >> AGK
+Ryuu:ip 127.0.0.1:16909 Connection Closed
+GameServer Connection With host 127.0.0.1:16911 Successfuly
+ip 127.0.0.1:16911 Send >> HG
+ip 127.0.0.1:16911 Recv << AT07/28/2013 01:31:01|127.0.0.1:16910|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:16911 Send >> ATK0
+Ryuu:ip 127.0.0.1:16911 Recv << Ak0
+Ryuu:ip 127.0.0.1:16911 Recv << AV
+Ryuu:ip 127.0.0.1:16911 Send >> AV0
+Ryuu:ip 127.0.0.1:16911 Recv << Agfr
+Ryuu:ip 127.0.0.1:16911 Send >> Ag1|2|test|test|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~96e~1~1~ae#1#12c#0#1d300+0,6e#1#32#0#1d50+0;
+Ryuu:ip 127.0.0.1:16911 Recv << AL
+Ryuu:ip 127.0.0.1:16911 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:16911 Recv << Af
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:17026 Successfuly
+ip 127.0.0.1:17026 Send >> HG
+ip 127.0.0.1:17026 Recv << AT07/28/2013 01:55:16|127.0.0.1:17025|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:17026 Send >> ATK0
+Ryuu:ip 127.0.0.1:17026 Recv << Ak0
+Ryuu:ip 127.0.0.1:17026 Recv << AV
+Ryuu:ip 127.0.0.1:17026 Send >> AV0
+Ryuu:ip 127.0.0.1:17026 Recv << Agfr
+Ryuu:ip 127.0.0.1:17026 Send >> Ag1|2|test|test|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~96e~1~1~ae#1#12c#0#1d300+0,6e#1#32#0#1d50+0;
+Ryuu:ip 127.0.0.1:17026 Recv << AL
+Ryuu:ip 127.0.0.1:17026 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:17026 Recv << Af
+Ryuu:ip 127.0.0.1:17026 Recv << AG2|1
+Ryuu:ip 127.0.0.1:17026 Send >> OAKO24~914~1~-1~
+Ryuu:ip 127.0.0.1:17026 Send >> OAKO25~926~1~-1~
+Ryuu:ip 127.0.0.1:17026 Send >> OAKO26~96b~1~-1~7e#20#0#0#1d40+0,76#21#0#0#1d40+0
+Ryuu:ip 127.0.0.1:17026 Send >> OAKO27~96b~1~-1~7e#8#0#0#1d40+0,76#2#0#0#1d40+0
+Ryuu:ip 127.0.0.1:17026 Send >> OAKO28~96e~1~-1~ae#21#0#0#1d300+0,6e#1a#0#0#1d50+0
+Ryuu:ip 127.0.0.1:17026 Connection Closed
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:17037 Successfuly
+ip 127.0.0.1:17037 Send >> HG
+ip 127.0.0.1:17037 Recv << AT07/28/2013 01:55:50|127.0.0.1:17035|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:17037 Send >> ATK0
+Ryuu:ip 127.0.0.1:17037 Recv << Ak0
+Ryuu:ip 127.0.0.1:17037 Recv << AV
+Ryuu:ip 127.0.0.1:17037 Send >> AV0
+Ryuu:ip 127.0.0.1:17037 Recv << Agfr
+Ryuu:ip 127.0.0.1:17037 Send >> Ag1|2|test|test|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~96e~1~1~ae#1#12c#0#1d300+0,6e#1#32#0#1d50+0;
+Ryuu:ip 127.0.0.1:17037 Recv << AL
+Ryuu:ip 127.0.0.1:17037 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:17037 Recv << Af
+Ryuu:ip 127.0.0.1:17037 Recv << AG2|1
+Ryuu:ip 127.0.0.1:17037 Send >> OAKO29~914~1~-1~
+Ryuu:ip 127.0.0.1:17037 Send >> OAKO2a~926~1~-1~
+Ryuu:ip 127.0.0.1:17037 Send >> OAKO2b~96b~1~-1~7e#1b#0#0#1d40+0,76#1f#0#0#1d40+0
+Ryuu:ip 127.0.0.1:17037 Send >> OAKO2c~96b~1~-1~7e#27#0#0#1d40+0,76#12#0#0#1d40+0
+Ryuu:ip 127.0.0.1:17037 Send >> OAKO2d~96e~1~-1~ae#74#0#0#1d300+0,6e#20#0#0#1d50+0
+Ryuu:ip 127.0.0.1:17037 Send >> AGK
+Ryuu:ip 127.0.0.1:17037 Connection Closed
+GameServer Connection With host 127.0.0.1:17039 Successfuly
+ip 127.0.0.1:17039 Send >> HG
+ip 127.0.0.1:17039 Recv << AT07/28/2013 01:55:57|127.0.0.1:17038|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:17039 Send >> ATK0
+Ryuu:ip 127.0.0.1:17039 Recv << Ak0
+Ryuu:ip 127.0.0.1:17039 Recv << AV
+Ryuu:ip 127.0.0.1:17039 Send >> AV0
+Ryuu:ip 127.0.0.1:17039 Recv << Agfr
+Ryuu:ip 127.0.0.1:17039 Send >> Ag1|2|test|test|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~96e~1~1~ae#1#12c#0#1d300+0,6e#1#32#0#1d50+0;
+Ryuu:ip 127.0.0.1:17039 Recv << AL
+Ryuu:ip 127.0.0.1:17039 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:17039 Recv << Af
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:17051 Successfuly
+ip 127.0.0.1:17051 Send >> HG
+ip 127.0.0.1:17051 Recv << AT07/28/2013 01:59:15|127.0.0.1:17050|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:17051 Send >> ATK0
+Ryuu:ip 127.0.0.1:17051 Recv << Ak0
+Ryuu:ip 127.0.0.1:17051 Recv << AV
+Ryuu:ip 127.0.0.1:17051 Send >> AV0
+Ryuu:ip 127.0.0.1:17051 Recv << Agfr
+Ryuu:ip 127.0.0.1:17051 Send >> Ag1|2|test|test|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~96e~1~1~ae#1#12c#0#1d300+0,6e#1#32#0#1d50+0;
+Ryuu:ip 127.0.0.1:17051 Recv << AL
+Ryuu:ip 127.0.0.1:17051 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:17051 Recv << Af
+Ryuu:ip 127.0.0.1:17051 Recv << AG2|1
+Ryuu:ip 127.0.0.1:17051 Send >> OAKO2e~914~1~-1~
+Ryuu:ip 127.0.0.1:17051 Send >> OAKO2f~926~1~-1~
+Ryuu:ip 127.0.0.1:17051 Send >> OAKO30~96b~1~-1~7e#d#0#0#1d40+0,76#1a#0#0#1d40+0
+Ryuu:ip 127.0.0.1:17051 Send >> OAKO31~96b~1~-1~7e#24#0#0#1d40+0,76#25#0#0#1d40+0
+Ryuu:ip 127.0.0.1:17051 Send >> OAKO32~96e~1~-1~ae#3#0#0#1d300+0,6e#1a#0#0#1d50+0
+Ryuu:ip 127.0.0.1:17051 Send >> AGK
+Ryuu:ip 127.0.0.1:17051 Connection Closed
+GameServer Connection With host 127.0.0.1:17053 Successfuly
+ip 127.0.0.1:17053 Send >> HG
+ip 127.0.0.1:17053 Recv << AT07/28/2013 01:59:25|127.0.0.1:17052|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:17053 Send >> ATK0
+Ryuu:ip 127.0.0.1:17053 Recv << Ak0
+Ryuu:ip 127.0.0.1:17053 Recv << AV
+Ryuu:ip 127.0.0.1:17053 Send >> AV0
+Ryuu:ip 127.0.0.1:17053 Recv << Agfr
+Ryuu:ip 127.0.0.1:17053 Send >> Ag1|2|test|test|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~96e~1~1~ae#1#12c#0#1d300+0,6e#1#32#0#1d50+0;
+Ryuu:ip 127.0.0.1:17053 Recv << AL
+Ryuu:ip 127.0.0.1:17053 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:17053 Recv << Af
+Ryuu:ip 127.0.0.1:17053 Recv << AG2|1
+Ryuu:ip 127.0.0.1:17053 Send >> OAKO33~914~1~-1~
+Ryuu:ip 127.0.0.1:17053 Send >> OAKO34~926~1~-1~
+Ryuu:ip 127.0.0.1:17053 Send >> OAKO35~96b~1~-1~7e#17#0#0#1d40+0,76#7#0#0#1d40+0
+Ryuu:ip 127.0.0.1:17053 Send >> OAKO36~96b~1~-1~7e#d#0#0#1d40+0,76#3#0#0#1d40+0
+Ryuu:ip 127.0.0.1:17053 Send >> OAKO37~96e~1~-1~ae#84#0#0#1d300+0,6e#20#0#0#1d50+0
+Ryuu:ip 127.0.0.1:17053 Send >> AGK
+Ryuu:ip 127.0.0.1:17053 Connection Closed
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:17066 Successfuly
+ip 127.0.0.1:17066 Send >> HG
+ip 127.0.0.1:17066 Recv << AT07/28/2013 02:01:26|127.0.0.1:17065|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:17066 Send >> ATK0
+Ryuu:ip 127.0.0.1:17066 Recv << Ak0
+Ryuu:ip 127.0.0.1:17066 Recv << AV
+Ryuu:ip 127.0.0.1:17066 Send >> AV0
+Ryuu:ip 127.0.0.1:17066 Recv << Agfr
+Ryuu:ip 127.0.0.1:17066 Send >> Ag1|2|test|test|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~96e~1~1~ae#1#12c#0#1d300+0,6e#1#32#0#1d50+0;
+Ryuu:ip 127.0.0.1:17066 Recv << AL
+Ryuu:ip 127.0.0.1:17066 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:17066 Recv << Af
+Ryuu:ip 127.0.0.1:17066 Recv << AG2|1
+Ryuu:ip 127.0.0.1:17066 Send >> OAKO38~914~1~-1~
+Ryuu:ip 127.0.0.1:17066 Send >> OAKO39~926~1~-1~
+Ryuu:ip 127.0.0.1:17066 Send >> OAKO3a~96b~1~-1~7e#9#0#0#1d40+0,76#26#0#0#1d40+0
+Ryuu:ip 127.0.0.1:17066 Send >> OAKO3b~96b~1~-1~7e#5#0#0#1d40+0,76#12#0#0#1d40+0
+Ryuu:ip 127.0.0.1:17066 Send >> OAKO3c~96e~1~-1~ae#99#0#0#1d300+0,6e#20#0#0#1d50+0
+Ryuu:ip 127.0.0.1:17066 Send >> AGK
+Ryuu:ip 127.0.0.1:17066 Connection Closed
+GameServer Connection With host 127.0.0.1:17068 Successfuly
+ip 127.0.0.1:17068 Send >> HG
+ip 127.0.0.1:17068 Recv << AT07/28/2013 02:01:32|127.0.0.1:17067|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:17068 Send >> ATK0
+Ryuu:ip 127.0.0.1:17068 Recv << Ak0
+Ryuu:ip 127.0.0.1:17068 Recv << AV
+Ryuu:ip 127.0.0.1:17068 Send >> AV0
+Ryuu:ip 127.0.0.1:17068 Recv << Agfr
+Ryuu:ip 127.0.0.1:17068 Send >> Ag1|2|test|test|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~96e~1~1~ae#1#12c#0#1d300+0,6e#1#32#0#1d50+0;
+Ryuu:ip 127.0.0.1:17068 Recv << AL
+Ryuu:ip 127.0.0.1:17068 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:17068 Recv << Af
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:17081 Successfuly
+ip 127.0.0.1:17081 Send >> HG
+ip 127.0.0.1:17081 Recv << AT07/28/2013 02:02:47|127.0.0.1:17080|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:17081 Send >> ATK0
+Ryuu:ip 127.0.0.1:17081 Recv << Ak0
+Ryuu:ip 127.0.0.1:17081 Recv << AV
+Ryuu:ip 127.0.0.1:17081 Send >> AV0
+Ryuu:ip 127.0.0.1:17081 Recv << Agfr
+Ryuu:ip 127.0.0.1:17081 Send >> Ag1|2|test|test|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~96e~1~1~ae#1#12c#0#1d300+0,6e#1#32#0#1d50+0;
+Ryuu:ip 127.0.0.1:17081 Recv << AL
+Ryuu:ip 127.0.0.1:17081 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:17081 Recv << Af
+Ryuu:ip 127.0.0.1:17081 Recv << AG2|1
+Ryuu:ip 127.0.0.1:17081 Send >> OAKO3d~914~1~-1~
+Ryuu:ip 127.0.0.1:17081 Send >> OAKO3e~926~1~-1~
+Ryuu:ip 127.0.0.1:17081 Send >> OAKO3f~96b~1~-1~7e#1e#0#0#1d40+0,76#21#0#0#1d40+0
+Ryuu:ip 127.0.0.1:17081 Send >> OAKO40~96b~1~-1~7e#14#0#0#1d40+0,76#1d#0#0#1d40+0
+Ryuu:ip 127.0.0.1:17081 Send >> OAKO41~96e~1~-1~ae#b6#0#0#1d300+0,6e#10#0#0#1d50+0
+Ryuu:ip 127.0.0.1:17081 Send >> AGK
+Ryuu:ip 127.0.0.1:17081 Connection Closed
+GameServer Connection With host 127.0.0.1:17083 Successfuly
+ip 127.0.0.1:17083 Send >> HG
+ip 127.0.0.1:17083 Recv << AT07/28/2013 02:02:55|127.0.0.1:17082|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:17083 Send >> ATK0
+Ryuu:ip 127.0.0.1:17083 Recv << Ak0
+Ryuu:ip 127.0.0.1:17083 Recv << AV
+Ryuu:ip 127.0.0.1:17083 Send >> AV0
+Ryuu:ip 127.0.0.1:17083 Recv << Agfr
+Ryuu:ip 127.0.0.1:17083 Send >> Ag1|2|test|test|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~96e~1~1~ae#1#12c#0#1d300+0,6e#1#32#0#1d50+0;
+Ryuu:ip 127.0.0.1:17083 Recv << AL
+Ryuu:ip 127.0.0.1:17083 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:17083 Recv << Af
+Ryuu:ip 127.0.0.1:17083 Recv << AG2|1
+Ryuu:ip 127.0.0.1:17083 Send >> OAKO42~914~1~-1~
+Ryuu:ip 127.0.0.1:17083 Send >> OAKO43~926~1~-1~
+Ryuu:ip 127.0.0.1:17083 Send >> OAKO44~96b~1~-1~7e#22#0#0#1d40+0,76#14#0#0#1d40+0
+Ryuu:ip 127.0.0.1:17083 Send >> OAKO45~96b~1~-1~7e#18#0#0#1d40+0,76#f#0#0#1d40+0
+Ryuu:ip 127.0.0.1:17083 Send >> OAKO46~96e~1~-1~ae#6b#0#0#1d300+0,6e#e#0#0#1d50+0
+Ryuu:ip 127.0.0.1:17083 Send >> AGK
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:17094 Successfuly
+ip 127.0.0.1:17094 Send >> HG
+ip 127.0.0.1:17094 Recv << AT07/28/2013 02:03:27|127.0.0.1:17093|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:17094 Send >> ATK0
+Ryuu:ip 127.0.0.1:17094 Recv << Ak0
+Ryuu:ip 127.0.0.1:17094 Recv << AV
+Ryuu:ip 127.0.0.1:17094 Send >> AV0
+Ryuu:ip 127.0.0.1:17094 Recv << Agfr
+Ryuu:ip 127.0.0.1:17094 Send >> Ag1|2|test|test|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~96e~1~1~ae#1#12c#0#1d300+0,6e#1#32#0#1d50+0;
+Ryuu:ip 127.0.0.1:17094 Recv << AL
+Ryuu:ip 127.0.0.1:17094 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:17094 Recv << Af
+Ryuu:ip 127.0.0.1:17094 Recv << AG2|1
+Ryuu:ip 127.0.0.1:17094 Send >> OAKO47~914~1~-1~
+Ryuu:ip 127.0.0.1:17094 Send >> OAKO48~926~1~-1~
+Ryuu:ip 127.0.0.1:17094 Send >> OAKO49~96b~1~-1~7e#18#0#0#1d40+0,76#b#0#0#1d40+0
+Ryuu:ip 127.0.0.1:17094 Send >> OAKO4a~96b~1~-1~7e#e#0#0#1d40+0,76#6#0#0#1d40+0
+Ryuu:ip 127.0.0.1:17094 Send >> OAKO4b~96e~1~-1~ae#1d#0#0#1d300+0,6e#2#0#0#1d50+0
+Ryuu:ip 127.0.0.1:17094 Connection Closed
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:17105 Successfuly
+ip 127.0.0.1:17105 Send >> HG
+ip 127.0.0.1:17105 Recv << AT07/28/2013 02:06:09|127.0.0.1:17103|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:17105 Send >> ATK0
+Ryuu:ip 127.0.0.1:17105 Recv << Ak0
+Ryuu:ip 127.0.0.1:17105 Recv << AV
+Ryuu:ip 127.0.0.1:17105 Send >> AV0
+Ryuu:ip 127.0.0.1:17105 Recv << Agfr
+Ryuu:ip 127.0.0.1:17105 Send >> Ag1|2|test|test|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~96e~1~1~ae#1#12c#0#1d300+0,6e#1#32#0#1d50+0;
+Ryuu:ip 127.0.0.1:17105 Recv << AL
+Ryuu:ip 127.0.0.1:17105 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:17105 Recv << Af
+Ryuu:ip 127.0.0.1:17105 Recv << AG2|1
+Ryuu:ip 127.0.0.1:17105 Send >> OAKO4c~914~1~-1~
+Ryuu:ip 127.0.0.1:17105 Send >> OAKO4d~926~1~-1~
+Ryuu:ip 127.0.0.1:17105 Send >> OAKO4e~96b~1~-1~7e#19#0#0#1d40+0,76#12#0#0#1d40+0
+Ryuu:ip 127.0.0.1:17105 Send >> OAKO4f~96b~1~-1~7e#f#0#0#1d40+0,76#e#0#0#1d40+0
+Ryuu:ip 127.0.0.1:17105 Send >> OAKO50~96e~1~-1~ae#26#0#0#1d300+0,6e#b#0#0#1d50+0
+Ryuu:ip 127.0.0.1:17105 Send >> AGK
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:17118 Successfuly
+ip 127.0.0.1:17118 Send >> HG
+ip 127.0.0.1:17118 Recv << AT07/28/2013 02:07:47|127.0.0.1:17117|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:17118 Send >> ATK0
+Ryuu:ip 127.0.0.1:17118 Recv << Ak0
+Ryuu:ip 127.0.0.1:17118 Recv << AV
+Ryuu:ip 127.0.0.1:17118 Send >> AV0
+Ryuu:ip 127.0.0.1:17118 Recv << Agfr
+Ryuu:ip 127.0.0.1:17118 Send >> Ag1|2|test|test|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~96e~1~1~ae#1#12c#0#1d300+0,6e#1#32#0#1d50+0;
+Ryuu:ip 127.0.0.1:17118 Recv << AL
+Ryuu:ip 127.0.0.1:17118 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:17118 Recv << Af
+Ryuu:ip 127.0.0.1:17118 Recv << AG2|1
+Ryuu:ip 127.0.0.1:17118 Send >> OAKO51~914~1~-1~
+Ryuu:ip 127.0.0.1:17118 Send >> OAKO52~926~1~-1~
+Ryuu:ip 127.0.0.1:17118 Send >> OAKO53~96b~1~-1~7e#23#0#0#1d40+0,76#2#0#0#1d40+0
+Ryuu:ip 127.0.0.1:17118 Send >> OAKO54~96b~1~-1~7e#1a#0#0#1d40+0,76#25#0#0#1d40+0
+Ryuu:ip 127.0.0.1:17118 Send >> OAKO55~96e~1~-1~ae#76#0#0#1d300+0,6e#28#0#0#1d50+0
+Ryuu:ip 127.0.0.1:17118 Send >> AGK
+Ryuu:ip 127.0.0.1:17118 Connection Closed
+GameServer Connection With host 127.0.0.1:17120 Successfuly
+ip 127.0.0.1:17120 Send >> HG
+ip 127.0.0.1:17120 Recv << AT07/28/2013 02:07:54|127.0.0.1:17119|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:17120 Send >> ATK0
+Ryuu:ip 127.0.0.1:17120 Recv << Ak0
+Ryuu:ip 127.0.0.1:17120 Recv << AV
+Ryuu:ip 127.0.0.1:17120 Send >> AV0
+Ryuu:ip 127.0.0.1:17120 Recv << Agfr
+Ryuu:ip 127.0.0.1:17120 Send >> Ag1|2|test|test|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~96e~1~1~ae#1#12c#0#1d300+0,6e#1#32#0#1d50+0;
+Ryuu:ip 127.0.0.1:17120 Recv << AL
+Ryuu:ip 127.0.0.1:17120 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:17120 Recv << Af
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:17133 Successfuly
+ip 127.0.0.1:17133 Send >> HG
+ip 127.0.0.1:17133 Recv << AT07/28/2013 02:09:18|127.0.0.1:17132|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:17133 Send >> ATK0
+Ryuu:ip 127.0.0.1:17133 Recv << Ak0
+Ryuu:ip 127.0.0.1:17133 Recv << AV
+Ryuu:ip 127.0.0.1:17133 Send >> AV0
+Ryuu:ip 127.0.0.1:17133 Recv << Agfr
+Ryuu:ip 127.0.0.1:17133 Send >> Ag1|2|test|test|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~96e~1~1~ae#1#12c#0#1d300+0,6e#1#32#0#1d50+0;
+Ryuu:ip 127.0.0.1:17133 Recv << AL
+Ryuu:ip 127.0.0.1:17133 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:17133 Recv << Af
+Ryuu:ip 127.0.0.1:17133 Recv << AG2|1
+Ryuu:ip 127.0.0.1:17133 Send >> OAKO56~914~1~-1~
+Ryuu:ip 127.0.0.1:17133 Send >> OAKO57~926~1~-1~
+Ryuu:ip 127.0.0.1:17133 Send >> OAKO58~96b~1~-1~7e#13#0#0#1d40+0,76#10#0#0#1d40+0
+Ryuu:ip 127.0.0.1:17133 Send >> OAKO59~96b~1~-1~7e#18#0#0#1d40+0,76#13#0#0#1d40+0
+Ryuu:ip 127.0.0.1:17133 Send >> OAKO5a~96e~1~-1~ae#19#0#0#1d300+0,6e#25#0#0#1d50+0
+Ryuu:ip 127.0.0.1:17133 Send >> AGK
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:17177 Successfuly
+ip 127.0.0.1:17177 Send >> HG
+ip 127.0.0.1:17177 Recv << AT07/28/2013 02:12:20|127.0.0.1:17176|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:17177 Send >> ATK0
+Ryuu:ip 127.0.0.1:17177 Recv << Ak0
+Ryuu:ip 127.0.0.1:17177 Recv << AV
+Ryuu:ip 127.0.0.1:17177 Send >> AV0
+Ryuu:ip 127.0.0.1:17177 Recv << Agfr
+Ryuu:ip 127.0.0.1:17177 Send >> Ag1|2|test|test|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~96e~1~1~ae#1#12c#0#1d300+0,6e#1#32#0#1d50+0;
+Ryuu:ip 127.0.0.1:17177 Recv << AL
+Ryuu:ip 127.0.0.1:17177 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:17177 Recv << Af
+Ryuu:ip 127.0.0.1:17177 Recv << AG2|1
+Ryuu:ip 127.0.0.1:17177 Send >> OAKO5b~914~1~-1~
+Ryuu:ip 127.0.0.1:17177 Send >> OAKO5c~926~1~-1~
+Ryuu:ip 127.0.0.1:17177 Send >> OAKO5d~96b~1~-1~7e#1a#0#0#1d40+0,76#20#0#0#1d40+0
+Ryuu:ip 127.0.0.1:17177 Send >> OAKO5e~96b~1~-1~7e#10#0#0#1d40+0,76#1b#0#0#1d40+0
+Ryuu:ip 127.0.0.1:17177 Send >> OAKO5f~96e~1~-1~ae#c9#0#0#1d300+0,6e#2b#0#0#1d50+0
+Ryuu:ip 127.0.0.1:17177 Send >> AGK
+Ryuu:ip 127.0.0.1:17177 Connection Closed
+GameServer Connection With host 127.0.0.1:17179 Successfuly
+ip 127.0.0.1:17179 Send >> HG
+ip 127.0.0.1:17179 Recv << AT07/28/2013 02:12:36|127.0.0.1:17178|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:17179 Send >> ATK0
+Ryuu:ip 127.0.0.1:17179 Recv << Ak0
+Ryuu:ip 127.0.0.1:17179 Recv << AV
+Ryuu:ip 127.0.0.1:17179 Send >> AV0
+Ryuu:ip 127.0.0.1:17179 Recv << Agfr
+Ryuu:ip 127.0.0.1:17179 Send >> Ag1|2|test|test|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~96e~1~1~ae#1#12c#0#1d300+0,6e#1#32#0#1d50+0;
+Ryuu:ip 127.0.0.1:17179 Recv << AL
+Ryuu:ip 127.0.0.1:17179 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:17179 Recv << Af
+Ryuu:ip 127.0.0.1:17179 Recv << AG2|1
+Ryuu:ip 127.0.0.1:17179 Send >> OAKO60~914~1~-1~
+Ryuu:ip 127.0.0.1:17179 Send >> OAKO61~926~1~-1~
+Ryuu:ip 127.0.0.1:17179 Send >> OAKO62~96b~1~-1~7e#1f#0#0#1d40+0,76#e#0#0#1d40+0
+Ryuu:ip 127.0.0.1:17179 Send >> OAKO63~96b~1~-1~7e#19#0#0#1d40+0,76#21#0#0#1d40+0
+Ryuu:ip 127.0.0.1:17179 Send >> OAKO64~96e~1~-1~ae#74#0#0#1d300+0,6e#23#0#0#1d50+0
+Ryuu:ip 127.0.0.1:17179 Send >> AGK
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:17194 Successfuly
+ip 127.0.0.1:17194 Send >> HG
+ip 127.0.0.1:17194 Recv << AT07/28/2013 02:15:08|127.0.0.1:17193|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:17194 Send >> ATK0
+Ryuu:ip 127.0.0.1:17194 Recv << Ak0
+Ryuu:ip 127.0.0.1:17194 Recv << AV
+Ryuu:ip 127.0.0.1:17194 Send >> AV0
+Ryuu:ip 127.0.0.1:17194 Recv << Agfr
+Ryuu:ip 127.0.0.1:17194 Send >> Ag1|2|test|test|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~96e~1~1~ae#1#12c#0#1d300+0,6e#1#32#0#1d50+0;
+Ryuu:ip 127.0.0.1:17194 Recv << AL
+Ryuu:ip 127.0.0.1:17194 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:17194 Recv << Af
+Ryuu:ip 127.0.0.1:17194 Recv << AG2|1
+Ryuu:ip 127.0.0.1:17194 Send >> OAKO65~96e~1~-1~ae#c4#0#0#1d300+0,6e#2e#0#0#1d50+0
+Ryuu:ip 127.0.0.1:17194 Send >> AGK
+Ryuu:ip 127.0.0.1:17194 Connection Closed
+GameServer Connection With host 127.0.0.1:17196 Successfuly
+ip 127.0.0.1:17196 Send >> HG
+ip 127.0.0.1:17196 Recv << AT07/28/2013 02:15:14|127.0.0.1:17195|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:17196 Send >> ATK0
+Ryuu:ip 127.0.0.1:17196 Recv << Ak0
+Ryuu:ip 127.0.0.1:17196 Recv << AV
+Ryuu:ip 127.0.0.1:17196 Send >> AV0
+Ryuu:ip 127.0.0.1:17196 Recv << Agfr
+Ryuu:ip 127.0.0.1:17196 Send >> Ag1|2|test|test|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~96e~1~1~ae#1#12c#0#1d300+0,6e#1#32#0#1d50+0;
+Ryuu:ip 127.0.0.1:17196 Recv << AL
+Ryuu:ip 127.0.0.1:17196 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:17196 Recv << Af
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:17211 Successfuly
+ip 127.0.0.1:17211 Send >> HG
+ip 127.0.0.1:17211 Recv << AT07/28/2013 02:16:20|127.0.0.1:17210|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:17211 Send >> ATK0
+Ryuu:ip 127.0.0.1:17211 Recv << Ak0
+Ryuu:ip 127.0.0.1:17211 Recv << AV
+Ryuu:ip 127.0.0.1:17211 Send >> AV0
+Ryuu:ip 127.0.0.1:17211 Recv << Agfr
+Ryuu:ip 127.0.0.1:17211 Recv << AL
+Ryuu:ip 127.0.0.1:17211 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:17211 Recv << Af
+Ryuu:ip 127.0.0.1:17211 Connection Closed
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:17227 Successfuly
+ip 127.0.0.1:17227 Send >> HG
+ip 127.0.0.1:17227 Recv << AT07/28/2013 02:17:47|127.0.0.1:17226|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:17227 Send >> ATK0
+Ryuu:ip 127.0.0.1:17227 Recv << Ak0
+Ryuu:ip 127.0.0.1:17227 Recv << AV
+Ryuu:ip 127.0.0.1:17227 Send >> AV0
+Ryuu:ip 127.0.0.1:17227 Recv << Agfr
+Ryuu:ip 127.0.0.1:17227 Send >> Ag1|2|test|test|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~96e~1~1~ae#1#12c#0#1d300+0,6e#1#32#0#1d50+0;
+Ryuu:ip 127.0.0.1:17227 Recv << AL
+Ryuu:ip 127.0.0.1:17227 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:17227 Recv << Af
+Ryuu:ip 127.0.0.1:17227 Recv << AG2|1
+Ryuu:ip 127.0.0.1:17227 Send >> OAKO66~96e~1~-1~ae#113#0#0#1d300+0,6e#1e#0#0#1d50+0
+Ryuu:ip 127.0.0.1:17227 Send >> AGK
+Ryuu:ip 127.0.0.1:17227 Connection Closed
+GameServer Connection With host 127.0.0.1:17229 Successfuly
+ip 127.0.0.1:17229 Send >> HG
+ip 127.0.0.1:17229 Recv << AT07/28/2013 02:17:55|127.0.0.1:17228|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:17229 Send >> ATK0
+Ryuu:ip 127.0.0.1:17229 Recv << Ak0
+Ryuu:ip 127.0.0.1:17229 Recv << AV
+Ryuu:ip 127.0.0.1:17229 Send >> AV0
+Ryuu:ip 127.0.0.1:17229 Recv << Agfr
+Ryuu:ip 127.0.0.1:17229 Send >> Ag1|2|test|test|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~96e~1~1~ae#1#12c#0#1d300+0,6e#1#32#0#1d50+0;
+Ryuu:ip 127.0.0.1:17229 Recv << AL
+Ryuu:ip 127.0.0.1:17229 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:17229 Recv << Af
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:17242 Successfuly
+ip 127.0.0.1:17242 Send >> HG
+ip 127.0.0.1:17242 Recv << AT07/28/2013 02:18:32|127.0.0.1:17241|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:17242 Send >> ATK0
+Ryuu:ip 127.0.0.1:17242 Recv << Ak0
+Ryuu:ip 127.0.0.1:17242 Recv << AV
+Ryuu:ip 127.0.0.1:17242 Send >> AV0
+Ryuu:ip 127.0.0.1:17242 Recv << Agfr
+Ryuu:ip 127.0.0.1:17242 Recv << AL
+Ryuu:ip 127.0.0.1:17242 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:17242 Recv << Af
+Ryuu:ip 127.0.0.1:17242 Connection Closed
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:17255 Successfuly
+ip 127.0.0.1:17255 Send >> HG
+ip 127.0.0.1:17255 Recv << AT07/28/2013 02:18:54|127.0.0.1:17254|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:17255 Send >> ATK0
+Ryuu:ip 127.0.0.1:17255 Recv << Ak0
+Ryuu:ip 127.0.0.1:17255 Recv << AV
+Ryuu:ip 127.0.0.1:17255 Send >> AV0
+Ryuu:ip 127.0.0.1:17255 Recv << Agfr
+Ryuu:ip 127.0.0.1:17255 Send >> Ag1|2|test|test|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~96e~1~1~ae#1#12c#0#1d300+0,6e#1#32#0#1d50+0;
+Ryuu:ip 127.0.0.1:17255 Recv << AL
+Ryuu:ip 127.0.0.1:17255 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:17255 Recv << Af
+Ryuu:ip 127.0.0.1:17255 Recv << AG2|1
+Ryuu:ip 127.0.0.1:17255 Send >> OAKO67~96e~1~-1~ae#63#0#0#1d300+0,6e#10#0#0#1d50+0
+Ryuu:ip 127.0.0.1:17255 Send >> AGK
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:17267 Successfuly
+ip 127.0.0.1:17267 Send >> HG
+ip 127.0.0.1:17267 Recv << AT07/28/2013 02:21:09|127.0.0.1:17265|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:17267 Send >> ATK0
+Ryuu:ip 127.0.0.1:17267 Recv << Ak0
+Ryuu:ip 127.0.0.1:17267 Recv << AV
+Ryuu:ip 127.0.0.1:17267 Send >> AV0
+Ryuu:ip 127.0.0.1:17267 Recv << Agfr
+Ryuu:ip 127.0.0.1:17267 Recv << AL
+Ryuu:ip 127.0.0.1:17267 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:17267 Recv << Af
+Ryuu:ip 127.0.0.1:17267 Connection Closed
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:17280 Successfuly
+ip 127.0.0.1:17280 Send >> HG
+ip 127.0.0.1:17280 Recv << AT07/28/2013 02:21:29|127.0.0.1:17279|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:17280 Send >> ATK0
+Ryuu:ip 127.0.0.1:17280 Recv << Ak0
+Ryuu:ip 127.0.0.1:17280 Recv << AV
+Ryuu:ip 127.0.0.1:17280 Send >> AV0
+Ryuu:ip 127.0.0.1:17280 Recv << Agfr
+Ryuu:ip 127.0.0.1:17280 Send >> Ag1|2|test|test|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~96e~1~1~ae#1#12c#0#1d300+0,6e#1#32#0#1d50+0;
+Ryuu:ip 127.0.0.1:17280 Recv << AL
+Ryuu:ip 127.0.0.1:17280 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:17280 Recv << Af
+Ryuu:ip 127.0.0.1:17280 Recv << AG2|1
+Ryuu:ip 127.0.0.1:17280 Send >> OAKO68~96e~1~-1~ae#96#0#0#1d300+0,6e#2b#0#0#1d50+0
+Ryuu:ip 127.0.0.1:17280 Send >> AGK
+Ryuu:ip 127.0.0.1:17280 Connection Closed
+GameServer Connection With host 127.0.0.1:17282 Successfuly
+ip 127.0.0.1:17282 Send >> HG
+ip 127.0.0.1:17282 Recv << AT07/28/2013 02:21:37|127.0.0.1:17281|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:17282 Send >> ATK0
+Ryuu:ip 127.0.0.1:17282 Recv << Ak0
+Ryuu:ip 127.0.0.1:17282 Recv << AV
+Ryuu:ip 127.0.0.1:17282 Send >> AV0
+Ryuu:ip 127.0.0.1:17282 Recv << Agfr
+Ryuu:ip 127.0.0.1:17282 Recv << AL
+Ryuu:ip 127.0.0.1:17282 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:17282 Recv << Af
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:17299 Successfuly
+ip 127.0.0.1:17299 Send >> HG
+ip 127.0.0.1:17299 Recv << AT07/28/2013 02:25:31|127.0.0.1:17298|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:17299 Send >> ATK0
+Ryuu:ip 127.0.0.1:17299 Recv << Ak0
+Ryuu:ip 127.0.0.1:17299 Recv << AV
+Ryuu:ip 127.0.0.1:17299 Send >> AV0
+Ryuu:ip 127.0.0.1:17299 Recv << Agfr
+Ryuu:ip 127.0.0.1:17299 Recv << AL
+Ryuu:ip 127.0.0.1:17299 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:17299 Recv << Af
+Ryuu:ip 127.0.0.1:17299 Connection Closed
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:17314 Successfuly
+ip 127.0.0.1:17314 Send >> HG
+ip 127.0.0.1:17314 Recv << AT07/28/2013 02:26:10|127.0.0.1:17313|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:17314 Send >> ATK0
+Ryuu:ip 127.0.0.1:17314 Recv << Ak0
+Ryuu:ip 127.0.0.1:17314 Recv << AV
+Ryuu:ip 127.0.0.1:17314 Send >> AV0
+Ryuu:ip 127.0.0.1:17314 Recv << Agfr
+Ryuu:ip 127.0.0.1:17314 Send >> Ag1|1|Vous avez un cadeaux :)|Cadeaux de test uniquement|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~914~1~1~;2~926~1~1~;3~96b~2~1~7e#1#28#0#1d40+0,76#1#28#0#1d40+0;4~96e~1~1~ae#1#12c#0#1d300+0,6e#1#32#0#1d50+0;|2|test|test|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~96e~1~1~ae#1#12c#0#1d300+0,6e#1#32#0#1d50+0;
+Ryuu:ip 127.0.0.1:17314 Recv << AL
+Ryuu:ip 127.0.0.1:17314 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:17314 Recv << Af
+Ryuu:ip 127.0.0.1:17314 Recv << AG1|1
+Ryuu:ip 127.0.0.1:17314 Send >> OAKO69~914~1~-1~
+Ryuu:ip 127.0.0.1:17314 Send >> OAKO6a~926~1~-1~
+Ryuu:ip 127.0.0.1:17314 Send >> OAKO6b~96b~1~-1~7e#9#0#0#1d40+0,76#2#0#0#1d40+0
+Ryuu:ip 127.0.0.1:17314 Send >> OAKO6c~96b~1~-1~7e#26#0#0#1d40+0,76#24#0#0#1d40+0
+Ryuu:ip 127.0.0.1:17314 Send >> OAKO6d~96e~1~-1~ae#109#0#0#1d300+0,6e#14#0#0#1d50+0
+Ryuu:ip 127.0.0.1:17314 Send >> AGK
+Ryuu:ip 127.0.0.1:17314 Connection Closed
+GameServer Connection With host 127.0.0.1:17316 Successfuly
+ip 127.0.0.1:17316 Send >> HG
+ip 127.0.0.1:17316 Recv << AT07/28/2013 02:26:19|127.0.0.1:17315|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:17316 Send >> ATK0
+Ryuu:ip 127.0.0.1:17316 Recv << Ak0
+Ryuu:ip 127.0.0.1:17316 Recv << AV
+Ryuu:ip 127.0.0.1:17316 Send >> AV0
+Ryuu:ip 127.0.0.1:17316 Recv << Agfr
+Ryuu:ip 127.0.0.1:17316 Send >> Ag1|2|test|test|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~96e~1~1~ae#1#12c#0#1d300+0,6e#1#32#0#1d50+0;
+Ryuu:ip 127.0.0.1:17316 Recv << AL
+Ryuu:ip 127.0.0.1:17316 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:17316 Recv << Af
+Ryuu:ip 127.0.0.1:17316 Recv << AG2|1
+Ryuu:ip 127.0.0.1:17316 Send >> OAKO6e~96e~1~-1~ae#f0#0#0#1d300+0,6e#2b#0#0#1d50+0
+Ryuu:ip 127.0.0.1:17316 Send >> AGK
+Ryuu:ip 127.0.0.1:17316 Connection Closed
+GameServer Connection With host 127.0.0.1:17318 Successfuly
+ip 127.0.0.1:17318 Send >> HG
+ip 127.0.0.1:17318 Recv << AT07/28/2013 02:26:34|127.0.0.1:17317|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:17318 Send >> ATK0
+Ryuu:ip 127.0.0.1:17318 Recv << Ak0
+Ryuu:ip 127.0.0.1:17318 Recv << AV
+Ryuu:ip 127.0.0.1:17318 Send >> AV0
+Ryuu:ip 127.0.0.1:17318 Recv << Agfr
+Ryuu:ip 127.0.0.1:17318 Recv << AL
+Ryuu:ip 127.0.0.1:17318 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:17318 Recv << Af
+GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:17338 Successfuly
+ip 127.0.0.1:17338 Send >> HG
+ip 127.0.0.1:17338 Recv << AT07/28/2013 02:29:16|127.0.0.1:17337|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:17338 Send >> ATK0
+Ryuu:ip 127.0.0.1:17338 Recv << Ak0
+Ryuu:ip 127.0.0.1:17338 Recv << AV
+Ryuu:ip 127.0.0.1:17338 Send >> AV0
+Ryuu:ip 127.0.0.1:17338 Recv << Agfr
+Ryuu:ip 127.0.0.1:17338 Send >> Ag1[SilverGame.Models.Accounts.Account, 1|Vous avez un cadeaux :)|Cadeaux de test uniquement|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~914~1~1~;2~926~1~1~;3~96b~2~1~7e#1#28#0#1d40+0,76#1#28#0#1d40+0;4~96e~1~1~ae#1#12c#0#1d300+0,6e#1#32#0#1d50+0;]
+Ryuu:ip 127.0.0.1:17338 Recv << AL
+Ryuu:ip 127.0.0.1:17338 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:17338 Recv << Af
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:17349 Successfuly
+ip 127.0.0.1:17349 Send >> HG
+ip 127.0.0.1:17349 Recv << AT07/28/2013 02:30:04|127.0.0.1:17348|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:17349 Send >> ATK0
+Ryuu:ip 127.0.0.1:17349 Recv << Ak0
+Ryuu:ip 127.0.0.1:17349 Recv << AV
+Ryuu:ip 127.0.0.1:17349 Send >> AV0
+Ryuu:ip 127.0.0.1:17349 Recv << Agfr
+Ryuu:ip 127.0.0.1:17349 Send >> Ag11|Vous avez un cadeaux :)|Cadeaux de test uniquement|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~914~1~1~;2~926~1~1~;3~96b~2~1~7e#1#28#0#1d40+0,76#1#28#0#1d40+0;4~96e~1~1~ae#1#12c#0#1d300+0,6e#1#32#0#1d50+0;
+Ryuu:ip 127.0.0.1:17349 Recv << AL
+Ryuu:ip 127.0.0.1:17349 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:17349 Recv << Af
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:17361 Successfuly
+ip 127.0.0.1:17361 Send >> HG
+ip 127.0.0.1:17361 Recv << AT07/28/2013 02:30:23|127.0.0.1:17360|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:17361 Send >> ATK0
+Ryuu:ip 127.0.0.1:17361 Recv << Ak0
+Ryuu:ip 127.0.0.1:17361 Recv << AV
+Ryuu:ip 127.0.0.1:17361 Send >> AV0
+Ryuu:ip 127.0.0.1:17361 Recv << Agfr
+Ryuu:ip 127.0.0.1:17361 Send >> Ag1|1|Vous avez un cadeaux :)|Cadeaux de test uniquement|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~914~1~1~;2~926~1~1~;3~96b~2~1~7e#1#28#0#1d40+0,76#1#28#0#1d40+0;4~96e~1~1~ae#1#12c#0#1d300+0,6e#1#32#0#1d50+0;
+Ryuu:ip 127.0.0.1:17361 Recv << AL
+Ryuu:ip 127.0.0.1:17361 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:17361 Recv << Af
+Ryuu:ip 127.0.0.1:17361 Recv << AG1|1
+Ryuu:ip 127.0.0.1:17361 Send >> OAKO6f~914~1~-1~
+Ryuu:ip 127.0.0.1:17361 Send >> OAKO70~926~1~-1~
+Ryuu:ip 127.0.0.1:17361 Send >> OAKO71~96b~1~-1~7e#5#0#0#1d40+0,76#1a#0#0#1d40+0
+Ryuu:ip 127.0.0.1:17361 Send >> OAKO72~96b~1~-1~7e#22#0#0#1d40+0,76#15#0#0#1d40+0
+Ryuu:ip 127.0.0.1:17361 Send >> OAKO73~96e~1~-1~ae#b6#0#0#1d300+0,6e#15#0#0#1d50+0
+Ryuu:ip 127.0.0.1:17361 Send >> AGK
+Ryuu:ip 127.0.0.1:17361 Connection Closed
+GameServer Connection With host 127.0.0.1:17363 Successfuly
+ip 127.0.0.1:17363 Send >> HG
+ip 127.0.0.1:17363 Recv << AT07/28/2013 02:30:34|127.0.0.1:17362|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:17363 Send >> ATK0
+Ryuu:ip 127.0.0.1:17363 Recv << Ak0
+Ryuu:ip 127.0.0.1:17363 Recv << AV
+Ryuu:ip 127.0.0.1:17363 Send >> AV0
+Ryuu:ip 127.0.0.1:17363 Recv << Agfr
+Ryuu:ip 127.0.0.1:17363 Send >> Ag1|2|test|test|http://s2.e-monsite.com/2009/12/26/04/167wpr7.png|1~96e~1~1~ae#1#12c#0#1d300+0,6e#1#32#0#1d50+0;
+Ryuu:ip 127.0.0.1:17363 Recv << AL
+Ryuu:ip 127.0.0.1:17363 Send >> ALK31536000000|5|8;bij;1;100;322501;12419947;15402188;,,,,;0;1;;;|5;cecikonav;1;20;15380786;3304426;14983775;,,,,;0;1;;;|7;dexorusun;1;21;4211088;4231297;-1;,,,,;0;1;;;|6;hibuso;1;40;2286161;14827042;15524782;,,,,;0;1;;;|1;xowulofo;20;21;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:17363 Recv << Af
+Ryuu:ip 127.0.0.1:17363 Recv << AG2|1
+Ryuu:ip 127.0.0.1:17363 Send >> OAKO74~96e~1~-1~ae#69#0#0#1d300+0,6e#2a#0#0#1d50+0
+Ryuu:ip 127.0.0.1:17363 Send >> AGK
