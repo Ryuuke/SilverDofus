@@ -38,6 +38,8 @@ namespace SilverGame.Network.Game.GameParser
             _packetRegistry.Add(Packet.CharacterAdd, AddCharacter);
             _packetRegistry.Add(Packet.GiftsList, SendGiftsList);
             _packetRegistry.Add(Packet.GiftStored, AddGiftItem);
+            _packetRegistry.Add(Packet.CharacterSelected, SendCharacterInfos);
+            _packetRegistry.Add(Packet.GameCreated, SendCharacterName);
         }
 
         public void Parse(string packet)
@@ -101,7 +103,7 @@ namespace SilverGame.Network.Game.GameParser
                 }
                 catch (Exception e)
                 {
-                    Console.WriteLine(e.Message);
+                    SilverConsole.WriteLine(e.Message, ConsoleColor.Red);
                     Logs.LogWritter(Constant.ErrorsFolder,
                         string.Format("Impossible de charger le compte {0}", account[1]));
                 }
@@ -175,6 +177,7 @@ namespace SilverGame.Network.Game.GameParser
                     {
                         CharacterRepository.Create(name, classe, sex, color1, color2, color3, _client.Account.Id);
                         _client.SendPackets(Packet.CreationSuccess);
+                        SendCharactersList("");
                     }
                     else
                     {
@@ -211,13 +214,41 @@ namespace SilverGame.Network.Game.GameParser
             {
                 for (var i = 0; i < gift.Quantity; i++)
                 {
-                    _client.SendPackets(string.Format("{0}{1}", Packet.AddGiftItem, gift.Item.Generate(character, gift.Quantity)));
+                   gift.Item.Generate(character, gift.Quantity);
                 }
             }
 
             GiftRepository.RemoveFromAccount(gifts.First().GiftId, _client.Account.Id);
 
             _client.SendPackets(Packet.GiftStotedSuccess);
+        }
+
+        private void SendCharacterInfos(string data)
+        {
+            var character = DatabaseProvider.Characters.Find(x => x.Id == int.Parse(data));
+
+            if (character == null)
+                return;
+
+            _client.SendPackets(string.Format("{0}|{1}", Packet.CharacterSelectedResponse, character.InfosWheneSelectedCharacter()));
+        }
+
+        private void SendCharacterName(string data)
+        {
+            var character = DatabaseProvider.AccountCharacters.FindAll(x => x.Account.Id == _client.Account.Id).ElementAt(int.Parse(data) -1).Character;
+
+            if (character == null)
+                return;
+
+                _client.SendPackets(string.Format("{0}|1|{1}", Packet.GameCreatedResponse, character.Name));
+            try
+            {
+                _client.SendPackets(string.Format("{0}{1}", Packet.Stats, character.GetStats()));
+            }
+            catch (Exception e)
+            {
+                SilverConsole.WriteLine(e.Message,ConsoleColor.Red);
+            }
         }
     }
 }

@@ -23,11 +23,13 @@
             NameAlredyExists = "AAEa",
             CreateCharacterFullErrors = "AAEF",
             CreationSuccess = "AAK",
-            CharacterSelected = "AS",
-            CharacterSelectedResponse = "ASK",
             GiftsList = "Ag",
             GiftStored = "AG",
-            AddGiftItem = "OAKO",
-            GiftStotedSuccess = "AGK";
+            GiftStotedSuccess = "AGK",
+            CharacterSelected = "AS",
+            CharacterSelectedResponse = "ASK",
+            GameCreated = "GC",
+            GameCreatedResponse = "GCK",
+            Stats = "As";
     }
 }

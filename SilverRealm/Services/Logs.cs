@@ -34,8 +34,6 @@ namespace SilverRealm.Services
                 using (var sw = new StreamWriter(string.Format("{0}/{1}", folder, FileName), true, Encoding.Default))
                 {
                     sw.Write(DateTime.Now + " >> " + text + Environment.NewLine);
-
-                    sw.Close();
                 }
             }
         }

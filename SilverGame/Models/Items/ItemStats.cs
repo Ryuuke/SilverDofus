@@ -7,7 +7,7 @@ namespace SilverGame.Models.Items
 {
     class ItemStats
     {
-        public int Header { get; set; }
+        public StatsManager.Effect Header { get; set; }
         public int MinValue { get; set; }
         public int MaxValue { get; set; }
         public string JetDecimal = "0d0+0";
@@ -15,7 +15,7 @@ namespace SilverGame.Models.Items
         public override string ToString()
         {
             return string.Format("{0}#{1}#{2}#{3}#{4}",
-                Algorithm.DeciToHex(Header),
+                Algorithm.DeciToHex((int)Header),
                 Algorithm.DeciToHex(MinValue),
                 Algorithm.DeciToHex(MaxValue),
                 "0",
@@ -45,7 +45,7 @@ namespace SilverGame.Models.Items
                 where stat.Split('#').Length == 5
                 select new ItemStats
                 {
-                    Header = Algorithm.HexToDeci(stat.Split('#')[0]), MinValue = Algorithm.HexToDeci(stat.Split('#')[1]), MaxValue = Algorithm.HexToDeci(stat.Split('#')[2]), JetDecimal = stat.Split('#')[4]
+                    Header = (StatsManager.Effect) Algorithm.HexToDeci(stat.Split('#')[0]), MinValue = Algorithm.HexToDeci(stat.Split('#')[1]), MaxValue = Algorithm.HexToDeci(stat.Split('#')[2]), JetDecimal = stat.Split('#')[4]
                 }).ToList();
 
             return listStats;

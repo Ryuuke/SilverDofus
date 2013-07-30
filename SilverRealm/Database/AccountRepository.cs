@@ -10,6 +10,9 @@ namespace SilverRealm.Database
     {
         public static Account GetAccount<T>(string column, T attribut)
         {
+            if (!column.Equals(Constant.UsernameColumnName) && !column.Equals(Constant.PseudoColumnName))
+                return null;
+
             Account account = null;
 
             lock (DbManager.Lock)

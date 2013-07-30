@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using SilverGame.Database;
 using SilverGame.Database.Repository;
@@ -17,7 +16,7 @@ namespace SilverGame.Models.Items
         public List<ItemStats> Stats { get; set; }
         public string WeaponInfo { get; set; }
         public int Price { get; set; }
-        public ItemManager.ItemType ItemType { get; set; }
+        public StatsManager.ItemType ItemType { get; set; }
         public bool TwoHands { get; set; }
         public string Conditions { get; set; }
         public string UseEffects { get; set; }
@@ -45,8 +44,8 @@ namespace SilverGame.Models.Items
                     : 1,
                 Character = character,
                 ItemInfos = this,
-                ItemPosition = ItemManager.Position.None,
-                Stats = ItemStats.GenerateRandomStats(this.Stats),
+                ItemPosition = StatsManager.Position.None,
+                Stats = ItemStats.GenerateRandomStats(Stats),
                 Quantity = 1
             };
 

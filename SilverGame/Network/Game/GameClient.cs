@@ -3,7 +3,6 @@ using System.Linq;
 using System.Text;
 using SilverGame.Database.Repository;
 using SilverGame.Models.Accounts;
-using SilverGame.Models.Gifts;
 using SilverGame.Services;
 using SilverSock;
 

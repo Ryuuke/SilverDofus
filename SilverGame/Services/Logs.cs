@@ -31,11 +31,16 @@ namespace SilverGame.Services
         {
             lock (Lock)
             {
-                using (var sw = new StreamWriter(string.Format("{0}/{1}", folder, FileName), true, Encoding.Default))
+                try
                 {
-                    sw.Write(text + Environment.NewLine);
-
-                    sw.Close();
+                    using (var sw = new StreamWriter(string.Format("{0}/{1}", folder, FileName), true, Encoding.Default))
+                    {
+                        sw.Write(text + Environment.NewLine);
+                    }
+                }
+                catch (Exception e)
+                {
+                    SilverConsole.WriteLine(e.Message);
                 }
             }
         }

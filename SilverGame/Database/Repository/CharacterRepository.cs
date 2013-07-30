@@ -8,18 +8,29 @@ using SilverGame.Services;
 
 namespace SilverGame.Database.Repository
 {
-    static class CharacterRepository
+    internal static class CharacterRepository
     {
-
         public static void Create(string name, int classe, int sex, int color1, int color2, int color3, int accountId)
         {
+            // create alignment row in database & list
+            var alignmentId = DatabaseProvider.StatsManager.Count > 0 ? DatabaseProvider.StatsManager.OrderByDescending(x => x.Id).First().Id + 1 : 1;
+
+            AlignmentRepository.Create(alignmentId);
+
+            // create stats row in database & list
+            var statsId = DatabaseProvider.StatsManager.Count > 0 ? DatabaseProvider.StatsManager.OrderByDescending(x => x.Id).First().Id + 1 : 1;
+
+            CharacterStatsRepository.Create(statsId);
+
             try
             {
                 lock (GameDbManager.Lock)
                 {
+                    // create Character row in database & list
+
                     const string query =
                         "INSERT INTO characters SET name=@name, classe=@classe, sex=@sex, color1=@color1, color2=@color2," +
-                        "color3=@color3, skin=@skin, level=@level";
+                        "color3=@color3, skin=@skin, level=@level, alignmentId=@alignmentId, statsId=@statsId";
 
                     using (var command = new MySqlCommand(query, GameDbManager.Connection))
                     {
@@ -31,7 +42,8 @@ namespace SilverGame.Database.Repository
                         command.Parameters.Add(new MySqlParameter("@color3", color3));
                         command.Parameters.Add(new MySqlParameter("@skin", int.Parse(classe + "" + sex)));
                         command.Parameters.Add(new MySqlParameter("@level", int.Parse(Config.Get("Starting_level"))));
-
+                        command.Parameters.Add(new MySqlParameter("@alignmentId", alignmentId));
+                        command.Parameters.Add(new MySqlParameter("@statsId", statsId));
                         command.ExecuteNonQuery();
                     }
 
@@ -49,7 +61,8 @@ namespace SilverGame.Database.Repository
             {
                 lock (RealmDbManager.Lock)
                 {
-                    const string query = "INSERT INTO characters SET accountId=@accountId, gameserverId=(SELECT id FROM gameservers WHERE ServerKey=@key LIMIT 1), characterName=@name";
+                    const string query =
+                        "INSERT INTO characters SET accountId=@accountId, gameserverId=(SELECT id FROM gameservers WHERE ServerKey=@key LIMIT 1), characterName=@name";
 
                     using (var command = new MySqlCommand(query, RealmDbManager.Connection))
                     {
@@ -76,7 +89,7 @@ namespace SilverGame.Database.Repository
                 {
                     DatabaseProvider.Characters.Add(new Character
                     {
-                        Id = DatabaseProvider.Characters.Count > 1
+                        Id = DatabaseProvider.Characters.Count > 0
                             ? DatabaseProvider.Characters.OrderByDescending(x => x.Id).First().Id + 1
                             : 1,
                         Name = name,
@@ -87,6 +100,9 @@ namespace SilverGame.Database.Repository
                         Color3 = color3,
                         Level = int.Parse(Config.Get("Starting_level")),
                         Skin = int.Parse(classe + "" + sex),
+                        Alignment = DatabaseProvider.Alignments.Find(x => x.Id == alignmentId),
+                        Stats = DatabaseProvider.StatsManager.Find(x => x.Id == statsId),
+
                     });
                 }
 
@@ -97,6 +113,7 @@ namespace SilverGame.Database.Repository
                         Account = DatabaseProvider.Accounts.Find(x => x.Id == accountId),
                         Character = DatabaseProvider.Characters.Find(x => x.Name == name)
                     });
+                    Console.WriteLine(name +" " + accountId);
                 }
             }
             catch (Exception e)

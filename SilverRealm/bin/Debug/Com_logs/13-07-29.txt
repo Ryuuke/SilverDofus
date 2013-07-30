@@ -1,0 +1,92 @@
+29/07/2013 11:15:23 >> Waiting for connection to game servers ...
+29/07/2013 11:15:24 >> Connection successfuly with game server 127.0.0.1:23090
+29/07/2013 11:15:24 >> Recv << HRlolxdmdrlol
+29/07/2013 11:30:13 >> Waiting for connection to game servers ...
+29/07/2013 11:30:13 >> Connection successfuly with game server 127.0.0.1:23167
+29/07/2013 11:30:14 >> Recv << HRlolxdmdrlol
+29/07/2013 11:31:04 >> Connection closed with Game Server 127.0.0.1:23167
+29/07/2013 12:37:03 >> Waiting for connection to game servers ...
+29/07/2013 12:37:11 >> Connection successfuly with game server 127.0.0.1:23358
+29/07/2013 12:37:12 >> Recv << HRlolxdmdrlol
+29/07/2013 12:37:19 >> Waiting for connection to game servers ...
+29/07/2013 12:37:20 >> Connection successfuly with game server 127.0.0.1:23364
+29/07/2013 12:37:20 >> Recv << HRlolxdmdrlol
+29/07/2013 12:37:31 >> Connection closed with Game Server 127.0.0.1:23364
+29/07/2013 12:38:04 >> Waiting for connection to game servers ...
+29/07/2013 12:38:04 >> Connection successfuly with game server 127.0.0.1:23371
+29/07/2013 12:38:05 >> Recv << HRlolxdmdrlol
+29/07/2013 12:38:28 >> Connection closed with Game Server 127.0.0.1:23371
+29/07/2013 13:15:11 >> Waiting for connection to game servers ...
+29/07/2013 13:15:11 >> Connection successfuly with game server 127.0.0.1:23938
+29/07/2013 13:15:12 >> Recv << HRlolxdmdrlol
+29/07/2013 13:15:17 >> Connection closed with Game Server 127.0.0.1:23938
+29/07/2013 13:15:41 >> Waiting for connection to game servers ...
+29/07/2013 13:15:41 >> Connection successfuly with game server 127.0.0.1:23944
+29/07/2013 13:15:42 >> Recv << HRlolxdmdrlol
+29/07/2013 13:15:45 >> Connection closed with Game Server 127.0.0.1:23944
+29/07/2013 13:18:43 >> Waiting for connection to game servers ...
+29/07/2013 13:18:43 >> Connection successfuly with game server 127.0.0.1:23951
+29/07/2013 13:18:44 >> Recv << HRlolxdmdrlol
+29/07/2013 13:18:46 >> Connection closed with Game Server 127.0.0.1:23951
+29/07/2013 13:19:40 >> Waiting for connection to game servers ...
+29/07/2013 13:19:41 >> Connection successfuly with game server 127.0.0.1:23957
+29/07/2013 13:19:41 >> Recv << HRlolxdmdrlol
+29/07/2013 13:23:00 >> Waiting for connection to game servers ...
+29/07/2013 13:23:00 >> Connection successfuly with game server 127.0.0.1:23989
+29/07/2013 13:23:01 >> Recv << HRlolxdmdrlol
+29/07/2013 13:29:02 >> Connection successfuly with game server 127.0.0.1:24018
+29/07/2013 13:29:03 >> Recv << HRloool
+29/07/2013 13:29:54 >> Connection closed with Game Server 127.0.0.1:24018
+29/07/2013 13:29:58 >> Connection closed with Game Server 127.0.0.1:24018
+29/07/2013 13:32:25 >> Waiting for connection to game servers ...
+29/07/2013 13:32:25 >> Connection successfuly with game server 127.0.0.1:24033
+29/07/2013 13:32:26 >> Recv << HRlolxdmdrlol
+29/07/2013 14:00:42 >> Waiting for connection to game servers ...
+29/07/2013 14:00:43 >> Connection successfuly with game server 127.0.0.1:24058
+29/07/2013 14:00:43 >> Recv << HRlolxdmdrlol
+29/07/2013 14:00:44 >> Connection closed with Game Server 127.0.0.1:24058
+29/07/2013 15:34:54 >> Waiting for connection to game servers ...
+29/07/2013 15:34:54 >> Connection successfuly with game server 127.0.0.1:24504
+29/07/2013 15:34:55 >> Recv << HRlolxdmdrlol
+29/07/2013 15:34:56 >> Connection closed with Game Server 127.0.0.1:24504
+29/07/2013 15:35:13 >> Waiting for connection to game servers ...
+29/07/2013 15:35:13 >> Connection successfuly with game server 127.0.0.1:24511
+29/07/2013 15:35:14 >> Recv << HRlolxdmdrlol
+29/07/2013 15:35:14 >> Connection closed with Game Server 127.0.0.1:24511
+29/07/2013 15:35:33 >> Waiting for connection to game servers ...
+29/07/2013 15:35:33 >> Connection successfuly with game server 127.0.0.1:24519
+29/07/2013 15:35:34 >> Recv << HRlolxdmdrlol
+29/07/2013 15:36:35 >> Waiting for connection to game servers ...
+29/07/2013 15:36:36 >> Connection successfuly with game server 127.0.0.1:24525
+29/07/2013 15:36:36 >> Recv << HRlolxdmdrlol
+29/07/2013 15:36:38 >> Connection closed with Game Server 127.0.0.1:24525
+29/07/2013 15:37:34 >> Waiting for connection to game servers ...
+29/07/2013 15:37:35 >> Connection successfuly with game server 127.0.0.1:24532
+29/07/2013 15:37:35 >> Recv << HRlolxdmdrlol
+29/07/2013 15:38:39 >> Waiting for connection to game servers ...
+29/07/2013 15:38:39 >> Connection successfuly with game server 127.0.0.1:24539
+29/07/2013 15:38:40 >> Recv << HRlolxdmdrlol
+29/07/2013 15:38:41 >> Connection closed with Game Server 127.0.0.1:24539
+29/07/2013 15:40:19 >> Waiting for connection to game servers ...
+29/07/2013 15:40:20 >> Connection successfuly with game server 127.0.0.1:24546
+29/07/2013 15:40:35 >> Waiting for connection to game servers ...
+29/07/2013 15:40:36 >> Connection successfuly with game server 127.0.0.1:24552
+29/07/2013 15:40:37 >> Recv << HRlolxdmdrlol
+29/07/2013 16:04:13 >> Waiting for connection to game servers ...
+29/07/2013 16:04:14 >> Connection successfuly with game server 127.0.0.1:24637
+29/07/2013 16:04:14 >> Recv << HRlolxdmdrlol
+29/07/2013 17:57:12 >> Waiting for connection to game servers ...
+29/07/2013 17:57:12 >> Connection successfuly with game server 127.0.0.1:25344
+29/07/2013 17:57:13 >> Recv << HRlolxdmdrlol
+29/07/2013 17:57:36 >> Connection closed with Game Server 127.0.0.1:25344
+29/07/2013 17:57:53 >> Waiting for connection to game servers ...
+29/07/2013 17:57:53 >> Connection successfuly with game server 127.0.0.1:25360
+29/07/2013 17:57:54 >> Recv << HRlolxdmdrlol
+29/07/2013 17:58:00 >> Connection closed with Game Server 127.0.0.1:25360
+29/07/2013 17:58:36 >> Waiting for connection to game servers ...
+29/07/2013 17:58:37 >> Connection successfuly with game server 127.0.0.1:25372
+29/07/2013 17:58:37 >> Recv << HRlolxdmdrlol
+29/07/2013 17:58:45 >> Connection closed with Game Server 127.0.0.1:25372
+29/07/2013 17:59:00 >> Waiting for connection to game servers ...
+29/07/2013 17:59:00 >> Connection successfuly with game server 127.0.0.1:25382
+29/07/2013 17:59:00 >> Recv << HRlolxdmdrlol

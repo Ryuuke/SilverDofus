@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using MySql.Data.MySqlClient;
+﻿using MySql.Data.MySqlClient;
 using SilverGame.Database.Connection;
-using SilverGame.Models.Gifts;
-using SilverGame.Services;
 
 namespace SilverGame.Database.Repository
 {
-    static class AccountRepository
+    internal static class AccountRepository
     {
         public static void UpdateAccount(bool connected, int id = 0)
         {

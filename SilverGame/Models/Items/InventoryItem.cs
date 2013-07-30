@@ -8,7 +8,7 @@ namespace SilverGame.Models.Items
     {
         public int Id { get; set; }
         public Character Character;
-        public ItemManager.Position ItemPosition { get; set; }
+        public StatsManager.Position ItemPosition { get; set; }
         public ItemInfos ItemInfos { get; set; }
         public int Quantity { get; set; }
         public List<ItemStats> Stats { get; set; }

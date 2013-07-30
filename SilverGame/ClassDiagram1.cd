@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SilverGame.Database.Repository.InventoryItemRepository">
+    <Position X="2.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAABAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Database\Repository\InventoryItemRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SilverGame.Database.Repository.GiftRepository">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAABAAAAAAAAFAAAAAAAAAAAAA=</HashCode>
+      <FileName>Database\Repository\GiftRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SilverGame.Database.Repository.CharacterRepository">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Database\Repository\CharacterRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SilverGame.Database.Repository.AccountRepository">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Database\Repository\AccountRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

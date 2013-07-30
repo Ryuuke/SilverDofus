@@ -31,8 +31,6 @@ namespace SilverGame.Services
                         _values.Add(infos[0].Trim(), infos[1].Trim());
                     }
 
-                    sr.Close();
-
                     return true;
                 }
             }

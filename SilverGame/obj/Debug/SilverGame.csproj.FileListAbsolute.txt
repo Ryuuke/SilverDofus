@@ -1,8 +1,8 @@
 C:\Users\hpp\Documents\Visual Studio 2012\Projects\SilverDofus\SilverGame\bin\Debug\SilverGame.exe.config
 C:\Users\hpp\Documents\Visual Studio 2012\Projects\SilverDofus\SilverGame\bin\Debug\SilverGame.exe
 C:\Users\hpp\Documents\Visual Studio 2012\Projects\SilverDofus\SilverGame\bin\Debug\SilverGame.pdb
-C:\Users\hpp\Documents\Visual Studio 2012\Projects\SilverDofus\SilverGame\obj\Debug\SilverGame.csprojResolveAssemblyReference.cache
 C:\Users\hpp\Documents\Visual Studio 2012\Projects\SilverDofus\SilverGame\obj\Debug\SilverGame.exe
 C:\Users\hpp\Documents\Visual Studio 2012\Projects\SilverDofus\SilverGame\obj\Debug\SilverGame.pdb
 C:\Users\hpp\Documents\Visual Studio 2012\Projects\SilverDofus\SilverGame\bin\Debug\MySql.Data.dll
 C:\Users\hpp\Documents\Visual Studio 2012\Projects\SilverDofus\SilverGame\bin\Debug\SilverSock.dll
+C:\Users\hpp\Documents\Visual Studio 2012\Projects\SilverDofus\SilverGame\obj\Debug\SilverGame.csprojResolveAssemblyReference.cache
