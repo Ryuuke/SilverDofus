@@ -15,49 +15,46 @@ namespace SilverRealm.Database
 
             Account account = null;
 
-            lock (DbManager.Lock)
+            var query = "SELECT * FROM accounts WHERE " + column + "=@attribut";
+
+            var command = new MySqlCommand(query, DbManager.Connection);
+
+            command.Parameters.Add(new MySqlParameter("@attribut", attribut));
+
+            var reader = command.ExecuteReader();
+
+            if (reader.Read())
             {
-                var query = "SELECT * FROM accounts WHERE " + column + "=@attribut";
-
-                var command = new MySqlCommand(query, DbManager.Connection); 
-                
-                command.Parameters.Add(new MySqlParameter("@attribut", attribut));
-                    
-                var reader = command.ExecuteReader();
-
-                if (reader.Read())
+                try
                 {
-                    try
+                    account = new Account
                     {
-                        account = new Account
-                        {
-                            Id = reader.GetInt32("id"),
-                            Username = reader.GetString("username"),
-                            Password = reader.GetString("pass"),
-                            Pseudo = reader.GetString("pseudo"),
-                            Question = reader.GetString("question"),
-                            Reponse = reader.GetString("reponse"),
-                            Connected = reader.GetBoolean("connected"),
-                            GmLevel = reader.GetInt16("gmLevel"),
-                            BannedUntil =
-                                Convert.IsDBNull(reader["bannedUntil"])
-                                    ? (DateTime?)null
-                                    : reader.GetDateTime("bannedUntil"),
-                            Subscription =
-                                Convert.IsDBNull(reader["subscription"])
-                                    ? (DateTime?)null
-                                    : reader.GetDateTime("subscription"),
-                        };
-                    }
-                    catch (Exception e)
-                    {
-                        SilverConsole.WriteLine("SQL Error " + e.Message, ConsoleColor.Red);
-                        Logs.LogWritter(Constant.ErrorsFolder, "SQL Error :" + e.Message);
-                    }
+                        Id = reader.GetInt32("id"),
+                        Username = reader.GetString("username"),
+                        Password = reader.GetString("pass"),
+                        Pseudo = reader.GetString("pseudo"),
+                        Question = reader.GetString("question"),
+                        Reponse = reader.GetString("reponse"),
+                        Connected = reader.GetBoolean("connected"),
+                        GmLevel = reader.GetInt16("gmLevel"),
+                        BannedUntil =
+                            Convert.IsDBNull(reader["bannedUntil"])
+                                ? (DateTime?) null
+                                : reader.GetDateTime("bannedUntil"),
+                        Subscription =
+                            Convert.IsDBNull(reader["subscription"])
+                                ? (DateTime?) null
+                                : reader.GetDateTime("subscription"),
+                    };
                 }
-
-                reader.Close();
+                catch (Exception e)
+                {
+                    SilverConsole.WriteLine("SQL Error " + e.Message, ConsoleColor.Red);
+                    Logs.LogWritter(Constant.ErrorsFolder, "SQL Error :" + e.Message);
+                }
             }
+
+            reader.Close();
 
             return account;
         }

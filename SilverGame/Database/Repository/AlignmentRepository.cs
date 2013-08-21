@@ -1,45 +1,30 @@
-﻿using System;
-using MySql.Data.MySqlClient;
+﻿using MySql.Data.MySqlClient;
 using SilverGame.Database.Connection;
 using SilverGame.Models.Alignment;
-using SilverGame.Services;
 
 namespace SilverGame.Database.Repository
 {
-    class AlignmentRepository
+    class AlignmentRepository : Abstract.Repository
     {
-        public static void Create(int id)
+        public static void Create(Alignment alignment)
         {
-            var alignment = new Alignment{ Id = id };
+            const string query = "INSERT INTO alignments SET Id=@Id, Type=@Type, Honor=@Honor," +
+                                 "Deshonor=@Deshonor, Level=@Level, Grade=@Grade, Enabled=@Enabled";
 
-            lock (GameDbManager.Lock)
-            {
-                try
+            ExecuteQuery(query, GameDbManager.GetDatabaseConnection(),
+                (command) =>
                 {
-                    const string query = "INSERT INTO alignments SET Id=@Id, Type=@Type, Honor=@Honor," +
-                                         "Deshonor=@Deshonor, Level=@Level, Grade=@Grade, Enabled=@Enabled";
+                    command.Parameters.Add(new MySqlParameter("@Id", alignment.Id));
+                    command.Parameters.Add(new MySqlParameter("@Type", alignment.Type));
+                    command.Parameters.Add(new MySqlParameter("@Honor", alignment.Honor));
+                    command.Parameters.Add(new MySqlParameter("@Deshonor", alignment.Deshonor));
+                    command.Parameters.Add(new MySqlParameter("@Level", alignment.Level));
+                    command.Parameters.Add(new MySqlParameter("@Grade", alignment.Grade));
+                    command.Parameters.Add(new MySqlParameter("@Enabled", alignment.Enabled));
+                });
 
-                    using (var command = new MySqlCommand(query, GameDbManager.Connection))
-                    {
-                        command.Parameters.Add(new MySqlParameter("@Id", alignment.Id));
-                        command.Parameters.Add(new MySqlParameter("@Type", alignment.Type));
-                        command.Parameters.Add(new MySqlParameter("@Honor", alignment.Honor));
-                        command.Parameters.Add(new MySqlParameter("@Deshonor", alignment.Deshonor));
-                        command.Parameters.Add(new MySqlParameter("@Level", alignment.Level));
-                        command.Parameters.Add(new MySqlParameter("@Grade", alignment.Grade));
-                        command.Parameters.Add(new MySqlParameter("@Enabled", alignment.Enabled));
-
-                        command.ExecuteNonQuery();
-                    }
-
-                    lock (DatabaseProvider.Alignments)
-                        DatabaseProvider.Alignments.Add(alignment);
-                }
-                catch (Exception e)
-                {
-                    SilverConsole.WriteLine(e.Message);
-                }
-            }
+            lock (DatabaseProvider.Alignments)
+                DatabaseProvider.Alignments.Add(alignment);
         }
 
         public static void Update(Alignment alignment)

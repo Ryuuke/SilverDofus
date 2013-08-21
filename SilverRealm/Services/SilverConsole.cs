@@ -14,8 +14,8 @@ namespace SilverRealm.Services
             Console.WriteLine(" |  |_____    |  |   |  |     \\  \\   /  /    |  |______    |  |______|");
             Console.WriteLine(" |_____   |   |  |   |  |      \\  \\ /  /     |   ______|   |  |______  ");
             Console.WriteLine("       |  |   |  |   |  |       \\     /      |  |          |  |   |  | Dofus ");
-            Console.WriteLine("  _____|  |   |  |   |  |____    \\   /       |  |_______   |  |   |  | By");
-            Console.WriteLine(" |________|   |__|   |________|   \\_/        |__________|  |__|   |__|  Ryuuke");
+            Console.WriteLine("  _____|  |   |  |   |  |_____   \\   /       |  |_______   |  |   |  |  By");
+            Console.WriteLine(" |________|   |__|   |________|   \\_/        |__________|  |__|   |__| Ryuuke");
             Console.WriteLine("    ________________________________________________________________  ");
 
             Console.WriteLine(Environment.NewLine);

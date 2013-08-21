@@ -5,21 +5,21 @@ namespace SilverGame.Network.Abstract
 {
     abstract class Server
     {
-        protected SilverServer Serv;
+        private readonly SilverServer _serv;
 
         protected Server(string ip, int port)
         {
-            Serv = new SilverServer(ip, port);
+            _serv = new SilverServer(ip, port);
             {
-                Serv.OnAcceptSocketEvent += OnSocketAccepted;
-                Serv.OnListeningEvent += OnListening;
-                Serv.OnListeningFailedEvent += OnListeningFailed;
+                _serv.OnAcceptSocketEvent += OnSocketAccepted;
+                _serv.OnListeningEvent += OnListening;
+                _serv.OnListeningFailedEvent += OnListeningFailed;
             }
         }
 
         public void Run()
         {
-            Serv.WaitConnection();
+            _serv.WaitConnection();
         }
 
         #region abstracts

@@ -120,6 +120,7 @@ namespace SilverRealm.Network.Realm
                 SendPackets(Packet.AlredyConnected);
 
                 RealmServer.Disconnect(Account.Id);
+
                 ToGameClient.SendPacket(string.Format("{0}{1}", Packet.DisconnectMe, Account.Id));
 
                 RemoveMeOnList();

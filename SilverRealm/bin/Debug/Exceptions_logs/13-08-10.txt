@@ -1,0 +1,1 @@
+10/08/2013 18:16:57 >> Realm connection database SQL error : Access denied for user 'root'@'localhost' (using password: NO)

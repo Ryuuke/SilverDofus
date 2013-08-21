@@ -1,21 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using MySql.Data.MySqlClient;
+using System.Threading.Tasks;
 using SilverGame.Database.Connection;
 using SilverGame.Database.Repository;
-using SilverGame.Models;
 using SilverGame.Models.Accounts;
 using SilverGame.Models.Alignment;
+using SilverGame.Models.Chat;
 using SilverGame.Models.Experience;
 using SilverGame.Models.Gifts;
-using MySql.Data.MySqlClient;
 using SilverGame.Models.Characters;
 using SilverGame.Models.Items;
+using SilverGame.Models.Maps;
 using SilverGame.Services;
 
 namespace SilverGame.Database
 {
-    internal class DatabaseProvider
+    internal static class DatabaseProvider
     {
         public static int ServerId;
         public static readonly List<Account> Accounts = new List<Account>();
@@ -24,71 +26,61 @@ namespace SilverGame.Database
         public static readonly List<AccountCharacters> AccountCharacters = new List<AccountCharacters>();
         public static readonly List<Character> Characters = new List<Character>();
         public static readonly List<InventoryItem> InventoryItems = new List<InventoryItem>();
-        public static readonly List<ItemInfos> ItemsInfos = new List<ItemInfos>();
+        private static readonly List<ItemInfos> ItemsInfos = new List<ItemInfos>();
         public static readonly List<Gift> Gifts = new List<Gift>();
         public static readonly List<KeyValuePair<Account, Gift>> AccountGifts = new List<KeyValuePair<Account, Gift>>();
         public static readonly List<GiftItems> ItemGift = new List<GiftItems>();
         public static readonly List<Experience> Experiences = new List<Experience>();
+        public static readonly List<Map> Maps = new List<Map>();
+        public static readonly List<MapTrigger> MapTriggers = new List<MapTrigger>();
 
         public static void LoadDatabase()
         {
-            SilverConsole.WriteLine("loading database resources...", ConsoleColor.DarkGreen);
+            SilverConsole.WriteLine("loading database resources... \n", ConsoleColor.DarkGreen);
+
+            AccountRepository.UpdateAccount(false);
 
             LoadServerId();
             LoadAccounts();
             LoadAlignments();
             LoadStatsManager();
+            LoadMaps();
+            LoadTriggers();
             LoadCharacters();
             LoadCharactersAccount();
             LoadItemInfos();
             LoadInventoryItems();
+            LoadGiftsItems();
             LoadGifts();
             LoadAccountGifts();
             LoadExperience();
 
-            AccountRepository.UpdateAccount(false);
         }
 
         private static void LoadServerId()
         {
-            lock (RealmDbManager.Lock)
-            {
-                const string query = "SELECT id FROM gameservers WHERE ServerKey=@key LIMIT 1";
-
-                try
+            var task = ExecuteQueryLight(RealmDbManager.GetDatabaseConnection(),
+                "SELECT id FROM gameservers WHERE ServerKey=@key LIMIT 1", "Game Server",
+                (reader) =>
                 {
-                    using (var command = new MySqlCommand(query, RealmDbManager.Connection))
-                    {
-                        command.Parameters.Add(new MySqlParameter("@key", Config.Get("Game_key")));
+                    if (reader.Read())
+                        ServerId = reader.GetInt16("id");
 
-                        var reader = command.ExecuteReader();
+                    return 1;
 
-                        if (reader.Read())
-                            ServerId = reader.GetInt16("id");
+                }, (command) => command.Parameters.Add(new MySqlParameter("@key", Config.Get("Game_key"))));
 
-                        reader.Close();
-                    }
-                }
-                catch (Exception e)
-                {
-                    SilverConsole.WriteLine("SQL Error : "+ e.Message);
-                }
-            }
+            task.Wait();
         }
 
-        public static void LoadAccounts()
+        private static void LoadAccounts()
         {
-            const string query = "SELECT * FROM accounts";
-
-            using (var command = new MySqlCommand(query, RealmDbManager.Connection))
-            {
-                var reader = command.ExecuteReader();
-
-                while (reader.Read())
+            var task = ExecuteQueryLight(RealmDbManager.GetDatabaseConnection(), "SELECT * FROM accounts", "Accounts",
+                (reader) =>
                 {
-                    try
+                    while (reader.Read())
                     {
-                        var account = new Account
+                        Accounts.Add(new Account
                         {
                             Id = reader.GetInt32("id"),
                             Username = reader.GetString("username"),
@@ -106,137 +98,96 @@ namespace SilverGame.Database
                                 Convert.IsDBNull(reader["subscription"])
                                     ? (DateTime?) null
                                     : reader.GetDateTime("subscription"),
-                        };
-
-                        lock (Accounts)
-                            Accounts.Add(account);
+                        });
                     }
-                    catch (Exception e)
-                    {
-                        SilverConsole.WriteLine("SQL Error " + e.Message, ConsoleColor.Red);
-                        Logs.LogWritter(Constant.ErrorsFolder, "SQL Error :" + e.Message);
-                    }
-                }
 
-                reader.Close();
-            }
+                    return Accounts.Count;
+                });
 
-            SilverConsole.WriteLine(String.Format("loaded {0} accounts successfully", Accounts.Count),
-                ConsoleColor.Green);
+            task.Wait();
         }
 
-        public static void LoadCharactersAccount()
+        private static void LoadCharactersAccount()
         {
-            lock (RealmDbManager.Lock)
-            {
-                var tableResult = new List<KeyValuePair<int, string>>();
-
-                const string query = "SELECT * FROM characters WHERE gameserverId =@ServerId";
-
-                try
+            var task = ExecuteQueryLight(RealmDbManager.GetDatabaseConnection(),
+                "SELECT * FROM characters WHERE gameserverId =@ServerId", "Characters <<>> Account", (reader) =>
                 {
-                    using (var command = new MySqlCommand(query, RealmDbManager.Connection))
-                    {
-                        command.Parameters.Add(new MySqlParameter("@ServerId", ServerId));
-
-                        var reader = command.ExecuteReader();
-
-                        while (reader.Read())
-                        {
-                            tableResult.Add(new KeyValuePair<int, string>(
-                                reader.GetInt16("AccountId"),
-                                reader.GetString("characterName")
-                                ));
-                        }
-
-                        reader.Close();
-                    }
-
-                    lock (AccountCharacters)
-                    {
-                        foreach (var value in tableResult)
-                        {
-                            AccountCharacters.Add(new AccountCharacters
-                            {
-                                Account = Accounts.Find(x => x.Id == value.Key),
-                                Character = Characters.Find(x => x.Name.Equals(value.Value))
-                            });
-                        }
-                    }
-                }
-                catch (Exception e)
-                {
-                    SilverConsole.WriteLine("SQL Error : " + e.Message, ConsoleColor.Red);
-                    Logs.LogWritter(Constant.ErrorsFolder, "SQL Error :" + e.Message);
-                }
-            }
-        }
-
-        public static void LoadCharacters()
-        {
-            const string query = "SELECT * FROM Characters";
-
-            try
-            {
-                using (var command = new MySqlCommand(query, GameDbManager.Connection))
-                {
-                    var reader = command.ExecuteReader();
-
-                    lock (Characters)
-                    {
-                        while (reader.Read())
-                        {
-                            var character = new Character
-                            {
-                                Id = reader.GetInt16("id"),
-                                Name = reader.GetString("name"),
-                                Classe = reader.GetInt16("classe"),
-                                Color1 = reader.GetInt32("color1"),
-                                Color2 = reader.GetInt32("color2"),
-                                Color3 = reader.GetInt32("color3"),
-                                Level = reader.GetInt16("level"),
-                                Sex = reader.GetInt16("sex"),
-                                Skin = reader.GetInt16("skin"),
-                                Stats = StatsManager.Find(x => x.Id == reader.GetInt16("statsId")),
-                                PdvNow = reader.GetInt16("pdvNow"),
-                                PdvMax = reader.GetInt16("level") * 5 + (int) Character.ClassHp.Hp
-                            };
-
-                            Characters.Add(character);
-                            character.CalculateItemStats();
-                        }
-
-                        reader.Close();
-                    }
-                }
-            }
-            catch (Exception e)
-            {
-                SilverConsole.WriteLine("SQL Error : " + e.Message);
-                Logs.LogWritter(Constant.ErrorsFolder, "SQL Error :" + e.Message);
-            }
-
-            SilverConsole.WriteLine(String.Format("loaded {0} Characters successfully", Characters.Count),
-                ConsoleColor.Green);
-        }
-
-        public static void LoadItemInfos()
-        {
-            const string query = "SELECT * FROM items_infos";
-
-            try
-            {
-                using (var command = new MySqlCommand(query, GameDbManager.Connection))
-                {
-                    var reader = command.ExecuteReader();
+                    var tableResults = new List<KeyValuePair<int, string>>();
 
                     while (reader.Read())
                     {
-                        var itemInfos = new ItemInfos
+                        tableResults.Add(new KeyValuePair<int, string>(
+                            reader.GetInt16("AccountId"),
+                            reader.GetString("characterName")
+                            ));
+                    }
+
+                    foreach (var tableResult in tableResults)
+                    {
+                        AccountCharacters.Add(new AccountCharacters
+                        {
+                            Account = Accounts.Find(x => x.Id == tableResult.Key),
+                            Character = Characters.Find(x => x.Name.Equals(tableResult.Value))
+                        });
+                    }
+
+                    return AccountCharacters.Count;
+
+                }, (command) => command.Parameters.Add(new MySqlParameter("@ServerId", ServerId)));
+
+            task.Wait();
+        }
+
+        private static void LoadCharacters()
+        {
+            var task = ExecuteQueryLight(GameDbManager.GetDatabaseConnection(), "SELECT * FROM characters", "Characters",
+                (reader) =>
+                {
+                    while (reader.Read())
+                    {
+                        Characters.Add(new Character
+                        {
+                            Id = reader.GetInt16("id"),
+                            Name = reader.GetString("name"),
+                            Classe = (Character.Class) reader.GetInt16("classe"),
+                            Color1 = reader.GetInt32("color1"),
+                            Color2 = reader.GetInt32("color2"),
+                            Color3 = reader.GetInt32("color3"),
+                            Level = reader.GetInt16("level"),
+                            Sex = reader.GetInt16("sex"),
+                            Skin = reader.GetInt16("skin"),
+                            Stats = StatsManager.Find(x => x.Id == reader.GetInt16("statsId")),
+                            Alignment = Alignments.Find(x => x.Id == reader.GetInt16("alignmentId")),
+                            PdvNow = reader.GetInt16("pdvNow"),
+                            PdvMax = (reader.GetInt16("level") - 1)*Character.GainHpPerLvl + Character.BaseHp,
+                            Map = Maps.Find(x => x.Id == reader.GetInt32("mapId")),
+                            MapCell = reader.GetInt32("cellId"),
+                            Direction = reader.GetInt16("direction"),
+                            Channels = reader.GetString("channels").Select(channel => new Channel
+                            {
+                                Header = (Channel.ChannelHeader) channel
+                            }).ToList(),
+                        });
+                    }
+
+                    return Characters.Count;
+                });
+
+            task.Wait();
+        }
+
+        private static void LoadItemInfos()
+        {
+            var task = ExecuteQueryLight(GameDbManager.GetDatabaseConnection(), "SELECT * FROM items_infos", "Items",
+                (reader) =>
+                {
+                    while (reader.Read())
+                    {
+                        ItemsInfos.Add(new ItemInfos
                         {
                             Id = reader.GetInt16("ID"),
                             Name = reader.GetString("Name"),
-                            ItemType = (StatsManager.ItemType)reader.GetInt16("Type"),
+                            ItemType = (StatsManager.ItemType) reader.GetInt16("Type"),
                             Level = reader.GetInt16("Level"),
                             Weight = reader.GetInt16("Weight"),
                             WeaponInfo = reader.GetString("WeaponInfo"),
@@ -249,133 +200,94 @@ namespace SilverGame.Database
                             Conditions = reader.GetString("Conditions"),
                             Stats = ItemStats.ToStats(reader.GetString("stats")),
                             UseEffects = reader.GetString("UseEffects"),
-                        };
-
-                        lock (ItemsInfos)
-                            ItemsInfos.Add(itemInfos);
+                        });
                     }
 
-                    reader.Close();
-                }
-            }
-            catch (Exception e )
-            {
-                SilverConsole.WriteLine("SQL Error : " + e.Message, ConsoleColor.Red);
-                Logs.LogWritter(Constant.ErrorsFolder, "SQL Error :" + e.Message);
-            }
+                    return ItemsInfos.Count;
+                });
 
-            SilverConsole.WriteLine(String.Format("loaded {0} Items successfully", ItemsInfos.Count), ConsoleColor.Green);
+            task.Wait();
         }
 
-        public static void LoadInventoryItems()
+        private static void LoadInventoryItems()
         {
-            const string query = "SELECT * FROM inventory_items";
-
-            try
-            {
-                using (var command = new MySqlCommand(query, GameDbManager.Connection))
+            var task = ExecuteQueryLight(GameDbManager.GetDatabaseConnection(), "SELECT * FROM inventory_items",
+                "Inventory Items",
+                (reader) =>
                 {
-                    var reader = command.ExecuteReader();
-
                     while (reader.Read())
                     {
-                        var inventoryItem = new InventoryItem
+                        InventoryItems.Add(new InventoryItem
                         {
                             Id = reader.GetInt16("id"),
                             Character = Characters.Find(x => x.Id == reader.GetInt16("characterId")),
                             ItemInfos = ItemsInfos.Find(x => x.Id == reader.GetInt16("ItemId")),
-                            ItemPosition = (StatsManager.Position)reader.GetInt16("position"),
+                            ItemPosition = (StatsManager.Position) reader.GetInt16("position"),
                             Quantity = reader.GetInt16("quantity"),
                             Stats = ItemStats.ToStats(reader.GetString("stats")),
-                        };
-
-                        lock (InventoryItems)
-                            InventoryItems.Add(inventoryItem);
+                        });
                     }
 
-                    reader.Close();
-                }
-            }
-            catch (Exception e)
-            {
-                SilverConsole.WriteLine("SQL Error : " + e.Message, ConsoleColor.Red);
-                Logs.LogWritter(Constant.ErrorsFolder, "SQL Error :" + e.Message);
-            }
-           
-            SilverConsole.WriteLine(String.Format("loaded {0} Characters item successfully", InventoryItems.Count),
-                ConsoleColor.Green);
+                    foreach (var character in Characters)
+                        character.CalculateItemStats();
+
+                    return InventoryItems.Count;
+                });
+
+            task.Wait();
         }
 
-        public static void LoadGifts()
+        private static void LoadGiftsItems()
         {
-            var query = "SELECT * FROM gift_items";
-
-            try
-            {
-                using (var command = new MySqlCommand(query, GameDbManager.Connection))
+            var task = ExecuteQueryLight(GameDbManager.GetDatabaseConnection(), "SELECT * FROM gift_items", "Gift Items",
+                (reader) =>
                 {
-                    var reader = command.ExecuteReader();
-
-                    lock (ItemsInfos)
-                    {
-                        while (reader.Read())
-                        {
-                            ItemGift.Add(new GiftItems
-                            {
-                                GiftId = reader.GetInt16("giftId"),
-                                Item = ItemsInfos.Find(x => x.Id == reader.GetInt16("itemId")),
-                                Quantity = reader.GetInt16("quantity")
-                            });
-                        }
-
-                        reader.Close();
-                    }
-                }
-
-                query = "SELECT * FROM gift";
-
-                using (var command = new MySqlCommand(query, GameDbManager.Connection))
-                {
-                    var reader = command.ExecuteReader();
-
                     while (reader.Read())
                     {
-                        lock (Gifts)
+                        ItemGift.Add(new GiftItems
                         {
-                            Gifts.Add(new Gift
-                            {
-                                Id = reader.GetInt16("id"),
-                                Title = reader.GetString("title"),
-                                Description = reader.GetString("Description"),
-                                PictureUrl = reader.GetString("pictureUrl"),
-                                Items = ItemGift.FindAll(x => x.GiftId == reader.GetInt16("id")).Select(x => x.Item)
-                            });
-                        }
+                            GiftId = reader.GetInt16("giftId"),
+                            Item = ItemsInfos.Find(x => x.Id == reader.GetInt16("itemId")),
+                            Quantity = reader.GetInt16("quantity")
+                        });
                     }
 
-                    reader.Close();
-                }
-            }
-            catch (Exception e)
-            {
-                SilverConsole.WriteLine("SQL Error : " + e.Message, ConsoleColor.Red);
-                Logs.LogWritter(Constant.ErrorsFolder, "SQL Error :" + e.Message);
-            }
+                    return ItemGift.Count;
+                });
 
-            SilverConsole.WriteLine(string.Format("Loaded {0} Gifts Sucessfully", Gifts.Count), ConsoleColor.Green);
+            task.Wait();
         }
 
-        public static void LoadAccountGifts()
+        private static void LoadGifts()
         {
-            const string query = "SELECT * FROM account_gifts";
-
-            var listResult = new List<KeyValuePair<int, int>>();
-
-            try
-            {
-                using (var command = new MySqlCommand(query, GameDbManager.Connection))
+            var task = ExecuteQueryLight(GameDbManager.GetDatabaseConnection(), "SELECT * FROM gift", "Gifts",
+                (reader) =>
                 {
-                    var reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        Gifts.Add(new Gift
+                        {
+                            Id = reader.GetInt16("id"),
+                            Title = reader.GetString("title"),
+                            Description = reader.GetString("Description"),
+                            PictureUrl = reader.GetString("pictureUrl"),
+                            Items = ItemGift.FindAll(x => x.GiftId == reader.GetInt16("id")).Select(x => x.Item)
+                        });
+                    }
+
+                    return Gifts.Count;
+                });
+
+            task.Wait();
+        }
+
+        private static void LoadAccountGifts()
+        {
+            var task = ExecuteQueryLight(GameDbManager.GetDatabaseConnection(), "SELECT * FROM account_gifts",
+                "Account Gifs",
+                (reader) =>
+                {
+                    var listResult = new List<KeyValuePair<int, int>>();
 
                     while (reader.Read())
                     {
@@ -385,127 +297,171 @@ namespace SilverGame.Database
                             ));
                     }
 
-                    reader.Close();
-                }
-
-                lock (AccountGifts)
-                {
                     foreach (var keyValuePair in listResult)
                     {
                         AccountGifts.Add(new KeyValuePair<Account, Gift>(
                             Accounts.Find(x => x.Id == keyValuePair.Key),
-                            Gifts.Find(x => x.Id == keyValuePair.Value)
-                            ));
+                            Gifts.Find(x => x.Id == keyValuePair.Value)));
                     }
-                }
-            }
-            catch (Exception e)
-            {
-                SilverConsole.WriteLine("SQL Error : " + e.Message, ConsoleColor.Red);
 
-            }
+                    return AccountGifts.Count;
+                });
+
+            task.Wait();
         }
 
         private static void LoadExperience()
         {
-            const string query = "SELECT * FROM exp_data";
-
-            try
-            {
-                using (var command = new MySqlCommand(query, GameDbManager.Connection))
+            var task = ExecuteQueryLight(GameDbManager.GetDatabaseConnection(), "SELECT * FROM exp_data", "Levels",
+                (reader) =>
                 {
-                    var reader = command.ExecuteReader();
-
-                    lock (Experiences)
+                    while (reader.Read())
                     {
-                        while (reader.Read())
+                        Experiences.Add(new Experience
                         {
-                            Experiences.Add(new Experience
-                            {
-                                Level = reader.GetInt32("Level"),
-                                CharacterExp = reader.GetInt64("Character"),
-                                JobExp = reader.GetInt32("Job"),
-                                MountExp = reader.GetInt32("Mount"),
-                                PvpExp = reader.GetInt32("Pvp")
-                            });
-                        }
-
-                        reader.Close();
+                            Level = reader.GetInt32("Level"),
+                            CharacterExp = reader.GetInt64("Character"),
+                            JobExp = reader.GetInt32("Job"),
+                            MountExp = reader.GetInt32("Mount"),
+                            PvpExp = reader.GetInt32("Pvp")
+                        });
                     }
-                }
-            }
-            catch (Exception e)
-            {
-                SilverConsole.WriteLine("SQL Error : "+ e.Message, ConsoleColor.Red);
-                Logs.LogWritter(Constant.ErrorsFolder, "SQL Error :" + e.Message);
-            }
 
-            SilverConsole.WriteLine(string.Format("Loaded {0} Levels", Experiences.Count), ConsoleColor.Green);
+                    return Experiences.Count;
+                });
+
+            task.Wait();
         }
 
         private static void LoadAlignments()
         {
-            const string query = "SELECT * FROM alignments";
-
-            try
-            {
-                using (var command = new MySqlCommand(query, GameDbManager.Connection))
+            var task = ExecuteQueryLight(GameDbManager.GetDatabaseConnection(), "SELECT * FROM alignments", "Alignments",
+                (reader) =>
                 {
-                    var reader = command.ExecuteReader();
-
-                    lock (Alignments)
+                    while (reader.Read())
                     {
-                        while (reader.Read())
+                        Alignments.Add(new Alignment
                         {
-                            Alignments.Add(new Alignment
-                            {
-                                Id = reader.GetInt16("Id"),
-                                Type = reader.GetInt16("Type"),
-                                Honor = reader.GetInt16("Honor"),
-                                Deshonor = reader.GetInt16("Deshonor"),
-                                Grade = reader.GetInt16("Grade"),
-                                Level = reader.GetInt16("Level"),
-                                Enabled = reader.GetBoolean("Enabled")
-                            });
-                        }
-
-                        reader.Close();
+                            Id = reader.GetInt16("Id"),
+                            Type = reader.GetInt16("Type"),
+                            Honor = reader.GetInt16("Honor"),
+                            Deshonor = reader.GetInt16("Deshonor"),
+                            Grade = reader.GetInt16("Grade"),
+                            Level = reader.GetInt16("Level"),
+                            Enabled = reader.GetBoolean("Enabled")
+                        });
                     }
-                }
-            }
-            catch (Exception e)
-            {
-                SilverConsole.WriteLine("SQL Error : " + e.Message, ConsoleColor.Red);
-                Logs.LogWritter(Constant.ErrorsFolder, "SQL Error :" + e.Message);
-            }
-        }
 
+                    return Alignments.Count;
+                });
+
+            task.Wait();
+        }
 
         private static void LoadStatsManager()
         {
-            const string query = "SELECT * FROM character_stats";
+            var task = ExecuteQueryLight(GameDbManager.GetDatabaseConnection(), "SELECT * FROM character_stats",
+                "Character Stats",
+                (reader) =>
+                {
+                    while (reader.Read())
+                    {
+                        StatsManager.Add(new StatsManager
+                        {
+                            Id = reader.GetInt16("id"),
+                            Vitality = new GeneralStats {Base = reader.GetInt16("Vitality")},
+                            Wisdom = new GeneralStats {Base = reader.GetInt16("Wisdom")},
+                            Strength = new GeneralStats {Base = reader.GetInt16("Strenght")},
+                            Intelligence = new GeneralStats {Base = reader.GetInt16("Intelligence")},
+                            Chance = new GeneralStats {Base = reader.GetInt16("Chance")},
+                            Agility = new GeneralStats {Base = reader.GetInt16("Agility")},
+                        });
+                    }
+
+                    return StatsManager.Count;
+                });
+
+            task.Wait();
+        }
+
+        private static void LoadMaps()
+        {
+            var task = ExecuteQueryLight(GameDbManager.GetDatabaseConnection(), "SELECT * FROM maps_data", "Maps",
+                (reader) =>
+                {
+                    while (reader.Read())
+                    {
+                        var newMap = new Map
+                        {
+                            Id = reader.GetInt32("id"),
+                            Width = reader.GetInt32("width"),
+                            Height = reader.GetInt16("height"),
+                            PosX = reader.GetInt16("posX"),
+                            PosY = reader.GetInt16("posY"),
+                            MapData = reader.GetString("mapData"),
+                            Key = reader.GetString("decryptkey"),
+                            Time = reader.GetString("createTime"),
+                            Subarea = reader.GetInt16("subarea"),
+                            NeedRegister = reader.GetBoolean("needRegister"),
+                        };
+
+                        newMap.Cells = newMap.UncompressDatas();
+
+                        Maps.Add(newMap);
+                    }
+
+                    return Maps.Count;
+                });
+
+            task.Wait();
+        }
+
+        private static void LoadTriggers()
+        {
+            var task = ExecuteQueryLight(GameDbManager.GetDatabaseConnection(), "SELECT * FROM maps_triggers", "Trigger",
+                (reader) =>
+                {
+                    while (reader.Read())
+                    {
+                        MapTriggers.Add(new MapTrigger
+                        {
+                            Map = Maps.Find(x => x.Id == reader.GetInt32("MapID")),
+                            Cell = reader.GetInt32("CellID"),
+                            NewMap = Maps.Find(x => x.Id == reader.GetInt32("NewMap")),
+                            NewCell = reader.GetInt32("NewCell")
+                        });
+                    }
+
+                    return MapTriggers.Count;
+                });
+
+            task.Wait();
+        }
+
+        private static async Task ExecuteQueryLight(MySqlConnection connection, string query,
+            string loadingItemName,
+            Func<MySqlDataReader, int> operation, Action<MySqlCommand> paramAction = null)
+        {
+            SilverConsole.StartLoad("Loading " + loadingItemName);
+
+            var countListValue = 0;
 
             try
             {
-                using (var command = new MySqlCommand(query, GameDbManager.Connection))
+                using (connection)
                 {
-                    var reader = command.ExecuteReader();
-
-                    lock (StatsManager)
+                    using (var command = new MySqlCommand(query, connection))
                     {
-                        while (reader.Read())
-                        {
-                            StatsManager.Add(new StatsManager
-                            {
-                                Id = reader.GetInt16("id"),
-                                Vitality = new GeneralStats { Base = reader.GetInt16("Vitality") },
-                                Wisdom = new GeneralStats { Base = reader.GetInt16("Wisdom") },
-                                Strength = new GeneralStats { Base = reader.GetInt16("Strenght") },
-                                Intelligence = new GeneralStats { Base = reader.GetInt16("Intelligence") },
-                                Chance = new GeneralStats { Base = reader.GetInt16("Chance") },
-                                Agility = new GeneralStats { Base = reader.GetInt16("Agility") },
-                            });
-                        }
+                        if (paramAction != null)
+                            paramAction(command);
+
+                        var reader = command.ExecuteReader();
+
+                        var task = new Task<int>(() => operation(reader));
+
+                        task.Start();
+
+                        countListValue = await task;
 
                         reader.Close();
                     }
@@ -514,8 +470,13 @@ namespace SilverGame.Database
             catch (Exception e)
             {
                 SilverConsole.WriteLine("SQL Error : " + e.Message, ConsoleColor.Red);
-                Logs.LogWritter(Constant.ErrorsFolder, "SQL Error :" + e.Message);
+                Logs.LogWritter(Constant.ErrorsFolder, string.Format("SQL Error : {0}", e.Message));
             }
+
+            SilverConsole.StopLoad();
+
+            SilverConsole.WriteLine(string.Format(" Loaded {0} {1} Sucessfully", countListValue, loadingItemName),
+                ConsoleColor.Green);
         }
     }
 }

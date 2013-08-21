@@ -21,8 +21,9 @@
             CharacterAdd = "AA",
             CreateCharacterBadName = "AAEn",
             NameAlredyExists = "AAEa",
-            CreateCharacterFullErrors = "AAEF",
+            CreateCharacterFullErrors = "AAEf",
             CreationSuccess = "AAK",
+            GameBegin = "TB",
             GiftsList = "Ag",
             GiftStored = "AG",
             GiftStotedSuccess = "AGK",
@@ -30,6 +31,40 @@
             CharacterSelectedResponse = "ASK",
             GameCreated = "GC",
             GameCreatedResponse = "GCK",
-            Stats = "As";
+            Stats = "As",
+            MapData = "GDM",
+            MapLoaded = "GDK",
+            CellData = "GDC",
+            GameInfos = "GI",
+            Restriction = "AR6bk",
+            Movement = "GM",
+            GameActions = "GA",
+            GameEndAction = "GK",
+            Nothing = "BN",
+            ObjectMove = "OM",
+            ObjectWeight = "Ow",
+            ObjectQuantity = "OQ",
+            ObjectDrop = "OD",
+            ObjectAdd = "OAKO",
+            ObjectRemove = "OR",
+            ObjectItemSet = "OS",
+            ObjectAccessories = "Oa",
+            Date = "BD",
+            ReferenceTime = "BT",
+            SubscribeChannel = "cC",
+            ServerMessage = "BM",
+            DefaultMessage = "cMK",
+            RecruitmentMessage = "cMK?",
+            BusinessMessage = "cMK:",
+            PrivateMessageReceiver = "cMKF",
+            PrivateMessageSender = "cMKT",
+            PrivateMessageNotConnectedReceiverError = "cMEF",
+            AdminMesage = "cMK@",
+            Message = "Im";
+
+        // Message Id (Im)
+        public const string
+            WelcomeToDofus = "189",
+            LastConnectionInfos = "0152";
     }
 }

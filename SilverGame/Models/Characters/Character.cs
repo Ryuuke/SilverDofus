@@ -1,15 +1,25 @@
-﻿using System.Linq;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using SilverGame.Database;
+using SilverGame.Database.Repository;
+using SilverGame.Models.Chat;
 using SilverGame.Models.Items;
+using SilverGame.Models.Maps;
+using SilverGame.Network.Game;
 using SilverGame.Services;
 
 namespace SilverGame.Models.Characters
 {
     class Character
     {
+        public const int BaseHp = 50;
+        public const int GainHpPerLvl = 5;
+
         public int Id { get; set; }
         public string Name { get; set; }
-        public int Classe { get; set; }
+        public Class Classe { get; set; }
         public int Level { get; set; }
         public int Skin { get; set; }
         public int Sex { get; set; }
@@ -25,42 +35,42 @@ namespace SilverGame.Models.Characters
         public int PdvNow { get; set; }
         public int Energy { get; set; }
         public int EnergyMax { get; set; }
-        public int Vitality { get; set; }
-        public int Wisdom { get; set; }
-        public int Strength { get; set; }
-        public int Intelligence { get; set; }
-        public int Chance { get; set; }
-        public int Agility { get; set; }
         public StatsManager Stats { get; set; }
+        public Map Map { get; set; }
+        public int MapCell { get; set; }
+        public int Direction { get; set; }
+        public int CellDestination { get; set; }
+        public List<Channel> Channels { get; set; }
 
         public void CalculateItemStats()
         {
+            // TODO : Calculate Base Stats
             Stats.Calculate(this);
         }
 
         public string InfosWheneChooseCharacter()
         {
-            return string.Format("|{0};{1};{2};{3};{4};{5};{6};{7};0;{8};;;",
-                Id, Name, Level, Skin, Color1, Color2, Color3,
+            return String.Format("|{0};{1};{2};{3};{4};{5};{6};{7};0;{8};;;",
+                Id, Name, Level, Skin, Algorithm.DeciToHex(Color1), Algorithm.DeciToHex(Color2), Algorithm.DeciToHex(Color3),
                 GetItemsWheneChooseCharacter(), DatabaseProvider.ServerId);
         }
 
         public string InfosWheneSelectedCharacter()
         {
-            return string.Format("{0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}|{8}|{9};",
-                Id, Name, Level, Classe, Sex, Skin, Color1, Color2, Color3, GetItemsWheneSelectedCharacter());
+            return String.Format("{0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}|{8}|{9};",
+                Id, Name, Level, Classe, Sex, Skin, Algorithm.DeciToHex(Color1), Algorithm.DeciToHex(Color2), Algorithm.DeciToHex(Color3), GetItemsWheneSelectedCharacter());
         }
 
         private string GetItemsWheneSelectedCharacter()
         {
-            var items = DatabaseProvider.InventoryItems.FindAll(x => x.Character.Id == x.Id);
+            var items = DatabaseProvider.InventoryItems.FindAll(x => x.Character.Id == Id);
 
-            return items.Aggregate(string.Empty, (current, inventoryItem) => current + inventoryItem.ItemInfo());
+            return items.Aggregate(String.Empty, (current, inventoryItem) => string.Format("{0}{1};", current, inventoryItem.ItemInfo()));
         }
 
-        private string GetItemsWheneChooseCharacter()
+        public string GetItemsWheneChooseCharacter()
         {
-            var items = string.Empty;
+            var items = String.Empty;
 
             var inventoryItems = DatabaseProvider.InventoryItems.FindAll(x => x.Character.Id == Id);
 
@@ -89,13 +99,13 @@ namespace SilverGame.Models.Characters
 
             if (inventoryItems.Any(x => x.ItemPosition == StatsManager.Position.Bouclier))
                 items += Algorithm.DeciToHex(inventoryItems.Find(x => x.ItemPosition == StatsManager.Position.Bouclier).ItemInfos.Id);
-
+           
             return items;
         }
 
         public string GetStats()
         {
-            var stats = string.Empty;
+            var stats = String.Empty;
 
             stats += GetExperiance();
 
@@ -202,40 +212,214 @@ namespace SilverGame.Models.Characters
 
         private string GetExperiance()
         {
-            return string.Format("{0},{1},{2}",
+            return String.Format("{0},{1},{2}",
                     Exp, 
                     DatabaseProvider.Experiences.Find(x => x.Level == Level).CharacterExp,
-                    DatabaseProvider.Experiences.Find(x => x.Level == Level+1).CharacterExp
-                );
+                    DatabaseProvider.Experiences.Find(x => x.Level == Level+1).CharacterExp);
         }
 
         private int GetInitiative()
         {
-            return (PdvMax/4 + Stats.Initiative.Items)*(PdvNow / PdvMax);
+            var initiative = 0;
+
+            initiative += Level + Stats.Initiative.GetTotal();
+
+            initiative += Stats.Intelligence.GetTotal() > 0 ? (int) Math.Floor(1.5*Stats.Intelligence.GetTotal()) : 0;
+            initiative += Stats.Intelligence.GetTotal() > 0 ? (int) Math.Floor(1.5 * Stats.Agility.GetTotal()) : 0;
+            initiative += Stats.Intelligence.GetTotal() > 0 ? Stats.Wisdom.GetTotal() : 0;
+            initiative += Stats.Intelligence.GetTotal() > 0 ? Stats.Strength.GetTotal() : 0;
+            initiative += Stats.Intelligence.GetTotal() > 0 ? Stats.Chance.GetTotal() : 0;
+
+            return initiative;
         }
 
 
         private int GetProspection()
         {
-            return Chance/10 + Classe == 3 ? 120 : 100 + Stats.Prospection.Items;
+            return Stats.Chance.GetTotal()/10 + Classe == Class.Enutrof ? Constant.BaseProspectionEnu : Constant.BaseProspection + Stats.Prospection.GetTotal();
         }
 
         private string GetPa()
         {
-            return string.Format("{0},{1},0,0,{2}",
-                Level < 100 ? 6 : 7, Stats.Pa.Items, Level < 100 ? 6 + Stats.Pa.Items : 7 + Stats.Pa.Items);
+            return String.Format("{0},{1},0,0,{2}",
+                Level < Constant.HighLevel ? Constant.BasePa : Constant.BaseHighLevelPa, Stats.Pa.Items, Level < Constant.HighLevel ? Constant.BasePa + Stats.Pa.Items : Constant.BaseHighLevelPa + Stats.Pa.Items);
         }
-
 
         private string GetPm()
         {
-            return string.Format("{0},{1},0,0,{2}",
-                3, Stats.Pm.Items, 3 + Stats.Pm.Items);
+            return String.Format("{0},{1},0,0,{2}",
+                Constant.BasePm, Stats.Pm.Items, Constant.BasePm + Stats.Pm.Items);
         }
 
-        public enum ClassHp
+        public int GetCurrentWeight()
         {
-            Hp = 50,
+
+            return DatabaseProvider.InventoryItems.FindAll(x => x.Character == this).Sum(inventoryItem => inventoryItem.ItemInfos.Weight*inventoryItem.Quantity);
+
+        }
+
+        public int GetMaxWeight()
+        {
+            // TODO : Add Job Bonus
+            return  Constant.BaseWeight + Stats.Weight.Items + Stats.Strength.GetTotal()*5;
+        }
+
+        public void GenerateInfos(int gmLevel)
+        {
+            // Map
+            switch (Classe)
+            {
+                case Class.Feca:
+                    Map = DatabaseProvider.Maps.Find(x => x.Id == int.Parse(Config.Get("StartMap_Feca")));
+                    MapCell = int.Parse(Config.Get("StartCell_Feca"));
+                    Direction = int.Parse(Config.Get("StartDir_Feca"));
+                    break;
+                case Class.Osamodas:
+                    Map = DatabaseProvider.Maps.Find(x => x.Id == int.Parse(Config.Get("StartMap_Osa")));
+                    MapCell = int.Parse(Config.Get("StartCell_Osa"));
+                    Direction = int.Parse(Config.Get("StartDir_Osa"));
+                    break;
+                case Class.Enutrof:
+                    Map = DatabaseProvider.Maps.Find(x => x.Id == int.Parse(Config.Get("StartMap_Enu")));
+                    MapCell = int.Parse(Config.Get("StartCell_Enu"));
+                    Direction = int.Parse(Config.Get("StartDir_Enu"));
+                    break;
+                case Class.Sram:
+                    Map = DatabaseProvider.Maps.Find(x => x.Id == int.Parse(Config.Get("StartMap_Sram")));
+                    MapCell = int.Parse(Config.Get("StartCell_Sram"));
+                    Direction = int.Parse(Config.Get("StartDir_Sram"));
+                    break;
+                case Class.Xelor:
+                    Map = DatabaseProvider.Maps.Find(x => x.Id == int.Parse(Config.Get("StartMap_Xel")));
+                    MapCell = int.Parse(Config.Get("StartCell_Xel"));
+                    Direction = int.Parse(Config.Get("StartDir_Xel"));
+                    break;
+                case Class.Ecaflip:
+                    Map = DatabaseProvider.Maps.Find(x => x.Id == int.Parse(Config.Get("StartMap_Eca")));
+                    MapCell = int.Parse(Config.Get("StartCell_Eca"));
+                    Direction = int.Parse(Config.Get("StartDir_Eca"));
+                    break;
+                case Class.Eniripsa:
+                    Map = DatabaseProvider.Maps.Find(x => x.Id == int.Parse(Config.Get("StartMap_Eni")));
+                    MapCell = int.Parse(Config.Get("StartCell_Eni"));
+                    Direction = int.Parse(Config.Get("StartDir_Eni"));
+                    break;
+                case Class.Iop:
+                    Map = DatabaseProvider.Maps.Find(x => x.Id == int.Parse(Config.Get("StartMap_Iop")));
+                    MapCell = int.Parse(Config.Get("StartCell_Iop"));
+                    Direction = int.Parse(Config.Get("StartDir_Iop"));
+                    break;
+                case Class.Cra:
+                    Map = DatabaseProvider.Maps.Find(x => x.Id == int.Parse(Config.Get("StartMap_Cra")));
+                    MapCell = int.Parse(Config.Get("StartCell_Cra"));
+                    Direction = int.Parse(Config.Get("StartDir_Cra"));
+                    break;
+                case Class.Sadida:
+                    Map = DatabaseProvider.Maps.Find(x => x.Id == int.Parse(Config.Get("StartMap_Sadi")));
+                    MapCell = int.Parse(Config.Get("StartCell_Sadi"));
+                    Direction = int.Parse(Config.Get("StartDir_Sadi"));
+                    break;
+                case Class.Sacrieur:
+                    Map = DatabaseProvider.Maps.Find(x => x.Id == int.Parse(Config.Get("StartMap_Sacri")));
+                    MapCell = int.Parse(Config.Get("StartCell_Sacri"));
+                    Direction = int.Parse(Config.Get("StartDir_Sacri"));
+                    break;
+                case Class.Pandawa:
+                    Map = DatabaseProvider.Maps.Find(x => x.Id == int.Parse(Config.Get("StartMap_Panda")));
+                    MapCell = int.Parse(Config.Get("StartCell_Panda"));
+                    Direction = int.Parse(Config.Get("StartDir_Panda"));
+                    break;
+            }
+
+            // Create alignment row in database & list
+            var alignmentId = DatabaseProvider.StatsManager.Count > 0
+                ? DatabaseProvider.StatsManager.OrderByDescending(x => x.Id).First().Id + 1
+                : 1;
+
+            Alignment = new Alignment.Alignment {Id = alignmentId};
+            AlignmentRepository.Create(Alignment);
+
+            // Create stats row in database & list
+            var statsId = DatabaseProvider.StatsManager.Count > 0
+                ? DatabaseProvider.StatsManager.OrderByDescending(x => x.Id).First().Id + 1
+                : 1;
+
+            Stats = new StatsManager {Id = statsId};
+            CharacterStatsRepository.Create(Stats);
+
+            Channels = (gmLevel > 0)
+                ? Channel.Headers.Select(channel => new Channel
+                {
+                    Header = (Channel.ChannelHeader) channel
+                }).ToList()
+                : Channel.Headers.Where(x => x != (char) Channel.ChannelHeader.AdminChannel)
+                    .Select(channel => new Channel
+                    {
+                        Header = (Channel.ChannelHeader) channel
+                    }).ToList();
+        }
+
+        public string DisplayChar()
+        {
+            var builder = new StringBuilder();
+            {
+                builder.Append(MapCell).Append(";");
+                builder.Append(Direction).Append(";0;");
+                builder.Append(Id).Append(";");
+                builder.Append(Name).Append(";");
+                builder.Append(Classe).Append(";");
+                builder.Append(Skin).Append("^").Append("100").Append(";");
+
+                // TODO : debug align info
+                builder.Append(Sex).Append(";").Append("0,0,0").Append(",").Append(Level+Id).Append(";");
+
+                builder.Append(Algorithm.DeciToHex(Color1)).Append(";");
+                builder.Append(Algorithm.DeciToHex(Color2)).Append(";");
+                builder.Append(Algorithm.DeciToHex(Color3)).Append(";");
+                builder.Append(GetItemsWheneChooseCharacter()).Append(";"); // Items
+                builder.Append("0;"); //Aura
+                builder.Append(";;");
+                builder.Append(";"); // Guild
+                builder.Append(";0;");
+                builder.Append(";"); // Mount
+            }
+
+            return builder.ToString();
+        }
+
+        public void SendToAll(string message)
+        {
+            lock (GameServer.Lock)
+            {
+                foreach (var client in GameServer.Clients)
+                {
+                    client.SendPackets(message);
+                }
+            }
+        }
+
+        public void Disconnect()
+        {
+            if(this.Map != null)
+                this.Map.RemoveCharacter(this);
+
+            CharacterRepository.Update(this);
+        }
+
+        public enum Class
+        {
+            Feca = 1,
+            Osamodas = 2,
+            Enutrof = 3,
+            Sram = 4,
+            Xelor = 5,
+            Ecaflip =  6,
+            Eniripsa = 7,
+            Iop = 8,
+            Cra = 9,
+            Sadida = 10,
+            Sacrieur = 11,
+            Pandawa = 12,
         }
     }
 }

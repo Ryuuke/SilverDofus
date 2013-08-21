@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection;
 using SilverRealm.Services;
 
 namespace SilverRealm
@@ -7,6 +8,8 @@ namespace SilverRealm
     {
         static void Main()
         {
+            Console.Title = Assembly.GetExecutingAssembly().GetName().Name;
+
             SilverConsole.Welcome();
 
             Logs.LoadLogs();
@@ -22,7 +25,7 @@ namespace SilverRealm
                 server.Run();
             }
 
-            Console.ReadLine();
+            Console.Read();
         }
     }
 }

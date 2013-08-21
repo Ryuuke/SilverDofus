@@ -1,6 +1,6 @@
 ﻿namespace SilverRealm.Services
 {
-    internal class Packet
+    static class Packet
     {
         public const string
             HelloConnectionServer = "HC",
@@ -21,11 +21,10 @@
             SelectServer = "AX",
             ConnectToGameServer = "AYK",
             UnavailableServer = "AXEd";
-
+            
 
         // packet for communication Realm << >> Game
         public const string
-            HelloRealm = "HR",
             DisconnectMe = "DM";
     }
 }

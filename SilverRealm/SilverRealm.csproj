@@ -51,7 +51,6 @@
     <Compile Include="Database\Characters.cs" />
     <Compile Include="Database\DbManager.cs" />
     <Compile Include="Database\GameServerRepository.cs" />
-    <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Models\Account.cs" />
     <Compile Include="Models\GameServer.cs" />
     <Compile Include="Network\Abstract\Server.cs" />

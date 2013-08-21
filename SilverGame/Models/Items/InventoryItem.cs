@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
+using SilverGame.Database;
 using SilverGame.Models.Characters;
 using SilverGame.Services;
 
@@ -30,6 +32,22 @@ namespace SilverGame.Models.Items
                 Algorithm.DeciToHex(Quantity),
                 Algorithm.DeciToHex((int) ItemPosition),
                 string.Join(",", Stats));
+        }
+
+        public InventoryItem Copy(StatsManager.Position position = StatsManager.Position.None, int quantity = 1)
+        {
+            return new InventoryItem
+            {
+                Id =
+                    DatabaseProvider.InventoryItems.Count > 0
+                        ? DatabaseProvider.InventoryItems.OrderByDescending(x => x.Id).First().Id + 1
+                        : 1,
+                Character = this.Character,
+                ItemInfos = this.ItemInfos,
+                Quantity = quantity,
+                Stats = this.Stats,
+                ItemPosition = position,
+            };
         }
     }
 }

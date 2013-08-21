@@ -85,7 +85,6 @@ namespace SilverGame.Network.ToRealm
                     DisconectGameClient(packet.Substring(2));
                     break;
             }
-                
         }
 
         private void DisconectGameClient(string id)
@@ -94,9 +93,7 @@ namespace SilverGame.Network.ToRealm
                 return;
 
             lock (GameServer.Lock)
-            {
                 GameServer.Clients.Find(x => x.Account.Id == int.Parse(id)).Disconnect();
-            }
 
             Database.Repository.AccountRepository.UpdateAccount(false, int.Parse(id));
         }

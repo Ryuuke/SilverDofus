@@ -12,5 +12,10 @@
             return string.Format("{0},{1},{2},{3}",
                 Base, Items, Donation, Boosts);
         }
+
+        public int GetTotal()
+        {
+            return Base + Items + Donation + Boosts;
+        }
     }
 }

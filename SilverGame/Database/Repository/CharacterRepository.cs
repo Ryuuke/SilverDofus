@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using MySql.Data.MySqlClient;
 using SilverGame.Database.Connection;
 using SilverGame.Models.Accounts;
@@ -8,118 +7,85 @@ using SilverGame.Services;
 
 namespace SilverGame.Database.Repository
 {
-    internal static class CharacterRepository
+    internal class CharacterRepository : Abstract.Repository
     {
-        public static void Create(string name, int classe, int sex, int color1, int color2, int color3, int accountId)
+        public static void Create(Character character, int accountId)
         {
-            // create alignment row in database & list
-            var alignmentId = DatabaseProvider.StatsManager.Count > 0 ? DatabaseProvider.StatsManager.OrderByDescending(x => x.Id).First().Id + 1 : 1;
+            const string query =
+                "INSERT INTO characters SET id=@id, name=@name, classe=@classe, sex=@sex, color1=@color1, color2=@color2," +
+                "color3=@color3, skin=@skin, level=@level, alignmentId=@alignmentId, statsId=@statsId, " +
+                "pdvNow=@pdvNow, mapId=@mapId, cellId=@cellId, direction=@direction, channels=@channels";
 
-            AlignmentRepository.Create(alignmentId);
-
-            // create stats row in database & list
-            var statsId = DatabaseProvider.StatsManager.Count > 0 ? DatabaseProvider.StatsManager.OrderByDescending(x => x.Id).First().Id + 1 : 1;
-
-            CharacterStatsRepository.Create(statsId);
-
-            try
-            {
-                lock (GameDbManager.Lock)
+            ExecuteQuery(query, GameDbManager.GetDatabaseConnection(),
+                (command) =>
                 {
-                    // create Character row in database & list
+                    command.Parameters.Add(new MySqlParameter("@id", character.Id));
+                    command.Parameters.Add(new MySqlParameter("@name", character.Name));
+                    command.Parameters.Add(new MySqlParameter("@classe", (int) character.Classe));
+                    command.Parameters.Add(new MySqlParameter("@sex", character.Sex));
+                    command.Parameters.Add(new MySqlParameter("@color1", character.Color1));
+                    command.Parameters.Add(new MySqlParameter("@color2", character.Color2));
+                    command.Parameters.Add(new MySqlParameter("@color3", character.Color3));
+                    command.Parameters.Add(new MySqlParameter("@skin", character.Skin));
+                    command.Parameters.Add(new MySqlParameter("@level", character.Level));
+                    command.Parameters.Add(new MySqlParameter("@alignmentId", character.Alignment.Id));
+                    command.Parameters.Add(new MySqlParameter("@statsId", character.Stats.Id));
+                    command.Parameters.Add(new MySqlParameter("@pdvNow", character.PdvNow));
+                    command.Parameters.Add(new MySqlParameter("@mapId", character.Map.Id));
+                    command.Parameters.Add(new MySqlParameter("@cellId", character.MapCell));
+                    command.Parameters.Add(new MySqlParameter("@direction", character.Direction));
+                    command.Parameters.Add(new MySqlParameter("@channels", string.Join("", character.Channels)));
+                });
 
-                    const string query =
-                        "INSERT INTO characters SET name=@name, classe=@classe, sex=@sex, color1=@color1, color2=@color2," +
-                        "color3=@color3, skin=@skin, level=@level, alignmentId=@alignmentId, statsId=@statsId";
+            Logs.LogWritter(Constant.GameFolder, string.Format("Création du personnage {0}", character.Name));
 
-                    using (var command = new MySqlCommand(query, GameDbManager.Connection))
-                    {
-                        command.Parameters.Add(new MySqlParameter("@name", name));
-                        command.Parameters.Add(new MySqlParameter("@classe", classe));
-                        command.Parameters.Add(new MySqlParameter("@sex", sex));
-                        command.Parameters.Add(new MySqlParameter("@color1", color1));
-                        command.Parameters.Add(new MySqlParameter("@color2", color2));
-                        command.Parameters.Add(new MySqlParameter("@color3", color3));
-                        command.Parameters.Add(new MySqlParameter("@skin", int.Parse(classe + "" + sex)));
-                        command.Parameters.Add(new MySqlParameter("@level", int.Parse(Config.Get("Starting_level"))));
-                        command.Parameters.Add(new MySqlParameter("@alignmentId", alignmentId));
-                        command.Parameters.Add(new MySqlParameter("@statsId", statsId));
-                        command.ExecuteNonQuery();
-                    }
+            const string query2 =
+                "INSERT INTO characters SET accountId=@accountId, gameserverId=@gameServer, characterName=@name";
 
-                    Logs.LogWritter(Constant.GameFolder, string.Format("Création du personnage {0}", name));
-                }
-            }
-            catch (Exception e)
-            {
-                SilverConsole.WriteLine(e.Message, ConsoleColor.Red);
-                Logs.LogWritter(Constant.ErrorsFolder,
-                    string.Format("Impossible de créer le personnage {0} : {1}", name, e.Message));
-            }
-
-            try
-            {
-                lock (RealmDbManager.Lock)
+            ExecuteQuery(query2, RealmDbManager.GetDatabaseConnection(),
+                (command) =>
                 {
-                    const string query =
-                        "INSERT INTO characters SET accountId=@accountId, gameserverId=(SELECT id FROM gameservers WHERE ServerKey=@key LIMIT 1), characterName=@name";
+                    command.Parameters.Add(new MySqlParameter("@accountId", accountId));
+                    command.Parameters.Add(new MySqlParameter("@gameServer", DatabaseProvider.ServerId));
+                    command.Parameters.Add(new MySqlParameter("@name", character.Name));
+                });
 
-                    using (var command = new MySqlCommand(query, RealmDbManager.Connection))
-                    {
-                        command.Parameters.Add(new MySqlParameter("@accountId", accountId));
-                        command.Parameters.Add(new MySqlParameter("@key", Config.Get("Game_key")));
-                        command.Parameters.Add(new MySqlParameter("@name", name));
+            lock (DatabaseProvider.Characters)
+                DatabaseProvider.Characters.Add(character);
 
-                        command.ExecuteNonQuery();
-                    }
-                }
-            }
-            catch (Exception e)
-            {
-                SilverConsole.WriteLine(e.Message, ConsoleColor.Red);
-                Logs.LogWritter(Constant.ErrorsFolder,
-                    string.Format(
-                        "Impossible d'ajouter les informations sur le personnage {0} dans la table gameserver : {1}",
-                        name, e.Message));
-            }
-
-            try
-            {
-                lock (DatabaseProvider.Characters)
+            lock (DatabaseProvider.AccountCharacters)
+                DatabaseProvider.AccountCharacters.Add(new AccountCharacters
                 {
-                    DatabaseProvider.Characters.Add(new Character
-                    {
-                        Id = DatabaseProvider.Characters.Count > 0
-                            ? DatabaseProvider.Characters.OrderByDescending(x => x.Id).First().Id + 1
-                            : 1,
-                        Name = name,
-                        Classe = classe,
-                        Sex = sex,
-                        Color1 = color1,
-                        Color2 = color2,
-                        Color3 = color3,
-                        Level = int.Parse(Config.Get("Starting_level")),
-                        Skin = int.Parse(classe + "" + sex),
-                        Alignment = DatabaseProvider.Alignments.Find(x => x.Id == alignmentId),
-                        Stats = DatabaseProvider.StatsManager.Find(x => x.Id == statsId),
+                    Account = DatabaseProvider.Accounts.Find(x => x.Id == accountId),
+                    Character = character
+                });
+        }
 
-                    });
-                }
+        public static void Update(Character character)
+        {
 
-                lock (DatabaseProvider.AccountCharacters)
+            const string query =
+                "UPDATE characters SET skin=@skin, level=@level, alignmentId=@alignmentId, statsId=@statsId, " +
+                "pdvNow=@pdvNow, exp=@exp, mapId=@mapId, cellId=@cellId, direction=@direction, channels=@channels " +
+                "WHERE id=@id";
+
+            ExecuteQuery(query, GameDbManager.GetDatabaseConnection(),
+                (command) =>
                 {
-                    DatabaseProvider.AccountCharacters.Add(new AccountCharacters
-                    {
-                        Account = DatabaseProvider.Accounts.Find(x => x.Id == accountId),
-                        Character = DatabaseProvider.Characters.Find(x => x.Name == name)
-                    });
-                    Console.WriteLine(name +" " + accountId);
-                }
-            }
-            catch (Exception e)
-            {
-                SilverConsole.WriteLine(e.Message, ConsoleColor.Red);
-            }
+                    command.Parameters.Add(new MySqlParameter("@id", character.Id));
+                    command.Parameters.Add(new MySqlParameter("@skin", character.Skin));
+                    command.Parameters.Add(new MySqlParameter("@level", character.Level));
+                    command.Parameters.Add(new MySqlParameter("@pdvNow", character.PdvNow));
+                    command.Parameters.Add(new MySqlParameter("@exp", character.Exp));
+                    command.Parameters.Add(new MySqlParameter("@statsId", character.Stats.Id));
+                    command.Parameters.Add(new MySqlParameter("@alignmentId", character.Alignment.Id));
+                    command.Parameters.Add(new MySqlParameter("@mapId", character.Map.Id));
+                    command.Parameters.Add(new MySqlParameter("@cellId", character.MapCell));
+                    command.Parameters.Add(new MySqlParameter("@direction", character.Direction));
+                    command.Parameters.Add(new MySqlParameter("@channels",
+                        string.Format("{0}", string.Join("", character.Channels))));
+
+                });
         }
     }
 }

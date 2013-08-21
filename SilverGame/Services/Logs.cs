@@ -13,7 +13,7 @@ namespace SilverGame.Services
 
         public static Object Lock = new object();
 
-        private static readonly string FileName = string.Format("{0}.txt",DateTime.Now.ToString("yy-MM-dd"));
+        private static readonly string FileName = string.Format("{0}.txt", DateTime.Now.ToString("yy-MM-dd"));
 
         public static void LoadLogs()
         {
@@ -40,7 +40,7 @@ namespace SilverGame.Services
                 }
                 catch (Exception e)
                 {
-                    SilverConsole.WriteLine(e.Message);
+                    SilverConsole.WriteLine(e.Message, ConsoleColor.Red);
                 }
             }
         }

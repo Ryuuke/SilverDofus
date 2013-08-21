@@ -15,26 +15,25 @@ namespace SilverGame.Models.Items
         public override string ToString()
         {
             return string.Format("{0}#{1}#{2}#{3}#{4}",
-                Algorithm.DeciToHex((int)Header),
+                Algorithm.DeciToHex((int) Header),
                 Algorithm.DeciToHex(MinValue),
                 Algorithm.DeciToHex(MaxValue),
                 "0",
                 JetDecimal);
         }
 
-        public static List<ItemStats> GenerateRandomStats(List<ItemStats> stats)
+        public static List<ItemStats> GenerateRandomStats(IEnumerable<ItemStats> stats)
         {
             var rand = new Random();
 
             var generatedStats = stats.Select(itemStats => new ItemStats
             {
                 Header = itemStats.Header,
-                MinValue = rand.Next(itemStats.MinValue, itemStats.MaxValue),
+                MinValue =
+                    itemStats.MaxValue == 0 ? itemStats.MinValue : rand.Next(itemStats.MinValue, itemStats.MaxValue),
                 MaxValue = 0,
                 JetDecimal = itemStats.JetDecimal,
-
             }).ToList();
-
 
             return generatedStats;
         }
@@ -45,7 +44,10 @@ namespace SilverGame.Models.Items
                 where stat.Split('#').Length == 5
                 select new ItemStats
                 {
-                    Header = (StatsManager.Effect) Algorithm.HexToDeci(stat.Split('#')[0]), MinValue = Algorithm.HexToDeci(stat.Split('#')[1]), MaxValue = Algorithm.HexToDeci(stat.Split('#')[2]), JetDecimal = stat.Split('#')[4]
+                    Header = (StatsManager.Effect) Algorithm.HexToDeci(stat.Split('#')[0]),
+                    MinValue = Algorithm.HexToDeci(stat.Split('#')[1]),
+                    MaxValue = Algorithm.HexToDeci(stat.Split('#')[2]),
+                    JetDecimal = stat.Split('#')[4]
                 }).ToList();
 
             return listStats;

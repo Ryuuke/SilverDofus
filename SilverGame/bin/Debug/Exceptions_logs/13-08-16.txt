@@ -1,0 +1,1 @@
+Game connection database SQL error : Access denied for user 'root'@'localhost' (using password: NO)

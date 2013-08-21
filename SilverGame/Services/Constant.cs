@@ -1,6 +1,6 @@
 ﻿namespace SilverGame.Services
 {
-    class Constant
+    static class Constant
     {
         public const string ConfigFile = "GameConfig.txt";
         public const long OneYear = 31536000000;
@@ -13,8 +13,15 @@
             ComFolder = "Com_logs",
             GameFolder = "Game_logs";
 
-        public const string
-            AccountIdColumnName = "id",
-            CharacterNameColumnName = "name";
+        // Level
+        public const int HighLevel = 100;
+
+        // stats
+        public const int BasePa = 6,
+            BaseHighLevelPa = 7,
+            BasePm = 3,
+            BaseProspection = 100,
+            BaseProspectionEnu = 120,
+            BaseWeight = 1000;
     }
 }

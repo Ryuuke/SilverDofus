@@ -53,6 +53,7 @@
     <StartupObject>SilverGame.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="MySql.Data, Version=6.6.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\Desktop\SunDofus\Assemblies\MySql.Data.dll</HintPath>
@@ -65,6 +66,7 @@
     <Reference Include="System.Data" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Database\Copie de DatabaseProvider.cs" />
     <Compile Include="Database\Repository\AccountRepository.cs" />
     <Compile Include="Database\DatabaseProvider.cs" />
     <Compile Include="Database\Connection\GameDbManager.cs" />
@@ -74,10 +76,13 @@
     <Compile Include="Database\Repository\CharacterStatsRepository.cs" />
     <Compile Include="Database\Repository\GiftRepository.cs" />
     <Compile Include="Database\Repository\InventoryItemRepository.cs" />
+    <Compile Include="Database\Repository\Abstract\Repository.cs" />
     <Compile Include="Models\Accounts\Account.cs" />
     <Compile Include="Models\Accounts\AccountCharacters.cs" />
     <Compile Include="Models\Alignment\Alignment.cs" />
     <Compile Include="Models\Characters\Character.cs" />
+    <Compile Include="Models\Chat\Channel.cs" />
+    <Compile Include="Models\Chat\ServerMessage.cs" />
     <Compile Include="Models\Experience\Experience.cs" />
     <Compile Include="Models\Gifts\Gift.cs" />
     <Compile Include="Models\Gifts\GiftItems.cs" />
@@ -86,6 +91,9 @@
     <Compile Include="Models\Items\ItemInfos.cs" />
     <Compile Include="Models\Items\StatsManager.cs" />
     <Compile Include="Models\Items\ItemStats.cs" />
+    <Compile Include="Models\Maps\Map.cs" />
+    <Compile Include="Models\Maps\MapTrigger.cs" />
+    <Compile Include="Models\Maps\PathFinding.cs" />
     <Compile Include="Network\Abstract\Server.cs" />
     <Compile Include="Network\Game\GameClient.cs" />
     <Compile Include="Network\Game\GameParser\GameParser.cs" />

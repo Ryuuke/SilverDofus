@@ -1,19 +1,24 @@
 ﻿using System;
+using System.Reflection;
 using SilverGame.Database;
 using SilverGame.Database.Connection;
 using SilverGame.Services;
 
 namespace SilverGame
 {
-    class Program
+    static class Program
     {
         static void Main()
         {
+            Console.Title = Assembly.GetExecutingAssembly().GetName().Name;
+
             SilverConsole.Welcome();
 
-            if (Config.LoadConfig() && GameDbManager.InitGameDatabse() && RealmDbManager.InitRealmDatabase())
+            if (Config.LoadConfig() && GameDbManager.TestConnectivityToGameDb() && RealmDbManager.TestConnectivityToRealmDb())
             {
                 Logs.LoadLogs();
+
+                SilverConsole.LoadTimer();
 
                 DatabaseProvider.LoadDatabase();
 
@@ -24,7 +29,7 @@ namespace SilverGame
                 serv.Run();
             }
 
-            Console.ReadLine();
+            Console.Read();
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using SilverGame.Database;
 using SilverGame.Models.Characters;
 
@@ -19,7 +20,7 @@ namespace SilverGame.Models.Items
         public GeneralStats Pm = new GeneralStats();
         public GeneralStats Po = new GeneralStats();
         public GeneralStats Prospection = new GeneralStats();
-        public GeneralStats Pod = new GeneralStats();
+        public GeneralStats Weight = new GeneralStats();
         public GeneralStats MaxInvoc = new GeneralStats();
         public GeneralStats ReducDamageAir = new GeneralStats();
         public GeneralStats ReduceDamageChance = new GeneralStats();
@@ -58,9 +59,14 @@ namespace SilverGame.Models.Items
 
         public void Calculate(Character character)
         {
-            var items = DatabaseProvider.InventoryItems.FindAll(x => x.Character.Id == character.Id);
+            var items = DatabaseProvider.InventoryItems.FindAll(x => x.Character == character);
 
-            foreach (var stats in from inventoryItem in items where inventoryItem.ItemPosition > Position.None && inventoryItem.ItemPosition < Position.Bar1 from stats in inventoryItem.Stats select stats)
+            foreach (var stats in from inventoryItem in items
+                where
+                    (int) inventoryItem.ItemPosition > (int) Position.None &&
+                    (int) inventoryItem.ItemPosition < (int) Position.Bar1
+                from stats in inventoryItem.Stats
+                select stats)
             {
                 ParseStats(stats);
             }
@@ -115,6 +121,9 @@ namespace SilverGame.Models.Items
                 case Effect.AddProspection:
                     Prospection.Items += stats.MinValue;
                     break;
+                case Effect.AddPods:
+                    Weight.Items += stats.MinValue;
+                    break;
 
                 // Negative basic effects
 
@@ -150,6 +159,9 @@ namespace SilverGame.Models.Items
                     break;
                 case Effect.SubProspection:
                     Prospection.Items -= stats.MinValue;
+                    break;
+                case Effect.SubPods:
+                    Weight.Items -= stats.MinValue;
                     break;
 
                 // Positive Reduc damage effects
@@ -355,6 +367,30 @@ namespace SilverGame.Models.Items
                 case Effect.SubSoins:
                     Heal.Items -= stats.MinValue;
                     break;
+            }
+        }
+
+        public void AddItemStats(IEnumerable<ItemStats> stats)
+        {
+            foreach (var itemStatse in stats)
+            {
+                ParseStats(itemStatse);
+            }
+        }
+
+        public void RemoveItemStats(IEnumerable<ItemStats> stats)
+        {
+            var invertedStats = stats.Select(stat => new ItemStats
+            {
+                Header = stat.Header,
+                MinValue = -stat.MinValue,
+                MaxValue = stat.MaxValue,
+                JetDecimal = stat.JetDecimal
+            }).ToList();
+
+            foreach (var invertedStat in invertedStats)
+            {
+                ParseStats(invertedStat);
             }
         }
 

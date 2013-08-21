@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Linq;
 using System.Text;
-using SilverGame.Database.Repository;
 using SilverGame.Models.Accounts;
+using SilverGame.Models.Characters;
 using SilverGame.Services;
 using SilverSock;
 
@@ -14,28 +14,17 @@ namespace SilverGame.Network.Game
 
         private readonly GameParser.GameParser _parser;
         public Account Account;
+        public Character Character;
 
         public GameClient(SilverSocket socket)
         {
             Socket = socket;
             {
-                Socket.OnConnected += OnConnected;
                 Socket.OnDataArrivalEvent += DataArrival;
-                Socket.OnFailedToConnect += OnFailedToConnect;
                 Socket.OnSocketClosedEvent += OnSocketClosed;
             }
 
             _parser = new GameParser.GameParser(this);
-        }
-
-        private void OnConnected()
-        {
-            
-        }
-
-        private void OnFailedToConnect(Exception e)
-        {
-            
         }
 
         public void OnSocketClosed()
@@ -46,7 +35,11 @@ namespace SilverGame.Network.Game
                 ? string.Format("{0}:ip {1} Connection Closed", Account.Username, Socket.IP)
                 : string.Format("ip {0} Connection Closed", Socket.IP));
 
-            if (Account != null) AccountRepository.UpdateAccount(false, Account.Id);
+            if (Account != null)
+                Account.Disconnect();
+
+            if(Character != null)
+                Character.Disconnect();
 
             RemoveMeOnList();
         }

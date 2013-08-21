@@ -9,14 +9,14 @@ namespace SilverRealm.Network.ToGame
 {
     sealed class ToGameClient
     {
-        public static SilverSocket Socket;
+        private static SilverSocket _socket;
 
         private readonly CommunicationState _communicationState;
         private string _key;
 
         public ToGameClient(SilverSocket socket)
         {
-            Socket = socket;
+            _socket = socket;
             {
                 socket.OnDataArrivalEvent += DataArrival;
                 socket.OnSocketClosedEvent += OnSocketClosed;
@@ -25,18 +25,17 @@ namespace SilverRealm.Network.ToGame
             _communicationState = CommunicationState.VerifyGame;
         }
 
-        public void OnSocketClosed()
+        private void OnSocketClosed()
         {
-
-            RealmClient.GameServers.Single(gameServer => gameServer.ServerKey == _key).State = 0;      
+            RealmClient.GameServers.Single(gameServer => gameServer.ServerKey.Equals(_key)).State = 0;      
 
             foreach (var client in RealmServer.Clients)
             {
                 client.RefreshServerList();
             }
 
-            SilverConsole.WriteLine(string.Format("Connection closed with Game Server {0}", Socket.IP), ConsoleColor.Yellow);
-            Logs.LogWritter(Constant.ComFolder, string.Format("Connection closed with Game Server {0}", Socket.IP));
+            SilverConsole.WriteLine(string.Format("Connection closed with Game Server {0}", _socket.IP), ConsoleColor.Yellow);
+            Logs.LogWritter(Constant.ComFolder, string.Format("Connection closed with Game Server {0}", _socket.IP));
 
             lock (ToGameServer.Lock)
                 ToGameServer.Games.Remove(this);
@@ -45,10 +44,10 @@ namespace SilverRealm.Network.ToGame
         public static void SendPacket(string packet)
         {
             SilverConsole.WriteLine(string.Format("send >>" + string.Format("{0}\x00", packet)), ConsoleColor.Cyan);
-            Socket.Send(Encoding.UTF8.GetBytes(string.Format("{0}\x00", packet)));
+            _socket.Send(Encoding.UTF8.GetBytes(string.Format("{0}\x00", packet)));
         }
 
-        public void DataArrival(byte[] data)
+        private void DataArrival(byte[] data)
         {
             foreach (var packet in Encoding.UTF8.GetString(data).Replace("\x0a", "").Split('\x00').Where(x => x != ""))
             {
@@ -58,7 +57,7 @@ namespace SilverRealm.Network.ToGame
             }
         }
 
-        public void DataReceived(string packet)
+        private void DataReceived(string packet)
         {
             switch (_communicationState)
             {
@@ -72,14 +71,11 @@ namespace SilverRealm.Network.ToGame
         {
             _key = packet.Substring(2);
 
-            RealmClient.GameServers.Single(gameServer => gameServer.ServerKey == _key).State = 1;
+            RealmClient.GameServers.Single(gameServer => gameServer.ServerKey.Equals(_key)).State = 1;
 
-            lock (RealmServer.Lock)
+            foreach (var client in RealmServer.Clients)
             {
-                foreach (var client in RealmServer.Clients)
-                {
-                    client.RefreshServerList();
-                }
+                client.RefreshServerList();
             }
         }
 

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="SilverGame.Database.Repository.InventoryItemRepository">
-    <Position X="2.25" Y="1.75" Width="1.5" />
+    <Position X="2.25" Y="2.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAAAAAAAAABAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
       <FileName>Database\Repository\InventoryItemRepository.cs</FileName>
@@ -17,7 +17,7 @@
   <Class Name="SilverGame.Database.Repository.CharacterRepository">
     <Position X="2.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
       <FileName>Database\Repository\CharacterRepository.cs</FileName>
     </TypeIdentifier>
   </Class>

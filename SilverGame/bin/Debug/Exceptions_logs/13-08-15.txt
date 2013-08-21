@@ -1,0 +1,26 @@
+SQL Error :La chaîne doit avoir une longueur d'un et un seul caractère.
+SQL Error :There is already an open DataReader associated with this Connection which must be closed first.
+SQL Error :There is already an open DataReader associated with this Connection which must be closed first.
+SQL Error :There is already an open DataReader associated with this Connection which must be closed first.
+SQL Error :There is already an open DataReader associated with this Connection which must be closed first.
+SQL Error :La chaîne doit avoir une longueur d'un et un seul caractère.
+SQL Error :There is already an open DataReader associated with this Connection which must be closed first.
+SQL Error :There is already an open DataReader associated with this Connection which must be closed first.
+SQL Error :There is already an open DataReader associated with this Connection which must be closed first.
+SQL Error :There is already an open DataReader associated with this Connection which must be closed first.
+SQL Error :L'index se trouve en dehors des limites du tableau.
+SQL Error :There is already an open DataReader associated with this Connection which must be closed first.
+SQL Error :There is already an open DataReader associated with this Connection which must be closed first.
+SQL Error :There is already an open DataReader associated with this Connection which must be closed first.
+SQL Error :There is already an open DataReader associated with this Connection which must be closed first.
+SQL Error :La chaîne doit avoir une longueur d'un et un seul caractère.
+SQL Error :There is already an open DataReader associated with this Connection which must be closed first.
+SQL Error :There is already an open DataReader associated with this Connection which must be closed first.
+SQL Error :There is already an open DataReader associated with this Connection which must be closed first.
+SQL Error :There is already an open DataReader associated with this Connection which must be closed first.
+SQL Error :L'index se trouve en dehors des limites du tableau.
+SQL Error :There is already an open DataReader associated with this Connection which must be closed first.
+SQL Error :There is already an open DataReader associated with this Connection which must be closed first.
+SQL Error :There is already an open DataReader associated with this Connection which must be closed first.
+SQL Error :There is already an open DataReader associated with this Connection which must be closed first.
+Game connection database SQL error : Access denied for user 'root'@'localhost' (using password: NO)

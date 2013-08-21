@@ -1,4 +1,5 @@
 ﻿using System;
+using SilverGame.Database.Repository;
 
 namespace SilverGame.Models.Accounts
 {
@@ -14,5 +15,10 @@ namespace SilverGame.Models.Accounts
         public int GmLevel { get; set; }
         public DateTime? BannedUntil { get; set; }
         public DateTime? Subscription { get; set; }
+
+        public void Disconnect()
+        {
+            AccountRepository.UpdateAccount(false, Id);
+        }
     }
 }

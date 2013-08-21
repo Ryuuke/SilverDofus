@@ -35,7 +35,7 @@ namespace SilverGame.Models.Items
                 string.Join(",", Stats));
         }
 
-        public string Generate(Character character, int quantity)
+        public void Generate(Character character, int quantity = 1)
         {
             var item = new InventoryItem
             {
@@ -46,23 +46,20 @@ namespace SilverGame.Models.Items
                 ItemInfos = this,
                 ItemPosition = StatsManager.Position.None,
                 Stats = ItemStats.GenerateRandomStats(Stats),
-                Quantity = 1
+                Quantity = quantity
             };
 
             var existItem =
                 DatabaseProvider.InventoryItems.Find(
-                    x => x.ItemInfos.Id == item.Id && x.Stats.Equals(item.Stats) && x.Character.Id == item.Character.Id && x.ItemPosition == item.ItemPosition);
-
-            if (existItem != null)
-            {
-                existItem.Quantity += 1;
-                InventoryItemRepository.Update(existItem);
-            }
-            else
-                InventoryItemRepository.Create(item);
-            
-            
-            return item.ItemInfo();
+                    x => x.ItemInfos == item.ItemInfos && string.Join(",", x.Stats).Equals(string.Join(",", item.Stats)) && x.Character == item.Character && x.ItemPosition == item.ItemPosition);
+ 
+                if (existItem != null)
+                {
+                    existItem.Quantity += 1;
+                    InventoryItemRepository.Update(existItem);
+                }
+                else
+                    InventoryItemRepository.Create(item);
         }
     }
 }

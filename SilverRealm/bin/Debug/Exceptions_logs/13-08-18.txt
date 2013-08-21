@@ -1,0 +1,2 @@
+Realm connection database SQL error : Unable to connect to any of the specified MySQL hosts.
+Realm connection database SQL error : Unable to connect to any of the specified MySQL hosts.

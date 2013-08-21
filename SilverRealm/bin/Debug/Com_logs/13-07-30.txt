@@ -295,3 +295,7 @@
 30/07/2013 17:46:57 >> Connection successfuly with game server 127.0.0.1:30059
 30/07/2013 17:46:58 >> Recv << HRlolxdmdrlol
 30/07/2013 17:46:59 >> Connection closed with Game Server 127.0.0.1:30059
+30/07/2013 18:45:17 >> Waiting for connection to game servers ...
+30/07/2013 18:45:18 >> Connection successfuly with game server 127.0.0.1:31136
+30/07/2013 18:45:18 >> Recv << HRlolxdmdrlol
+30/07/2013 18:46:05 >> Connection closed with Game Server 127.0.0.1:31136

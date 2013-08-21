@@ -1,0 +1,3 @@
+Impossible de créer le personnage nakohuriw : La référence d'objet n'est pas définie à une instance d'un objet.
+Impossible de créer le personnage petufavan : La référence d'objet n'est pas définie à une instance d'un objet.
+Impossible de créer le personnage buqub : La référence d'objet n'est pas définie à une instance d'un objet.

@@ -1446,3 +1446,25 @@ Ryuu:ip 127.0.0.1:30049 Recv << BM¤|catot Salut/re :D|
 Ryuu:ip 127.0.0.1:30049 Recv << BD
 Ryuu:ip 127.0.0.1:30049 Connection Closed
 GameServer Waiting for new connection
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:31139 Successfuly
+ip 127.0.0.1:31139 Send >> HG
+ip 127.0.0.1:31139 Recv << AT07/30/2013 18:45:31|127.0.0.1:31138|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:31139 Send >> ATK0
+Ryuu:ip 127.0.0.1:31139 Recv << Ak0
+Ryuu:ip 127.0.0.1:31139 Recv << AV
+Ryuu:ip 127.0.0.1:31139 Send >> AV0
+Ryuu:ip 127.0.0.1:31139 Recv << Agfr
+Ryuu:ip 127.0.0.1:31139 Recv << AL
+Ryuu:ip 127.0.0.1:31139 Send >> ALK31536000000|3|4;catot;1;50;-1;-1;-1;,,,,;0;1;;;|5;tihesanu;1;110;-1;-1;-1;,,,,;0;1;;;|8;vuciqarow;1;80;-1;-1;-1;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:31139 Recv << Af
+Ryuu:ip 127.0.0.1:31139 Recv << AS8
+Ryuu:ip 127.0.0.1:31139 Send >> ASK|8|vuciqarow|1|8|0|80|-1|-1|-1|;
+Ryuu:ip 127.0.0.1:31139 Recv << Af
+Ryuu:ip 127.0.0.1:31139 Recv << GC1
+Ryuu:ip 127.0.0.1:31139 Send >> GCK|1|catot
+Ryuu:ip 127.0.0.1:31139 Send >> As0,0,110|0|0|0||50,55|0,0|0|100|6,0,0,0,6|3,0,0,0,3|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0
+Ryuu:ip 127.0.0.1:31139 Recv << BM@|vuciqarow Salut/re :D|
+Ryuu:ip 127.0.0.1:31139 Recv << BM¤|vuciqarow Salut/re :D|
+Ryuu:ip 127.0.0.1:31139 Recv << BD
+Ryuu:ip 127.0.0.1:31139 Connection Closed

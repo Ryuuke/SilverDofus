@@ -1,0 +1,476 @@
+RealmServer Waiting for connexion 
+RealmServer Connection successfuly with Realm Client 127.0.0.1:2684
+ip 127.0.0.1:2684 Send >> HCh5IGXO2wFVnuNaBh2a7PUsiz2arQD3Zw
+ip 127.0.0.1:2684 Recv << 1.29.1
+ip 127.0.0.1:2684 Recv << Ryuu#1U07epv
+ip 127.0.0.1:2684 Send >> AdRyuuke
+ip 127.0.0.1:2684 Send >> Ac0
+ip 127.0.0.1:2684 Send >> AH1;1;0;1|2;0;0;1
+ip 127.0.0.1:2684 Send >> AlK0
+ip 127.0.0.1:2684 Send >> AQdelete?
+Ryuu:ip 127.0.0.1:2684 Recv << Af
+Ryuu:ip 127.0.0.1:2684 Send >> Af|0|0|1|-1
+Ryuu:ip 127.0.0.1:2684 Recv << Ax
+Ryuu:ip 127.0.0.1:2684 Send >> AxK0|1,7
+Ryuu:ip 127.0.0.1:2684 Recv << AX1
+Ryuu:ip 127.0.0.1:2684 Send >> AYK127.0.0.1:5555;08/18/2013 00:40:20|127.0.0.1:2684|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:2684  Connection closed
+RealmServer Connection successfuly with Realm Client 127.0.0.1:2691
+ip 127.0.0.1:2691 Send >> HCY_IVB6_IjCcsh6cqwOKmfGV1WiPWwm4O
+ip 127.0.0.1:2691 Recv << 1.29.1
+ip 127.0.0.1:2691 Recv << ryuu#1FLLUpv
+ip 127.0.0.1:2691 Send >> AdRyuuke
+ip 127.0.0.1:2691 Send >> Ac0
+ip 127.0.0.1:2691 Send >> AH1;1;0;1|2;0;0;1
+ip 127.0.0.1:2691 Send >> AlK0
+ip 127.0.0.1:2691 Send >> AQdelete?
+Ryuu:ip 127.0.0.1:2691 Recv << Af
+Ryuu:ip 127.0.0.1:2691 Send >> Af|0|0|1|-1
+Ryuu:ip 127.0.0.1:2691 Recv << Ax
+Ryuu:ip 127.0.0.1:2691 Send >> AxK0|1,8
+Ryuu:ip 127.0.0.1:2691 Recv << AX1
+Ryuu:ip 127.0.0.1:2691 Send >> AYK127.0.0.1:5555;08/18/2013 00:42:13|127.0.0.1:2691|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:2691  Connection closed
+RealmServer Waiting for connexion 
+RealmServer Connection successfuly with Realm Client 127.0.0.1:5170
+ip 127.0.0.1:5170 Send >> HCYKIbfAR7wBRWOauk_m2o6Te-CxQphr_u
+ip 127.0.0.1:5170 Recv << 1.29.1
+ip 127.0.0.1:5170 Recv << Ryuu#1FLrApv
+ip 127.0.0.1:5170 Send >> AdRyuuke
+ip 127.0.0.1:5170 Send >> Ac0
+ip 127.0.0.1:5170 Send >> AH1;1;0;1|2;0;0;1
+ip 127.0.0.1:5170 Send >> AlK0
+ip 127.0.0.1:5170 Send >> AQdelete?
+Ryuu:ip 127.0.0.1:5170 Recv << Af
+Ryuu:ip 127.0.0.1:5170 Send >> Af|0|0|1|-1
+Ryuu:ip 127.0.0.1:5170 Recv << Ax
+Ryuu:ip 127.0.0.1:5170 Send >> AxK0|1,8
+Ryuu:ip 127.0.0.1:5170 Recv << AX1
+Ryuu:ip 127.0.0.1:5170 Send >> AYK127.0.0.1:5555;08/18/2013 10:35:46|127.0.0.1:5170|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:5170  Connection closed
+RealmServer Connection successfuly with Realm Client 127.0.0.1:5179
+ip 127.0.0.1:5179 Send >> HCl0NGF8AjT-fYLxFqYXmndJtfFKKUVBZf
+ip 127.0.0.1:5179 Recv << 1.29.1
+ip 127.0.0.1:5179 Recv << Ryuuke#1Y42_uA
+ip 127.0.0.1:5179 Send >> AlEf
+ip 127.0.0.1:5179 Recv << Af
+ip 127.0.0.1:5179 Connection closed
+RealmServer Connection successfuly with Realm Client 127.0.0.1:5180
+ip 127.0.0.1:5180 Send >> HCCxKZzZQcYTG8Orzf3ADveXqOGHb7xSzs
+ip 127.0.0.1:5180 Recv << 1.29.1
+ip 127.0.0.1:5180 Recv << Ryuuke#1jp-hrAGM
+ip 127.0.0.1:5180 Send >> AdRyuu
+ip 127.0.0.1:5180 Send >> Ac0
+ip 127.0.0.1:5180 Send >> AH1;1;0;1|2;0;0;1
+ip 127.0.0.1:5180 Send >> AlK1
+ip 127.0.0.1:5180 Send >> AQnoob+?
+Ryuuke:ip 127.0.0.1:5180 Recv << Af
+Ryuuke:ip 127.0.0.1:5180 Send >> Af|0|0|1|-1
+Ryuuke:ip 127.0.0.1:5180 Recv << Ax
+Ryuuke:ip 127.0.0.1:5180 Send >> AxK0|1,1
+Ryuuke:ip 127.0.0.1:5180 Recv << AX1
+Ryuuke:ip 127.0.0.1:5180 Send >> AYK127.0.0.1:5555;08/18/2013 10:36:07|127.0.0.1:5180|2,Ryuuke,lool,Ryuu,noob ?,OUIIII,False,5,,
+Ryuuke:ip 127.0.0.1:5180  Connection closed
+RealmServer Waiting for connexion 
+RealmServer Connection successfuly with Realm Client 127.0.0.1:5212
+ip 127.0.0.1:5212 Send >> HCIGBJIj2IlbrfOKrBvEyFEAON8QKRG3Xh
+ip 127.0.0.1:5212 Recv << 1.29.1
+ip 127.0.0.1:5212 Recv << Ryuuke#1pvnwirqw
+ip 127.0.0.1:5212 Send >> AdRyuu
+ip 127.0.0.1:5212 Send >> Ac0
+ip 127.0.0.1:5212 Send >> AH1;0;0;1|2;0;0;1
+ip 127.0.0.1:5212 Send >> AlK1
+ip 127.0.0.1:5212 Send >> AQnoob+?
+Ryuuke:ip 127.0.0.1:5212 Recv << Af
+Ryuuke:ip 127.0.0.1:5212 Send >> Af|0|0|1|-1
+Ryuuke:ip 127.0.0.1:5212 Recv << Ax
+Ryuuke:ip 127.0.0.1:5212 Send >> AxK0|1,1
+RealmServer Connection successfuly with Realm Client 127.0.0.1:5213
+ip 127.0.0.1:5213 Send >> HC4OCTPPwV6L_aaaENaDNNqVXi3ZM3Kkbt
+ip 127.0.0.1:5213 Recv << 1.29.1
+ip 127.0.0.1:5213 Recv << Ryuu#16avEjp
+ip 127.0.0.1:5213 Send >> AdRyuuke
+ip 127.0.0.1:5213 Send >> Ac0
+ip 127.0.0.1:5213 Send >> AH1;0;0;1|2;0;0;1
+ip 127.0.0.1:5213 Send >> AlK0
+ip 127.0.0.1:5213 Send >> AQdelete?
+Ryuu:ip 127.0.0.1:5213 Recv << Af
+Ryuu:ip 127.0.0.1:5213 Send >> Af|0|0|1|-1
+Ryuu:ip 127.0.0.1:5213 Recv << Ax
+Ryuu:ip 127.0.0.1:5213 Send >> AxK0|1,8
+Ryuuke:ip 127.0.0.1:5212 Send >> AH1;1;0;1|2;0;0;1
+Ryuu:ip 127.0.0.1:5213 Send >> AH1;1;0;1|2;0;0;1
+Ryuuke:ip 127.0.0.1:5212 Recv << AX1
+Ryuuke:ip 127.0.0.1:5212 Send >> AYK127.0.0.1:5555;08/18/2013 10:45:09|127.0.0.1:5212|2,Ryuuke,lool,Ryuu,noob ?,OUIIII,False,5,,
+Ryuuke:ip 127.0.0.1:5212  Connection closed
+Ryuu:ip 127.0.0.1:5213 Recv << AX1
+Ryuu:ip 127.0.0.1:5213 Send >> AYK127.0.0.1:5555;08/18/2013 10:45:11|127.0.0.1:5213|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:5213  Connection closed
+RealmServer Waiting for connexion 
+RealmServer Connection successfuly with Realm Client 127.0.0.1:5231
+ip 127.0.0.1:5231 Send >> HCAo8t5rCwhfr2oLLzcpM9Vvx5gjBOsKAP
+ip 127.0.0.1:5231 Recv << 1.29.1
+ip 127.0.0.1:5231 Recv << Ryuu#1hn1--e
+ip 127.0.0.1:5231 Send >> AdRyuuke
+ip 127.0.0.1:5231 Send >> Ac0
+ip 127.0.0.1:5231 Send >> AH1;0;0;1|2;0;0;1
+ip 127.0.0.1:5231 Send >> AlK0
+ip 127.0.0.1:5231 Send >> AQdelete?
+Ryuu:ip 127.0.0.1:5231 Recv << Af
+Ryuu:ip 127.0.0.1:5231 Send >> Af|0|0|1|-1
+Ryuu:ip 127.0.0.1:5231 Recv << Ax
+Ryuu:ip 127.0.0.1:5231 Send >> AxK0|1,8
+RealmServer Connection successfuly with Realm Client 127.0.0.1:5232
+ip 127.0.0.1:5232 Send >> HCT_it48uEYV50fawXehx_xtxe2dmV10dJ
+ip 127.0.0.1:5232 Recv << 1.29.1
+ip 127.0.0.1:5232 Recv << Ryuuke#1AGLUV46a
+ip 127.0.0.1:5232 Send >> AdRyuu
+ip 127.0.0.1:5232 Send >> Ac0
+ip 127.0.0.1:5232 Send >> AH1;0;0;1|2;0;0;1
+ip 127.0.0.1:5232 Send >> AlK1
+ip 127.0.0.1:5232 Send >> AQnoob+?
+Ryuuke:ip 127.0.0.1:5232 Recv << Af
+Ryuuke:ip 127.0.0.1:5232 Send >> Af|0|0|1|-1
+Ryuuke:ip 127.0.0.1:5232 Recv << Ax
+Ryuuke:ip 127.0.0.1:5232 Send >> AxK0|1,1
+Ryuu:ip 127.0.0.1:5231 Send >> AH1;1;0;1|2;0;0;1
+Ryuuke:ip 127.0.0.1:5232 Send >> AH1;1;0;1|2;0;0;1
+Ryuu:ip 127.0.0.1:5231 Recv << AX1
+Ryuu:ip 127.0.0.1:5231 Send >> AYK127.0.0.1:5555;08/18/2013 10:47:24|127.0.0.1:5231|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:5231  Connection closed
+Ryuuke:ip 127.0.0.1:5232 Recv << AX1
+Ryuuke:ip 127.0.0.1:5232 Send >> AYK127.0.0.1:5555;08/18/2013 10:47:25|127.0.0.1:5232|2,Ryuuke,lool,Ryuu,noob ?,OUIIII,False,5,,
+Ryuuke:ip 127.0.0.1:5232  Connection closed
+RealmServer Waiting for connexion 
+RealmServer Connection successfuly with Realm Client 127.0.0.1:5251
+ip 127.0.0.1:5251 Send >> HCFQp2WHu43IYc-Kryn2Q_Csbk6FkwXYnW
+ip 127.0.0.1:5251 Recv << 1.29.1
+ip 127.0.0.1:5251 Recv << Ryuu#1msxG28
+ip 127.0.0.1:5251 Send >> AdRyuuke
+ip 127.0.0.1:5251 Send >> Ac0
+ip 127.0.0.1:5251 Send >> AH1;0;0;1|2;0;0;1
+ip 127.0.0.1:5251 Send >> AlK0
+ip 127.0.0.1:5251 Send >> AQdelete?
+Ryuu:ip 127.0.0.1:5251 Recv << Af
+Ryuu:ip 127.0.0.1:5251 Send >> Af|0|0|1|-1
+Ryuu:ip 127.0.0.1:5251 Recv << Ax
+Ryuu:ip 127.0.0.1:5251 Send >> AxK0|1,8
+RealmServer Connection successfuly with Realm Client 127.0.0.1:5254
+ip 127.0.0.1:5254 Send >> HCfRCGy5MtGh9PjaRe_twKc-HmPe7qw9hf
+ip 127.0.0.1:5254 Recv << 1.29.1
+ip 127.0.0.1:5254 Recv << Ryuuke#1SYyHjsnt
+ip 127.0.0.1:5254 Send >> AdRyuu
+ip 127.0.0.1:5254 Send >> Ac0
+ip 127.0.0.1:5254 Send >> AH1;0;0;1|2;0;0;1
+ip 127.0.0.1:5254 Send >> AlK1
+ip 127.0.0.1:5254 Send >> AQnoob+?
+Ryuuke:ip 127.0.0.1:5254 Recv << Af
+Ryuuke:ip 127.0.0.1:5254 Send >> Af|0|0|1|-1
+Ryuuke:ip 127.0.0.1:5254 Recv << Ax
+Ryuuke:ip 127.0.0.1:5254 Send >> AxK0|1,1
+Ryuu:ip 127.0.0.1:5251 Send >> AH1;1;0;1|2;0;0;1
+Ryuuke:ip 127.0.0.1:5254 Send >> AH1;1;0;1|2;0;0;1
+Ryuuke:ip 127.0.0.1:5254 Recv << AX1
+Ryuuke:ip 127.0.0.1:5254 Send >> AYK127.0.0.1:5555;08/18/2013 10:57:04|127.0.0.1:5254|2,Ryuuke,lool,Ryuu,noob ?,OUIIII,False,5,,
+Ryuuke:ip 127.0.0.1:5254  Connection closed
+Ryuu:ip 127.0.0.1:5251 Recv << AX1
+Ryuu:ip 127.0.0.1:5251 Send >> AYK127.0.0.1:5555;08/18/2013 10:57:05|127.0.0.1:5251|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:5251  Connection closed
+RealmServer Waiting for connexion 
+RealmServer Connection successfuly with Realm Client 127.0.0.1:5319
+ip 127.0.0.1:5319 Send >> HCpXoOeW1ecTE9WfZW_AWwH81ILKl7pjps
+ip 127.0.0.1:5319 Recv << 1.29.1
+ip 127.0.0.1:5319 Recv << Ryuu#128EN17
+ip 127.0.0.1:5319 Send >> AdRyuuke
+ip 127.0.0.1:5319 Send >> Ac0
+ip 127.0.0.1:5319 Send >> AH1;0;0;1|2;0;0;1
+ip 127.0.0.1:5319 Send >> AlK0
+ip 127.0.0.1:5319 Send >> AQdelete?
+Ryuu:ip 127.0.0.1:5319 Recv << Af
+Ryuu:ip 127.0.0.1:5319 Send >> Af|0|0|1|-1
+Ryuu:ip 127.0.0.1:5319 Recv << Ax
+Ryuu:ip 127.0.0.1:5319 Send >> AxK0|1,8
+RealmServer Connection successfuly with Realm Client 127.0.0.1:5320
+ip 127.0.0.1:5320 Send >> HCGxmqOKgMBzNPepSyKxqxxsKs7ScFL604
+ip 127.0.0.1:5320 Recv << 1.29.1
+ip 127.0.0.1:5320 Recv << Ryuuke#1nt-hZ839
+ip 127.0.0.1:5320 Send >> AdRyuu
+ip 127.0.0.1:5320 Send >> Ac0
+ip 127.0.0.1:5320 Send >> AH1;0;0;1|2;0;0;1
+ip 127.0.0.1:5320 Send >> AlK1
+ip 127.0.0.1:5320 Send >> AQnoob+?
+Ryuuke:ip 127.0.0.1:5320 Recv << Af
+Ryuuke:ip 127.0.0.1:5320 Send >> Af|0|0|1|-1
+Ryuuke:ip 127.0.0.1:5320 Recv << Ax
+Ryuuke:ip 127.0.0.1:5320 Send >> AxK0|1,1
+Ryuu:ip 127.0.0.1:5319 Send >> AH1;1;0;1|2;0;0;1
+Ryuuke:ip 127.0.0.1:5320 Send >> AH1;1;0;1|2;0;0;1
+Ryuu:ip 127.0.0.1:5319 Recv << AX1
+Ryuu:ip 127.0.0.1:5319 Send >> AYK127.0.0.1:5555;08/18/2013 11:20:08|127.0.0.1:5319|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:5319  Connection closed
+Ryuuke:ip 127.0.0.1:5320 Recv << AX1
+Ryuuke:ip 127.0.0.1:5320 Send >> AYK127.0.0.1:5555;08/18/2013 11:20:09|127.0.0.1:5320|2,Ryuuke,lool,Ryuu,noob ?,OUIIII,False,5,,
+Ryuuke:ip 127.0.0.1:5320  Connection closed
+RealmServer Waiting for connexion 
+RealmServer Connection successfuly with Realm Client 127.0.0.1:5335
+ip 127.0.0.1:5335 Send >> HC2Wbn9IBfYNRWNTqe65L0dFSQJ9V2E2I4
+ip 127.0.0.1:5335 Recv << 1.29.1
+ip 127.0.0.1:5335 Recv << Ryuuke#14-DMOX06
+ip 127.0.0.1:5335 Send >> AdRyuu
+ip 127.0.0.1:5335 Send >> Ac0
+ip 127.0.0.1:5335 Send >> AH1;0;0;1|2;0;0;1
+ip 127.0.0.1:5335 Send >> AlK1
+ip 127.0.0.1:5335 Send >> AQnoob+?
+Ryuuke:ip 127.0.0.1:5335 Recv << Af
+Ryuuke:ip 127.0.0.1:5335 Send >> Af|0|0|1|-1
+Ryuuke:ip 127.0.0.1:5335 Recv << Ax
+Ryuuke:ip 127.0.0.1:5335 Send >> AxK0|1,1
+RealmServer Connection successfuly with Realm Client 127.0.0.1:5336
+ip 127.0.0.1:5336 Send >> HCYGBCS0DJHgckdVdz17CYRjZxdxQaYLN7
+ip 127.0.0.1:5336 Recv << 1.29.1
+ip 127.0.0.1:5336 Recv << Ryuu#1FLnwio
+ip 127.0.0.1:5336 Send >> AdRyuuke
+ip 127.0.0.1:5336 Send >> Ac0
+ip 127.0.0.1:5336 Send >> AH1;0;0;1|2;0;0;1
+ip 127.0.0.1:5336 Send >> AlK0
+ip 127.0.0.1:5336 Send >> AQdelete?
+Ryuu:ip 127.0.0.1:5336 Recv << Af
+Ryuu:ip 127.0.0.1:5336 Send >> Af|0|0|1|-1
+Ryuu:ip 127.0.0.1:5336 Recv << Ax
+Ryuu:ip 127.0.0.1:5336 Send >> AxK0|1,8
+Ryuuke:ip 127.0.0.1:5335 Send >> AH1;1;0;1|2;0;0;1
+Ryuu:ip 127.0.0.1:5336 Send >> AH1;1;0;1|2;0;0;1
+Ryuu:ip 127.0.0.1:5336 Recv << AX1
+Ryuu:ip 127.0.0.1:5336 Send >> AYK127.0.0.1:5555;08/18/2013 11:22:27|127.0.0.1:5336|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:5336  Connection closed
+Ryuuke:ip 127.0.0.1:5335 Recv << AX1
+Ryuuke:ip 127.0.0.1:5335 Send >> AYK127.0.0.1:5555;08/18/2013 11:22:29|127.0.0.1:5335|2,Ryuuke,lool,Ryuu,noob ?,OUIIII,False,5,,
+Ryuuke:ip 127.0.0.1:5335  Connection closed
+RealmServer Waiting for connexion 
+RealmServer Connection successfuly with Realm Client 127.0.0.1:5352
+ip 127.0.0.1:5352 Send >> HCgeq3Xd3LcyD528q5oBjSoiqysTglCfF4
+ip 127.0.0.1:5352 Recv << 1.29.1
+ip 127.0.0.1:5352 Recv << Ryuuke#1TZR03a5_
+ip 127.0.0.1:5352 Send >> AdRyuu
+ip 127.0.0.1:5352 Send >> Ac0
+ip 127.0.0.1:5352 Send >> AH1;0;0;1|2;0;0;1
+ip 127.0.0.1:5352 Send >> AlK1
+ip 127.0.0.1:5352 Send >> AQnoob+?
+Ryuuke:ip 127.0.0.1:5352 Recv << Af
+Ryuuke:ip 127.0.0.1:5352 Send >> Af|0|0|1|-1
+Ryuuke:ip 127.0.0.1:5352 Recv << Ax
+Ryuuke:ip 127.0.0.1:5352 Send >> AxK0|1,1
+RealmServer Connection successfuly with Realm Client 127.0.0.1:5353
+ip 127.0.0.1:5353 Send >> HCzTQmjNylRx4naDHD5wBfgbB904Ke8Ri8
+ip 127.0.0.1:5353 Recv << 1.29.1
+ip 127.0.0.1:5353 Recv << Ryuu#1agAJxD
+ip 127.0.0.1:5353 Send >> AdRyuuke
+ip 127.0.0.1:5353 Send >> Ac0
+ip 127.0.0.1:5353 Send >> AH1;0;0;1|2;0;0;1
+ip 127.0.0.1:5353 Send >> AlK0
+ip 127.0.0.1:5353 Send >> AQdelete?
+Ryuu:ip 127.0.0.1:5353 Recv << Af
+Ryuu:ip 127.0.0.1:5353 Send >> Af|0|0|1|-1
+Ryuu:ip 127.0.0.1:5353 Recv << Ax
+Ryuu:ip 127.0.0.1:5353 Send >> AxK0|1,8
+Ryuuke:ip 127.0.0.1:5352 Send >> AH1;1;0;1|2;0;0;1
+Ryuu:ip 127.0.0.1:5353 Send >> AH1;1;0;1|2;0;0;1
+Ryuu:ip 127.0.0.1:5353 Recv << AX1
+Ryuu:ip 127.0.0.1:5353 Send >> AYK127.0.0.1:5555;08/18/2013 11:23:23|127.0.0.1:5353|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:5353  Connection closed
+Ryuuke:ip 127.0.0.1:5352 Recv << AX1
+Ryuuke:ip 127.0.0.1:5352 Send >> AYK127.0.0.1:5555;08/18/2013 11:23:24|127.0.0.1:5352|2,Ryuuke,lool,Ryuu,noob ?,OUIIII,False,5,,
+Ryuuke:ip 127.0.0.1:5352  Connection closed
+RealmServer Waiting for connexion 
+RealmServer Connection successfuly with Realm Client 127.0.0.1:5373
+ip 127.0.0.1:5373 Send >> HCGO7m9kifNNaUpEVpIl9SlFOxOfbKF437
+ip 127.0.0.1:5373 Recv << 1.29.1
+ip 127.0.0.1:5373 Recv << Ryuu#1ntvE9d
+ip 127.0.0.1:5373 Send >> AdRyuuke
+ip 127.0.0.1:5373 Send >> Ac0
+ip 127.0.0.1:5373 Send >> AH1;0;0;1|2;0;0;1
+ip 127.0.0.1:5373 Send >> AlK0
+ip 127.0.0.1:5373 Send >> AQdelete?
+Ryuu:ip 127.0.0.1:5373 Recv << Af
+Ryuu:ip 127.0.0.1:5373 Send >> Af|0|0|1|-1
+Ryuu:ip 127.0.0.1:5373 Recv << Ax
+Ryuu:ip 127.0.0.1:5373 Send >> AxK0|1,8
+RealmServer Connection successfuly with Realm Client 127.0.0.1:5374
+ip 127.0.0.1:5374 Send >> HC5PjqRjrgKvixJv7X6_DiKHYaaKK4iKLV
+ip 127.0.0.1:5374 Recv << 1.29.1
+ip 127.0.0.1:5374 Recv << Ryuuke#17bwFW539
+ip 127.0.0.1:5374 Send >> AdRyuu
+ip 127.0.0.1:5374 Send >> Ac0
+ip 127.0.0.1:5374 Send >> AH1;0;0;1|2;0;0;1
+ip 127.0.0.1:5374 Send >> AlK1
+ip 127.0.0.1:5374 Send >> AQnoob+?
+Ryuuke:ip 127.0.0.1:5374 Recv << Af
+Ryuuke:ip 127.0.0.1:5374 Send >> Af|0|0|1|-1
+Ryuuke:ip 127.0.0.1:5374 Recv << Ax
+Ryuuke:ip 127.0.0.1:5374 Send >> AxK0|1,1
+Ryuu:ip 127.0.0.1:5373 Send >> AH1;1;0;1|2;0;0;1
+Ryuuke:ip 127.0.0.1:5374 Send >> AH1;1;0;1|2;0;0;1
+Ryuuke:ip 127.0.0.1:5374 Recv << AX1
+Ryuuke:ip 127.0.0.1:5374 Send >> AYK127.0.0.1:5555;08/18/2013 11:26:07|127.0.0.1:5374|2,Ryuuke,lool,Ryuu,noob ?,OUIIII,False,5,,
+Ryuuke:ip 127.0.0.1:5374  Connection closed
+Ryuu:ip 127.0.0.1:5373 Recv << AX1
+Ryuu:ip 127.0.0.1:5373 Send >> AYK127.0.0.1:5555;08/18/2013 11:26:08|127.0.0.1:5373|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:5373  Connection closed
+RealmServer Waiting for connexion 
+RealmServer Connection successfuly with Realm Client 127.0.0.1:5391
+ip 127.0.0.1:5391 Send >> HCuCalE7xF6VQ4kZTcdFy-002vgeHqvnRn
+ip 127.0.0.1:5391 Recv << 1.29.1
+ip 127.0.0.1:5391 Recv << Ryuuke#17bjsNWY4
+ip 127.0.0.1:5391 Send >> AdRyuu
+ip 127.0.0.1:5391 Send >> Ac0
+ip 127.0.0.1:5391 Send >> AH1;0;0;1|2;0;0;1
+ip 127.0.0.1:5391 Send >> AlK1
+ip 127.0.0.1:5391 Send >> AQnoob+?
+Ryuuke:ip 127.0.0.1:5391 Recv << Af
+Ryuuke:ip 127.0.0.1:5391 Send >> Af|0|0|1|-1
+Ryuuke:ip 127.0.0.1:5391 Recv << Ax
+Ryuuke:ip 127.0.0.1:5391 Send >> AxK0|1,1
+RealmServer Connection successfuly with Realm Client 127.0.0.1:5392
+ip 127.0.0.1:5392 Send >> HC6BCAD2Ba5voAJ_qSwf4pFPQFMReAAgjS
+ip 127.0.0.1:5392 Recv << 1.29.1
+ip 127.0.0.1:5392 Recv << Ryuu#18cirjp
+ip 127.0.0.1:5392 Send >> AdRyuuke
+ip 127.0.0.1:5392 Send >> Ac0
+ip 127.0.0.1:5392 Send >> AH1;0;0;1|2;0;0;1
+ip 127.0.0.1:5392 Send >> AlK0
+ip 127.0.0.1:5392 Send >> AQdelete?
+Ryuu:ip 127.0.0.1:5392 Recv << Af
+Ryuu:ip 127.0.0.1:5392 Send >> Af|0|0|1|-1
+Ryuu:ip 127.0.0.1:5392 Recv << Ax
+Ryuu:ip 127.0.0.1:5392 Send >> AxK0|1,8
+Ryuuke:ip 127.0.0.1:5391 Send >> AH1;1;0;1|2;0;0;1
+Ryuu:ip 127.0.0.1:5392 Send >> AH1;1;0;1|2;0;0;1
+Ryuuke:ip 127.0.0.1:5391 Recv << AX1
+Ryuuke:ip 127.0.0.1:5391 Send >> AYK127.0.0.1:5555;08/18/2013 11:27:05|127.0.0.1:5391|2,Ryuuke,lool,Ryuu,noob ?,OUIIII,False,5,,
+Ryuuke:ip 127.0.0.1:5391  Connection closed
+Ryuu:ip 127.0.0.1:5392 Recv << AX1
+Ryuu:ip 127.0.0.1:5392 Send >> AYK127.0.0.1:5555;08/18/2013 11:27:10|127.0.0.1:5392|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:5392  Connection closed
+RealmServer Waiting for connexion 
+RealmServer Connection successfuly with Realm Client 127.0.0.1:5411
+ip 127.0.0.1:5411 Send >> HCQrhnmg1UVU6Ekwwn4SLib7JqD09GnILy
+ip 127.0.0.1:5411 Recv << 1.29.1
+ip 127.0.0.1:5411 Recv << Ryuuke#1xD4bU306
+ip 127.0.0.1:5411 Send >> AdRyuu
+ip 127.0.0.1:5411 Send >> Ac0
+ip 127.0.0.1:5411 Send >> AH1;0;0;1|2;0;0;1
+ip 127.0.0.1:5411 Send >> AlK1
+ip 127.0.0.1:5411 Send >> AQnoob+?
+Ryuuke:ip 127.0.0.1:5411 Recv << Af
+Ryuuke:ip 127.0.0.1:5411 Send >> Af|0|0|1|-1
+Ryuuke:ip 127.0.0.1:5411 Recv << Ax
+Ryuuke:ip 127.0.0.1:5411 Send >> AxK0|1,1
+RealmServer Connection successfuly with Realm Client 127.0.0.1:5412
+ip 127.0.0.1:5412 Send >> HCi9KlIkJs7lETwMfQPH8UwirVU3WxjvGm
+ip 127.0.0.1:5412 Recv << 1.29.1
+ip 127.0.0.1:5412 Recv << Ryuu#1V1_irx
+ip 127.0.0.1:5412 Send >> AdRyuuke
+ip 127.0.0.1:5412 Send >> Ac0
+ip 127.0.0.1:5412 Send >> AH1;0;0;1|2;0;0;1
+ip 127.0.0.1:5412 Send >> AlK0
+ip 127.0.0.1:5412 Send >> AQdelete?
+Ryuu:ip 127.0.0.1:5412 Recv << Af
+Ryuu:ip 127.0.0.1:5412 Send >> Af|0|0|1|-1
+Ryuu:ip 127.0.0.1:5412 Recv << Ax
+Ryuu:ip 127.0.0.1:5412 Send >> AxK0|1,8
+Ryuuke:ip 127.0.0.1:5411 Send >> AH1;1;0;1|2;0;0;1
+Ryuu:ip 127.0.0.1:5412 Send >> AH1;1;0;1|2;0;0;1
+Ryuuke:ip 127.0.0.1:5411 Recv << AX1
+Ryuuke:ip 127.0.0.1:5411 Send >> AYK127.0.0.1:5555;08/18/2013 11:29:00|127.0.0.1:5411|2,Ryuuke,lool,Ryuu,noob ?,OUIIII,False,5,,
+Ryuuke:ip 127.0.0.1:5411  Connection closed
+Ryuu:ip 127.0.0.1:5412 Recv << AX1
+Ryuu:ip 127.0.0.1:5412 Send >> AYK127.0.0.1:5555;08/18/2013 11:29:02|127.0.0.1:5412|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:5412  Connection closed
+RealmServer Waiting for connexion 
+RealmServer Connection successfuly with Realm Client 127.0.0.1:5507
+ip 127.0.0.1:5507 Send >> HCGjhAiggLjO5aCXWPUa_wWYxKPn9iOhTV
+ip 127.0.0.1:5507 Recv << 1.29.1
+ip 127.0.0.1:5507 Recv << Ryuuke#1ntW5U3hn
+ip 127.0.0.1:5507 Send >> AdRyuu
+ip 127.0.0.1:5507 Send >> Ac0
+ip 127.0.0.1:5507 Send >> AH1;0;0;1|2;0;0;1
+ip 127.0.0.1:5507 Send >> AlK1
+ip 127.0.0.1:5507 Send >> AQnoob+?
+Ryuuke:ip 127.0.0.1:5507 Recv << Af
+Ryuuke:ip 127.0.0.1:5507 Send >> Af|0|0|1|-1
+Ryuuke:ip 127.0.0.1:5507 Recv << Ax
+Ryuuke:ip 127.0.0.1:5507 Send >> AxK0|1,1
+RealmServer Connection successfuly with Realm Client 127.0.0.1:5508
+ip 127.0.0.1:5508 Send >> HCCPSDTQbbY31-irQoPEhdHy6TYIW7i-8b
+ip 127.0.0.1:5508 Recv << 1.29.1
+ip 127.0.0.1:5508 Recv << Ryuu#1jpwFzF
+ip 127.0.0.1:5508 Send >> AdRyuuke
+ip 127.0.0.1:5508 Send >> Ac0
+ip 127.0.0.1:5508 Send >> AH1;0;0;1|2;0;0;1
+ip 127.0.0.1:5508 Send >> AlK0
+ip 127.0.0.1:5508 Send >> AQdelete?
+Ryuu:ip 127.0.0.1:5508 Recv << Af
+Ryuu:ip 127.0.0.1:5508 Send >> Af|0|0|1|-1
+Ryuu:ip 127.0.0.1:5508 Recv << Ax
+Ryuu:ip 127.0.0.1:5508 Send >> AxK0|1,8
+Ryuuke:ip 127.0.0.1:5507 Send >> AH1;1;0;1|2;0;0;1
+Ryuu:ip 127.0.0.1:5508 Send >> AH1;1;0;1|2;0;0;1
+Ryuuke:ip 127.0.0.1:5507 Recv << AX1
+Ryuuke:ip 127.0.0.1:5507 Send >> AYK127.0.0.1:5555;08/18/2013 11:37:17|127.0.0.1:5507|2,Ryuuke,lool,Ryuu,noob ?,OUIIII,False,5,,
+Ryuuke:ip 127.0.0.1:5507  Connection closed
+Ryuu:ip 127.0.0.1:5508 Recv << AX1
+Ryuu:ip 127.0.0.1:5508 Send >> AYK127.0.0.1:5555;08/18/2013 11:37:18|127.0.0.1:5508|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:5508  Connection closed
+RealmServer Waiting for connexion 
+RealmServer Connection successfuly with Realm Client 127.0.0.1:5525
+ip 127.0.0.1:5525 Send >> HCYUnE1g3Ka-iK-PVioUS9piYCLe-RL-jY
+ip 127.0.0.1:5525 Recv << 1.29.1
+ip 127.0.0.1:5525 Recv << Ryuuke#1FLBK09lr
+ip 127.0.0.1:5525 Send >> AdRyuu
+ip 127.0.0.1:5525 Send >> Ac0
+ip 127.0.0.1:5525 Send >> AH1;0;0;1|2;0;0;1
+ip 127.0.0.1:5525 Send >> AlK1
+ip 127.0.0.1:5525 Send >> AQnoob+?
+Ryuuke:ip 127.0.0.1:5525 Recv << Af
+Ryuuke:ip 127.0.0.1:5525 Send >> Af|0|0|1|-1
+Ryuuke:ip 127.0.0.1:5525 Recv << Ax
+Ryuuke:ip 127.0.0.1:5525 Send >> AxK0|1,1
+RealmServer Connection successfuly with Realm Client 127.0.0.1:5526
+ip 127.0.0.1:5526 Send >> HCQ7ZQW0lo-qkm8Nuq7trmZMMQ8X5Xim-c
+ip 127.0.0.1:5526 Recv << 1.29.1
+ip 127.0.0.1:5526 Recv << Ryuu#1xD9gGM
+ip 127.0.0.1:5526 Send >> AdRyuuke
+ip 127.0.0.1:5526 Send >> Ac0
+ip 127.0.0.1:5526 Send >> AH1;0;0;1|2;0;0;1
+ip 127.0.0.1:5526 Send >> AlK0
+ip 127.0.0.1:5526 Send >> AQdelete?
+Ryuu:ip 127.0.0.1:5526 Recv << Af
+Ryuu:ip 127.0.0.1:5526 Send >> Af|0|0|1|-1
+Ryuu:ip 127.0.0.1:5526 Recv << Ax
+Ryuu:ip 127.0.0.1:5526 Send >> AxK0|1,8
+Ryuuke:ip 127.0.0.1:5525 Send >> AH1;1;0;1|2;0;0;1
+Ryuu:ip 127.0.0.1:5526 Send >> AH1;1;0;1|2;0;0;1
+Ryuuke:ip 127.0.0.1:5525 Recv << AX1
+Ryuuke:ip 127.0.0.1:5525 Send >> AYK127.0.0.1:5555;08/18/2013 11:38:39|127.0.0.1:5525|2,Ryuuke,lool,Ryuu,noob ?,OUIIII,False,5,,
+Ryuuke:ip 127.0.0.1:5525  Connection closed
+Ryuu:ip 127.0.0.1:5526 Recv << AX1
+Ryuu:ip 127.0.0.1:5526 Send >> AYK127.0.0.1:5555;08/18/2013 11:38:40|127.0.0.1:5526|1,Ryuu,lol,Ryuuke,delete?,delete,False,0,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:5526  Connection closed
+RealmServer Waiting for connexion 
+RealmServer Connection successfuly with Realm Client 127.0.0.1:6277
+ip 127.0.0.1:6277 Send >> HCFLcDA0soT-29UZqpL33QNQYHGIVHGW1k
+ip 127.0.0.1:6277 Recv << 1.29.1
+ip 127.0.0.1:6277 Recv << Ryuuke#1mssBPYkq
+ip 127.0.0.1:6277 Send >> AdRyuu
+ip 127.0.0.1:6277 Send >> Ac0
+ip 127.0.0.1:6277 Send >> AH1;0;0;1|2;0;0;1
+ip 127.0.0.1:6277 Send >> AlK1
+ip 127.0.0.1:6277 Send >> AQnoob+?
+Ryuuke:ip 127.0.0.1:6277 Recv << Af
+Ryuuke:ip 127.0.0.1:6277 Send >> Af|0|0|1|-1
+Ryuuke:ip 127.0.0.1:6277 Recv << Ax
+Ryuuke:ip 127.0.0.1:6277 Send >> AxK0|1,1
+Ryuuke:ip 127.0.0.1:6277 Send >> AH1;1;0;1|2;0;0;1
+Ryuuke:ip 127.0.0.1:6277 Recv << AX1
+Ryuuke:ip 127.0.0.1:6277 Send >> AYK127.0.0.1:5555;08/18/2013 12:07:38|127.0.0.1:6277|2,Ryuuke,lool,Ryuu,noob ?,OUIIII,False,5,,
+Ryuuke:ip 127.0.0.1:6277  Connection closed

@@ -11,3 +11,4 @@ C:\Users\hpp\Documents\Visual Studio 2012\Projects\SilverDofus\SilverRealm\bin\D
 C:\Users\hpp\Documents\Visual Studio 2012\Projects\SilverDofus\SilverRealm\bin\Debug\SilverRealm.pdb
 C:\Users\hpp\Documents\Visual Studio 2012\Projects\SilverDofus\SilverRealm\bin\Debug\MySql.Data.dll
 C:\Users\hpp\Documents\Visual Studio 2012\Projects\SilverDofus\SilverRealm\bin\Debug\SilverSock.dll
+C:\Users\hpp\Documents\Visual Studio 2012\Projects\SilverDofus\SilverRealm\obj\Debug\SilverRealm.csprojResolveAssemblyReference.cache

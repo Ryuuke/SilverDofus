@@ -4,7 +4,7 @@ using SilverGame.Models.Gifts;
 
 namespace SilverGame.Database.Repository
 {
-    internal class GiftRepository
+    class GiftRepository : Abstract.Repository
     {
         public static void Create(Gift gift)
         {
@@ -20,12 +20,8 @@ namespace SilverGame.Database.Repository
         {
             const string query = "DELETE FROM inventory_items WHERE gift=@giftId";
 
-            using (var command = new MySqlCommand(query, GameDbManager.Connection))
-            {
-                command.Parameters.Add(new MySqlParameter("@id", gift.Id));
-
-                command.ExecuteNonQuery();
-            }
+            ExecuteQuery(query, GameDbManager.GetDatabaseConnection(),
+                (command) => command.Parameters.Add(new MySqlParameter("@id", gift.Id)));
 
             lock (DatabaseProvider.Gifts)
                 DatabaseProvider.Gifts.Remove(gift);
@@ -35,13 +31,12 @@ namespace SilverGame.Database.Repository
         {
             const string query = "DELETE FROM account_gifts WHERE giftId=@giftId AND accountId=@accountId";
 
-            using (var command = new MySqlCommand(query, GameDbManager.Connection))
-            {
-                command.Parameters.Add(new MySqlParameter("@giftId", giftId));
-                command.Parameters.Add(new MySqlParameter("@accountId", accountId));
-
-                command.ExecuteNonQuery();
-            }
+            ExecuteQuery(query, GameDbManager.GetDatabaseConnection(),
+                (command) =>
+                {
+                    command.Parameters.Add(new MySqlParameter("@giftId", giftId));
+                    command.Parameters.Add(new MySqlParameter("@accountId", accountId));
+                });
 
             lock (DatabaseProvider.AccountGifts)
                 DatabaseProvider.AccountGifts.Remove(
