@@ -27,7 +27,7 @@ namespace SilverRealm.Database
                     {
                         Id = reader.GetInt16("id"),
                         Ip = reader.GetString("ip"),
-                        Port = reader.GetInt32("port"),
+                        Port = reader.GetInt16("port"),
                         ServerKey = reader.GetString("ServerKey"),
                         State = 0,
                     });

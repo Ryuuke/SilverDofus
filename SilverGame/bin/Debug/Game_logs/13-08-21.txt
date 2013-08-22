@@ -1614,3 +1614,164 @@ Connected To Realm Database Successfuly
 GameServer Waiting for new connection
 Connected To Game Database Successfuly
 Connected To Realm Database Successfuly
+Connected To Game Database Successfuly
+Connected To Realm Database Successfuly
+GameServer Waiting for new connection
+Connected To Game Database Successfuly
+Connected To Realm Database Successfuly
+GameServer Waiting for new connection
+Connected To Game Database Successfuly
+Connected To Realm Database Successfuly
+GameServer Waiting for new connection
+Connected To Game Database Successfuly
+Connected To Realm Database Successfuly
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:56750 Successfuly
+ip 127.0.0.1:56750 Send >> HG
+ip 127.0.0.1:56750 Recv << AT08/21/2013 22:47:15|127.0.0.1:56749|1,Ryuu,lol,Ryuuke,delete?,delete,False,5,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:56750 Send >> ATK0
+Ryuu:ip 127.0.0.1:56750 Recv << Ak0
+Ryuu:ip 127.0.0.1:56750 Recv << AV
+Ryuu:ip 127.0.0.1:56750 Send >> AV0
+Ryuu:ip 127.0.0.1:56750 Recv << Agfr
+Ryuu:ip 127.0.0.1:56750 Recv << AL
+Ryuu:ip 127.0.0.1:56750 Connection Closed
+Connected To Game Database Successfuly
+Connected To Realm Database Successfuly
+GameServer Waiting for new connection
+GameServer Connection With host 127.0.0.1:57607 Successfuly
+ip 127.0.0.1:57607 Send >> HG
+ip 127.0.0.1:57607 Recv << AT08/21/2013 23:03:07|127.0.0.1:57606|1,Ryuu,lol,Ryuuke,delete?,delete,False,5,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:57607 Send >> ATK0
+Ryuu:ip 127.0.0.1:57607 Recv << Ak0
+Ryuu:ip 127.0.0.1:57607 Recv << AV
+Ryuu:ip 127.0.0.1:57607 Send >> AV0
+Ryuu:ip 127.0.0.1:57607 Recv << Agfr
+Ryuu:ip 127.0.0.1:57607 Recv << AL
+Ryuu:ip 127.0.0.1:57607 Send >> ALK31536000000|13|7;bilap;1;30;-1;-1;-1;,,,,;0;1;;;|12;fipe;1;120;-1;-1;-1;,,,,;0;1;;;|6;geje;1;40;-1;-1;-1;,,,,;0;1;;;|10;gitigig;1;31;8a3ad1;81d13a;d1943a;,,,,;0;1;;;|4;heto;1;90;-1;-1;-1;,,,,;0;1;;;|14;hirohatuj;1;100;82169e;bc826a;169e94;,,,,;0;1;;;|5;hoxol;1;20;-1;-1;-1;,,,,;0;1;;;|11;kulebux;1;50;-1;-1;-1;,,,,;0;1;;;|13;mob;1;70;362212;1c3612;a96d27;,,,,;0;1;;;|1;rafet;1;10;4ff926;d026f9;f92653;,,,,;0;1;;;|3;ruvokig;1;80;-1;-1;-1;,,,,;0;1;;;|8;sebovej;1;80;-1;-1;-1;,,,,;0;1;;;|9;wejufadiv;1;40;99fa12;9312fa;f7f3db;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:57607 Recv << Af
+Ryuu:ip 127.0.0.1:57607 Recv << AS1
+Ryuu:ip 127.0.0.1:57607 Send >> ASK|1|rafet|1|Feca|0|10|4ff926|d026f9|f92653|3~76~1~2~77#1#0#0#0d0+2;4~76~1~4~77#2#0#0#0d0+2;1e~96b~1~-1~7e#1a#0#0#1d40+0,76#a#0#0#1d40+0;1f~96e~1~-1~ae#48#0#0#1d300+0,6e#1b#0#0#1d50+0;20~96e~1~-1~ae#68#0#0#1d300+0,6e#6#0#0#1d50+0;2a~24f8~4~-1~7d#1#0#0#1d100+250,7c#1#0#0#1d10+30,b2#1#0#0#1d5+5,8a#1#0#0#1d10+20,75#1#0#0#0d0+2,b0#1#0#0#1d10+20,b6#1#0#0#1d2+0,6f#1#0#0#0d0+1,73#1#0#0#1d2+3,70#1#0#0#1d5+10;;
+Ryuu:ip 127.0.0.1:57607 Recv << Af
+Ryuu:ip 127.0.0.1:57607 Recv << GC1
+Ryuu:ip 127.0.0.1:57607 Send >> GCK|1|rafet
+Ryuu:ip 127.0.0.1:57607 Send >> As0,0,110|0|0|0|1~1,0,0,0,0,False|46,50|0,0|1|100|6,0,0,0,6|3,0,0,0,3|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,3,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0
+Ryuu:ip 127.0.0.1:57607 Send >> AR6bk
+Ryuu:ip 127.0.0.1:57607 Send >> Im189
+Ryuu:ip 127.0.0.1:57607 Send >> cC+!?:@%*#i
+Ryuu:ip 127.0.0.1:57607 Send >> Ow203|1000
+Ryuu:ip 127.0.0.1:57607 Send >> GDM|10273|0802221754|6362373428457b497f365d4b425936204f78612a6b3f5b6c756527484b3e7644335e58417f4c6f6e4b3042237558452c7e5d507c7751646b72786e2c435039642459275c5c51287158614d575c70597b644459402532423f34424b794d217460233b30616f69585145695d6f475b6b6d655c716d39684f7b2f6f3c5a375a364d236327372d6d5032383b502e743c7e3a7b682a3934733a7d7e384c4e5053732338376e387c71346c73757d46253242646f38
+Ryuu:ip 127.0.0.1:57607 Recv << BM@|rafet Salut/re :D|
+Ryuu:ip 127.0.0.1:57607 Send >> cMK@|1|rafet|rafet Salut/re :D
+Ryuu:ip 127.0.0.1:57607 Recv << BM¤|rafet Salut/re :D|
+Ryuu:ip 127.0.0.1:57607 Recv << BD
+Ryuu:ip 127.0.0.1:57607 Recv << GI
+Ryuu:ip 127.0.0.1:57607 Send >> GM|+322;3;0;1;rafet;Feca;10^100;0;0,0,0,2;4ff926;d026f9;f92653;,,,,;0;;;;;0;;
+Ryuu:ip 127.0.0.1:57607 Send >> GDK
+Ryuu:ip 127.0.0.1:57607 Recv << GA001heM
+Ryuu:ip 127.0.0.1:57607 Send >> GA0;1;1;dfcheM
+Ryuu:ip 127.0.0.1:57607 Recv << GKK0
+Ryuu:ip 127.0.0.1:57607 Send >> BN
+Ryuu:ip 127.0.0.1:57607 Recv << GA001hey
+Ryuu:ip 127.0.0.1:57607 Send >> GA0;1;1;heMhey
+Ryuu:ip 127.0.0.1:57607 Recv << GKK0
+Ryuu:ip 127.0.0.1:57607 Send >> BN
+Ryuu:ip 127.0.0.1:57607 Recv << GA001dfEefD
+Ryuu:ip 127.0.0.1:57607 Send >> GA0;1;1;heydfEefD
+Ryuu:ip 127.0.0.1:57607 Recv << GKK0
+Ryuu:ip 127.0.0.1:57607 Send >> BN
+Ryuu:ip 127.0.0.1:57607 Recv << GA001heLgei
+Ryuu:ip 127.0.0.1:57607 Send >> GA0;1;1;efDheLgei
+Ryuu:ip 127.0.0.1:57607 Recv << GKE0|264
+Ryuu:ip 127.0.0.1:57607 Recv << GA001bexce0
+Ryuu:ip 127.0.0.1:57607 Send >> GA0;1;1;geibexce0
+Ryuu:ip 127.0.0.1:57607 Recv << GKK0
+Ryuu:ip 127.0.0.1:57607 Send >> BN
+Ryuu:ip 127.0.0.1:57607 Recv << GA001dfc
+Ryuu:ip 127.0.0.1:57607 Send >> GA0;1;1;ce0dfc
+Ryuu:ip 127.0.0.1:57607 Recv << GKK0
+Ryuu:ip 127.0.0.1:57607 Send >> BN
+Ryuu:ip 127.0.0.1:57607 Recv << GA001afebhl
+Ryuu:ip 127.0.0.1:57607 Send >> GA0;1;1;dfcafebhl
+Ryuu:ip 127.0.0.1:57607 Recv << GKK0
+Ryuu:ip 127.0.0.1:57607 Send >> GA;2;1;
+Ryuu:ip 127.0.0.1:57607 Send >> GDM|10337|0802250906|34483c79583b556e5a654935485c566f6050674138767b7c7a6a36652158346f32202d40742d707544602532354a447520763a644d63644f5c784e612c5d453162536f7f46383058566132407761624c5c6b4f562c78485d54302f28704e233443232632745b6b6a53487049526741205732414131375256673061583f7f7e6f217a442e4753342e27572c41556840292e237b487c35366f70626e283d7d42435e653740407f692e4f25324278266f65784d35414029663d4669467f4b647e3d264a65676956534f453541204b3c662e7d707e343a7a5963745f7d7d624c374241692532425a5544663163403b647e2f316b65603c266440
+Ryuu:ip 127.0.0.1:57607 Recv << GI
+Ryuu:ip 127.0.0.1:57607 Send >> GM|+32;1;0;1;rafet;Feca;10^100;0;0,0,0,2;4ff926;d026f9;f92653;,,,,;0;;;;;0;;
+Ryuu:ip 127.0.0.1:57607 Send >> GDK
+Ryuu:ip 127.0.0.1:57607 Recv << GA001ca9dblccf
+Ryuu:ip 127.0.0.1:57607 Send >> GA0;1;1;baGca9dblccf
+Ryuu:ip 127.0.0.1:57607 Recv << GKK0
+Ryuu:ip 127.0.0.1:57607 Send >> BN
+Ryuu:ip 127.0.0.1:57607 Recv << GA001bdFadGcd9
+Ryuu:ip 127.0.0.1:57607 Send >> GA0;1;1;ccfbdFadGcd9
+Ryuu:ip 127.0.0.1:57607 Recv << GKK0
+Ryuu:ip 127.0.0.1:57607 Send >> BN
+Ryuu:ip 127.0.0.1:57607 Recv << GA001bgIcg_
+Ryuu:ip 127.0.0.1:57607 Send >> GA0;1;1;cd9bgIcg_
+Ryuu:ip 127.0.0.1:57607 Recv << GKK0
+Ryuu:ip 127.0.0.1:57607 Send >> GA;2;1;
+Ryuu:ip 127.0.0.1:57607 Send >> GDM|10258|0802250905|595025323534515253237a3a6277793a486e6e7640437d3b27286b63372532423a253235345a514538497c7259605d474b437f463e2a7a7633494b25323528757d43355d7368695f62275b7a4b476a704d2d213b664b5e4579772425324270796d79542837616d412c303324793b735625324232416a6a783c396e4a25323522362532427b227b444d48636a5f2a436461423672604e6b754e7e4c3d527563492d70253242555b5e64725a274a33413a6c584f34675d403c666f325d253235403324262e392f377d444e7b5c7669237a782f
+Ryuu:ip 127.0.0.1:57607 Recv << GI
+Ryuu:ip 127.0.0.1:57607 Send >> GM|+177;2;0;1;rafet;Feca;10^100;0;0,0,0,2;4ff926;d026f9;f92653;,,,,;0;;;;;0;;
+Ryuu:ip 127.0.0.1:57607 Send >> GDK
+Ryuu:ip 127.0.0.1:57607 Recv << GA001bg_
+Ryuu:ip 127.0.0.1:57607 Send >> GA0;1;1;ccXbg_
+Ryuu:ip 127.0.0.1:57607 Recv << GKE0|342
+Ryuu:ip 127.0.0.1:57607 Recv << GA001bhoahp
+Ryuu:ip 127.0.0.1:57607 Send >> GA0;1;1;bfwbhoahp
+Ryuu:ip 127.0.0.1:57607 Recv << GKK0
+Ryuu:ip 127.0.0.1:57607 Send >> GA;2;1;
+Ryuu:ip 127.0.0.1:57607 Send >> GDM|10295|0804041110|676c587c35235a6d6e77265a4769643d46595d553521782c3b20737550516d46693c622e58605b7d7654446e607d746d253242595c73786d292532425751313a487d6743537326795b4c39636f43372f346a372768354b38207d2f3a544f2a467e484d3e522d65682f7953662f5d2f376f774551624e5f404370336e6b5432583c513a5d307a7b533c282f60253242535a2e526a2262337f7f53646b5f414b474f763a344a424d545b795064752e7944682a28305a253235556449334637413e2c584b7f2d66545179663a514849402068276f344266585a683b6c5c574739343639253235
+Ryuu:ip 127.0.0.1:57607 Recv << GI
+Ryuu:ip 127.0.0.1:57607 Send >> GM|+218;0;0;1;rafet;Feca;10^100;0;0,0,0,2;4ff926;d026f9;f92653;,,,,;0;;;;;0;;
+Ryuu:ip 127.0.0.1:57607 Send >> GDK
+Ryuu:ip 127.0.0.1:57607 Recv << GA001bewaeybfYaf0bgsagv
+Ryuu:ip 127.0.0.1:57607 Send >> GA0;1;1;adAbewaeybfYaf0bgsagv
+Ryuu:ip 127.0.0.1:57607 Recv << GKK0
+Ryuu:ip 127.0.0.1:57607 Send >> GA;2;1;
+Ryuu:ip 127.0.0.1:57607 Send >> GDM|10297|0802221713|4d557971337f4b64472e5b472a363235537e7b2961325e7d68535e29653d284f79647f6b3b47403947512c3d3c6924245a2d4d2f5d386e227f30772a78237151713f2e21496940765748232532427841383b27592c6a7f59365f61345660445b6258787e41453230442e444b4e246d26467845776f6c6e272071277c337f746b7f62303b3f3d7b2c576865492f52263f677938494352305825324276212621474c4a7153333f203f51306f683b3b5346523a253235492a787c6f5c79503b20585b5a223a474e473371555c6f53646c532a2f6d4f534f73286a407c75583557612e5c20683d724356
+Ryuu:ip 127.0.0.1:57607 Recv << GI
+Ryuu:ip 127.0.0.1:57607 Send >> GM|+349;0;0;1;rafet;Feca;10^100;0;0,0,0,2;4ff926;d026f9;f92653;,,,,;0;;;;;0;;
+Ryuu:ip 127.0.0.1:57607 Send >> GDK
+Ryuu:ip 127.0.0.1:57607 Recv << GA001afEheyaeH
+Ryuu:ip 127.0.0.1:57607 Send >> GA0;1;1;afDafEheyaeH
+Ryuu:ip 127.0.0.1:57607 Recv << GKE0|294
+Ryuu:ip 127.0.0.1:57607 Recv << GA001hekaephdLfdw
+Ryuu:ip 127.0.0.1:57607 Send >> GA0;1;1;aeMhekaephdLfdw
+Ryuu:ip 127.0.0.1:57607 Recv << GA500214;114
+Ryuu:ip 127.0.0.1:57607 Recv << GKK0
+Ryuu:ip 127.0.0.1:57607 Send >> BN
+Ryuu:ip 127.0.0.1:57607 Recv << GA001beH
+Ryuu:ip 127.0.0.1:57607 Send >> GA0;1;1;fdwbeH
+Ryuu:ip 127.0.0.1:57607 Recv << GKK0
+Ryuu:ip 127.0.0.1:57607 Send >> GA;2;1;
+Ryuu:ip 127.0.0.1:57607 Send >> GDM|10301|0909071138|592e27436b4e2e5136506c674e4a5367692532353f6f475d6b30575c2532354529722f59733b5f7476673c5e253242273d2e5861537c7b253242303b4024452c3a74283225323560777e3f4429597b7b77752477627c5a7f267d6141742e717f7f58677e68243c65594c33712c2f26513f293f563f7c2822424d3a453e34302644576a5a277d3424416c4965247257662e626d67532e30335f292a5266432e3b762c7b72627032522e757e553a5f6c724f626c556e3e2c6035645676205742576d2e4f6c732743485d545034253235616b
+Ryuu:ip 127.0.0.1:57607 Connection Closed
+GameServer Connection With host 127.0.0.1:60170 Successfuly
+ip 127.0.0.1:60170 Send >> HG
+ip 127.0.0.1:60170 Recv << AT08/21/2013 23:32:09|127.0.0.1:60169|1,Ryuu,lol,Ryuuke,delete?,delete,False,5,20/07/2013 09:50:48,26/07/2013 12:29:05
+Ryuu:ip 127.0.0.1:60170 Send >> ATK0
+Ryuu:ip 127.0.0.1:60170 Recv << Ak0
+Ryuu:ip 127.0.0.1:60170 Recv << AV
+Ryuu:ip 127.0.0.1:60170 Send >> AV0
+Ryuu:ip 127.0.0.1:60170 Recv << Agfr
+Ryuu:ip 127.0.0.1:60170 Recv << AL
+Ryuu:ip 127.0.0.1:60170 Send >> ALK31536000000|13|7;bilap;1;30;-1;-1;-1;,,,,;0;1;;;|12;fipe;1;120;-1;-1;-1;,,,,;0;1;;;|6;geje;1;40;-1;-1;-1;,,,,;0;1;;;|10;gitigig;1;31;8a3ad1;81d13a;d1943a;,,,,;0;1;;;|4;heto;1;90;-1;-1;-1;,,,,;0;1;;;|14;hirohatuj;1;100;82169e;bc826a;169e94;,,,,;0;1;;;|5;hoxol;1;20;-1;-1;-1;,,,,;0;1;;;|11;kulebux;1;50;-1;-1;-1;,,,,;0;1;;;|13;mob;1;70;362212;1c3612;a96d27;,,,,;0;1;;;|1;rafet;1;10;4ff926;d026f9;f92653;,,,,;0;1;;;|3;ruvokig;1;80;-1;-1;-1;,,,,;0;1;;;|8;sebovej;1;80;-1;-1;-1;,,,,;0;1;;;|9;wejufadiv;1;40;99fa12;9312fa;f7f3db;,,,,;0;1;;;
+Ryuu:ip 127.0.0.1:60170 Recv << Af
+Ryuu:ip 127.0.0.1:60170 Recv << AS1
+Ryuu:ip 127.0.0.1:60170 Send >> ASK|1|rafet|1|Feca|0|10|4ff926|d026f9|f92653|3~76~1~2~77#1#0#0#0d0+2;4~76~1~4~77#2#0#0#0d0+2;1e~96b~1~-1~7e#1a#0#0#1d40+0,76#a#0#0#1d40+0;1f~96e~1~-1~ae#48#0#0#1d300+0,6e#1b#0#0#1d50+0;20~96e~1~-1~ae#68#0#0#1d300+0,6e#6#0#0#1d50+0;2a~24f8~4~-1~7d#1#0#0#1d100+250,7c#1#0#0#1d10+30,b2#1#0#0#1d5+5,8a#1#0#0#1d10+20,75#1#0#0#0d0+2,b0#1#0#0#1d10+20,b6#1#0#0#1d2+0,6f#1#0#0#0d0+1,73#1#0#0#1d2+3,70#1#0#0#1d5+10;;
+Ryuu:ip 127.0.0.1:60170 Recv << Af
+Ryuu:ip 127.0.0.1:60170 Recv << GC1
+Ryuu:ip 127.0.0.1:60170 Send >> GCK|1|rafet
+Ryuu:ip 127.0.0.1:60170 Send >> As0,0,110|0|0|0|1~1,0,0,0,0,False|46,50|0,0|1|100|6,0,0,0,6|3,0,0,0,3|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,3,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0|0,0,0,0
+Ryuu:ip 127.0.0.1:60170 Send >> AR6bk
+Ryuu:ip 127.0.0.1:60170 Send >> Im189
+Ryuu:ip 127.0.0.1:60170 Send >> cC+!?:@%*#i
+Ryuu:ip 127.0.0.1:60170 Send >> Ow203|1000
+Ryuu:ip 127.0.0.1:60170 Send >> GDM|10301|0909071138|592e27436b4e2e5136506c674e4a5367692532353f6f475d6b30575c2532354529722f59733b5f7476673c5e253242273d2e5861537c7b253242303b4024452c3a74283225323560777e3f4429597b7b77752477627c5a7f267d6141742e717f7f58677e68243c65594c33712c2f26513f293f563f7c2822424d3a453e34302644576a5a277d3424416c4965247257662e626d67532e30335f292a5266432e3b762c7b72627032522e757e553a5f6c724f626c556e3e2c6035645676205742576d2e4f6c732743485d545034253235616b
+Ryuu:ip 127.0.0.1:60170 Recv << BM@|rafet Salut/re :D|
+Ryuu:ip 127.0.0.1:60170 Send >> cMK@|1|rafet|rafet Salut/re :D
+Ryuu:ip 127.0.0.1:60170 Recv << BM¤|rafet Salut/re :D|
+Ryuu:ip 127.0.0.1:60170 Recv << BD
+Ryuu:ip 127.0.0.1:60170 Connection Closed

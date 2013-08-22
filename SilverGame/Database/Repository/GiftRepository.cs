@@ -4,7 +4,7 @@ using SilverGame.Models.Gifts;
 
 namespace SilverGame.Database.Repository
 {
-    class GiftRepository : Abstract.Repository
+    static class GiftRepository
     {
         public static void Create(Gift gift)
         {
@@ -20,7 +20,7 @@ namespace SilverGame.Database.Repository
         {
             const string query = "DELETE FROM inventory_items WHERE gift=@giftId";
 
-            ExecuteQuery(query, GameDbManager.GetDatabaseConnection(),
+            Base.Repository.ExecuteQuery(query, GameDbManager.GetDatabaseConnection(),
                 (command) => command.Parameters.Add(new MySqlParameter("@id", gift.Id)));
 
             lock (DatabaseProvider.Gifts)
@@ -31,7 +31,7 @@ namespace SilverGame.Database.Repository
         {
             const string query = "DELETE FROM account_gifts WHERE giftId=@giftId AND accountId=@accountId";
 
-            ExecuteQuery(query, GameDbManager.GetDatabaseConnection(),
+            Base.Repository.ExecuteQuery(query, GameDbManager.GetDatabaseConnection(),
                 (command) =>
                 {
                     command.Parameters.Add(new MySqlParameter("@giftId", giftId));

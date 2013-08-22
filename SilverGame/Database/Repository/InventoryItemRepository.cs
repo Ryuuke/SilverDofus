@@ -4,7 +4,7 @@ using SilverGame.Models.Items;
 
 namespace SilverGame.Database.Repository
 {
-    internal class InventoryItemRepository : Abstract.Repository
+    static class InventoryItemRepository
     {
         public static void Create(InventoryItem inventoryItem)
         {
@@ -12,7 +12,7 @@ namespace SilverGame.Database.Repository
                 "INSERT INTO inventory_items SET id=@id, characterId=@characterId, itemId=@itemId, position=@position," +
                 "stats=@stats, quantity=@quantity";
 
-            ExecuteQuery(query, GameDbManager.GetDatabaseConnection(),
+            Base.Repository.ExecuteQuery(query, GameDbManager.GetDatabaseConnection(),
                 (command) =>
                 {
                     command.Parameters.Add(new MySqlParameter("@id", inventoryItem.Id));
@@ -33,7 +33,7 @@ namespace SilverGame.Database.Repository
                 "UPDATE inventory_items SET id=@id, characterId=@characterId, itemId=@itemId, position=@position," +
                 "stats=@stats, quantity=@quantity WHERE id=@id";
 
-            ExecuteQuery(query, GameDbManager.GetDatabaseConnection(),
+            Base.Repository.ExecuteQuery(query, GameDbManager.GetDatabaseConnection(),
                 (command) =>
                 {
                     command.Parameters.Add(new MySqlParameter("@id", inventoryItem.Id));
@@ -50,7 +50,7 @@ namespace SilverGame.Database.Repository
             const string query =
                 "DELETE FROM Inventory_items WHERE id=@id";
 
-            ExecuteQuery(query, GameDbManager.GetDatabaseConnection(),
+            Base.Repository.ExecuteQuery(query, GameDbManager.GetDatabaseConnection(),
                 (command) => command.Parameters.Add(new MySqlParameter("@id", inventoryItem.Id)));
 
             lock (DatabaseProvider.InventoryItems)

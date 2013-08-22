@@ -11,7 +11,7 @@ namespace SilverGame.Services
             Constant.ComFolder, Constant.GameFolder, Constant.ErrorsFolder
         };
 
-        public static Object Lock = new object();
+        private static readonly Object Lock = new object();
 
         private static readonly string FileName = string.Format("{0}.txt", DateTime.Now.ToString("yy-MM-dd"));
 

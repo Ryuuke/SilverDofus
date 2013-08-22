@@ -17,7 +17,8 @@
         public const int HighLevel = 100;
 
         // stats
-        public const int BasePa = 6,
+        public const int 
+            BasePa = 6,
             BaseHighLevelPa = 7,
             BasePm = 3,
             BaseProspection = 100,

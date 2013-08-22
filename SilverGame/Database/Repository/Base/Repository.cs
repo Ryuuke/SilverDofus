@@ -2,11 +2,11 @@
 using MySql.Data.MySqlClient;
 using SilverGame.Services;
 
-namespace SilverGame.Database.Repository.Abstract
+namespace SilverGame.Database.Repository.Base
 {
-    abstract class Repository
+    static class Repository
     {
-        protected static void ExecuteQuery(string query, MySqlConnection mySqlConnection, Action<MySqlCommand> paramAction)
+        public static void ExecuteQuery(string query, MySqlConnection mySqlConnection, Action<MySqlCommand> paramAction)
         {
             try
             {

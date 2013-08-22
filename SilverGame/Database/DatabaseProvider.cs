@@ -54,7 +54,6 @@ namespace SilverGame.Database
             LoadGifts();
             LoadAccountGifts();
             LoadExperience();
-
         }
 
         private static void LoadServerId()
@@ -159,10 +158,12 @@ namespace SilverGame.Database
                             Stats = StatsManager.Find(x => x.Id == reader.GetInt16("statsId")),
                             Alignment = Alignments.Find(x => x.Id == reader.GetInt16("alignmentId")),
                             PdvNow = reader.GetInt16("pdvNow"),
-                            PdvMax = (reader.GetInt16("level") - 1)*Character.GainHpPerLvl + Character.BaseHp,
+                            PdvMax = reader.GetInt16("pdvNow"),
                             Map = Maps.Find(x => x.Id == reader.GetInt32("mapId")),
                             MapCell = reader.GetInt32("cellId"),
                             Direction = reader.GetInt16("direction"),
+                            StatsPoints = reader.GetInt32("statsPoints"),
+                            SpellPoints = reader.GetInt32("spellsPoints"),
                             Channels = reader.GetString("channels").Select(channel => new Channel
                             {
                                 Header = (Channel.ChannelHeader) channel

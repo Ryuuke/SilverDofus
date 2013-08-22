@@ -29,7 +29,7 @@ namespace SilverRealm.Database
                 {
                     account = new Account
                     {
-                        Id = reader.GetInt32("id"),
+                        Id = reader.GetInt16("id"),
                         Username = reader.GetString("username"),
                         Password = reader.GetString("pass"),
                         Pseudo = reader.GetString("pseudo"),

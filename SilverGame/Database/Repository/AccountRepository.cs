@@ -3,7 +3,7 @@ using SilverGame.Database.Connection;
 
 namespace SilverGame.Database.Repository
 {
-    internal class AccountRepository : Abstract.Repository
+    static class AccountRepository
     {
         public static void UpdateAccount(bool connected, int id = 0)
         {
@@ -11,7 +11,7 @@ namespace SilverGame.Database.Repository
                 ? "UPDATE accounts, characters SET accounts.connected = @connected WHERE characters.accountId = accounts.id"
                 : "UPDATE accounts, characters SET accounts.connected = @connected WHERE accounts.id = @id AND characters.accountId = accounts.id";
 
-            ExecuteQuery(query, RealmDbManager.GetDatabaseConnection(),
+            Base.Repository.ExecuteQuery(query, RealmDbManager.GetDatabaseConnection(),
                 (command) =>
                 {
                     command.Parameters.Add(new MySqlParameter("@id", id));

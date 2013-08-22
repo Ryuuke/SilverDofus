@@ -13,7 +13,7 @@ namespace SilverRealm.Network.Realm
         public static Object Lock = new Object();
 
         public RealmServer()
-            : base(Config.Get("Realm_ip"), Int32.Parse(Config.Get("Realm_port")))
+            : base(Config.Get("Realm_ip"), Int16.Parse(Config.Get("Realm_port")))
         {
             Clients = new List<RealmClient>();
         }
@@ -46,7 +46,8 @@ namespace SilverRealm.Network.Realm
         {
             if (!Clients.Any(x => x.Account != null && x.Account.Id == id)) return;
 
-            Clients.Find(client => client.Account.Id == id).Disconnect();
+            lock (Lock)
+                Clients.Find(client => client.Account.Id == id).Disconnect();
         }
     }
 }

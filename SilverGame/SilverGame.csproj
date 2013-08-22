@@ -73,10 +73,10 @@
     <Compile Include="Database\Repository\AlignmentRepository.cs" />
     <Compile Include="Database\Repository\CharacterRepository.cs" />
     <Compile Include="Database\Connection\RealmDbManager.cs" />
-    <Compile Include="Database\Repository\CharacterStatsRepository.cs" />
+    <Compile Include="Database\Repository\StatsRepository.cs" />
     <Compile Include="Database\Repository\GiftRepository.cs" />
     <Compile Include="Database\Repository\InventoryItemRepository.cs" />
-    <Compile Include="Database\Repository\Abstract\Repository.cs" />
+    <Compile Include="Database\Repository\Base\Repository.cs" />
     <Compile Include="Models\Accounts\Account.cs" />
     <Compile Include="Models\Accounts\AccountCharacters.cs" />
     <Compile Include="Models\Alignment\Alignment.cs" />
@@ -88,6 +88,7 @@
     <Compile Include="Models\Gifts\GiftItems.cs" />
     <Compile Include="Models\Items\GeneralStats.cs" />
     <Compile Include="Models\Items\InventoryItem.cs" />
+    <Compile Include="Models\Items\ItemCondition.cs" />
     <Compile Include="Models\Items\ItemInfos.cs" />
     <Compile Include="Models\Items\StatsManager.cs" />
     <Compile Include="Models\Items\ItemStats.cs" />

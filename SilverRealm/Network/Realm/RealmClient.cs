@@ -211,7 +211,7 @@ namespace SilverRealm.Network.Realm
 
         private void ConnectToGameServer(string packet)
         {
-            var gameServerId = Int32.Parse(packet.Substring(2));
+            var gameServerId = Int16.Parse(packet.Substring(2));
 
             var gameServer = GameServers.Single(gS => gS.Id == gameServerId);
 

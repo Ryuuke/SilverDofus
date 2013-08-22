@@ -12,7 +12,7 @@ namespace SilverRealm.Network.ToGame
         public static Object Lock = new Object();
 
         public ToGameServer()
-            : base(Config.Get("Realm_ip"), Int32.Parse(Config.Get("port_com")))
+            : base(Config.Get("Realm_ip"), Int16.Parse(Config.Get("port_com")))
         {
             Games = new List<ToGameClient>();
         }

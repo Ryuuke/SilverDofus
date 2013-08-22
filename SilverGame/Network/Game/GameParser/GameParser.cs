@@ -51,6 +51,7 @@ namespace SilverGame.Network.Game.GameParser
             _packetRegistry.Add(Packet.ObjectRemove, RemoveItem);
             _packetRegistry.Add(Packet.SubscribeChannel, SubscribeChannel);
             _packetRegistry.Add(Packet.ServerMessage, SendMessage);
+            _packetRegistry.Add(Packet.StatsBoost, StatsBoost);
         }
 
         public void Parse(string packet)
@@ -576,5 +577,26 @@ namespace SilverGame.Network.Game.GameParser
                     break;
             }
         }
+
+        private void StatsBoost(string data)
+        {
+            try
+            {
+                var baseStats = int.Parse(data);
+
+                if (baseStats < 10 || baseStats > 15)
+                    return;
+
+                _client.Character.BoostStats((Character.BaseStats)baseStats);
+
+                _client.SendPackets(string.Format("{0}{1}", Packet.Stats, _client.Character.GetStats()));
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            
+        }
+
     }
 }

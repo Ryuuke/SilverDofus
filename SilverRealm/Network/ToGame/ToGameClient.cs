@@ -27,12 +27,13 @@ namespace SilverRealm.Network.ToGame
 
         private void OnSocketClosed()
         {
-            RealmClient.GameServers.Single(gameServer => gameServer.ServerKey.Equals(_key)).State = 0;      
+            var closedGameServer = RealmClient.GameServers.Single(gameServer => gameServer.ServerKey.Equals(_key));
+
+            if (closedGameServer != null)
+                closedGameServer.State = 0;
 
             foreach (var client in RealmServer.Clients)
-            {
                 client.RefreshServerList();
-            }
 
             SilverConsole.WriteLine(string.Format("Connection closed with Game Server {0}", _socket.IP), ConsoleColor.Yellow);
             Logs.LogWritter(Constant.ComFolder, string.Format("Connection closed with Game Server {0}", _socket.IP));

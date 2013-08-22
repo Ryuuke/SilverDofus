@@ -44,7 +44,15 @@ namespace SilverGame.Services
 
         public static string Get(string info)
         {
-            return _values[info];
+            try
+            {
+                return _values[info];
+            }
+            catch (Exception e)
+            {
+                SilverConsole.WriteLine(e.Message);
+                return null;
+            }
         }
     }
 }

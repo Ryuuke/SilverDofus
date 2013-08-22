@@ -60,7 +60,8 @@
             PrivateMessageSender = "cMKT",
             PrivateMessageNotConnectedReceiverError = "cMEF",
             AdminMesage = "cMK@",
-            Message = "Im";
+            Message = "Im",
+            StatsBoost = "AB";
 
         // Message Id (Im)
         public const string
