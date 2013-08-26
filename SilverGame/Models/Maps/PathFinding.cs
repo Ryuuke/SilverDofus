@@ -2,6 +2,8 @@
 
 using System;
 using System.Globalization;
+using System.Linq;
+using SilverGame.Database;
 
 namespace SilverGame.Models.Maps
 {
@@ -134,7 +136,6 @@ namespace SilverGame.Models.Maps
 
                 case 7:
                     return cell - _map.Width + 1;
-
             }
 
             return -1;
@@ -216,6 +217,72 @@ namespace SilverGame.Models.Maps
             var loc7 = loc6 % width;
 
             return (loc5 - loc7);
+        }
+
+        public static int GetNearbyCell(int cell, Map map)
+        {
+            for (var i = 0; i < 7; i++)
+            {
+                var newCell = FindCell(cell, (NearbyCells) i, map);
+
+                if (map.Cells.All(x => x != newCell))
+                   continue;
+
+                if (IsEmpty(newCell, map))
+                    return newCell;
+            }
+
+            return -1;
+        }
+
+        private static bool IsEmpty(int cell, Map map)
+        {
+            return !DatabaseProvider.InventoryItems.Any(x => x.Map == map && x.Cell == cell) &&
+                   !DatabaseProvider.Characters.Any(x => x.Map == map && x.MapCell == cell);
+        }
+
+        private static int FindCell(int cell, NearbyCells dir, Map map)
+        {
+            switch (dir)
+            {
+                case NearbyCells.BottomRight:
+                    return cell + 1;
+
+                case NearbyCells.Bottom:
+                    return cell + map.Width;
+
+                case NearbyCells.BottomLeft:
+                    return cell + (map.Width * 2) - 1;
+
+                case NearbyCells.Left:
+                    return cell + map.Width - 1;
+
+                case NearbyCells.TopLeft:
+                    return cell - 1;
+
+                case NearbyCells.Top:
+                    return cell - map.Width;
+
+                case NearbyCells.TopRight:
+                    return cell - (map.Width * 2) + 1;
+
+                case NearbyCells.Right:
+                    return cell - map.Width + 1;
+            }
+
+            return -1;
+        }
+
+        private enum NearbyCells
+        {
+            BottomRight = 0,
+            Bottom = 1,
+            BottomLeft = 2,
+            Left = 3,
+            TopLeft = 4,
+            Top = 5,
+            TopRight = 6,
+            Right = 7,
         }
     }
 }

@@ -49,9 +49,8 @@ namespace SilverGame.Models.Items
                 Quantity = quantity
             };
 
-            var existItem =
-                DatabaseProvider.InventoryItems.Find(
-                    x => x.ItemInfos == item.ItemInfos && string.Join(",", x.Stats).Equals(string.Join(",", item.Stats)) && x.Character == item.Character && x.ItemPosition == item.ItemPosition);
+            var existItem = InventoryItem.ExistItem(item, item.Character, item.ItemPosition);
+                
  
                 if (existItem != null)
                 {
@@ -59,7 +58,7 @@ namespace SilverGame.Models.Items
                     InventoryItemRepository.Update(existItem);
                 }
                 else
-                    InventoryItemRepository.Create(item);
+                    InventoryItemRepository.Create(item, true);
         }
     }
 }

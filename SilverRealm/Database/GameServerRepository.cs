@@ -15,32 +15,38 @@ namespace SilverRealm.Database
 
             const string query = "SELECT * FROM gameservers";
 
-            var command = new MySqlCommand(query, DbManager.Connection);
-
-            var reader = command.ExecuteReader();
-
-            while (reader.Read())
+            lock (DbManager.Lock)
             {
-                try
+                using (var connection = DbManager.GetConnection())
                 {
-                    gameServers.Add(new GameServer
+                    using (var command = new MySqlCommand(query, connection))
                     {
-                        Id = reader.GetInt16("id"),
-                        Ip = reader.GetString("ip"),
-                        Port = reader.GetInt16("port"),
-                        ServerKey = reader.GetString("ServerKey"),
-                        State = 0,
-                    });
-                }
-                catch (Exception e)
-                {
-                    SilverConsole.WriteLine("SQL error : " + e.Message, ConsoleColor.Red);
-                    Logs.LogWritter(Constant.ErrorsFolder, "SQL error : " + e.Message);
+                        var reader = command.ExecuteReader();
+
+                        while (reader.Read())
+                        {
+                            try
+                            {
+                                gameServers.Add(new GameServer
+                                {
+                                    Id = reader.GetInt16("id"),
+                                    Ip = reader.GetString("ip"),
+                                    Port = reader.GetInt16("port"),
+                                    ServerKey = reader.GetString("ServerKey"),
+                                    State = 0,
+                                });
+                            }
+                            catch (Exception e)
+                            {
+                                SilverConsole.WriteLine("SQL error : " + e.Message, ConsoleColor.Red);
+                                Logs.LogWritter(Constant.ErrorsFolder, "SQL error : " + e.Message);
+                            }
+                        }
+                        reader.Close();
+                    }
                 }
             }
-
-            reader.Close();
-
+            
             if (gameServers.Any()) return gameServers;
 
             SilverConsole.WriteLine("Warning : Could not find Game Server On database", ConsoleColor.Yellow);

@@ -1,0 +1,4 @@
+SQL Error : La séquence ne contient aucun élément correspondant.
+SQL Error : Could not find specified column in results: connected
+SQL Error : Could not find specified column in results: connected
+SQL Error : Could not find specified column in results: connected

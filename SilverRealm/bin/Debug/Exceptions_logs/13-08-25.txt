@@ -1,0 +1,5 @@
+SQL Error :Could not find specified column in results: connected
+SQL Error :Could not find specified column in results: connected
+SQL Error :Could not find specified column in results: connected
+Realm connection database SQL error : The connection property has not been set or is null.
+Realm connection database SQL error : The connection property has not been set or is null.

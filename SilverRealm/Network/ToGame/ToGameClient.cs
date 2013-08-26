@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Text;
+using SilverRealm.Database;
 using SilverRealm.Network.Realm;
 using SilverRealm.Services;
 using SilverSock;
@@ -30,7 +31,10 @@ namespace SilverRealm.Network.ToGame
             var closedGameServer = RealmClient.GameServers.Single(gameServer => gameServer.ServerKey.Equals(_key));
 
             if (closedGameServer != null)
+            {
+                AccountRepository.UpdateAccount(closedGameServer.Id);
                 closedGameServer.State = 0;
+            }
 
             foreach (var client in RealmServer.Clients)
                 client.RefreshServerList();

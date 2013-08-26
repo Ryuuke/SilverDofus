@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Threading;
 using System.Timers;
+using Timer = System.Timers.Timer;
 
 namespace SilverGame.Services
 {
@@ -7,7 +9,8 @@ namespace SilverGame.Services
     {
         private static readonly Timer Timer = new Timer(45);
         private static AnimationState _state;
-
+        private static readonly object Locker = new object();
+        private static readonly object Lockere = new object();
         public static void LoadTimer()
         {
             Timer.Elapsed += TimerOnElapsed;
@@ -34,14 +37,17 @@ namespace SilverGame.Services
 
         public static void WriteLine(string text, ConsoleColor color = ConsoleColor.Gray, bool line = true)
         {
-            Console.ForegroundColor = color;
+            lock (Locker)
+            {
+                Console.ForegroundColor = color;
 
-            if (line)
-                Console.WriteLine(text);
-            else
-                Console.Write(text);
+                if (line)
+                    Console.WriteLine(text);
+                else
+                    Console.Write(text);
 
-            Console.ResetColor();
+                Console.ResetColor();
+            }
         }
 
         private static int _startX;
@@ -91,10 +97,11 @@ namespace SilverGame.Services
         {
             Timer.Enabled = false;
 
-            var consoleX = Console.CursorLeft - 3;
+            var consoleX = Console.CursorLeft -3;
             var consoleY = Console.CursorTop;
-
-            Console.SetCursorPosition(consoleX, consoleY);
+            
+            if(consoleX > 0)
+                Console.SetCursorPosition(consoleX, consoleY);
 
             WriteLine("Completed !", ConsoleColor.DarkGreen);
         }

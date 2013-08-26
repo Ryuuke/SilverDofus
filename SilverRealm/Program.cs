@@ -4,7 +4,7 @@ using SilverRealm.Services;
 
 namespace SilverRealm
 {
-    class Program
+    static class Program
     {
         static void Main()
         {
@@ -14,7 +14,7 @@ namespace SilverRealm
 
             Logs.LoadLogs();
 
-            if (Config.LoadConfig() && Database.DbManager.InitRealmDatabase())
+            if (Config.LoadConfig() && Database.DbManager.TestConnectivityToRealmDb())
             {
                 Network.Realm.RealmClient.GameServers = Database.GameServerRepository.GetAll();
 

@@ -13,8 +13,8 @@ namespace SilverGame.Database.Repository
              const string query =
                  "INSERT INTO characters SET id=@id, name=@name, classe=@classe, sex=@sex, color1=@color1, color2=@color2," +
                  "color3=@color3, skin=@skin, level=@level, alignmentId=@alignmentId, statsId=@statsId, " +
-                 "pdvNow=@pdvNow, mapId=@mapId, cellId=@cellId, direction=@direction, channels=@channels, statsPoints@statsPoints" +
-                 "spellsPoints=@spellsPoints";
+                 "pdvNow=@pdvNow, mapId=@mapId, cellId=@cellId, direction=@direction, channels=@channels, statsPoints=@statsPoints, " +
+                 "spellsPoints=@spellsPoints, kamas=@kamas";
 
              Base.Repository.ExecuteQuery(query, GameDbManager.GetDatabaseConnection(),
                  (command) =>
@@ -37,6 +37,7 @@ namespace SilverGame.Database.Repository
                      command.Parameters.Add(new MySqlParameter("@channels", string.Join("", character.Channels)));
                      command.Parameters.Add(new MySqlParameter("@statsPoints", character.StatsPoints));
                      command.Parameters.Add(new MySqlParameter("@spellsPoints", character.SpellPoints));
+                     command.Parameters.Add(new MySqlParameter("@kamas", character.Kamas));
                  });
 
              Logs.LogWritter(Constant.GameFolder, string.Format("Création du personnage {0}", character.Name));
@@ -70,7 +71,7 @@ namespace SilverGame.Database.Repository
              const string query =
                  "UPDATE characters SET skin=@skin, level=@level, " +
                  "pdvNow=@pdvNow, exp=@exp, mapId=@mapId, cellId=@cellId, direction=@direction, channels=@channels, " +
-                 "statsPoints=@statsPoints, spellsPoints=@spellsPoints WHERE id=@id";
+                 "statsPoints=@statsPoints, spellsPoints=@spellsPoints, kamas=@kamas WHERE id=@id";
 
              Base.Repository.ExecuteQuery(query, GameDbManager.GetDatabaseConnection(),
                  (command) =>
@@ -87,7 +88,7 @@ namespace SilverGame.Database.Repository
                          string.Format("{0}", string.Join("", character.Channels))));
                      command.Parameters.Add(new MySqlParameter("@statsPoints", character.StatsPoints));
                      command.Parameters.Add(new MySqlParameter("@spellsPoints", character.SpellPoints));
-
+                     command.Parameters.Add(new MySqlParameter("@kamas", character.Kamas));
                  });
          }
     }

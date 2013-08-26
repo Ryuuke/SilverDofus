@@ -830,3 +830,5 @@ Ryuu:ip 127.0.0.1:6048 Send >> As0,0,110|0|346|0|1~1,0,0,0,0,False|60,60|0,0|82|
 Ryuu:ip 127.0.0.1:6048 Recv << BD
 Connected To Game Database Successfuly
 Connected To Realm Database Successfuly
+Connected To Game Database Successfuly
+Connected To Realm Database Successfuly

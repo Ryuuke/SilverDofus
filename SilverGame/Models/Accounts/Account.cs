@@ -18,7 +18,7 @@ namespace SilverGame.Models.Accounts
 
         public void Disconnect()
         {
-            AccountRepository.UpdateAccount(false, Id);
+            AccountRepository.UpdateAccount(Id, false);
         }
     }
 }

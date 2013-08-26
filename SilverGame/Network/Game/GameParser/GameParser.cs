@@ -8,6 +8,7 @@ using SilverGame.Database.Repository;
 using SilverGame.Models.Accounts;
 using SilverGame.Models.Characters;
 using SilverGame.Models.Chat;
+using SilverGame.Models.Exchange;
 using SilverGame.Models.Items;
 using SilverGame.Models.Maps;
 using SilverGame.Services;
@@ -48,18 +49,23 @@ namespace SilverGame.Network.Game.GameParser
             _packetRegistry.Add(Packet.GameActions, ParseGameAction);
             _packetRegistry.Add(Packet.GameEndAction, ParseEndGameAction);
             _packetRegistry.Add(Packet.ObjectMove, MoveItem);
-            _packetRegistry.Add(Packet.ObjectRemove, RemoveItem);
+            _packetRegistry.Add(Packet.ObjectDrop, DropItem);
+            _packetRegistry.Add(Packet.ObjectDelete, DeleteItem);
             _packetRegistry.Add(Packet.SubscribeChannel, SubscribeChannel);
             _packetRegistry.Add(Packet.ServerMessage, SendMessage);
             _packetRegistry.Add(Packet.StatsBoost, StatsBoost);
+            _packetRegistry.Add(Packet.ExchangeRequest, ParseRequest);
+            _packetRegistry.Add(Packet.ExchangeLeave, LeaveExchange);
+            _packetRegistry.Add(Packet.ExchangeAccepted, ExchangeAccepted);
+            _packetRegistry.Add(Packet.ExchangeObjectMove, ExchangeMove);
+            _packetRegistry.Add(Packet.ExchangeReady, ExchangeReady);
         }
 
         public void Parse(string packet)
         {
             var header = packet.Substring(0, 2);
 
-            if (!_packetRegistry.ContainsKey(header))
-                return;
+            if (!_packetRegistry.ContainsKey(header)) return;
 
             var response = _packetRegistry[header];
 
@@ -67,6 +73,8 @@ namespace SilverGame.Network.Game.GameParser
         }
 
         // Respones functions
+
+        #region HelloGame ^^
 
         private void ParseTicket(string packet)
         {
@@ -99,7 +107,6 @@ namespace SilverGame.Network.Game.GameParser
                         Pseudo = account[3],
                         Question = account[4],
                         Reponse = account[5],
-                        Connected = true,
                         GmLevel = int.Parse(account[7]),
                         BannedUntil =
                             account[8] == ""
@@ -111,7 +118,7 @@ namespace SilverGame.Network.Game.GameParser
                                 : DateTime.Parse(account[9].ToString(CultureInfo.InvariantCulture)),
                     };
 
-                    AccountRepository.UpdateAccount(true, _client.Account.Id);
+                    AccountRepository.UpdateAccount(_client.Account.Id);
                 }
                 catch (Exception e)
                 {
@@ -156,6 +163,10 @@ namespace SilverGame.Network.Game.GameParser
                     characters));
             }
         }
+
+        #endregion
+
+        #region CreateCharacter
 
         private void GenerateName(string data)
         {
@@ -241,12 +252,15 @@ namespace SilverGame.Network.Game.GameParser
             }
         }
 
+        #endregion
+
+        #region Gifts
+
         private void SendGiftsList(string data)
         {
             var gift = DatabaseProvider.AccountGifts.Find(x => x.Key.Id == _client.Account.Id).Value;
 
-            if (gift == null)
-                return;
+            if (gift == null) return;
 
             _client.SendPackets(string.Format("{0}1|{1}", Packet.GiftsList, gift));
         }
@@ -272,14 +286,18 @@ namespace SilverGame.Network.Game.GameParser
             _client.SendPackets(Packet.GiftStotedSuccess);
         }
 
+        #endregion
+
+        #region GameInfos
+
         private void SendCharacterInfos(string data)
         {
             var character = DatabaseProvider.Characters.Find(x => x.Id == int.Parse(data));
 
-            if (character == null)
-                return;
+            if (character == null) return;
 
             _client.Character = character;
+
             _client.SendPackets(string.Format("{0}|{1}", 
                 Packet.CharacterSelectedResponse,
                 character.InfosWheneSelectedCharacter()));
@@ -287,12 +305,11 @@ namespace SilverGame.Network.Game.GameParser
 
         private void SendCharacterGameInfos(string data)
         {
-            if (_client.Character == null)
-                return;
+            if (_client.Character == null) return;
 
             _client.SendPackets(string.Format("{0}|1|{1}", Packet.GameCreatedResponse, _client.Character.Name));
 
-            _client.SendPackets(string.Format("{0}{1}", Packet.Stats, _client.Character.GetStats()));
+            RefreshCharacterStats();
 
             _client.SendPackets(Packet.Restriction);
 
@@ -301,10 +318,15 @@ namespace SilverGame.Network.Game.GameParser
             _client.SendPackets(string.Format("{0}+{1}", Packet.SubscribeChannel,
                 string.Join("", _client.Character.Channels)));
 
-            _client.SendPackets(string.Format("{0}{1}|{2}", Packet.ObjectWeight,
-                _client.Character.GetCurrentWeight(), _client.Character.GetMaxWeight()));
-
             LoadMap();
+        }
+
+        public void RefreshCharacterStats()
+        {
+            _client.SendPackets(string.Format("{0}{1}|{2}", Packet.CharacterWeight,
+                    _client.Character.GetCurrentWeight(), _client.Character.GetMaxWeight()));
+
+            _client.SendPackets(string.Format("{0}{1}", Packet.Stats, _client.Character.GetStats()));
         }
 
         private void LoadMap()
@@ -319,8 +341,14 @@ namespace SilverGame.Network.Game.GameParser
 
             _client.Character.Map.Send(string.Format("{0}{1}", Packet.Movement, _client.Character.Map.DisplayChars()));
 
+            _client.Character.Map.SendItemsOnMap();
+
             _client.SendPackets(Packet.MapLoaded);
         }
+
+        #endregion
+
+        #region GameActionParser
 
         private void ParseGameAction(string data)
         {
@@ -332,8 +360,30 @@ namespace SilverGame.Network.Game.GameParser
             }
         }
 
+        private void ParseEndGameAction(string data)
+        {
+            switch (data.Substring(0, 1))
+            {
+                case "E":
+                    ChangeDestination(data);
+                    break;
+
+                case "K":
+                    EndMove();
+                    break;
+            }
+        }
+
+        #endregion
+
+        #region DisplaceCharacter
+
         private void Move(string data)
         {
+            if (_client.Character.State != Character.CharacterState.Free &&
+                _client.Character.State != Character.CharacterState.OnMove)
+                return;
+
             data = data.Substring(3);
 
             var path = new PathFinding(
@@ -354,27 +404,15 @@ namespace SilverGame.Network.Game.GameParser
 
             _client.Character.Direction = path.Direction;
             _client.Character.CellDestination = path.Destination;
+            _client.Character.State = Character.CharacterState.OnMove;
 
             _client.Character.Map.Send(string.Format("{0}0;1;{1};{2}", Packet.GameActions, _client.Character.Id, newPath));
-
-        }
-
-        private void ParseEndGameAction(string data)
-        {
-            switch (data.Substring(0, 1))
-            {
-                case "E":
-                    ChangeDestination(data);
-                    break;
-
-                case "K":
-                    EndMove();
-                    break;
-            }
         }
 
         private void ChangeDestination(string data)
         {
+            if (_client.Character.State != Character.CharacterState.OnMove) return;
+
             var cell = int.Parse(data.Split('|')[1]);
 
             if (_client.Character.Map.Cells.Contains(cell))
@@ -383,32 +421,73 @@ namespace SilverGame.Network.Game.GameParser
 
         private void EndMove()
         {
+            if (_client.Character.State != Character.CharacterState.OnMove) return;
+
             _client.Character.MapCell = _client.Character.CellDestination;
+            _client.Character.State = Character.CharacterState.Free;
 
             var trigger =
                 DatabaseProvider.MapTriggers.Find(
                     x => x.Cell == _client.Character.MapCell
-                         && x.Map == _client.Character.Map);
+                         && x.Map == _client.Character.Map.Id);
+
+            var dropedItem =
+                DatabaseProvider.InventoryItems.Find(
+                    x => x.Map == _client.Character.Map && x.Cell == _client.Character.MapCell);
+
+            if (dropedItem != null)
+                AddDroppedItem(dropedItem);
 
             if (trigger != null)
                 TeleportPlayer(trigger.NewMap, trigger.NewCell);
-            else
-                _client.SendPackets(Packet.Nothing);
+            
+            
+            _client.SendPackets(Packet.Nothing);
         }
 
-        private void TeleportPlayer(Map newMap, int newCell)
+        private void TeleportPlayer(int newMap, int newCell)
         {
             _client.Character.Map.RemoveCharacter(_client.Character);
 
             _client.SendPackets(string.Format("{0};2;{1};", Packet.GameActions, _client.Character.Id));
 
             _client.Character.MapCell = newCell;
-            _client.Character.Map = newMap;
+            _client.Character.Map = DatabaseProvider.Maps.Find(x => x.Id == newMap);
 
             LoadMap();
         }
 
-        // TODO : verify item conditions
+        #endregion
+
+        #region DisplaceItems
+
+        private void AddDroppedItem(InventoryItem droppedItem)
+        {
+            var existItem = InventoryItem.ExistItem(droppedItem, _client.Character);
+
+            _client.Character.Map.Send(string.Format("{0}-{1};{2};0", Packet.CellObject, droppedItem.Cell, droppedItem.ItemInfos.Id));
+
+            if (existItem != null)
+            {
+                existItem.Quantity += droppedItem.Quantity;
+
+                lock (DatabaseProvider.InventoryItems)
+                    DatabaseProvider.InventoryItems.Remove(droppedItem);
+
+                _client.SendPackets(string.Format("{0}{1}|{2}", Packet.ObjectQuantity, existItem.Id,
+                        existItem.Quantity));
+            }
+            else
+            {
+                droppedItem.Map = null;
+                droppedItem.Cell = 0;
+                droppedItem.Character = _client.Character;
+
+                InventoryItemRepository.Create(droppedItem, true);
+
+                _client.SendPackets(string.Format("{0}{1}", Packet.ObjectAdd, droppedItem.ItemInfo()));
+            }
+        }
 
         private void MoveItem(string data)
         {
@@ -422,29 +501,20 @@ namespace SilverGame.Network.Game.GameParser
                         x.Id == itemId && 
                         x.Character.Id == _client.Character.Id);
 
-            if (item == null)
-                return;
-
-            if (itemPosition != StatsManager.Position.None && item.ItemInfos.Level > _client.Character.Level)
-                return;
+            if (item == null) return;
 
             if (itemPosition == StatsManager.Position.None)
             {
-                var existItem = DatabaseProvider.InventoryItems.Find(
-                    x =>
-                        x.ItemInfos == item.ItemInfos &&
-                        string.Join(",", x.Stats).Equals(string.Join(",", item.Stats)) &&
-                        x.Character == item.Character && x.ItemPosition == itemPosition);
+                var existItem = InventoryItem.ExistItem(item,  item.Character, itemPosition);
 
                 if (existItem != null)
                 {
                     var id = item.Id;
+                    existItem.Quantity += item.Quantity;
 
-                    InventoryItemRepository.Remove(item);
+                    InventoryItemRepository.Remove(item, true);
 
                     _client.SendPackets(string.Format("{0}{1}", Packet.ObjectRemove, id));
-
-                    existItem.Quantity += 1;
 
                     InventoryItemRepository.Update(existItem);
 
@@ -463,6 +533,10 @@ namespace SilverGame.Network.Game.GameParser
             }
             else
             {
+                if (item.ItemInfos.Level > _client.Character.Level || 
+                    ItemCondition.VerifyIfCharacterMeetItemCondition(_client.Character, item.ItemInfos.Conditions) == false)
+                    return;
+
                 var existItem = DatabaseProvider.InventoryItems.Find(
                     x =>
                         x.Character == _client.Character &&
@@ -480,7 +554,7 @@ namespace SilverGame.Network.Game.GameParser
                 {
                     var newItem = item.Copy(quantity: item.Quantity - 1);
 
-                    InventoryItemRepository.Create(newItem);
+                    InventoryItemRepository.Create(newItem, true);
 
                     item.Quantity = 1;
 
@@ -504,44 +578,130 @@ namespace SilverGame.Network.Game.GameParser
                 _client.Character.Stats.AddItemStats(item.Stats);
             }
 
-            _client.SendPackets(string.Format("{0}{1}|{2}", Packet.ObjectWeight,
-                    _client.Character.GetCurrentWeight(), _client.Character.GetMaxWeight()));
-
-            _client.SendPackets(string.Format("{0}{1}", Packet.Stats, _client.Character.GetStats()));
+            RefreshCharacterStats();
 
             _client.Character.Map.Send(string.Format("{0}{1}|{2}", Packet.ObjectAccessories, _client.Character.Id,
                 _client.Character.GetItemsWheneChooseCharacter()));
         }
 
-        private void RemoveItem(string data)
+        private void DropItem(string data)
         {
-            throw new NotImplementedException();
+            var itemId = int.Parse(data.Split('|')[0]);
+            var quantity = int.Parse(data.Split('|')[1]);
+
+            var item =
+                DatabaseProvider.InventoryItems.Find(
+                    x => x.Id == itemId && x.Character.Id == _client.Character.Id && x.Quantity >= quantity);
+
+            if (item == null) return;
+                
+            item.Quantity -= quantity;
+
+            var cell = PathFinding.GetNearbyCell(_client.Character.MapCell, _client.Character.Map);
+
+            if (cell == -1)
+            {
+                _client.SendPackets(string.Format("{0}{1}", Packet.Message, Packet.NotEnoughSpaceToDropItem));
+                return;
+            }
+
+            if (item.Quantity == 0)
+            {
+                item.Quantity = quantity;
+                item.Map = _client.Character.Map;
+                item.Cell = cell;
+                item.Character = null;
+
+                InventoryItemRepository.Remove(item, false);
+                
+                _client.SendPackets(string.Format("{0}{1}", Packet.ObjectRemove, item.Id));
+
+                _client.Character.Map.Send(string.Format("{0}+{1};{2};0", Packet.CellObject, item.Cell, item.ItemInfos.Id));
+            }
+            else
+            {
+                var newItem = item.Copy(quantity: quantity);
+
+                newItem.Map = _client.Character.Map;
+                newItem.Cell = cell;
+                newItem.Character = null;
+
+                lock (DatabaseProvider.InventoryItems)
+                    DatabaseProvider.InventoryItems.Add(newItem);
+
+                _client.SendPackets(string.Format("{0}{1}|{2}", Packet.ObjectQuantity, item.Id, item.Quantity));
+
+                _client.Character.Map.Send(string.Format("{0}+{1};{2};0", Packet.CellObject, newItem.Cell, item.ItemInfos.Id));
+            }
+
+            RefreshCharacterStats();
+
+            if (!item.IsEquiped()) return;
+
+            _client.Character.Stats.RemoveItemStats(item.Stats);
+
+            _client.Character.Map.Send(string.Format("{0}{1}|{2}", Packet.ObjectAccessories, _client.Character.Id,
+                _client.Character.GetItemsWheneChooseCharacter()));
         }
+
+
+        private void DeleteItem(string data)
+        {
+            var itemId = int.Parse(data.Split('|')[0]);
+            var quantity = int.Parse(data.Split('|')[1]);
+
+            var item =
+                DatabaseProvider.InventoryItems.Find(
+                    x => x.Id == itemId && x.Character.Id == _client.Character.Id && x.Quantity >= quantity);
+
+            if (item == null) return;
+
+            item.Quantity -= quantity;
+
+            if (item.Quantity <= 0)
+            {
+                _client.SendPackets(string.Format("{0}{1}", Packet.ObjectRemove, item.Id));
+
+                InventoryItemRepository.Remove(item, true);
+            }
+            else
+            {
+                item.Quantity = quantity;
+
+                _client.SendPackets(string.Format("{0}{1}|{2}", Packet.ObjectQuantity, item.Id, item.Quantity));
+
+                InventoryItemRepository.Update(item);
+            }
+
+            RefreshCharacterStats();
+
+            if (!item.IsEquiped()) return;
+
+            _client.Character.Stats.RemoveItemStats(item.Stats);
+
+            _client.Character.Map.Send(string.Format("{0}{1}|{2}", Packet.ObjectAccessories, _client.Character.Id,
+                _client.Character.GetItemsWheneChooseCharacter()));
+        }
+
+        #endregion
+
+        #region Chat
 
         private void SubscribeChannel(string data)
         {
-            if (!Channel.Headers.Contains(data[1]))
-                return;
+            if (!Channel.Headers.Contains(data[1])) return;
 
             var state = data[0];
             var header = (Channel.ChannelHeader) data[1];
 
-            if (state.Equals('+'))
+            switch (state)
             {
-                if (_client.Character.Channels.All(x => x.Header != header))
-                {
-                    _client.Character.Channels.Add(new Channel
-                    {
-                        Header = header
-                    });
-                }
-            }
-            else
-            {
-                if (_client.Character.Channels.Any(x => x.Header == header))
-                {
-                    _client.Character.Channels.RemoveAll(x => x.Header == header);
-                }
+                case '+':
+                    _client.Character.AddChannel(header);
+                    break;
+                case '-':
+                    _client.Character.RemoveChannel(header);
+                    break;
             }
 
             _client.SendPackets(string.Format("{0}{1}", Packet.SubscribeChannel, data));
@@ -577,26 +737,234 @@ namespace SilverGame.Network.Game.GameParser
                     break;
             }
         }
+        #endregion
+
+        #region CharacterStats
 
         private void StatsBoost(string data)
         {
-            try
-            {
-                var baseStats = int.Parse(data);
+            var baseStats = int.Parse(data);
 
-                if (baseStats < 10 || baseStats > 15)
-                    return;
+            if (baseStats < 10 || baseStats > 15) return;
 
-                _client.Character.BoostStats((Character.BaseStats)baseStats);
+            _client.Character.BoostStats((Character.BaseStats)baseStats);
 
-                _client.SendPackets(string.Format("{0}{1}", Packet.Stats, _client.Character.GetStats()));
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
-            
+            _client.SendPackets(string.Format("{0}{1}", Packet.Stats, _client.Character.GetStats()));
         }
 
+        #endregion  
+
+        #region ExchangeRequests
+
+        private void ParseRequest(string data)
+        {
+            var id = int.Parse(data.Split('|')[0]);
+
+            switch (id)
+            {
+                case 0:
+                    break;
+                case 1:
+                    StartExchangeWithPlayer(data);
+                    break;
+            }
+        }
+
+        private void StartExchangeWithPlayer(string data)
+        {
+            if (_client.Character.State != Character.CharacterState.Free
+                && _client.Character.State != Character.CharacterState.OnMove)
+                return;
+
+            var requestId = data.Split('|')[0];
+            var receiverId = int.Parse(data.Split('|')[1]);
+
+            var receiverCharacter = DatabaseProvider.Characters.Find(x => x.Id == receiverId);
+
+            if (receiverCharacter == null)
+            {
+                _client.SendPackets(Packet.CannotExchangeWithThisPlayer);
+                return;
+            }
+
+            var receiverClient = GameServer.Clients.Find(x => x.Character == receiverCharacter);
+
+            if (receiverClient == null)
+            {
+                _client.SendPackets(Packet.CannotExchangeWithThisPlayer);
+                return;
+            }
+
+            if (receiverClient.Character.Map != _client.Character.Map)
+            {
+                _client.SendPackets(Packet.CannotExchangeWithThisPlayer);
+                return;
+            }
+
+            if (receiverClient.Character.State == Character.CharacterState.OnExchange)
+            {
+                _client.SendPackets(Packet.PlayerIsAlredyOnExchange);
+                return;
+            }
+
+            if (receiverClient.Character.State != Character.CharacterState.Free)
+            {
+                _client.SendPackets(Packet.CannotExchangeWithThisPlayer); return;
+            }
+
+            receiverCharacter.State = Character.CharacterState.OnExchange;
+            receiverCharacter.ExchangeWithCharacter = _client.Character;
+
+            _client.Character.State = Character.CharacterState.OnExchange;
+            _client.Character.ExchangeWithCharacter = receiverCharacter;
+
+            receiverClient.SendPackets(string.Format("{0}{1}|{2}|{3}", Packet.ExchangeRequestValidated, _client.Character.Id, receiverId, requestId));
+            _client.SendPackets(string.Format("{0}{1}|{2}|{3}", Packet.ExchangeRequestValidated, _client.Character.Id, receiverId, requestId));
+        }
+
+        private void ExchangeAccepted(string data)
+        {
+            if (_client.Character.State != Character.CharacterState.OnExchange) return;
+
+            var receiverCharacter = _client.Character.ExchangeWithCharacter;
+
+            // TODO : other type of exchange here, maybe do a switch later...
+            if (receiverCharacter == null) return;
+
+            var receiverClient = GameServer.Clients.Find(x => x.Character == receiverCharacter);
+
+            if (receiverClient == null) return;
+
+            ExchangeManager.CreateExchangeSession(_client.Character, receiverClient.Character);
+
+            receiverClient.SendPackets(string.Format("{0}{1}", Packet.ExchangeCreated, "1"));
+
+            _client.SendPackets(string.Format("{0}{1}", Packet.ExchangeCreated, "1"));
+        }
+
+        private void LeaveExchange(string data)
+        {
+            if (_client.Character.State != Character.CharacterState.OnExchange) return;
+
+            var receiverCharacter = _client.Character.ExchangeWithCharacter;
+
+            if (receiverCharacter != null)
+                _client.Character.LeaveExchangeWithPlayer();
+
+            var receiverClient = GameServer.Clients.Find(x => x.Character == receiverCharacter);
+
+            var exchangeSession =
+                ExchangeManager.Exchanges.Find(
+                    x => x.FirstTrader == _client.Character && x.SecondTrader == receiverClient.Character
+                         || x.FirstTrader == receiverClient.Character && x.SecondTrader == _client.Character);
+
+            if (exchangeSession != null)
+            {
+                ExchangeManager.CloseExchangeSession(exchangeSession);
+            }
+
+            receiverClient.SendPackets(Packet.ExchangeLeave);
+            _client.SendPackets(Packet.ExchangeLeave);
+        }
+
+        private void ExchangeMove(string data)
+        {
+            var id = data[0];
+
+            var receiverCharacter = _client.Character.ExchangeWithCharacter;
+
+            var receiverClient = GameServer.Clients.Find(x => x.Character == receiverCharacter);
+
+            if (receiverClient == null) return;
+
+            var exchangeSession =
+                ExchangeManager.Exchanges.Find(
+                    x => x.FirstTrader == _client.Character && x.SecondTrader == receiverClient.Character
+                        || x.FirstTrader == receiverClient.Character && x.SecondTrader == _client.Character);
+
+            if (exchangeSession == null) return;
+
+            switch (id)
+            {
+                case 'O':
+                    ExchangeMoveObject(data.Substring(1), receiverClient, exchangeSession);
+                    break;
+                case 'G':
+                    ExchangeMoveKamas(data.Substring(1), receiverClient, exchangeSession);
+                    break;
+            }
+        }
+
+        private void ExchangeMoveObject(string data, GameClient receiverClient, Exchange exchangeSession)
+        {
+
+            if (_client.Character.State != Character.CharacterState.OnExchange) return;
+
+            var state = data[0];
+            var itemId = int.Parse(data.Substring(1).Split('|')[0]);
+            var quantity = int.Parse(data.Substring(1).Split('|')[1]);
+
+            var item =
+                DatabaseProvider.InventoryItems.Find(
+                    x => x.Character == _client.Character && x.Id == itemId && x.Quantity >= quantity);
+
+            if (item == null) return;
+
+            if (item.ItemPosition != StatsManager.Position.None) return;
+
+            switch (state)
+            {
+                case '+':
+                    exchangeSession.AddItem(_client.Character, item, quantity, _client, receiverClient);
+                    break;
+                case '-':
+                    exchangeSession.RemoveItem(_client.Character, item, quantity, _client, receiverClient);
+                    break;
+            }
+        }
+
+        private void ExchangeMoveKamas(string data, GameClient receiverClient, Exchange exchangeSession)
+        {
+            if (_client.Character.State != Character.CharacterState.OnExchange) return;
+
+            var kamas = int.Parse(data);
+
+            if(_client.Character.Kamas >= kamas)
+                exchangeSession.AddKamas(_client.Character, kamas, _client, receiverClient);
+        }
+
+        private void ExchangeReady(string data)
+        {
+            if (_client.Character.State != Character.CharacterState.OnExchange) return;
+
+            var receiverCharacter = _client.Character.ExchangeWithCharacter;
+
+            var receiverClient = GameServer.Clients.Find(x => x.Character == receiverCharacter);
+
+            if (receiverClient == null) return;
+
+            var exchangeSession =
+                ExchangeManager.Exchanges.Find(
+                    x => x.FirstTrader == _client.Character && x.SecondTrader == receiverClient.Character
+                        || x.FirstTrader == receiverClient.Character && x.SecondTrader == _client.Character);
+
+            if (exchangeSession == null) return;
+            
+            var finishedExchange = exchangeSession.Accepted(_client.Character, _client, receiverClient);
+
+            if (!finishedExchange) return;
+
+            exchangeSession.Swap();
+
+            ExchangeManager.CloseExchangeSession(exchangeSession);
+
+            receiverClient.Character.State = Character.CharacterState.Free;
+            receiverClient.Character.ExchangeWithCharacter = null;
+
+            _client.Character.State = Character.CharacterState.Free;
+            _client.Character.ExchangeWithCharacter = null;
+        }
+
+        #endregion
     }
 }

@@ -41,6 +41,8 @@ namespace SilverGame.Models.Characters
         public int Direction { get; set; }
         public int CellDestination { get; set; }
         public List<Channel> Channels { get; set; }
+        public CharacterState State;
+        public Character ExchangeWithCharacter { get; set; }
 
         public void CalculateItemStats()
         {
@@ -1041,11 +1043,47 @@ namespace SilverGame.Models.Characters
 
         #endregion
 
+        #region Channel
+
+        public void AddChannel(Channel.ChannelHeader header)
+        {
+            if (Channels.All(x => x.Header != header))
+            {
+                Channels.Add(new Channel
+                {
+                    Header = header
+                });
+            }
+        }
+
+        public void RemoveChannel(Channel.ChannelHeader header)
+        {
+            if (Channels.Any(x => x.Header == header))
+            {
+                Channels.RemoveAll(x => x.Header == header);
+            }
+        }
+
+        #endregion
+
+        #region Exchange
+
+        public void LeaveExchangeWithPlayer()
+        {
+            ExchangeWithCharacter.ExchangeWithCharacter = null;
+            ExchangeWithCharacter.State = CharacterState.Free;
+
+            ExchangeWithCharacter = null;
+            State = CharacterState.Free;
+        }
+
+        #endregion
+
         public void SendToAll(string message)
         {
             lock (GameServer.Lock)
             {
-                foreach (var client in GameServer.Clients)
+                foreach (var client in GameServer.Clients.Where(x => x.Character != null))
                 {
                     client.SendPackets(message);
                 }
@@ -1056,6 +1094,20 @@ namespace SilverGame.Models.Characters
         {
             if (this.Map != null)
                 this.Map.RemoveCharacter(this);
+
+            if (this.ExchangeWithCharacter != null)
+            {
+                var receiverClient = GameServer.Clients.Find(x => x.Character == this.ExchangeWithCharacter);
+
+                if(receiverClient != null)
+                    receiverClient.SendPackets(Packet.ExchangeLeave);
+
+                this.ExchangeWithCharacter.State = CharacterState.Free;
+                this.ExchangeWithCharacter.ExchangeWithCharacter = null;
+
+                this.State = CharacterState.Free;
+                this.ExchangeWithCharacter = null;
+            }
 
             CharacterRepository.Update(this);
         }
@@ -1084,6 +1136,14 @@ namespace SilverGame.Models.Characters
             Chance = 13,
             Agility = 14,
             Intelligence = 15,
+        }
+
+        public enum CharacterState
+        {
+            Free,
+            OnExchange,
+            OnMove,
+            OnFight,
         }
     }
 }

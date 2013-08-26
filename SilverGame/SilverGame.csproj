@@ -64,9 +64,9 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Transactions" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Database\Copie de DatabaseProvider.cs" />
     <Compile Include="Database\Repository\AccountRepository.cs" />
     <Compile Include="Database\DatabaseProvider.cs" />
     <Compile Include="Database\Connection\GameDbManager.cs" />
@@ -83,6 +83,8 @@
     <Compile Include="Models\Characters\Character.cs" />
     <Compile Include="Models\Chat\Channel.cs" />
     <Compile Include="Models\Chat\ServerMessage.cs" />
+    <Compile Include="Models\Exchange\Exchange.cs" />
+    <Compile Include="Models\Exchange\ExchangeManager.cs" />
     <Compile Include="Models\Experience\Experience.cs" />
     <Compile Include="Models\Gifts\Gift.cs" />
     <Compile Include="Models\Gifts\GiftItems.cs" />

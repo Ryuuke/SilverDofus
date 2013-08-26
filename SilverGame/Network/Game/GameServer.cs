@@ -27,7 +27,7 @@ namespace SilverGame.Network.Game
         protected override void OnListeningFailed(Exception e)
         {
             SilverConsole.WriteLine("Error : Listening Failed, check your port or IP address ...", ConsoleColor.Red);
-            Logs.LogWritter(Constant.GameFolder, string.Format("GameServer listening failed {0}", e.Message));
+            Logs.LogWritter(Constant.ErrorsFolder, string.Format("GameServer listening failed {0}", e.Message));
         }
 
         protected override void OnSocketAccepted(SilverSocket socket)

@@ -44,8 +44,14 @@ namespace SilverGame.Models.Chat
 
             var clientReceiver = GameServer.Clients.Find(x => x.Character == receiver);
 
+            if (clientReceiver == null)
+            {
+                clientSender.SendPackets(string.Format("{0}{1}", Packet.PrivateMessageNotConnectedReceiverError, receiverName));
+                return;
+            }
+
             clientReceiver.SendPackets(string.Format("{0}|{1}|{2}|{3}", Packet.PrivateMessageReceiver, _character.Id, _character.Name, message));
-            clientSender.SendPackets(string.Format("{0}|{1}|{2}|{3}", Packet.PrivateMessageSender, _character.Id, _character.Name, message));
+            clientSender.SendPackets(string.Format("{0}|{1}|{2}|{3}", Packet.PrivateMessageSender, receiver.Id, receiver.Name, message));
         }
 
         public void SendAdminMessage(string message)

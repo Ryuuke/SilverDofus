@@ -5,18 +5,37 @@ namespace SilverGame.Database.Repository
 {
     static class AccountRepository
     {
-        public static void UpdateAccount(bool connected, int id = 0)
+        public static void UpdateAccount(int id = 0, bool connected = true)
         {
-            var query = id == 0
-                ? "UPDATE accounts, characters SET accounts.connected = @connected WHERE characters.accountId = accounts.id"
-                : "UPDATE accounts, characters SET accounts.connected = @connected WHERE accounts.id = @id AND characters.accountId = accounts.id";
+            if (id != 0 && connected)
+            {
+                const string query = "INSERT INTO gameconnection SET connected = 1, accountId=@accountid, gameserverid=@gsId";
 
-            Base.Repository.ExecuteQuery(query, RealmDbManager.GetDatabaseConnection(),
-                (command) =>
-                {
-                    command.Parameters.Add(new MySqlParameter("@id", id));
-                    command.Parameters.Add(new MySqlParameter("@connected", connected));
-                });
+                Base.Repository.ExecuteQuery(query, RealmDbManager.GetDatabaseConnection(),
+                    (command) =>
+                    {
+                        command.Parameters.Add(new MySqlParameter("@accountid", id));
+                        command.Parameters.Add(new MySqlParameter("@gsId", DatabaseProvider.ServerId));
+                    });
+            }
+            else if (connected == false && id == 0)
+            {
+                const string query = "DELETE FROM gameconnection";
+
+                Base.Repository.ExecuteQuery(query, RealmDbManager.GetDatabaseConnection(),
+                    (command) => { });
+            }
+            else if (connected == false && id != 0)
+            {
+                const string query = "DELETE FROM gameconnection WHERE accountid=@accountid AND gameserverid=@gsId";
+
+                Base.Repository.ExecuteQuery(query, RealmDbManager.GetDatabaseConnection(),
+                    (command) =>
+                    {
+                        command.Parameters.Add(new MySqlParameter("@accountid", id));
+                        command.Parameters.Add(new MySqlParameter("@gsId", DatabaseProvider.ServerId));
+                    });
+            }
         }
     }
 }

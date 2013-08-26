@@ -2,7 +2,7 @@
 
 namespace SilverRealm.Services
 {
-    class SilverConsole
+    static class SilverConsole
     {
         public static void Welcome()
         {

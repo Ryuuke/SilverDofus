@@ -11,19 +11,26 @@ namespace SilverRealm.Database
             const string query =
                 "Select gameServerId, count(characterName) AS numberCharacters FROM characters WHERE accountId=@accountId GROUP by gameServerId;";
 
-            var command = new MySqlCommand(query, DbManager.Connection);
+            lock (DbManager.Lock)
+            {
+                using (var connection = DbManager.GetConnection())
+                {
+                    using (var command = new MySqlCommand(query, connection))
+                    {
+                        command.Parameters.Add(new MySqlParameter("@accountId", accountId));
 
-            command.Parameters.Add(new MySqlParameter("@accountId", accountId));
+                        var reader = command.ExecuteReader();
 
-            var reader = command.ExecuteReader();
+                        while (reader.Read())
+                            charactersByGameServer = string.Concat(charactersByGameServer,
+                                string.Format(format, reader.GetInt16("gameServerId"), reader.GetInt16("numberCharacters")));
 
-            while (reader.Read())
-                charactersByGameServer = string.Concat(charactersByGameServer,
-                    string.Format(format, reader.GetInt16("gameServerId"), reader.GetInt16("numberCharacters")));
+                        reader.Close();
 
-            reader.Close();
-
-            return charactersByGameServer;
+                        return charactersByGameServer;
+                    }
+                }
+            }
         }
     }
 }

@@ -62,9 +62,7 @@ namespace SilverGame.Models.Items
             var items = DatabaseProvider.InventoryItems.FindAll(x => x.Character == character);
 
             foreach (var stats in from inventoryItem in items
-                where
-                    (int) inventoryItem.ItemPosition > (int) Position.None &&
-                    (int) inventoryItem.ItemPosition < (int) Position.Bar1
+                where inventoryItem.IsEquiped()
                 from stats in inventoryItem.Stats
                 select stats)
             {

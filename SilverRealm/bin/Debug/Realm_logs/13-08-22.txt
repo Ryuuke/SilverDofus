@@ -210,3 +210,4 @@ Ryuu:ip 127.0.0.1:6037 Recv << AX1
 Ryuu:ip 127.0.0.1:6037 Send >> AYK127.0.0.1:5555;08/22/2013 17:38:04|127.0.0.1:6037|1,Ryuu,lol,Ryuuke,delete?,delete,False,5,20/07/2013 09:50:48,26/07/2013 12:29:05
 Ryuu:ip 127.0.0.1:6037  Connection closed
 RealmServer Waiting for connexion 
+RealmServer Waiting for connexion 

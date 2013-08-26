@@ -2,6 +2,7 @@
 using System.Linq;
 using SilverGame.Database;
 using SilverGame.Models.Characters;
+using SilverGame.Models.Maps;
 using SilverGame.Services;
 
 namespace SilverGame.Models.Items
@@ -14,6 +15,8 @@ namespace SilverGame.Models.Items
         public ItemInfos ItemInfos { get; set; }
         public int Quantity { get; set; }
         public List<ItemStats> Stats { get; set; }
+        public Map Map { get; set; }
+        public int Cell { get; set; }
 
         public override string ToString()
         {
@@ -34,6 +37,15 @@ namespace SilverGame.Models.Items
                 string.Join(",", Stats));
         }
 
+        public string ToExchangeFormat(int quantity)
+        {
+            return string.Format("{0}|{1}|{2}|{3}",
+                Id,
+                quantity,
+                ItemInfos.Id,
+                string.Join(",", Stats));
+        }
+
         public InventoryItem Copy(StatsManager.Position position = StatsManager.Position.None, int quantity = 1)
         {
             return new InventoryItem
@@ -48,6 +60,21 @@ namespace SilverGame.Models.Items
                 Stats = this.Stats,
                 ItemPosition = position,
             };
+        }
+
+        public bool IsEquiped()
+        {
+            return (int) ItemPosition > (int) StatsManager.Position.None &&
+                   (int) ItemPosition < (int) StatsManager.Position.Bar1;
+        }
+
+        public static InventoryItem ExistItem(InventoryItem item, Character character, StatsManager.Position position = StatsManager.Position.None, int quantity = 1)
+        {
+            return DatabaseProvider.InventoryItems.Find(
+                x =>
+                    x.ItemInfos == item.ItemInfos &&
+                    string.Join(",", x.Stats).Equals(string.Join(",", item.Stats)) &&
+                    x.Character == character && x.ItemPosition == position && x.Quantity >= quantity);
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using SilverGame.Database;
 using SilverGame.Models.Characters;
 using SilverGame.Network.Game;
 using SilverGame.Services;
@@ -41,9 +42,7 @@ namespace SilverGame.Models.Maps
             lock (GameServer.Lock)
             {
                 foreach (var character in _characters)
-                {
                     GameServer.Clients.Find(x => x.Character == character).SendPackets(packet);
-                }
             }
         }
 
@@ -110,6 +109,12 @@ namespace SilverGame.Models.Maps
         public string DisplayChars()
         {
             return _characters.Aggregate(string.Empty, (current, character) => current + string.Format("|+{0}", character.DisplayChar()));
+        }
+
+        public void SendItemsOnMap()
+        {
+                foreach (var mapItems in DatabaseProvider.InventoryItems.Where(x => x.Map == this))
+                    Send(string.Format("{0}+{1};{2};0", Packet.CellObject, mapItems.Cell, mapItems.ItemInfos.Id));
         }
     }
 }

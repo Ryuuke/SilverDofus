@@ -32,7 +32,8 @@ namespace SilverGame.Network.ToRealm
 
         public void OnConnected()
         {
-            SilverConsole.WriteLine("Com : Connected to Realm Server Successfully", ConsoleColor.Green);
+            SilverConsole.WriteLine("Com : Connected" +
+                                    " to Realm Server Successfully", ConsoleColor.Green);
             Logs.LogWritter(Constant.ComFolder, "Com : Connected to Realm Server Successfully");
 
             Thread.Sleep(500);
@@ -95,7 +96,7 @@ namespace SilverGame.Network.ToRealm
             lock (GameServer.Lock)
                 GameServer.Clients.Find(x => x.Account.Id == int.Parse(id)).Disconnect();
 
-            Database.Repository.AccountRepository.UpdateAccount(false, int.Parse(id));
+            Database.Repository.AccountRepository.UpdateAccount(int.Parse(id), false);
         }
     }
 }

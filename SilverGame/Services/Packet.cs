@@ -42,9 +42,11 @@
             GameEndAction = "GK",
             Nothing = "BN",
             ObjectMove = "OM",
-            ObjectWeight = "Ow",
+            CharacterWeight = "Ow",
             ObjectQuantity = "OQ",
             ObjectDrop = "OD",
+            ObjectDelete = "Od",
+            CellObject = "GDO",
             ObjectAdd = "OAKO",
             ObjectRemove = "OR",
             ObjectItemSet = "OS",
@@ -58,14 +60,30 @@
             BusinessMessage = "cMK:",
             PrivateMessageReceiver = "cMKF",
             PrivateMessageSender = "cMKT",
-            PrivateMessageNotConnectedReceiverError = "cMEF",
+            PrivateMessageNotConnectedReceiverError = "cMEf",
             AdminMesage = "cMK@",
             Message = "Im",
-            StatsBoost = "AB";
+            StatsBoost = "AB",
+            ExchangeRequest = "ER",
+            ExchangeRequestValidated = "ERK",
+            ExchangeLeave = "EV",
+            CannotExchangeWithThisPlayer = "EREE",
+            PlayerIsAlredyOnExchange = "EREI",
+            ExchangeAccepted = "EA",
+            ExchangeCreated = "ECK",
+            ExchangeObjectMove = "EM",
+            ExchangeObjectLocalObjectMove = "EMKO",
+            ExchangeObjectDistantObjectMove = "EmKO",
+            ExchangeObjectLocalKamasMove = "EMKG",
+            ExchangeObjectDistantKamasMove = "EmKG",
+            ExchangeReady = "EK",
+            ExchangeLeaveSucess = "EVa";
 
         // Message Id (Im)
         public const string
             WelcomeToDofus = "189",
-            LastConnectionInfos = "0152";
+            LastConnectionInfos = "0152",
+            NotEnoughSpaceToDropItem = "1145",
+            MyMessage = "0";
     }
 }

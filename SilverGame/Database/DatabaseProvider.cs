@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using MySql.Data.MySqlClient;
 using System.Threading.Tasks;
@@ -38,9 +39,10 @@ namespace SilverGame.Database
         {
             SilverConsole.WriteLine("loading database resources... \n", ConsoleColor.DarkGreen);
 
-            AccountRepository.UpdateAccount(false);
-
             LoadServerId();
+
+            AccountRepository.UpdateAccount(connected: false);
+
             LoadAccounts();
             LoadAlignments();
             LoadStatsManager();
@@ -87,7 +89,6 @@ namespace SilverGame.Database
                             Pseudo = reader.GetString("pseudo"),
                             Question = reader.GetString("question"),
                             Reponse = reader.GetString("reponse"),
-                            Connected = reader.GetBoolean("connected"),
                             GmLevel = reader.GetInt16("gmLevel"),
                             BannedUntil =
                                 Convert.IsDBNull(reader["bannedUntil"])
@@ -164,6 +165,7 @@ namespace SilverGame.Database
                             Direction = reader.GetInt16("direction"),
                             StatsPoints = reader.GetInt32("statsPoints"),
                             SpellPoints = reader.GetInt32("spellsPoints"),
+                            Kamas = reader.GetInt32("kamas"),
                             Channels = reader.GetString("channels").Select(channel => new Channel
                             {
                                 Header = (Channel.ChannelHeader) channel
@@ -410,7 +412,6 @@ namespace SilverGame.Database
 
                         Maps.Add(newMap);
                     }
-
                     return Maps.Count;
                 });
 
@@ -426,9 +427,9 @@ namespace SilverGame.Database
                     {
                         MapTriggers.Add(new MapTrigger
                         {
-                            Map = Maps.Find(x => x.Id == reader.GetInt32("MapID")),
+                            Map = reader.GetInt32("MapID"),
                             Cell = reader.GetInt32("CellID"),
-                            NewMap = Maps.Find(x => x.Id == reader.GetInt32("NewMap")),
+                            NewMap = reader.GetInt32("NewMap"),
                             NewCell = reader.GetInt32("NewCell")
                         });
                     }
