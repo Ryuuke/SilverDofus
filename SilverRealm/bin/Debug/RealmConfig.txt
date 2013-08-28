@@ -19,7 +19,7 @@ Realm_Database_Password=
 Realm_Database_Name=SilverEmu
 
 	// Systeme d'abonnement
-subscription=false
+subscription=true
 
 	// port de communication avec les games
 port_com=448

@@ -1,9 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using SilverGame.Database;
 using SilverGame.Models.Characters;
+using SilverGame.Models.Items.Abstract;
 
-namespace SilverGame.Models.Items
+namespace SilverGame.Models.Items.Items
 {
     class StatsManager
     {
@@ -59,18 +61,26 @@ namespace SilverGame.Models.Items
 
         public void Calculate(Character character)
         {
-            var items = DatabaseProvider.InventoryItems.FindAll(x => x.Character == character);
+            var items = DatabaseProvider.InventoryItems.FindAll(x => x.Character == character && x.IsEquiped());
 
             foreach (var stats in from inventoryItem in items
-                where inventoryItem.IsEquiped()
                 from stats in inventoryItem.Stats
                 select stats)
             {
                 ParseStats(stats);
             }
+
+            foreach (var itemSetBonus in from set in character.GetSets()
+                let numberOfItemsEquipedInSet = character.GetAllItemsEquipedInSet(set).Count
+                where set.BonusesDictionary.ContainsKey(numberOfItemsEquipedInSet)
+                from itemSetBonus in set.BonusesDictionary[numberOfItemsEquipedInSet]
+                select itemSetBonus)
+            {
+                ParseStats(itemSetBonus);
+            }
         }
 
-        private void ParseStats(ItemStats stats)
+        private void ParseStats(Jet stats)
         {
             if (WeaponEffect.Contains(stats.Header))
                 return;
@@ -368,7 +378,7 @@ namespace SilverGame.Models.Items
             }
         }
 
-        public void AddItemStats(IEnumerable<ItemStats> stats)
+        public void AddItemStats(IEnumerable<Jet> stats)
         {
             foreach (var itemStatse in stats)
             {
@@ -376,14 +386,12 @@ namespace SilverGame.Models.Items
             }
         }
 
-        public void RemoveItemStats(IEnumerable<ItemStats> stats)
+        public void RemoveItemStats(IEnumerable<Jet> stats)
         {
-            var invertedStats = stats.Select(stat => new ItemStats
+            var invertedStats = stats.Select(stat => new Jet
             {
                 Header = stat.Header,
                 MinValue = -stat.MinValue,
-                MaxValue = stat.MaxValue,
-                JetDecimal = stat.JetDecimal
             }).ToList();
 
             foreach (var invertedStat in invertedStats)
@@ -392,8 +400,60 @@ namespace SilverGame.Models.Items
             }
         }
 
+        public void DecreaseItemSetEffect(InventoryItem item)
+        {
+            var itemSet = item.ItemInfos.GetSet();
+            var character = item.Character;
 
-        public Effect[] WeaponEffect =
+            var numberOfItemsEquipedInSet = DatabaseProvider.InventoryItems.Count(
+                x => x.Character == character && x.ItemInfos.GetSet() == itemSet && x.IsEquiped());
+
+            if (itemSet.BonusesDictionary.ContainsKey(numberOfItemsEquipedInSet + 1))
+            {
+                var oldBonusSet = itemSet.BonusesDictionary[numberOfItemsEquipedInSet + 1];
+
+                RemoveItemStats(oldBonusSet);
+            }
+
+            if (!itemSet.BonusesDictionary.ContainsKey(numberOfItemsEquipedInSet)) return;
+
+            var newBonusSet = itemSet.BonusesDictionary[numberOfItemsEquipedInSet];
+
+            AddItemStats(newBonusSet);
+        }
+
+        public void IncreaseItemSetEffect(InventoryItem item)
+        {
+            var itemSet = item.ItemInfos.GetSet();
+            var character = item.Character;
+
+           
+
+            try
+            {
+                var numberOfItemsEquipedInSet = DatabaseProvider.InventoryItems.Count(
+               x => x.Character == character && x.ItemInfos.GetSet() == itemSet && x.IsEquiped());
+
+                if (itemSet.BonusesDictionary.ContainsKey(numberOfItemsEquipedInSet - 1))
+                {
+                    var oldBonusSet = itemSet.BonusesDictionary[numberOfItemsEquipedInSet - 1];
+
+                    RemoveItemStats(oldBonusSet);
+                }
+
+                if (!itemSet.BonusesDictionary.ContainsKey(numberOfItemsEquipedInSet)) return;
+
+                var newBonusSet = itemSet.BonusesDictionary[numberOfItemsEquipedInSet];
+
+                AddItemStats(newBonusSet);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
+        }
+
+        public static Effect[] WeaponEffect =
         {
             Effect.VolEau,
             Effect.VolTerre,

@@ -25,7 +25,7 @@ namespace SilverGame.Network.ToRealm
 
         public void ConnectToRealm()
         {
-            SilverConsole.WriteLine("Connection to Realm server...", ConsoleColor.DarkGreen);
+            SilverConsole.WriteLine("Com : Connection to Realm server...", ConsoleColor.DarkGreen);
             Logs.LogWritter(Constant.ComFolder, "Connection to Realm server...");
             Socket.ConnectTo(Config.Get("Realm_ip"), Int32.Parse(Config.Get("Com_port")));
         }
@@ -50,7 +50,7 @@ namespace SilverGame.Network.ToRealm
 
         public void OnSocketClosed()
         {
-            SilverConsole.WriteLine("Connection To Realm Server closed", ConsoleColor.Yellow);
+            SilverConsole.WriteLine("Com : Connection To Realm Server closed", ConsoleColor.Yellow);
             Logs.LogWritter(Constant.ComFolder, "Com : Connection to Realm Server closed");
 
             RetryToConnect();
@@ -94,7 +94,7 @@ namespace SilverGame.Network.ToRealm
                 return;
 
             lock (GameServer.Lock)
-                GameServer.Clients.Find(x => x.Account.Id == int.Parse(id)).Disconnect();
+                GameServer.Clients.Find(x => x.Account.Id == int.Parse(id)).OnSocketClosed();
 
             Database.Repository.AccountRepository.UpdateAccount(int.Parse(id), false);
         }

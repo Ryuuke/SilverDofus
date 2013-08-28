@@ -186,7 +186,7 @@ namespace SilverRealm.Network.Realm
             if (bool.Parse(Config.Get("subscription")))
             {
                 SendPackets(string.Format("{0}{1}{2}", Packet.SubscriptionPlayerList, 
-                        (Account.Subscription == null || DateTime.Now >= Account.Subscription.Value)
+                        Account.IsNotSubscribed()
                             ? (object) Constant.DiscoveryMode
                             : (Account.Subscription.Value - DateTime.Now).TotalMilliseconds.ToString(CultureInfo.InvariantCulture).Split('.')[0], 
                         listCharactersByGameServer));

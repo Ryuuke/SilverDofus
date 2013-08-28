@@ -73,12 +73,5 @@ namespace SilverGame.Network.Game
                 _parser.Parse(packet);
             }
         }
-
-        public void Disconnect()
-        {
-            Socket.CloseSocket();
-
-            RemoveMeOnList();
-        }
     }
 }

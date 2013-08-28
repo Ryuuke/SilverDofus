@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using SilverGame.Database.Connection;
 using SilverGame.Models.Items;
+using SilverGame.Models.Items.Items;
 
 namespace SilverGame.Database.Repository
 {

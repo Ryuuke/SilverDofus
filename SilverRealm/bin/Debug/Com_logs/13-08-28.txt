@@ -1,0 +1,141 @@
+Waiting for connection to game servers ...
+Connection successfuly with game server 127.0.0.1:56938
+Recv << HRlolxdmdrlol
+Waiting for connection to game servers ...
+Connection successfuly with game server 127.0.0.1:59721
+Recv << HRlolxdmdrlol
+Connection closed with Game Server 127.0.0.1:59721
+Waiting for connection to game servers ...
+Connection successfuly with game server 127.0.0.1:61091
+Recv << HRlolxdmdrlol
+Waiting for connection to game servers ...
+Connection successfuly with game server 127.0.0.1:61435
+Recv << HRlolxdmdrlol
+Connection closed with Game Server 127.0.0.1:61435
+Waiting for connection to game servers ...
+Connection successfuly with game server 127.0.0.1:61601
+Recv << HRlolxdmdrlol
+Connection closed with Game Server 127.0.0.1:61601
+Waiting for connection to game servers ...
+Connection successfuly with game server 127.0.0.1:62027
+Recv << HRlolxdmdrlol
+Connection closed with Game Server 127.0.0.1:62027
+Waiting for connection to game servers ...
+Connection successfuly with game server 127.0.0.1:62625
+Recv << HRlolxdmdrlol
+Connection closed with Game Server 127.0.0.1:62625
+Waiting for connection to game servers ...
+Connection successfuly with game server 127.0.0.1:63706
+Recv << HRlolxdmdrlol
+Waiting for connection to game servers ...
+Connection successfuly with game server 127.0.0.1:64584
+Recv << HRlolxdmdrlol
+Connection closed with Game Server 127.0.0.1:64584
+Waiting for connection to game servers ...
+Connection successfuly with game server 127.0.0.1:65089
+Recv << HRlolxdmdrlol
+Connection closed with Game Server 127.0.0.1:65089
+Waiting for connection to game servers ...
+Connection successfuly with game server 127.0.0.1:65402
+Recv << HRlolxdmdrlol
+Connection closed with Game Server 127.0.0.1:65402
+Waiting for connection to game servers ...
+Connection successfuly with game server 127.0.0.1:1177
+Recv << HRlolxdmdrlol
+Connection closed with Game Server 127.0.0.1:1177
+Waiting for connection to game servers ...
+Connection successfuly with game server 127.0.0.1:1972
+Recv << HRlolxdmdrlol
+Connection closed with Game Server 127.0.0.1:1972
+Waiting for connection to game servers ...
+Connection successfuly with game server 127.0.0.1:2079
+Recv << HRlolxdmdrlol
+Connection closed with Game Server 127.0.0.1:2079
+Waiting for connection to game servers ...
+Connection successfuly with game server 127.0.0.1:2799
+Recv << HRlolxdmdrlol
+Connection closed with Game Server 127.0.0.1:2799
+Waiting for connection to game servers ...
+Connection successfuly with game server 127.0.0.1:3752
+Recv << HRlolxdmdrlol
+Connection closed with Game Server 127.0.0.1:3752
+Waiting for connection to game servers ...
+Connection successfuly with game server 127.0.0.1:4104
+Recv << HRlolxdmdrlol
+Waiting for connection to game servers ...
+Connection successfuly with game server 127.0.0.1:4193
+Recv << HRlolxdmdrlol
+Waiting for connection to game servers ...
+Connection successfuly with game server 127.0.0.1:4261
+Recv << HRlolxdmdrlol
+Connection closed with Game Server 127.0.0.1:4261
+Waiting for connection to game servers ...
+Connection successfuly with game server 127.0.0.1:4707
+Recv << HRlolxdmdrlol
+Connection closed with Game Server 127.0.0.1:4707
+Waiting for connection to game servers ...
+Connection successfuly with game server 127.0.0.1:5766
+Recv << HRlolxdmdrlol
+Connection closed with Game Server 127.0.0.1:5766
+Waiting for connection to game servers ...
+Connection successfuly with game server 127.0.0.1:5869
+Recv << HRlolxdmdrlol
+Connection closed with Game Server 127.0.0.1:5869
+Waiting for connection to game servers ...
+Connection successfuly with game server 127.0.0.1:6270
+Recv << HRlolxdmdrlol
+Connection closed with Game Server 127.0.0.1:6270
+Waiting for connection to game servers ...
+Connection successfuly with game server 127.0.0.1:10551
+Recv << HRlolxdmdrlol
+Waiting for connection to game servers ...
+Connection successfuly with game server 127.0.0.1:10796
+Recv << HRlolxdmdrlol
+Connection closed with Game Server 127.0.0.1:10796
+Waiting for connection to game servers ...
+Connection successfuly with game server 127.0.0.1:38654
+Recv << HRlolxdmdrlol
+Connection closed with Game Server 127.0.0.1:38654
+Waiting for connection to game servers ...
+Connection successfuly with game server 127.0.0.1:38735
+Recv << HRlolxdmdrlol
+Connection closed with Game Server 127.0.0.1:38735
+Waiting for connection to game servers ...
+Connection successfuly with game server 127.0.0.1:40427
+Recv << HRlolxdmdrlol
+Connection closed with Game Server 127.0.0.1:40427
+Waiting for connection to game servers ...
+Connection successfuly with game server 127.0.0.1:40471
+Recv << HRlolxdmdrlol
+Waiting for connection to game servers ...
+Connection successfuly with game server 127.0.0.1:44717
+Recv << HRlolxdmdrlol
+Connection closed with Game Server 127.0.0.1:44717
+Waiting for connection to game servers ...
+Connection successfuly with game server 127.0.0.1:44803
+Recv << HRlolxdmdrlol
+Connection closed with Game Server 127.0.0.1:44803
+Waiting for connection to game servers ...
+Connection successfuly with game server 127.0.0.1:44832
+Recv << HRlolxdmdrlol
+Connection closed with Game Server 127.0.0.1:44832
+Waiting for connection to game servers ...
+Connection successfuly with game server 127.0.0.1:44901
+Recv << HRlolxdmdrlol
+Waiting for connection to game servers ...
+Connection successfuly with game server 127.0.0.1:44950
+Recv << HRlolxdmdrlol
+Waiting for connection to game servers ...
+Connection successfuly with game server 127.0.0.1:45035
+Recv << HRlolxdmdrlol
+Connection closed with Game Server 127.0.0.1:45035
+Waiting for connection to game servers ...
+Connection successfuly with game server 127.0.0.1:45056
+Recv << HRlolxdmdrlol
+Connection closed with Game Server 127.0.0.1:45056
+Waiting for connection to game servers ...
+Connection successfuly with game server 127.0.0.1:45099
+Recv << HRlolxdmdrlol
+Waiting for connection to game servers ...
+Connection successfuly with game server 127.0.0.1:50208
+Recv << HRlolxdmdrlol

@@ -19,7 +19,6 @@ namespace SilverGame.Models.Maps
         public string MapData { get; set; }
         public string Key { get; set; }
         public string Time { get; set; }
-        public bool NeedRegister { get; set; }
         private readonly List<Character> _characters = new List<Character>();
         public List<int> Cells = new List<int>();
 

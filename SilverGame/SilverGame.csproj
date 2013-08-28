@@ -88,15 +88,18 @@
     <Compile Include="Models\Experience\Experience.cs" />
     <Compile Include="Models\Gifts\Gift.cs" />
     <Compile Include="Models\Gifts\GiftItems.cs" />
-    <Compile Include="Models\Items\GeneralStats.cs" />
-    <Compile Include="Models\Items\InventoryItem.cs" />
-    <Compile Include="Models\Items\ItemCondition.cs" />
-    <Compile Include="Models\Items\ItemInfos.cs" />
-    <Compile Include="Models\Items\StatsManager.cs" />
-    <Compile Include="Models\Items\ItemStats.cs" />
+    <Compile Include="Models\Items\ItemSets\ItemSet.cs" />
+    <Compile Include="Models\Items\Items\GeneralStats.cs" />
+    <Compile Include="Models\Items\Items\InventoryItem.cs" />
+    <Compile Include="Models\Items\Items\ItemCondition.cs" />
+    <Compile Include="Models\Items\Items\ItemInfos.cs" />
+    <Compile Include="Models\Items\Abstract\Jet.cs" />
+    <Compile Include="Models\Items\Items\StatsManager.cs" />
+    <Compile Include="Models\Items\Items\ItemStats.cs" />
     <Compile Include="Models\Maps\Map.cs" />
     <Compile Include="Models\Maps\MapTrigger.cs" />
     <Compile Include="Models\Maps\PathFinding.cs" />
+    <Compile Include="Models\Subareas\Subarea.cs" />
     <Compile Include="Network\Abstract\Server.cs" />
     <Compile Include="Network\Game\GameClient.cs" />
     <Compile Include="Network\Game\GameParser\GameParser.cs" />
@@ -135,6 +138,7 @@
   <ItemGroup>
     <Content Include="GameConfig.txt" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

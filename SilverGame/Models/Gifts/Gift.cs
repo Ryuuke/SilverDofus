@@ -10,7 +10,7 @@ namespace SilverGame.Models.Gifts
         public string Title { get; set; }
         public string Description { get; set; }
         public string PictureUrl { get; set; }
-        public IEnumerable<ItemInfos> Items { get; set; }
+        public List<GiftItems> Items { get; set; }
 
         public override string ToString()
         {
@@ -19,7 +19,7 @@ namespace SilverGame.Models.Gifts
 
             for(var i=0; i < Items.Count() ; i++)
             {
-                gift += string.Format("{0}~{1};", i+1, Items.ElementAt(i).GetGiftFormat(Id));
+                gift += string.Format("{0}~{1};", i+1, Items.ElementAt(i).GetGiftFormat());
             }
 
             return gift;

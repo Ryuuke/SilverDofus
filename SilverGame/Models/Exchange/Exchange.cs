@@ -4,6 +4,7 @@ using System.Transactions;
 using SilverGame.Database.Repository;
 using SilverGame.Models.Characters;
 using SilverGame.Models.Items;
+using SilverGame.Models.Items.Items;
 using SilverGame.Network.Game;
 using SilverGame.Services;
 

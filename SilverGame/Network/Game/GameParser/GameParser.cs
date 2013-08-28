@@ -9,7 +9,8 @@ using SilverGame.Models.Accounts;
 using SilverGame.Models.Characters;
 using SilverGame.Models.Chat;
 using SilverGame.Models.Exchange;
-using SilverGame.Models.Items;
+using SilverGame.Models.Items.Items;
+using SilverGame.Models.Items.ItemSets;
 using SilverGame.Models.Maps;
 using SilverGame.Services;
 
@@ -19,57 +20,76 @@ namespace SilverGame.Network.Game.GameParser
     {
         private readonly GameClient _client;
 
-        private delegate void Response(string data);
+        private readonly Dictionary<string, Action<string>> _charactersPacketRegistry;
+        private readonly Dictionary<string, Action<string>> _inGamePacketRegistry;
 
-        private readonly Dictionary<string, Response> _packetRegistry;
+        private PacketState _packetState;
 
         public GameParser(GameClient client)
         {
             _client = client;
 
-            _client.SendPackets(Packet.HelloGameServer);
+            _charactersPacketRegistry = new Dictionary<string, Action<string>>();
+            _inGamePacketRegistry = new Dictionary<string, Action<string>>();
 
-            _packetRegistry = new Dictionary<string, Response>();
+            InitCharactersRegistry();
+            InitInGameRegistry();
 
-            InitRegistry();
+            _client.SendPackets(Packet.HelloGame);
         }
 
-        private void InitRegistry()
+        private void InitCharactersRegistry()
         {
-            _packetRegistry.Add(Packet.TicketResponse, ParseTicket);
-            _packetRegistry.Add(Packet.RegionalVersion, SendRegionalVersion);
-            _packetRegistry.Add(Packet.CharactersList, SendCharactersList);
-            _packetRegistry.Add(Packet.CharacterNameGenerated, GenerateName);
-            _packetRegistry.Add(Packet.CharacterAdd, AddCharacter);
-            _packetRegistry.Add(Packet.GiftsList, SendGiftsList);
-            _packetRegistry.Add(Packet.GiftStored, AddGiftItem);
-            _packetRegistry.Add(Packet.CharacterSelected, SendCharacterInfos);
-            _packetRegistry.Add(Packet.GameCreated, SendCharacterGameInfos);
-            _packetRegistry.Add(Packet.GameInfos, SendGameInfos);
-            _packetRegistry.Add(Packet.GameActions, ParseGameAction);
-            _packetRegistry.Add(Packet.GameEndAction, ParseEndGameAction);
-            _packetRegistry.Add(Packet.ObjectMove, MoveItem);
-            _packetRegistry.Add(Packet.ObjectDrop, DropItem);
-            _packetRegistry.Add(Packet.ObjectDelete, DeleteItem);
-            _packetRegistry.Add(Packet.SubscribeChannel, SubscribeChannel);
-            _packetRegistry.Add(Packet.ServerMessage, SendMessage);
-            _packetRegistry.Add(Packet.StatsBoost, StatsBoost);
-            _packetRegistry.Add(Packet.ExchangeRequest, ParseRequest);
-            _packetRegistry.Add(Packet.ExchangeLeave, LeaveExchange);
-            _packetRegistry.Add(Packet.ExchangeAccepted, ExchangeAccepted);
-            _packetRegistry.Add(Packet.ExchangeObjectMove, ExchangeMove);
-            _packetRegistry.Add(Packet.ExchangeReady, ExchangeReady);
+            _charactersPacketRegistry.Add(Packet.RegionalVersion, SendRegionalVersion);
+            _charactersPacketRegistry.Add(Packet.CharactersList, SendCharactersList);
+            _charactersPacketRegistry.Add(Packet.CharacterNameGenerated, GenerateName);
+            _charactersPacketRegistry.Add(Packet.CharacterAdd, AddCharacter);
+            _charactersPacketRegistry.Add(Packet.GiftsList, SendGiftsList);
+            _charactersPacketRegistry.Add(Packet.GiftStored, AddGiftItem);
+            _charactersPacketRegistry.Add(Packet.CharacterSelected, SendCharacterInfos);
+        }
+
+        private void InitInGameRegistry()
+        {
+            _inGamePacketRegistry.Add(Packet.GameInfos, SendGameInfos);
+            _inGamePacketRegistry.Add(Packet.GameActions, ParseGameAction);
+            _inGamePacketRegistry.Add(Packet.GameEndAction, ParseEndGameAction);
+            _inGamePacketRegistry.Add(Packet.ObjectMove, MoveItem);
+            _inGamePacketRegistry.Add(Packet.ObjectDrop, DropItem);
+            _inGamePacketRegistry.Add(Packet.ObjectDelete, DeleteItem);
+            _inGamePacketRegistry.Add(Packet.SubscribeChannel, SubscribeChannel);
+            _inGamePacketRegistry.Add(Packet.ServerMessage, SendMessage);
+            _inGamePacketRegistry.Add(Packet.StatsBoost, StatsBoost);
+            _inGamePacketRegistry.Add(Packet.ExchangeRequest, ParseRequest);
+            _inGamePacketRegistry.Add(Packet.ExchangeLeave, LeaveExchange);
+            _inGamePacketRegistry.Add(Packet.ExchangeAccepted, ExchangeAccepted);
+            _inGamePacketRegistry.Add(Packet.ExchangeObjectMove, ExchangeMove);
+            _inGamePacketRegistry.Add(Packet.ExchangeReady, ExchangeReady);
         }
 
         public void Parse(string packet)
         {
             var header = packet.Substring(0, 2);
 
-            if (!_packetRegistry.ContainsKey(header)) return;
-
-            var response = _packetRegistry[header];
-
-            response(packet.Substring(2));
+            switch (_packetState)
+            {
+                case PacketState.Ticket:
+                    if (header == Packet.TicketResponse)
+                        ParseTicket(packet.Substring(2));
+                    break;
+                case PacketState.CharactersInfos:
+                    if (_charactersPacketRegistry.ContainsKey(header))
+                        _charactersPacketRegistry[header](packet.Substring(2));
+                    break;
+                case PacketState.GameCreate:
+                    if (header == Packet.GameCreated)
+                        SendCharacterGameInfos();
+                    break;
+                case PacketState.InGame:
+                    if (_inGamePacketRegistry.ContainsKey(header))
+                        _inGamePacketRegistry[header](packet.Substring(2));
+                    break;
+            }
         }
 
         // Respones functions
@@ -118,7 +138,15 @@ namespace SilverGame.Network.Game.GameParser
                                 : DateTime.Parse(account[9].ToString(CultureInfo.InvariantCulture)),
                     };
 
+                    _packetState = PacketState.CharactersInfos;
+
                     AccountRepository.UpdateAccount(_client.Account.Id);
+
+                    AccountRepository.UpdateCharactersList(_client.Account.Id);
+
+                    _packetState = PacketState.CharactersInfos;
+
+                    _client.SendPackets(Packet.TicketAccepted);
                 }
                 catch (Exception e)
                 {
@@ -126,8 +154,6 @@ namespace SilverGame.Network.Game.GameParser
                     Logs.LogWritter(Constant.ErrorsFolder,
                         string.Format("Impossible de charger le compte {0}", account[1]));
                 }
-
-                _client.SendPackets(Packet.TicketAccepted);
             }
         }
 
@@ -148,7 +174,7 @@ namespace SilverGame.Network.Game.GameParser
             if (bool.Parse(Config.Get("Subscription")))
             {
                 _client.SendPackets(string.Format("{0}{1}|{2}{3}", Packet.CharactersListResponse,
-                    _client.Account.Subscription == null || _client.Account.Subscription.Value < DateTime.Now
+                    _client.Account.IsNotSubscribed()
                         ? (object) Constant.DiscoveryMode
                         : (_client.Account.Subscription.Value - DateTime.Now).TotalMilliseconds.ToString(
                             CultureInfo.InvariantCulture).Split('.')[0],
@@ -176,7 +202,8 @@ namespace SilverGame.Network.Game.GameParser
 
         private void AddCharacter(string data)
         {
-            var charactersNumber = DatabaseProvider.AccountCharacters.FindAll(x => x.Account.Id == _client.Account.Id).Count;
+            var charactersNumber =
+                DatabaseProvider.AccountCharacters.FindAll(x => x.Account.Id == _client.Account.Id).Count;
 
             if (charactersNumber >= int.Parse(Config.Get("Player_Max_Per_Account")))
             {
@@ -197,6 +224,11 @@ namespace SilverGame.Network.Game.GameParser
             var color2 = int.Parse(datas[4]);
 
             var color3 = int.Parse(datas[5]);
+
+            if (classe == (int) Character.Class.Pandawa && 
+                bool.Parse(Config.Get("Subscription")) &&
+                _client.Account.IsNotSubscribed()) 
+                return;
 
             if (DatabaseProvider.Characters.All(x => x.Name != name) && name.Length >= 3 && name.Length <= 20)
             {
@@ -258,30 +290,30 @@ namespace SilverGame.Network.Game.GameParser
 
         private void SendGiftsList(string data)
         {
-            var gift = DatabaseProvider.AccountGifts.Find(x => x.Key.Id == _client.Account.Id).Value;
+            _client.Account.Gifts = GiftRepository.FindAll(_client.Account.Id).ToList();
 
-            if (gift == null) return;
-
-            _client.SendPackets(string.Format("{0}1|{1}", Packet.GiftsList, gift));
+            foreach (var gift in _client.Account.Gifts)
+            {
+                _client.SendPackets(string.Format("{0}1|{1}", Packet.GiftsList, gift));
+            }
         }
 
         private void AddGiftItem(string data)
         {
-            var gifts = DatabaseProvider.ItemGift.FindAll(
-                x => x.GiftId == int.Parse(data.Split('|')[0]));
+            var items = _client.Account.Gifts.Find(x => x.Id == int.Parse(data.Split('|')[0])).Items;
 
             var character = DatabaseProvider.Characters.Find(
                 x => x.Id == int.Parse(data.Split('|')[1]));
 
-            foreach (var gift in gifts)
+            foreach (var item in items)
             {
-                for (var i = 0; i < gift.Quantity; i++)
+                for (var i = 0; i < item.Quantity; i++)
                 {
-                    gift.Item.Generate(character, gift.Quantity);
+                    item.Item.Generate(character);
                 }
             }
 
-            GiftRepository.RemoveFromAccount(gifts.First().GiftId, _client.Account.Id);
+            GiftRepository.RemoveFromAccount(items.First().GiftId, _client.Account.Id);
 
             _client.SendPackets(Packet.GiftStotedSuccess);
         }
@@ -298,16 +330,20 @@ namespace SilverGame.Network.Game.GameParser
 
             _client.Character = character;
 
-            _client.SendPackets(string.Format("{0}|{1}", 
+            _client.SendPackets(string.Format("{0}|{1}",
                 Packet.CharacterSelectedResponse,
                 character.InfosWheneSelectedCharacter()));
+
+            _packetState = PacketState.GameCreate;
         }
 
-        private void SendCharacterGameInfos(string data)
+        private void SendCharacterGameInfos()
         {
             if (_client.Character == null) return;
 
             _client.SendPackets(string.Format("{0}|1|{1}", Packet.GameCreatedResponse, _client.Character.Name));
+
+            SendItemSetsBonnus();
 
             RefreshCharacterStats();
 
@@ -319,12 +355,35 @@ namespace SilverGame.Network.Game.GameParser
                 string.Join("", _client.Character.Channels)));
 
             LoadMap();
+
+            _packetState = PacketState.InGame;
         }
 
-        public void RefreshCharacterStats()
+        private void SendItemSetsBonnus()
+        {
+            var sets = _client.Character.GetSets();
+
+            foreach (var set in sets)
+            {
+                SendItemSetBonnus(set);
+            }
+        }
+
+        private void SendItemSetBonnus(ItemSet set)
+        {
+            var itemsInTheSameSet = _client.Character.GetAllItemsEquipedInSet(set);
+
+            _client.SendPackets(string.Format("{0}+{1}|{2}|{3}", Packet.ObjectItemSet, set.Id,
+                string.Join(",", itemsInTheSameSet.Select(x => x.Id)),
+                itemsInTheSameSet.Count > 1
+                    ? string.Join(",", set.BonusesDictionary[itemsInTheSameSet.Count].Select(x => x.ToString()))
+                    : ""));
+        }
+
+        private void RefreshCharacterStats()
         {
             _client.SendPackets(string.Format("{0}{1}|{2}", Packet.CharacterWeight,
-                    _client.Character.GetCurrentWeight(), _client.Character.GetMaxWeight()));
+                _client.Character.GetCurrentWeight(), _client.Character.GetMaxWeight()));
 
             _client.SendPackets(string.Format("{0}{1}", Packet.Stats, _client.Character.GetStats()));
         }
@@ -341,9 +400,35 @@ namespace SilverGame.Network.Game.GameParser
 
             _client.Character.Map.Send(string.Format("{0}{1}", Packet.Movement, _client.Character.Map.DisplayChars()));
 
+            if (bool.Parse(Config.Get("Subscription")))
+                VerifyMapSubscription();
+
             _client.Character.Map.SendItemsOnMap();
 
             _client.SendPackets(Packet.MapLoaded);
+        }
+
+        private void VerifyMapSubscription()
+        {
+            var characterMap = _client.Character.Map;
+            var subarea = DatabaseProvider.Subareas.Find(x => x.Id == characterMap.Subarea);
+
+            if (subarea == null) return;
+
+            if (subarea.NeedRegistered)
+            {
+                if (!_client.Account.IsNotSubscribed()) return;
+
+                _client.Character.SubscriptionRestrictionMap = true;
+
+                _client.SendPackets(string.Format("{0}+10", Packet.SubscriberRestriction));
+            }
+            else
+            {
+                _client.Character.SubscriptionRestrictionMap = false;
+
+                _client.SendPackets(string.Format("{0}-", Packet.SubscriberRestriction));
+            }
         }
 
         #endregion
@@ -440,8 +525,7 @@ namespace SilverGame.Network.Game.GameParser
 
             if (trigger != null)
                 TeleportPlayer(trigger.NewMap, trigger.NewCell);
-            
-            
+
             _client.SendPackets(Packet.Nothing);
         }
 
@@ -465,7 +549,8 @@ namespace SilverGame.Network.Game.GameParser
         {
             var existItem = InventoryItem.ExistItem(droppedItem, _client.Character);
 
-            _client.Character.Map.Send(string.Format("{0}-{1};{2};0", Packet.CellObject, droppedItem.Cell, droppedItem.ItemInfos.Id));
+            _client.Character.Map.Send(string.Format("{0}-{1};{2};0", Packet.CellObject, droppedItem.Cell,
+                droppedItem.ItemInfos.Id));
 
             if (existItem != null)
             {
@@ -475,7 +560,7 @@ namespace SilverGame.Network.Game.GameParser
                     DatabaseProvider.InventoryItems.Remove(droppedItem);
 
                 _client.SendPackets(string.Format("{0}{1}|{2}", Packet.ObjectQuantity, existItem.Id,
-                        existItem.Quantity));
+                    existItem.Quantity));
             }
             else
             {
@@ -497,15 +582,15 @@ namespace SilverGame.Network.Game.GameParser
 
             var item =
                 DatabaseProvider.InventoryItems.Find(
-                    x => 
-                        x.Id == itemId && 
+                    x =>
+                        x.Id == itemId &&
                         x.Character.Id == _client.Character.Id);
 
             if (item == null) return;
 
             if (itemPosition == StatsManager.Position.None)
             {
-                var existItem = InventoryItem.ExistItem(item,  item.Character, itemPosition);
+                var existItem = InventoryItem.ExistItem(item, item.Character, itemPosition);
 
                 if (existItem != null)
                 {
@@ -526,16 +611,42 @@ namespace SilverGame.Network.Game.GameParser
                     item.ItemPosition = StatsManager.Position.None;
                     InventoryItemRepository.Update(item);
 
-                    _client.SendPackets(string.Format("{0}{1}|{2}", Packet.ObjectMove, item.Id, (int)itemPosition));
+                    _client.SendPackets(string.Format("{0}{1}|{2}", Packet.ObjectMove, item.Id, (int) itemPosition));
                 }
 
                 _client.Character.Stats.RemoveItemStats(item.Stats);
+
+                if (item.ItemInfos.HasSet())
+                    _client.Character.Stats.DecreaseItemSetEffect(item);
             }
             else
             {
-                if (item.ItemInfos.Level > _client.Character.Level || 
-                    ItemCondition.VerifyIfCharacterMeetItemCondition(_client.Character, item.ItemInfos.Conditions) == false)
+                if (item.ItemInfos.Level > _client.Character.Level)
+                {
+                    _client.SendPackets(Packet.ObjectErrorLevel);
                     return;
+                }
+
+                if (itemPosition == StatsManager.Position.Anneau1 || itemPosition == StatsManager.Position.Anneau2)
+                {
+                    if (item.ItemInfos.HasSet())
+                    {
+                        var itemSet = item.ItemInfos.GetSet();
+
+                        if (_client.Character.CheckIfRingInSetAlredyEquiped(itemSet) == true)
+                        {
+                            _client.SendPackets(Packet.ObjectErrorRingInSetAlredyEquiped);
+                            return;
+                        }
+                    }
+                }
+
+                if (ItemCondition.VerifyIfCharacterMeetItemCondition(_client.Character, item.ItemInfos.Conditions) ==
+                    false)
+                {
+                    _client.SendPackets(string.Format("{0}{1}", Packet.Message, Packet.ConditionToEquipItem));
+                    return;
+                }
 
                 var existItem = DatabaseProvider.InventoryItems.Find(
                     x =>
@@ -576,12 +687,24 @@ namespace SilverGame.Network.Game.GameParser
                 }
 
                 _client.Character.Stats.AddItemStats(item.Stats);
+
+                if (item.ItemInfos.HasSet())
+                    _client.Character.Stats.IncreaseItemSetEffect(item);
+
+            }
+
+            if (item.ItemInfos.HasSet())
+            {
+                var set = item.ItemInfos.GetSet();
+
+                SendItemSetBonnus(set);
             }
 
             RefreshCharacterStats();
 
             _client.Character.Map.Send(string.Format("{0}{1}|{2}", Packet.ObjectAccessories, _client.Character.Id,
                 _client.Character.GetItemsWheneChooseCharacter()));
+
         }
 
         private void DropItem(string data)
@@ -594,7 +717,7 @@ namespace SilverGame.Network.Game.GameParser
                     x => x.Id == itemId && x.Character.Id == _client.Character.Id && x.Quantity >= quantity);
 
             if (item == null) return;
-                
+
             item.Quantity -= quantity;
 
             var cell = PathFinding.GetNearbyCell(_client.Character.MapCell, _client.Character.Map);
@@ -613,10 +736,11 @@ namespace SilverGame.Network.Game.GameParser
                 item.Character = null;
 
                 InventoryItemRepository.Remove(item, false);
-                
+
                 _client.SendPackets(string.Format("{0}{1}", Packet.ObjectRemove, item.Id));
 
-                _client.Character.Map.Send(string.Format("{0}+{1};{2};0", Packet.CellObject, item.Cell, item.ItemInfos.Id));
+                _client.Character.Map.Send(string.Format("{0}+{1};{2};0", Packet.CellObject, item.Cell,
+                    item.ItemInfos.Id));
             }
             else
             {
@@ -631,7 +755,8 @@ namespace SilverGame.Network.Game.GameParser
 
                 _client.SendPackets(string.Format("{0}{1}|{2}", Packet.ObjectQuantity, item.Id, item.Quantity));
 
-                _client.Character.Map.Send(string.Format("{0}+{1};{2};0", Packet.CellObject, newItem.Cell, item.ItemInfos.Id));
+                _client.Character.Map.Send(string.Format("{0}+{1};{2};0", Packet.CellObject, newItem.Cell,
+                    item.ItemInfos.Id));
             }
 
             RefreshCharacterStats();
@@ -737,6 +862,7 @@ namespace SilverGame.Network.Game.GameParser
                     break;
             }
         }
+
         #endregion
 
         #region CharacterStats
@@ -747,12 +873,12 @@ namespace SilverGame.Network.Game.GameParser
 
             if (baseStats < 10 || baseStats > 15) return;
 
-            _client.Character.BoostStats((Character.BaseStats)baseStats);
+            _client.Character.BoostStats((Character.BaseStats) baseStats);
 
             _client.SendPackets(string.Format("{0}{1}", Packet.Stats, _client.Character.GetStats()));
         }
 
-        #endregion  
+        #endregion
 
         #region ExchangeRequests
 
@@ -809,7 +935,8 @@ namespace SilverGame.Network.Game.GameParser
 
             if (receiverClient.Character.State != Character.CharacterState.Free)
             {
-                _client.SendPackets(Packet.CannotExchangeWithThisPlayer); return;
+                _client.SendPackets(Packet.CannotExchangeWithThisPlayer);
+                return;
             }
 
             receiverCharacter.State = Character.CharacterState.OnExchange;
@@ -818,8 +945,10 @@ namespace SilverGame.Network.Game.GameParser
             _client.Character.State = Character.CharacterState.OnExchange;
             _client.Character.ExchangeWithCharacter = receiverCharacter;
 
-            receiverClient.SendPackets(string.Format("{0}{1}|{2}|{3}", Packet.ExchangeRequestValidated, _client.Character.Id, receiverId, requestId));
-            _client.SendPackets(string.Format("{0}{1}|{2}|{3}", Packet.ExchangeRequestValidated, _client.Character.Id, receiverId, requestId));
+            receiverClient.SendPackets(string.Format("{0}{1}|{2}|{3}", Packet.ExchangeRequestValidated,
+                _client.Character.Id, receiverId, requestId));
+            _client.SendPackets(string.Format("{0}{1}|{2}|{3}", Packet.ExchangeRequestValidated, _client.Character.Id,
+                receiverId, requestId));
         }
 
         private void ExchangeAccepted(string data)
@@ -880,7 +1009,7 @@ namespace SilverGame.Network.Game.GameParser
             var exchangeSession =
                 ExchangeManager.Exchanges.Find(
                     x => x.FirstTrader == _client.Character && x.SecondTrader == receiverClient.Character
-                        || x.FirstTrader == receiverClient.Character && x.SecondTrader == _client.Character);
+                         || x.FirstTrader == receiverClient.Character && x.SecondTrader == _client.Character);
 
             if (exchangeSession == null) return;
 
@@ -897,7 +1026,6 @@ namespace SilverGame.Network.Game.GameParser
 
         private void ExchangeMoveObject(string data, GameClient receiverClient, Exchange exchangeSession)
         {
-
             if (_client.Character.State != Character.CharacterState.OnExchange) return;
 
             var state = data[0];
@@ -929,7 +1057,7 @@ namespace SilverGame.Network.Game.GameParser
 
             var kamas = int.Parse(data);
 
-            if(_client.Character.Kamas >= kamas)
+            if (_client.Character.Kamas >= kamas)
                 exchangeSession.AddKamas(_client.Character, kamas, _client, receiverClient);
         }
 
@@ -946,10 +1074,10 @@ namespace SilverGame.Network.Game.GameParser
             var exchangeSession =
                 ExchangeManager.Exchanges.Find(
                     x => x.FirstTrader == _client.Character && x.SecondTrader == receiverClient.Character
-                        || x.FirstTrader == receiverClient.Character && x.SecondTrader == _client.Character);
+                         || x.FirstTrader == receiverClient.Character && x.SecondTrader == _client.Character);
 
             if (exchangeSession == null) return;
-            
+
             var finishedExchange = exchangeSession.Accepted(_client.Character, _client, receiverClient);
 
             if (!finishedExchange) return;
@@ -966,5 +1094,13 @@ namespace SilverGame.Network.Game.GameParser
         }
 
         #endregion
+
+        private enum PacketState
+        {
+            Ticket,
+            CharactersInfos,
+            GameCreate,
+            InGame
+        }
     }
 }

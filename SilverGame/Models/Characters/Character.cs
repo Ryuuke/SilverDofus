@@ -6,6 +6,8 @@ using SilverGame.Database;
 using SilverGame.Database.Repository;
 using SilverGame.Models.Chat;
 using SilverGame.Models.Items;
+using SilverGame.Models.Items.Items;
+using SilverGame.Models.Items.ItemSets;
 using SilverGame.Models.Maps;
 using SilverGame.Network.Game;
 using SilverGame.Services;
@@ -43,6 +45,7 @@ namespace SilverGame.Models.Characters
         public List<Channel> Channels { get; set; }
         public CharacterState State;
         public Character ExchangeWithCharacter { get; set; }
+        public bool SubscriptionRestrictionMap { get; set; }
 
         public void CalculateItemStats()
         {
@@ -1075,6 +1078,34 @@ namespace SilverGame.Models.Characters
 
             ExchangeWithCharacter = null;
             State = CharacterState.Free;
+        }
+
+        #endregion
+
+        #region Helper
+
+        public bool CheckIfRingInSetAlredyEquiped(ItemSet itemSet)
+        {
+            return DatabaseProvider.InventoryItems.Any(
+                x =>
+                    x.Character == this && x.IsEquiped() &&
+                    (x.ItemPosition == StatsManager.Position.Anneau1 ||
+                     x.ItemPosition == StatsManager.Position.Anneau2) &&
+                    x.ItemInfos.GetSet() == itemSet);
+        }
+
+        public List<InventoryItem> GetAllItemsEquipedInSet(ItemSet itemSet)
+        {
+            return
+                DatabaseProvider.InventoryItems.FindAll(
+                    x => x.Character == this && x.IsEquiped() && x.ItemInfos.GetSet() == itemSet);
+        }
+
+        public IEnumerable<ItemSet> GetSets()
+        {
+            var itemsInSet = DatabaseProvider.InventoryItems.FindAll(x => x.Character == this && x.IsEquiped() && x.ItemInfos.HasSet());
+
+            return itemsInSet.Select(inventoryItem => DatabaseProvider.ItemSets.Find(x => x == inventoryItem.ItemInfos.GetSet())).Distinct();
         }
 
         #endregion

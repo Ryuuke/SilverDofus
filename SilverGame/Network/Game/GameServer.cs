@@ -19,7 +19,7 @@ namespace SilverGame.Network.Game
 
         protected override void OnListening()
         {
-            SilverConsole.WriteLine("Waiting for new connection ...", ConsoleColor.DarkGreen);
+            SilverConsole.WriteLine("GameServer : Waiting for new connection ...", ConsoleColor.DarkGreen);
 
             Logs.LogWritter(Constant.GameFolder, "GameServer Waiting for new connection");
         }

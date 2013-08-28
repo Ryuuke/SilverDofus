@@ -50,7 +50,7 @@ namespace SilverRealm.Services
             }
             catch (Exception e)
             {
-                SilverConsole.WriteLine(e.Message);
+                SilverConsole.WriteLine(string.Format("Unable to find {0} in {1}", info, Constant.ConfigFile));
                 return null;
             }
         }

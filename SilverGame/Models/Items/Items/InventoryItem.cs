@@ -5,7 +5,7 @@ using SilverGame.Models.Characters;
 using SilverGame.Models.Maps;
 using SilverGame.Services;
 
-namespace SilverGame.Models.Items
+namespace SilverGame.Models.Items.Items
 {
     class InventoryItem
     {

@@ -9,7 +9,7 @@ namespace SilverRealm.Database
             var charactersByGameServer = string.Empty;
 
             const string query =
-                "Select gameServerId, count(characterName) AS numberCharacters FROM characters WHERE accountId=@accountId GROUP by gameServerId;";
+                "Select gameServerId, count(characterId) AS numberCharacters FROM characters WHERE accountId=@accountId GROUP by gameServerId;";
 
             lock (DbManager.Lock)
             {

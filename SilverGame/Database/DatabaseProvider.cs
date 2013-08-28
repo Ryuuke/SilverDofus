@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Globalization;
 using System.Linq;
 using MySql.Data.MySqlClient;
 using System.Threading.Tasks;
@@ -10,10 +11,11 @@ using SilverGame.Models.Accounts;
 using SilverGame.Models.Alignment;
 using SilverGame.Models.Chat;
 using SilverGame.Models.Experience;
-using SilverGame.Models.Gifts;
 using SilverGame.Models.Characters;
-using SilverGame.Models.Items;
+using SilverGame.Models.Items.Items;
+using SilverGame.Models.Items.ItemSets;
 using SilverGame.Models.Maps;
+using SilverGame.Models.Subareas;
 using SilverGame.Services;
 
 namespace SilverGame.Database
@@ -27,35 +29,41 @@ namespace SilverGame.Database
         public static readonly List<AccountCharacters> AccountCharacters = new List<AccountCharacters>();
         public static readonly List<Character> Characters = new List<Character>();
         public static readonly List<InventoryItem> InventoryItems = new List<InventoryItem>();
-        private static readonly List<ItemInfos> ItemsInfos = new List<ItemInfos>();
-        public static readonly List<Gift> Gifts = new List<Gift>();
-        public static readonly List<KeyValuePair<Account, Gift>> AccountGifts = new List<KeyValuePair<Account, Gift>>();
-        public static readonly List<GiftItems> ItemGift = new List<GiftItems>();
+        public static readonly List<ItemInfos> ItemsInfos = new List<ItemInfos>();
+        public static readonly List<ItemSet> ItemSets = new List<ItemSet>();
         public static readonly List<Experience> Experiences = new List<Experience>();
         public static readonly List<Map> Maps = new List<Map>();
         public static readonly List<MapTrigger> MapTriggers = new List<MapTrigger>();
+        public static readonly List<Subarea> Subareas = new List<Subarea>();
 
         public static void LoadDatabase()
         {
-            SilverConsole.WriteLine("loading database resources... \n", ConsoleColor.DarkGreen);
+            SilverConsole.WriteLine("Loading Database Resources... \n", ConsoleColor.DarkGreen);
 
             LoadServerId();
 
             AccountRepository.UpdateAccount(connected: false);
 
-            LoadAccounts();
-            LoadAlignments();
-            LoadStatsManager();
-            LoadMaps();
-            LoadTriggers();
-            LoadCharacters();
-            LoadCharactersAccount();
-            LoadItemInfos();
-            LoadInventoryItems();
-            LoadGiftsItems();
-            LoadGifts();
-            LoadAccountGifts();
-            LoadExperience();
+            var sw = new Stopwatch();
+
+            sw.Start();
+
+                LoadAccounts();
+                LoadAlignments();
+                LoadStatsManager();
+                LoadMaps();
+                LoadTriggers();
+                LoadSubareas();
+                LoadCharacters();
+                LoadCharactersAccount();
+                LoadItemInfos();
+                LoadItemSets();
+                LoadInventoryItems();
+                LoadExperience();
+
+            sw.Stop();
+
+            SilverConsole.WriteLine(string.Format("Loaded Database Resources Successfully in {0} Sec \n", sw.Elapsed.TotalSeconds.ToString(CultureInfo.InvariantCulture).Substring(0,4)), ConsoleColor.DarkGreen);
         }
 
         private static void LoadServerId()
@@ -112,13 +120,13 @@ namespace SilverGame.Database
             var task = ExecuteQueryLight(RealmDbManager.GetDatabaseConnection(),
                 "SELECT * FROM characters WHERE gameserverId =@ServerId", "Characters <<>> Account", (reader) =>
                 {
-                    var tableResults = new List<KeyValuePair<int, string>>();
+                    var tableResults = new List<KeyValuePair<int, int>>();
 
                     while (reader.Read())
                     {
-                        tableResults.Add(new KeyValuePair<int, string>(
+                        tableResults.Add(new KeyValuePair<int, int>(
                             reader.GetInt16("AccountId"),
-                            reader.GetString("characterName")
+                            reader.GetInt16("characterId")
                             ));
                     }
 
@@ -127,7 +135,7 @@ namespace SilverGame.Database
                         AccountCharacters.Add(new AccountCharacters
                         {
                             Account = Accounts.Find(x => x.Id == tableResult.Key),
-                            Character = Characters.Find(x => x.Name.Equals(tableResult.Value))
+                            Character = Characters.Find(x => x.Id == tableResult.Value)
                         });
                     }
 
@@ -212,6 +220,38 @@ namespace SilverGame.Database
             task.Wait();
         }
 
+
+        private static void LoadItemSets()
+        {
+            var task = ExecuteQueryLight(GameDbManager.GetDatabaseConnection(), "SELECT * FROM items_set",
+                "Items Set",
+                (reader) =>
+                {
+                    while (reader.Read())
+                    {
+                        ItemSets.Add(new ItemSet
+                        {
+                            Id = reader.GetInt16("id"),
+                            Name = reader.GetString("name"),
+                            Items =
+                                reader.GetString("items")
+                                    .Split(',')
+                                    .Select(itemId => ItemsInfos.Find(x => x.Id == int.Parse(itemId)))
+                                    .ToList(),
+                            BonusesDictionary =
+                                ItemSet.ToBonusDictionary(reader.GetString("effects2"), reader.GetString("effects3"),
+                                    reader.GetString("effects4"), reader.GetString("effects5"),
+                                    reader.GetString("effects6"), reader.GetString("effects7"),
+                                    reader.GetString("effects8")).ToDictionary(x => x.Key, x => x.Value)
+                        });
+                    }
+
+                    return ItemSets.Count;
+                });
+
+            task.Wait();
+        }
+
         private static void LoadInventoryItems()
         {
             var task = ExecuteQueryLight(GameDbManager.GetDatabaseConnection(), "SELECT * FROM inventory_items",
@@ -235,79 +275,6 @@ namespace SilverGame.Database
                         character.CalculateItemStats();
 
                     return InventoryItems.Count;
-                });
-
-            task.Wait();
-        }
-
-        private static void LoadGiftsItems()
-        {
-            var task = ExecuteQueryLight(GameDbManager.GetDatabaseConnection(), "SELECT * FROM gift_items", "Gift Items",
-                (reader) =>
-                {
-                    while (reader.Read())
-                    {
-                        ItemGift.Add(new GiftItems
-                        {
-                            GiftId = reader.GetInt16("giftId"),
-                            Item = ItemsInfos.Find(x => x.Id == reader.GetInt16("itemId")),
-                            Quantity = reader.GetInt16("quantity")
-                        });
-                    }
-
-                    return ItemGift.Count;
-                });
-
-            task.Wait();
-        }
-
-        private static void LoadGifts()
-        {
-            var task = ExecuteQueryLight(GameDbManager.GetDatabaseConnection(), "SELECT * FROM gift", "Gifts",
-                (reader) =>
-                {
-                    while (reader.Read())
-                    {
-                        Gifts.Add(new Gift
-                        {
-                            Id = reader.GetInt16("id"),
-                            Title = reader.GetString("title"),
-                            Description = reader.GetString("Description"),
-                            PictureUrl = reader.GetString("pictureUrl"),
-                            Items = ItemGift.FindAll(x => x.GiftId == reader.GetInt16("id")).Select(x => x.Item)
-                        });
-                    }
-
-                    return Gifts.Count;
-                });
-
-            task.Wait();
-        }
-
-        private static void LoadAccountGifts()
-        {
-            var task = ExecuteQueryLight(GameDbManager.GetDatabaseConnection(), "SELECT * FROM account_gifts",
-                "Account Gifs",
-                (reader) =>
-                {
-                    var listResult = new List<KeyValuePair<int, int>>();
-
-                    while (reader.Read())
-                    {
-                        listResult.Add(new KeyValuePair<int, int>(
-                            reader.GetInt16("accountId"),
-                            reader.GetInt16("giftId")
-                            ));
-                    }
-
-                    foreach (var keyValuePair in listResult)
-                    {
-                        AccountGifts.Add(new KeyValuePair<Account, Gift>(
-                            Accounts.Find(x => x.Id == keyValuePair.Key),
-                            Gifts.Find(x => x.Id == keyValuePair.Value)));
-                    }
-
-                    return AccountGifts.Count;
                 });
 
             task.Wait();
@@ -405,13 +372,13 @@ namespace SilverGame.Database
                             Key = reader.GetString("decryptkey"),
                             Time = reader.GetString("createTime"),
                             Subarea = reader.GetInt16("subarea"),
-                            NeedRegister = reader.GetBoolean("needRegister"),
                         };
 
                         newMap.Cells = newMap.UncompressDatas();
 
                         Maps.Add(newMap);
                     }
+
                     return Maps.Count;
                 });
 
@@ -435,6 +402,27 @@ namespace SilverGame.Database
                     }
 
                     return MapTriggers.Count;
+                });
+
+            task.Wait();
+        }
+
+        private static void LoadSubareas()
+        {
+            var task = ExecuteQueryLight(GameDbManager.GetDatabaseConnection(), "SELECT * FROM subareas", "Subareas",
+                (reader) =>
+                {
+                    while (reader.Read())
+                    {
+                        Subareas.Add(new Subarea
+                        {
+                            Id = reader.GetInt32("id"),
+                            Name = reader.GetString("name"),
+                            NeedRegistered = reader.GetBoolean("needRegistered")
+                        });
+                    }
+
+                    return Subareas.Count;
                 });
 
             task.Wait();

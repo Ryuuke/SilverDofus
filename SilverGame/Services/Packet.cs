@@ -8,7 +8,7 @@
             DisconnectMe = "DM";
 
         public const string
-            HelloGameServer = "HG",
+            HelloGame = "HG",
             TicketResponse = "AT",
             TicketExpired = "M130",
             InvalidIp = "M031",
@@ -22,6 +22,7 @@
             CreateCharacterBadName = "AAEn",
             NameAlredyExists = "AAEa",
             CreateCharacterFullErrors = "AAEf",
+            CreateCharacterSubscriptionOutError = "AAEs",
             CreationSuccess = "AAK",
             GameBegin = "TB",
             GiftsList = "Ag",
@@ -36,6 +37,7 @@
             MapLoaded = "GDK",
             CellData = "GDC",
             GameInfos = "GI",
+            SubscriberRestriction = "BP",
             Restriction = "AR6bk",
             Movement = "GM",
             GameActions = "GA",
@@ -50,7 +52,9 @@
             ObjectAdd = "OAKO",
             ObjectRemove = "OR",
             ObjectItemSet = "OS",
+            ObjectErrorRingInSetAlredyEquiped = "OAEA",
             ObjectAccessories = "Oa",
+            ObjectErrorLevel = "OAEL",
             Date = "BD",
             ReferenceTime = "BT",
             SubscribeChannel = "cC",
@@ -79,11 +83,13 @@
             ExchangeReady = "EK",
             ExchangeLeaveSucess = "EVa";
 
+
         // Message Id (Im)
         public const string
             WelcomeToDofus = "189",
             LastConnectionInfos = "0152",
             NotEnoughSpaceToDropItem = "1145",
-            MyMessage = "0";
+            MyMessage = "0",
+            ConditionToEquipItem = "119";
     }
 }

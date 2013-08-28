@@ -1,11 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using SilverGame.Database;
 using SilverGame.Database.Repository;
 using SilverGame.Models.Characters;
-using SilverGame.Services;
+using SilverGame.Models.Items.ItemSets;
 
-namespace SilverGame.Models.Items
+namespace SilverGame.Models.Items.Items
 {
     class ItemInfos
     {
@@ -26,14 +27,6 @@ namespace SilverGame.Models.Items
         public bool IsBuff { get; set; }
         public bool Usable { get; set; }
 
-        public string GetGiftFormat(int id)
-        {
-            return string.Format("{0}~{1}~{2}~{3}",
-                Algorithm.DeciToHex(Id),
-                Algorithm.DeciToHex(DatabaseProvider.ItemGift.Find(x => x.GiftId == id && x.Item.Id == Id).Quantity),
-                "1",
-                string.Join(",", Stats));
-        }
 
         public void Generate(Character character, int quantity = 1)
         {
@@ -45,20 +38,29 @@ namespace SilverGame.Models.Items
                 Character = character,
                 ItemInfos = this,
                 ItemPosition = StatsManager.Position.None,
-                Stats = ItemStats.GenerateRandomStats(Stats),
+                Stats = ItemStats.GenerateRandomStats(Stats).ToList(),
                 Quantity = quantity
             };
 
             var existItem = InventoryItem.ExistItem(item, item.Character, item.ItemPosition);
-                
- 
-                if (existItem != null)
-                {
-                    existItem.Quantity += 1;
-                    InventoryItemRepository.Update(existItem);
-                }
-                else
-                    InventoryItemRepository.Create(item, true);
+
+            if (existItem != null)
+            {
+                existItem.Quantity += 1;
+                InventoryItemRepository.Update(existItem);
+            }
+            else
+                InventoryItemRepository.Create(item, true);
+        }
+
+        public bool HasSet()
+        {
+            return DatabaseProvider.ItemSets.Any(x => x.Items.Any(y => y.Id == Id));
+        }
+
+        public ItemSet GetSet()
+        {
+            return !HasSet() ? null : DatabaseProvider.ItemSets.Find(x => x.Items.Any(y => y.Id == Id));
         }
     }
 }

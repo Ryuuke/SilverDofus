@@ -1,0 +1,4 @@
+Realm connection database SQL error : Multiple simultaneous connections or connections with different connection strings inside the same transaction are not currently supported.
+SQL Error : Could not find specified column in results: name
+SQL Error : Could not find specified column in results: effect2
+SQL Error : Could not find specified column in results: pdvNow

@@ -2,7 +2,7 @@
 using SilverGame.Database;
 using SilverGame.Models.Characters;
 
-namespace SilverGame.Models.Items
+namespace SilverGame.Models.Items.Items
 {
     static class ItemCondition
     {

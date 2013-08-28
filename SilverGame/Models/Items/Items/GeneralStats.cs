@@ -1,4 +1,4 @@
-﻿namespace SilverGame.Models.Items
+﻿namespace SilverGame.Models.Items.Items
 {
     class GeneralStats
     {

@@ -43,14 +43,14 @@ namespace SilverGame.Database.Repository
              Logs.LogWritter(Constant.GameFolder, string.Format("Création du personnage {0}", character.Name));
 
              const string query2 =
-                 "INSERT INTO characters SET accountId=@accountId, gameserverId=@gameServer, characterName=@name";
+                 "INSERT INTO characters SET accountId=@accountId, gameserverId=@gameServer, characterId=@id";
 
              Base.Repository.ExecuteQuery(query2, RealmDbManager.GetDatabaseConnection(),
                  (command) =>
                  {
                      command.Parameters.Add(new MySqlParameter("@accountId", accountId));
                      command.Parameters.Add(new MySqlParameter("@gameServer", DatabaseProvider.ServerId));
-                     command.Parameters.Add(new MySqlParameter("@name", character.Name));
+                     command.Parameters.Add(new MySqlParameter("@id", character.Id));
                  });
 
              lock (DatabaseProvider.Characters)
@@ -68,6 +68,7 @@ namespace SilverGame.Database.Repository
          {
              StatsRepository.Update(character.Stats);
              AlignmentRepository.Update(character.Alignment);
+
              const string query =
                  "UPDATE characters SET skin=@skin, level=@level, " +
                  "pdvNow=@pdvNow, exp=@exp, mapId=@mapId, cellId=@cellId, direction=@direction, channels=@channels, " +
